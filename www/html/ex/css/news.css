@@ -1,0 +1,203 @@
+/*#maincontents .news.list*/
+#container.news.list #maincontents section.posts {
+	margin:0 15px 50px 15px;
+}
+#container.news.list #maincontents section.posts header.contents-title {
+	margin:0 0 15px 0;
+	padding:0 0 5px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.news.list #maincontents section.posts header.contents-title h1 {
+	font-size:24px;
+}
+#container.news.list #maincontents section.posts header.contents-title p {
+	margin:15px 0;
+}
+#container.news.list #maincontents section.posts article.post {
+	margin:0 0 15px 0;
+	padding:0 0 15px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.news.list #maincontents section.posts article.post header {
+	float:left;
+	width:450px;
+}
+#container.news.list #maincontents section.posts article.post header.noimg {
+	margin-bottom:0;
+	float:none;
+	width:auto;
+}
+
+#container.news.list #maincontents section.posts article.post header h2 {
+	font-size:20px;
+}
+#container.news.list #maincontents section.posts article.post header time {
+	margin:0 0 5px 0;
+	color:#666;
+}
+#container.news.list #maincontents section.posts article.post figure {
+	float:right;
+	width:200px;
+	height:140px;
+}
+#container.news.list #maincontents section.posts article.post p {
+	margin:0 0 25px 0;
+	font-size:16px;
+}
+#container.news.list #maincontents section.posts article.post ul.link li {
+	background:url(../img/icon_8C7B8C.gif) 0 5px no-repeat;
+	margin:0 0 5px 0;
+	padding:0 0 0 15px;
+	font-size:14px;
+}
+#container.news.list #maincontents section.posts article.post ul li.target {
+	background:url(../img/icon_354D66.gif) 0 5px no-repeat;
+}
+#container.news.list #maincontents section.posts article.post ul li.target a {
+	background:url(../img/icon_blank.gif) right 3px no-repeat;
+	padding:0 15px 0 0;
+}
+#container.news #maincontents ul.tag{
+	background:url(../img/icon_tag.gif) 0 2px no-repeat;
+	padding:0 0 0 23px;
+}
+#container.news #maincontents ul.tag li{
+	margin:0 10px 0 0;
+	font-size:12px;
+	line-height:20px;
+	float:left;
+}
+
+/*#maincontents .news.individual*/
+#container.news.individual #maincontents article.post {
+	margin:0 0 50px 0;
+}
+#container.news.individual #maincontents article.post header {
+	margin:0 0 0 0;
+	padding:0 15px 15px;
+	border-bottom:#EEE8E8 solid 5px;
+}
+#container.news.individual #maincontents article.post header h1 {
+	font-size:24px;
+	margin:0 0 10px 0;
+}
+#container.news.individual #maincontents article.post header time {
+	margin:0 0 5px 0;
+	color:#666;
+}
+#container.news.individual #maincontents article.post header ul.socialmedia {
+	margin:0 0 5px 0;
+}
+#container.news.individual #maincontents article.post figure {
+	border-bottom:#EEE8E8 solid 5px;
+	text-align:center;
+}
+#container.news.individual #maincontents article.post figure figcaption {
+	padding:5px 15px;
+	font-size:14px;
+	text-align:right;
+}
+#container.news.individual #maincontents section {
+	padding:15px;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.news.individual #maincontents section p {
+	margin:0 0 25px 0;
+}
+#container.news.individual #maincontents section.body {
+	padding:30px 15px;
+}
+#container.news.individual #maincontents section.body h2 {
+	font-size:20px;
+}
+#container.news.individual #maincontents section.body h3 {
+	font-size:18px;
+}
+#container.news.individual #maincontents section.body .red {
+	color:#900;
+}
+#container.news.individual #maincontents section.body .blue {
+	color:#354C7F;
+}
+#container.news.individual #maincontents section.body .pink {
+	color:#D72274;
+}
+#container.news.individual #maincontents section.body .green {
+	color:#1D6F33;
+}
+#container.news.individual #maincontents section.body div.enclosure {
+	border:#CCC solid 3px;
+	padding:15px;
+	margin:0 0 25px 0;
+}
+#container.news.individual #maincontents section.body .bg-yellow {
+	background:#FFFF3C;
+}
+#container.news.individual #maincontents section.body .bg-green {
+	background:#C1FF09;
+}
+#container.news.individual #maincontents section.body div.center {
+	text-align:center;
+}
+#container.news.individual #maincontents section.body span.small {
+	font-size:14px;
+}
+#container.news.individual #maincontents section.body hr {
+    border-color: #CCC;
+    border-style: solid;
+    border-width: 1px 0 0;
+    height: 1px;
+	margin:0 0 0 0;
+}
+#container.news.individual #maincontents section.body img {
+    padding: 0;
+	height: auto;
+    max-width: 100%;
+} 
+
+/*simple-btn*/
+a.simple-btn {
+	background-color: #1383D5;
+	color: #fff;
+	font-size: 14px;
+	text-align:center;
+	text-decoration:none;
+	display: inline-block;
+	margin:0 0 10px;
+	padding: 10px 15px;
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+}
+a.simple-btn:hover {
+	background-color: #46A7EE;
+	text-decoration:none;
+}
+
+
+/*#sidearea*/
+#container.news #sidearea aside.box ul.categorys{
+	margin-bottom:20px;
+}
+#container.news #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_354D66.gif) 0 7px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+
+/*#vod-btn*/
+ul#vod-btn{
+	margin:20px 0;
+}
+ul#vod-btn li{
+	float:left;
+	width:23%;
+	margin:0 1% 10px;
+}
+ul#vod-btn li img{
+	width:100%;
+	height:auto;
+}
+

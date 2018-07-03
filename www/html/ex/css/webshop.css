@@ -1,0 +1,269 @@
+/*film*/
+#container.webshop #maincontents{
+	border-top:#349BCD solid 5px;
+}
+#container.webshop.list #maincontents section.posts article.post header p {
+	color: #C00;
+}
+#container.webshop.individual #maincontents article.post header p {
+	color:#349BCD;
+}
+#container.webshop #sidearea{
+	border-top:#349BCD solid 5px;
+}
+#container.webshop #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_349BCD.gif) 0 7px no-repeat;
+}
+#container.webshop #sidearea aside.box ul.categorys.rental li{
+	background:url(../img/icon_3399CC.gif) 0 7px no-repeat;
+}
+
+a.simple-btn {
+    background-color: #1383d5;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+}
+a.simple-btn:hover {
+    background-color: #46a7ee;
+    text-decoration: none;
+}
+
+/*#maincontents .webshop.list*/
+#container.webshop.list #maincontents section.posts {
+	margin:0 15px 50px 15px;
+}
+#container.webshop.list #maincontents section.posts header.contents-title {
+	margin:0 0 15px 0;
+	padding:0 0 5px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.webshop.list #maincontents section.posts header.contents-title h1 {
+	font-size:24px;
+}
+#container.webshop.list #maincontents section.posts header.contents-title h1 .note {
+	font-size:14px;
+	font-weight:normal;
+	color:#666;
+}
+#container.webshop.list #maincontents section.posts article.post {
+	margin:0 0 15px 0;
+	padding:0 0 15px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.webshop.list #maincontents section.posts article.post header {
+	float:right;
+	width:450px;
+}
+#container.webshop.list #maincontents section.posts article.post header h2 {
+	font-size:20px;
+}
+#container.webshop.list #maincontents section.posts article.post header p {
+	margin:0 0 5px 0;
+	font-size:14px;
+}
+#container.webshop.list #maincontents section.posts article.post figure {
+	float:left;
+	width:200px;
+	height:140px;
+}
+#container.webshop.list #maincontents section.posts article.post p {
+	margin:0 0 25px 0;
+	font-size:16px;
+}
+#container.webshop.list #maincontents section.posts article.post ul.link li {
+	background:url(../img/icon_8C7B8C.gif) 0 5px no-repeat;
+	margin:0 0 5px 0;
+	padding:0 0 0 15px;
+	font-size:14px;
+}
+#container.webshop.list #maincontents section.posts article.post ul li.target {
+	background:url(../img/icon_354D66.gif) 0 5px no-repeat;
+}
+#container.webshop.list #maincontents section.posts article.post ul li.target a {
+	background:url(../img/icon_blank.gif) right 3px no-repeat;
+	padding:0 15px 0 0;
+}
+#container.webshop #maincontents ul.tag{
+	background:url(../img/icon_tag.gif) 0 2px no-repeat;
+	padding:0 0 0 23px;
+}
+#container.webshop #maincontents ul.material{
+	background:url(../img/icon_material.gif) 0 2px no-repeat;
+	padding:0 0 0 23px;
+}
+#container.webshop #maincontents ul.tag li,
+#container.webshop #maincontents ul.material li{
+	margin:0 10px 0 0;
+	font-size:12px;
+	line-height:20px;
+	float:left;
+}
+
+
+
+/*#sidearea*/
+#container.webshop #sidearea aside.box ul.calendar li{
+	background:url(../img/icon_calendar.gif) 0 6px no-repeat;
+	padding:0 0 0 20px;
+	font-size:18px;
+}
+#container.webshop #sidearea aside.box ul.categorys{
+	margin-bottom:20px;
+}
+#container.webshop #sidearea aside.box ul.categorys li{
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+#container.webshop #sidearea aside.box ul.categorys li.sub{
+	margin:0 0 5px 0;
+}
+#container.webshop #sidearea aside.box ul.categorys li.archive {
+	background-image:none !important;
+	margin:0 0 0 10px;
+	padding:0 0 0 0;
+}
+#container.webshop #sidearea aside.box ul.categorys li.archive ul {
+	margin:0 0 10px 0;
+	padding:0 0 0 0;
+}
+#container.webshop #sidearea aside.box ul.categorys li.archive ul li{
+	background:url(../img/icon_link_arrow_9D3798.gif) 0 6px no-repeat;
+	margin:0 0 5px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+	line-height:23px;
+}
+#container.webshop #sidearea aside.box ul.service li{
+	background:url(../img/icon_8C7B8C.gif) 0 5px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:14px;
+}
+#container.webshop #sidearea aside.box ul.tag li{
+	background:url(../img/icon_tag.gif) 0 2px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 25px;
+	font-size:14px;
+	line-height:20px;
+}
+#container.webshop #sidearea aside.box ul.material li.sub{
+	background:url(../img/icon_material.gif) 0 2px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 25px;
+	font-size:16px;
+	line-height:20px;
+}
+
+
+table.simple {
+	margin:0 0 20px 0;
+}
+table.simple th {
+	text-align:center;
+}
+
+table.cautions {
+	margin:0 0 20px 0;
+    border: none;
+    width: 100%;
+}
+table.cautions th {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #3399CC;
+    padding: 5px 10px;
+    text-align: center;
+	vertical-align: middle;
+	border: none;
+	color:#FFF;
+	width:80px;
+	font-weight:normal;
+	font-size:14px;
+}
+table.cautions td {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    padding: 0 10px;
+    text-align: left;
+	border: none;
+}
+
+/*rental news*/
+#container.webshop.rental.list #maincontents section.posts.news article.post {
+	margin:0 0 10px 0;
+	padding:0 0 10px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post header {
+	float:left;
+	width:440px;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post header.noimg {
+	margin-bottom:0;
+	float:none;
+	width:auto;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post header h2 {
+	font-weight:normal;
+	font-size:18px;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post header h2 a {
+	text-decoration:underline;
+	color:#267499;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post header h2 a:hover {
+	text-decoration:none;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post header time {
+	margin:0 0 5px 0;
+	
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post figure {
+	float:right;
+	width:200px;
+	height:140px;
+}
+#container.webshop.rental.list #maincontents section.posts.news article.post p {
+	margin:0 0 25px 0;
+	font-size:16px;
+}
+#container.webshop.rental.list #maincontents section.posts.news footer {
+	text-align:right;
+	font-size:16px;
+}
+#container.webshop.rental.list #maincontents section.posts.news footer a {
+	color:#333;
+}
+
+
+/*table*/
+table.simple th.font-s {
+	font-size:12px;
+}
+table.simple td.pdf p {
+	background: url(../img/icon_file_pdf.gif) no-repeat;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 64px;
+	height:64px;
+	line-height:60px;
+}
+table.simple td.word p {
+	background: url(../img/icon_file_word.gif) no-repeat;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 64px;
+	height:64px;
+	line-height:60px;
+}

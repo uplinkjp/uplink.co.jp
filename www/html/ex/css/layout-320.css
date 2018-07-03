@@ -1,0 +1,330 @@
+@charset "utf-8";
+
+body {
+	min-width: inherit;
+}
+
+#pagewidth{
+	margin:5px 0;
+	padding:0 1%;
+	width:98%;
+	overflow:hidden;
+}
+#pagewidth header{
+	margin:0 0 10px 0;
+}
+#pagewidth header nav{
+	margin:0 0 5px 0;
+	height: auto;
+}
+#pagewidth header nav h1#logo{
+	margin:0 0 5px 0;
+	width:12%;
+	height:40px;
+}
+#pagewidth header nav h1#logo a{
+	margin:0 0 0 0;
+}
+#pagewidth header nav h1#logo a img{
+	width:auto;
+	max-height:40px;
+}
+#pagewidth header nav .main-menu{
+	width:88%;
+	height:40px;
+	margin:0 0 0 0;
+}
+#pagewidth header nav .main-menu ul{
+	margin:0 0 0 0;
+	height:40px;
+	clear:both;
+}
+#pagewidth header nav .main-menu ul li{
+	margin:0 1% 0 0;
+	width:32.66666666666667%;
+}
+#pagewidth header nav .main-menu ul li a{
+	display:block;
+	font-size:12px;
+	text-align:center;
+	line-height:40px;
+	color:#FFF;
+	width:100%;
+	height:40px;
+}
+#pagewidth header nav .main-menu ul li.map{
+	margin:0 0 0 0;
+}
+#pagewidth header nav .main-menu ul li.map a{
+	font-size:10px;
+}
+#pagewidth header nav .others-menu{
+	width:100%;
+	height: 63px;
+	clear:both;
+}
+#pagewidth header nav .others-menu ul{
+	width:100%;
+	height:30px;
+}
+#pagewidth header nav .others-menu ul li{
+	margin:0 1% 5px 0;
+	height:30px;
+}
+#pagewidth header nav .others-menu ul li a{
+	height:30px;
+	line-height:30px;
+}
+#pagewidth header nav .others-menu ul li.gallery{
+	width:32.666%;
+}
+#pagewidth header nav .others-menu ul li.market{
+	width:32.666%;
+}
+#pagewidth header nav .others-menu ul li.workshop{
+	margin:0 0 0 0;
+	width:32.666%;
+}
+#pagewidth header nav .others-menu ul li.cafe{
+	width:32.666%;
+	clear:both;
+}
+#pagewidth header nav .others-menu ul li.webshop{
+	width:32.666%;
+}
+#pagewidth header nav .others-menu ul li.film{
+	margin:0 0 0 0;
+	width:32.666%;
+}
+#pagewidth header nav .others-menu ul li a{
+	display:block;
+	font-size:10px;
+	text-align:center;
+	height:30px;
+	color:#FFF;
+	overflow:hidden;
+}
+#pagewidth header nav .others-menu ul li.gallery a{
+	width:100%;
+}
+#pagewidth header nav .others-menu ul li.market a{
+	width:100%;
+}
+#pagewidth header nav .others-menu ul li.workshop a{
+	width:100%;
+}
+#pagewidth header nav .others-menu ul li.cafe a{
+	width:100%;
+}
+#pagewidth header nav .guidance{
+	width:100%;
+	float:none;
+	margin:7px 0 7px 0;
+	padding:0 0 0 0;
+}
+#pagewidth header nav .guidance ul li{
+	background:url(../img/icon_354D66.gif) 0 3px no-repeat;
+	font-size:13px;
+	line-height:19px;
+	margin:0 0.3% 0 0;
+	padding:0 0 0 12px;
+	clear:both;
+}
+#pagewidth header nav .subscribe{
+	margin:0 0 0 0;
+	width:100%;
+	float:none;
+}
+#pagewidth header nav .subscribe ul{
+	margin:0 0 0 0;
+}
+#pagewidth header nav .subscribe ul li.twitter,
+#pagewidth header nav .subscribe ul li.facebook,
+#pagewidth header nav .subscribe ul li.instagram,
+#pagewidth header nav .subscribe ul li.youtube,
+#pagewidth header nav .subscribe ul li.mail{
+	display:none;
+}
+#pagewidth header nav .subscribe ul li.search{
+	width:100%;
+	margin:0 0 0 0;
+}
+#pagewidth header nav .subscribe ul li a{
+	display:block;
+	width:100%;
+	height:30px;
+	font-size:16px;
+	line-height:30px;
+	color:#FFF;
+	text-align:center;
+}
+
+/*foot*/
+footer#footer-nav{
+	margin:0 0 0 0;
+	width:100%;
+	background:#8C7B8C url(../img/bg_foot.png) 0 bottom repeat-x;
+}
+footer#footer-nav nav{
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+	width:auto;
+}
+footer#footer-nav nav section.information{
+	float:left;
+	margin:20px 2.5% 20px 2.5%;
+	width:45%;
+}
+footer#footer-nav nav section.subscribe{
+	float:right;
+	margin:20px 2.5% 20px 2.5%;
+	width:45%;
+}
+footer#footer-nav nav section.menu-film{
+	clear:both;
+	margin:0 10px 20px;
+	width:auto;
+}
+footer#footer-nav nav section.webdice{
+	background:#FFF;
+	float:left;
+	margin:0 5% 50px;
+	width:90%;
+}
+footer#footer-nav nav section.webdice h1{
+	margin:15px 2.5% 15px;
+	width:25%;
+}
+footer#footer-nav nav section.webdice h2{
+	margin:15px 2.5% 5px;
+	width:65%;
+}
+footer#footer-nav nav section.search{
+}
+
+footer#footer-nav nav section.search #cse-search-form{
+	margin:0 2%;
+	font-size:12px;
+	color:#8C7B8C;
+	text-align:left;
+	width:80%;
+}
+
+/*search*/
+#pagewidth.page-search header nav .subscribe ul li.search{
+	display:none;
+}
+#pagewidth.page-search .result{
+	padding:10px;
+}
+#pagewidth.page-search .result .gsc-control-cse{
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+
+
+
+/*container 2column*/
+#container #maincontents{
+	width:100%;
+	float:none;
+	margin:0 0 30px 0;
+	padding:0 0 0 0;
+}
+/*#pager*/
+#container #maincontents nav#pager{
+	font-size:12px;
+	height:50px;
+}
+#container #maincontents nav#pager .wp-pagenavi {
+	margin:0 0 0 0;
+}
+#container #maincontents nav#pager .wp-pagenavi span.current,
+#container #maincontents nav#pager .wp-pagenavi span.extend{
+	padding:8px 10px;
+}
+
+#container #sidearea{
+	width:100%;
+	float:none;
+}
+#container #sidearea aside.box.facebook{
+	display:none;
+}
+#container #sidearea aside.box.twitter{
+	display:none;
+}
+#container #sidearea aside.box.twitter-widget{
+	display:none;
+}
+
+/*ul.socialmedia*/
+/*ul.socialmedia {
+	display:none;
+}*/
+
+/*backtotop*/
+#backtotop {
+    bottom: 5px;
+    height: 41px;
+    right: 5px;
+    width: 41px;
+}
+#backtotop a {
+    background: url(../img/btn_backtotop.png) no-repeat scroll -7px -7px transparent;
+    height: 41px;
+    width: 41px;
+}
+#backtotop a:hover {
+    background: url(../img/btn_backtotop.png) no-repeat scroll -7px -62px transparent;
+}
+* html #backtotop {
+    bottom: 5px;
+    right: 5px;
+}
+
+/*WP文中の画像用*/
+#container.schedule.individual #maincontents section.body img {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/*aside.widget*/
+#container.individual #maincontents aside.widget {
+	padding:15px 10px;
+}
+#container.individual #maincontents aside.widget h3 {
+	font-size:14px;
+}
+#container.individual #maincontents aside.widget ul li{
+	margin:0 0 10px;
+	float:none;
+}
+#container.individual #maincontents aside.widget ul li a{
+	height:50px;
+	line-height:50px;
+}
+#container.individual #maincontents aside.widget ul li.twitter{
+	background:#45B0E3;
+	width:100%;
+}
+#container.individual #maincontents aside.widget ul li.facebook{
+	background:#39599F;
+	width:100%;
+}
+#container.individual #maincontents aside.widget ul li.instagram{
+	background:#2C6798;
+	width:100%;
+}
+#container.individual #maincontents aside.widget ul li.mail{
+	background:#FFB244;
+	width:100%;
+}
+#container.individual #maincontents aside.widget ul li.line{
+	background:#3eb13b;
+	width:100%;
+}
+
+
+

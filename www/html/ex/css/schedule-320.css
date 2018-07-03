@@ -1,0 +1,315 @@
+/*#maincontents .schedule*/
+#container.schedule.list #maincontents section.posts header.contents-title h1 {
+	font-size:20px;
+}
+#container.schedule.list #maincontents section.posts article.post header {
+	width:70%;
+}
+#container.schedule.list #maincontents section.posts article.post header h2 {
+	font-size:14px;
+}
+#container.schedule.list #maincontents section.posts article.post header p {
+	font-size:12px;
+}
+#container.schedule.list #maincontents section.posts article.post figure {
+	width:28%;
+	height:63px;
+}
+#container.schedule.list #maincontents section.posts article.post figure img {
+	width:100%;
+	height:auto;
+}
+#container.schedule.individual #maincontents article.post figure figcaption {
+	font-size:10px;
+}
+#container.schedule.list #maincontents section.posts article.post p {
+	font-size:14px;
+}
+
+/*#maincontents .schedule.individual*/
+#container.schedule.individual #maincontents article.post {
+	margin:0 0 20px 0;
+}
+#container.schedule.individual #maincontents article.post header {
+	padding: 0 10px 15px;
+}
+#container.schedule.individual #maincontents article.post header h1 {
+	font-size:20px;
+}
+#container.schedule.individual #maincontents article.post figure img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#container.schedule.individual #maincontents article.post figure p {
+	font-size:12px;
+}
+#container.schedule.individual #maincontents section {
+	font-size:14px;
+}
+#container.schedule.individual #maincontents section.data dl dt{
+	float:none;
+	clear:both;
+	margin:0 0 0 0;
+	width: auto;
+	color:#666;
+	font-size:14px;
+}
+#container.schedule.individual #maincontents section.data dl dd{
+	float:none;
+	margin:0 0 10px 0;
+	padding:0 0 0 0;
+	width: auto;
+	border-left:none;
+	font-size:14px;
+}
+#container.schedule.individual #maincontents section.body {
+	padding:30px 15px;
+}
+#container.schedule.individual #maincontents section.body h2 {
+	font-size:18px;
+}
+#container.schedule.individual #maincontents section.body h3 {
+	font-size:16px;
+}
+#container.schedule.individual #maincontents section.body div.enclosure {
+	padding:10px;
+	margin:0 0 20px 0;
+}
+#container.schedule.individual #maincontents section.body span.small {
+	font-size:12px;
+}
+#container.schedule.individual #maincontents section.body iframe {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#container.schedule.individual #maincontents section.body .enclosure iframe {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+
+/*info.php*/
+/*#maincontents .info*/
+#container.info #maincontents article.post {
+	margin:0 0 20px 0;
+}
+#container.info #maincontents article.post header h1 {
+	font-size:20px;
+}
+#container.info #maincontents section {
+	padding:0;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.info #maincontents section.body {
+	padding:15px;
+}
+#container.info #maincontents section.body h2 {
+	font-size:18px;
+}
+#container.info #maincontents section.body p {
+	font-size:14px;
+}
+#container.info #maincontents section.body ol {
+	margin:0 0 25px 0;
+}
+#container.info #maincontents section.body ol li {
+	font-size:14px;
+}
+
+/*contents*/
+#container.info #maincontents section.body section.contents h2 small {
+	font-size:16px;
+}
+#container.info #maincontents section.body section.contents section.content {
+	margin:0 0 25px 0;
+}
+#container.info #maincontents section.body section.contents section {
+	margin:0 0 25px 0;
+}
+#container.info #maincontents section.body section.contents section.content section {
+	margin:0 0 25px 0;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents section.content h3 {
+	font-size:16px;
+}
+#container.info #maincontents section.body section.contents section.content h3 small {
+	font-size:14px;
+}
+#container.info #maincontents section.body section.contents section.content h3 span.txt-icon {
+	font-size:12px;
+	margin:0 5px 0 0;
+}
+#container.info #maincontents section.body section.contents h4 {
+	font-size:14px;
+}
+#container.info #maincontents section.body section.contents h4 small {
+	font-size:12px;
+	font-weight:normal;
+}
+#container.info #maincontents section.body section.contents section.content ul li {
+	background: url(../img/icon_c.gif) no-repeat 0 8px;
+	font-size: 12px;
+}
+#container.info #maincontents section.body section.contents section.content ul.important li {
+	background: url(../img/icon_c.gif) no-repeat 0 8px;
+	font-size: 12px;
+}
+
+#container.info #maincontents section.body section.contents section.content.frame {
+	margin:0 0 25px 0;
+}
+/*table*/
+table.simple {
+	font-size:12px;
+	width:100%;
+}
+table.simple th, table.simple td {
+	padding:5px;
+}
+table.simple th.discount {
+	width:60px;
+}
+table.simple td.charge {
+	width:60px;
+}
+table.simple th small {
+	font-size: 10px;
+}
+table.simple td span.seats {
+	font-size:10px;
+	padding:3px;
+}
+
+/*simple-btn*/
+a.simple-btn {
+	font-size: 12px;
+	margin:0 0 5px;
+	padding: 5px 10px;
+}
+
+/*market*/
+img.market-img{
+    height: auto;
+    width: 270px;
+}
+p.market-facebook{
+	display:none;
+}
+#container.schedule.list #maincontents section.posts article.post .market1.fb-like-box{
+	display:none;
+}
+
+/*#single-schedule*/
+article.post section#single-schedule.schedule {
+	margin:0;
+	padding:15px 0 !important;
+}
+article.post #single-schedule.schedule dl dt.head {
+	font-size:12px;
+	width:15%;
+	padding:0 1%;
+	text-align: left;
+}
+article.post #single-schedule.schedule dl dd.head {
+	font-size:12px;
+	width:81%;
+	padding:0 1%;
+	text-align: left;
+}
+article.post #single-schedule.schedule dl dt.day {
+	font-size:12px;
+	line-height:1.4;
+	width:15%;
+	padding:0 1%;
+	text-align: left;
+}
+article.post #single-schedule.schedule dl dd.day {
+	font-size:14px;
+	width:81%;
+	padding:0 1%;
+	text-align: left;
+}
+article.post #single-schedule.schedule dd.day .time{
+	padding:5px 0;
+}
+article.post #single-schedule.schedule dd.day .time p {
+	line-height:1.4 !important;
+}
+article.post #single-schedule.schedule dd.day .time.with-ticket p.txt,
+article.post #single-schedule.schedule dd.day .time.with-btn p.txt {
+	width: 79%;
+	margin:0 1% 0 0;
+	float:left;
+}
+article.post #single-schedule.schedule dd.day .time.with-ticket.with-btn p.txt {
+	width: 68%;
+	margin:0 2% 0 0 !important;
+}
+article.post #single-schedule.schedule dd.day .time.with-btn p.btn_preservation {
+	float:right;
+	padding:0;
+	overflow: auto;
+}
+article.post #single-schedule.schedule dd.day .time.with-btn p.btn_preservation,
+article.post #single-schedule.schedule dd.day .time.with-ticket p.btn_preservation {
+	width:20%;
+	float:right;
+	text-align:center;
+}
+article.post #single-schedule.schedule dd.day .time.with-btn.with-ticket p.btn_preservation {
+	width:15%;
+}
+article.post #single-schedule.schedule dd.day .time.with-ticket p.btn_preservation small {
+	margin:0 0 0 0;
+	color: #666;
+	font-size:14px;
+	line-height:1;
+	text-align:center;
+	height:auto;
+	padding:3px 0 0 0;
+	width:100%;
+}
+article.post #single-schedule.schedule dd.day .time.with-ticket.with-btn p.btn_preservation {
+	float:left;
+	width:30%;
+}
+article.post #single-schedule.schedule dd.day .time.with-ticket.with-btn p.btn_preservation small {
+	width:34%;
+	margin:0 1% 0 0;
+}
+article.post #single-schedule.schedule dd.day .time.with-ticket.with-btn p.btn_preservation a,
+article.post #single-schedule.schedule dd.day .time.with-ticket.with-btn p.btn_preservation span {
+	width:65%;
+	margin:0 0 0 0;
+}
+article.post #single-schedule.schedule dd.day .time.with-btn p.btn_preservation a {
+	background: #900;
+	text-decoration: none;
+	text-align:center;
+	font-size:12px;
+	line-height:1.2;
+	color:#FFF;
+	width:auto;
+	height:auto;
+	display:block;
+	margin:0 0 0 0;
+	padding:5px 0;
+}
+article.post #single-schedule.schedule dd.day .time.with-btn p.btn_preservation span {
+	background: #666;
+	text-decoration: none;
+	text-align:center;
+	font-size:12px;
+	line-height:1.2;
+	color:#FFF;
+	width:auto;
+	height:auto;
+	display: block;
+	margin:0 0 0 0;
+	padding:5px 0;
+}

@@ -1,0 +1,98 @@
+/*film*/
+/*#maincontents .film.list*/
+#container.webshop.list #maincontents section.posts header.contents-title h1 {
+	font-size:20px;
+}
+#container.webshop.list #maincontents section.posts article.post header {
+	width:70%;
+}
+#container.webshop.list #maincontents section.posts article.post header h2 {
+	font-size:14px;
+}
+#container.webshop.list #maincontents section.posts article.post header p {
+	font-size:12px;
+}
+#container.webshop.list #maincontents section.posts article.post figure {
+	width:28%;
+	height:63px;
+}
+#container.webshop.list #maincontents section.posts article.post figure img {
+	width:100%;
+	height:auto;
+}
+#container.webshop.individual #maincontents article.post figure figcaption {
+	font-size:10px;
+}
+#container.webshop.list #maincontents section.posts article.post p {
+	font-size:14px;
+}
+
+/*simple-btn*/
+a.simple-btn {
+	font-size: 12px;
+	margin:0 0 5px;
+	padding: 5px 10px;
+}
+
+
+table.simple th {
+	font-size:14px;
+}
+table.simple td {
+	font-size:14px;
+}
+table.simple td.pdf p {
+	background: none;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 0;
+	height: auto;
+	line-height: 1.6;
+}
+table.simple td.word p {
+	background: none;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 0;
+	height: auto;
+	line-height: 1.6;
+}
+table.cautions {
+	margin:0 0 20px 0;
+    border: none;
+    width: 100%;
+}
+table.cautions {
+	margin:0 0 20px 0;
+    border: none;
+    width: 100%;
+}
+table.cautions th {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #3399CC;
+    padding: 5px 5px;
+    text-align: center;
+	vertical-align: middle;
+	border: none;
+	color:#FFF;
+	width:25px;
+	font-weight:normal;
+	font-size:12px;
+}
+table.cautions td {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    padding: 0 5px;
+    text-align: left;
+	border: none;
+}
+
+
+iframe{
+	width:270px;
+}

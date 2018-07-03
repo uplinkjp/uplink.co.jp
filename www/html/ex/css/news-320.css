@@ -1,0 +1,113 @@
+/*#maincontents .news*/
+#container.news.list #maincontents section.posts header.contents-title h1 {
+	font-size:20px;
+}
+#container.news.list #maincontents section.posts article.post header {
+	width:170px;
+}
+#container.news.list #maincontents section.posts article.post header h2 {
+	font-size:14px;
+}
+#container.news.list #maincontents section.posts article.post header p {
+	font-size:12px;
+}
+#container.news.list #maincontents section.posts article.post header time {
+	font-size:12px;
+}
+#container.news.list #maincontents section.posts article.post figure {
+	width:90px;
+	height:63px;
+}
+#container.news.list #maincontents section.posts article.post figure img {
+	width:90px;
+	height:63px;
+}
+#container.news.individual #maincontents article.post figure figcaption {
+	font-size:10px;
+}
+#container.news.list #maincontents section.posts article.post p {
+	font-size:14px;
+}
+
+/*#maincontents .news.individual*/
+#container.news.individual #maincontents article.post {
+	margin:0 0 20px 0;
+}
+#container.news.individual #maincontents article.post header h1 {
+	font-size:20px;
+}
+#container.news.individual #maincontents article.post figure img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#container.news.individual #maincontents article.post figure p {
+	font-size:12px;
+}
+#container.news.individual #maincontents section {
+	font-size:14px;
+}
+#container.news.individual #maincontents section.data dl dt{
+	float:none;
+	clear:both;
+	margin:0 0 0 0;
+	width: auto;
+	color:#666;
+	font-size:14px;
+}
+#container.news.individual #maincontents section.data dl dd{
+	float:none;
+	margin:0 0 10px 0;
+	padding:0 0 0 0;
+	width: auto;
+	border-left:none;
+	font-size:14px;
+}
+#container.news.individual #maincontents section.body {
+	padding:30px 15px;
+}
+#container.news.individual #maincontents section.body img {
+    height: auto;
+    max-width: 100%;
+}
+#container.news.individual #maincontents section.body h2 {
+	font-size:18px;
+}
+#container.news.individual #maincontents section.body h3 {
+	font-size:16px;
+}
+#container.news.individual #maincontents section.body iframe {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+#container.news.individual #maincontents section.body div.enclosure {
+	padding:10px;
+	margin:0 0 20px 0;
+}
+#container.news.individual #maincontents section.body span.small {
+	font-size:12px;
+}
+
+
+/*simple-btn*/
+a.simple-btn {
+	font-size: 12px;
+	margin:0 0 5px;
+	padding: 5px 10px;
+}
+
+/*#vod-btn*/
+ul#vod-btn{
+	margin:20px 0;
+}
+ul#vod-btn li{
+	float:none;
+	width:90%;
+	margin:0 auto 10px;
+	text-align:center;
+}
+ul#vod-btn li img{
+	width:60%;
+	height:auto;
+}

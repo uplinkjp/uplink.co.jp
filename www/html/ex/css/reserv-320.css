@@ -1,0 +1,108 @@
+/*#maincontents .reserv*/
+#container.reserv #maincontents article.post header h1 {
+	font-size:20px;
+}
+#container.reserv #maincontents section {
+	font-size:14px;
+	padding:15px 0;
+}
+#container.reserv #maincontents section p {
+	margin:0 0 10px 0;
+}
+#container.reserv #maincontents section.body {
+	padding:15px;
+}
+#container.reserv #maincontents section.body h2 {
+	font-size:18px;
+}
+
+/*contents*/
+#container.reserv #maincontents section.body section.contents h2 {
+	margin:0 0 0 0;
+	padding:0 0 5px 0;
+	border-bottom:#CCC solid 1px;
+}
+#container.reserv #maincontents section.body section.contents section.content ul.important li {
+	font-size:14px;
+}
+
+
+/*#sidearea*/
+#container.reserv #sidearea{
+	border-top:#95C600 solid 5px;
+}
+#container.reserv #sidearea aside.box ul.categorys{
+	margin-bottom:20px;
+}
+#container.reserv #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_95C600.gif) 0 7px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+
+
+/*form*/
+#container.reserv #maincontents section.body .form {
+	margin:0 0 25px;
+}
+#container.reserv #maincontents section.body .form div {
+	margin:0 0 15px;
+}
+#container.reserv #maincontents section.body .form div label {
+	display:block;
+	font-weight:normal;
+	margin:0 0 5px 0;
+}
+.form input {
+	width:258px;
+}
+.form select {
+	width:230px;
+}
+.form textarea{
+	width:258px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="submit"],
+.form textarea,
+.form .dropdown {
+	font-size:16px;
+}
+#container.reserv #maincontents section.body .form input.submit {
+	background:#990000;
+	width:100%;
+	color:#FFF;
+	border:none;
+}
+
+
+/*table*/
+table.simple-black {
+    width: 100%;
+    border: 1px #333 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin:0 0 30px 0;
+}
+table.simple-black th {
+	width:100px;
+    padding: 5px 10px;
+    border: #333 solid;
+    border-width: 0 0 1px 1px;
+    background: #F5F5F5;
+    font-weight: normal;
+    text-align: left;
+}
+table.simple-black th.h {
+    background: #333;
+	color:#FFF;
+}
+table.simple-black td {
+    padding: 5px 10px;
+    border: 1px #333 solid;
+    border-width: 0 0 1px 1px;
+    text-align: left;
+}

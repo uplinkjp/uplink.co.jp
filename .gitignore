@@ -9,4 +9,6 @@ node_modules*
 bower_components
 tmp/*
 
+/sql/production.sql
+
 *installedlocalmodules.json
