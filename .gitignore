@@ -1,0 +1,12 @@
+/.vagrant
+/wiki
+.DS_Store
+
+/log
+npm-debug.log
+node_modules*
+.sass-cache
+bower_components
+tmp/*
+
+*installedlocalmodules.json

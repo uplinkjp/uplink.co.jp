@@ -1,0 +1,40 @@
+version: '2'
+services:
+  wp:
+    build: ./www
+    container_name: uplink_wp
+    volumes:
+      - ./www/html/assets:/var/www/html/assets
+      - ./log/apache:/var/log/apache2
+    ports:
+      - 80:80
+    links:
+      - mysql
+    environment:
+      DOMAIN: uplink.test
+      APACHE_DOCROOT: /var/www/html
+      APACHE_LOG_DIR: /var/log/apache2
+      PROJECT_NAME: uplink
+      WP_DB_HOST: mysql:3306
+      WP_DB_NAME: uplink
+      WP_DB_USER: uplink
+      WP_DB_PASSWORD: 3030
+      CTS_USE_LANG: 1
+  mysql:
+    image: mysql:5.7.21
+    container_name: uplink_mysql
+    ports:
+      - 3306:3306
+    working_dir: /sql
+    volumes:
+      - db-data:/var/lib/mysql
+      - ./sql:/sql
+      - ./log/mysql:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: uplink
+      MYSQL_USER: uplink
+      MYSQL_PASSWORD: 3030
+volumes:
+  db-data:
+    driver: local
