@@ -1,0 +1,1 @@
+<?php /* Template Name: info/information_en */?>
