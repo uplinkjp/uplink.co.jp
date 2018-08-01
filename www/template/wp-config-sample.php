@@ -84,8 +84,8 @@ $table_prefix  = 'wp_';
 define('WP_DEBUG', false);
 
 // wp-contentディレクトリの位置を指定
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/assets');
-define('WP_CONTENT_URL', 'http://'.$_SERVER["HTTP_HOST"].'/assets');
+// define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/assets');
+// define('WP_CONTENT_URL', 'http://'.$_SERVER["HTTP_HOST"].'/assets');
 
 // CHITOSE meets WP BOOTSTRAP
 define('CTS_USE_LANG', (boolean)$_ENV['CTS_USE_LANG']);
