@@ -11,15 +11,15 @@ sitemap.xml
 sitemap.xml.gz
 wp-config.php
 
-html/assets/advanced-cache.php
-html/assets/backup-db/
-html/assets/backups/
-html/assets/blogs.dir/
-html/assets/cache/
-html/assets/upgrade/
-html/assets/uploads/
-html/assets/wp-cache-config.php
-html/assets/plugins/hello.php
+html/wp/wp-content/advanced-cache.php
+html/wp/wp-content/backup-db/
+html/wp/wp-content/backups/
+html/wp/wp-content/blogs.dir/
+html/wp/wp-content/cache/
+html/wp/wp-content/upgrade/
+html/wp/wp-content/uploads/
+html/wp/wp-content/wp-cache-config.php
+html/wp/wp-content/plugins/hello.php
 
 html/wp.tar.gz
 
