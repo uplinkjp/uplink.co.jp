@@ -1,6 +1,12 @@
 # UPLINK.CO.JP
 
-## Wordpress
+## Documents
+
+- [Google Drive](https://drive.google.com/drive/u/1/folders/0AOv3OX6hKyzzUk9PVA)
+
+---
+
+## Dependencies
 
 - Docker for Mac
 
