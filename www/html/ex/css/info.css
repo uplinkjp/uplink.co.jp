@@ -1,0 +1,345 @@
+/*#maincontents .info*/
+#container.info #maincontents article.post {
+	margin:0 0 50px 0;
+}
+#container.info #maincontents article.post header {
+	margin:0 15px;
+	padding:0 0 5px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.info #maincontents article.post header h1 {
+	font-size:24px;
+}
+#container.info #maincontents section {
+	padding:15px;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.info #maincontents section p {
+	margin:0 0 15px 0;
+}
+#container.info #maincontents section.body {
+	padding:15px;
+}
+#container.info #maincontents section.body h2 {
+	font-size:22px;
+	margin:0 0 5px 0;
+}
+#container.info #maincontents section.body h2 span.point {
+	font-size:12px;
+	font-weight:normal;
+	background:#ccc;
+	padding:5px 10px;
+}
+#container.info #maincontents section.body ol {
+	margin:0 15px 25px 15px;
+	padding:0 25px;
+}
+#container.info #maincontents section.body ol li {
+	list-style-type: decimal;
+}
+
+/*contents*/
+#container.info #maincontents section.body section.contents {
+	margin:45px 0;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents h2 {
+	margin:0 0 20px 0;
+	padding:0 0 5px 0;
+	border-bottom:#CCC solid 1px;
+}
+#container.info #maincontents section.body section.contents h2 small {
+	font-size:18px;
+	font-weight:normal;
+}
+#container.info #maincontents section.body section.contents h2 span.txt-icon {
+	font-size:16px;
+	font-weight:normal;
+	line-height:1;
+	color:#FFF;
+	background:#990000;
+	padding:5px 20px;
+	margin:0 10px 0 0;
+}
+#container.info #maincontents section.body section.contents section.content {
+	margin:0 15px 25px 15px;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents section.content .notes {
+	color:#900;
+}
+#container.info #maincontents section.body section.contents section.content section {
+	margin:0 15px 25px 15px;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents section.content h3 {
+	font-size:20px;
+	margin:0 0 5px 0;
+}
+#container.info #maincontents section.body section.contents section.content h3 small {
+	font-size:16px;
+	font-weight:normal;
+}
+#container.info #maincontents section.body section.contents section.content h3 small a {
+	text-decoration:underline;
+}
+#container.info #maincontents section.body section.contents section.content h3 small a:hover {
+	text-decoration:none;
+}
+#container.info #maincontents section.body section.contents section.content h3 span.txt-icon {
+	font-size:12px;
+	font-weight:normal;
+	line-height:1;
+	color:#FFF;
+	background:#990000;
+	padding:5px 10px;
+	margin:0 10px 0 0;
+}
+#container.info #maincontents section.body section.contents h4 {
+	font-size:18px;
+	margin:0 0 5px 0;
+}
+#container.info #maincontents section.body section.contents h4 small {
+	font-size:14px;
+	font-weight:normal;
+}
+#container.info #maincontents section.body section.contents section.data {
+	margin:0 0 15px 0;
+	padding:0 0 0 0;
+	font-size:14px;
+}
+#container.info #maincontents section.body section.contents section.data dl dt {
+	clear: both;
+	width:90px;
+	float:left;
+	color:#666666;
+	margin:0 0 10px 0;
+}
+#container.info #maincontents section.body section.contents section.data dl dd {
+	border-left: 1px solid #CCCCCC;
+	float:right;
+	width:560px;
+	padding:0 0 0 10px;
+}
+#container.info #maincontents section.body section.contents section.photos {
+	margin:0 15px 15px 15px;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents section.photos ul li {
+	float:left;
+	margin:0 12px 0 0;
+}
+#container.info #maincontents section.body section.contents section.photos ul li.last {
+	margin:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents section.content ul li {
+	background: url(../img/icon_c.gif) no-repeat 0 10px;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+#container.info #maincontents section.body section.contents section.content ul.important li {
+	background: url(../img/icon_c.gif) no-repeat 0 12px;
+	font-size: 16px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+#container.info #maincontents section.body section.contents section.content.frame {
+	margin:0 15px 25px 15px;
+	padding:10px;
+	border:#999 solid 3px;
+}
+#container.info #maincontents section.body section.contents p.frame {
+	margin:0 0 15px 0;
+	padding:10px;
+	border:#999 solid 3px;
+}
+
+
+
+/*rental*/
+#container.info.rental #maincontents section.body section.contents section.content h3 {
+	margin:0 0 15px 0;
+	padding:0 0 0 5px;
+	border-left:#354D66 solid 5px;
+}
+
+/*privacypolicy*/
+#container.info.privacypolicy #maincontents section.body section.contents dl {
+	margin:0 0 15px 0;
+}
+#container.info.privacypolicy #maincontents section.body section.contents dl dt{
+	background: url(../img/icon_c.gif) no-repeat 0 10px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+#container.info.privacypolicy #maincontents section.body section.contents dl dd{
+	margin:0 0 10px 0;
+	font-size:14px;
+}
+#container.info.privacypolicy #maincontents section.body section.contents ul{
+	margin:0 0 15px 0;
+}
+#container.info.privacypolicy #maincontents section.body section.contents ul li{
+	background: url(../img/icon_c.gif) no-repeat 0 10px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+
+
+/*info chronology*/
+dl.chronology {
+	background: url(../img/bg_history_dl.gif) repeat-y scroll left center;
+	font-size:14px;
+}
+dl.chronology dt {
+	background: url(../img/bg_history_dt.gif) no-repeat scroll left center;
+	color:#8C7B8D;
+	width:90px;
+	float:left;
+}
+dl.chronology dd {
+	margin:0 0 20px 0;
+	width:580px;
+	float:right;
+}
+dl.chronology dd p {
+	margin:0 0 0 0 !important;
+}
+
+/*table*/
+table.simple th.day {
+	width:100px;
+}
+table.simple td.charge {
+	width:200px;
+	text-align:right;
+}
+table.simple td.time {
+	width:80px;
+}
+table.simple ol {
+	margin:0 0 0 0 !important;
+}
+table.simple td.deadline {
+	color:#990000;
+}
+table.simple td.pdf p {
+	background: url(../img/icon_file_pdf.gif) no-repeat;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 64px;
+	height:64px;
+	line-height:60px;
+}
+table.simple td.word p {
+	background: url(../img/icon_file_word.gif) no-repeat;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 64px;
+	height:64px;
+	line-height:60px;
+}
+
+/*twitter*/
+#container.info #maincontents section.body section.tw-accounts {
+	margin:0 0 35px 0;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.tw-accounts h2 {
+	margin:0 0 15px 0;
+	border-bottom:#CCC solid 1px;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account {
+	margin:0 15px 15px 15px;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account figure {
+	width:85px;
+	float:left;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account figure img {
+	border:#CCC solid 1px;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account p {
+	margin:0 0 0 0;
+	width:545px;
+	float:right;
+	font-size:14px;
+}
+
+
+/*map*/
+#container.info #maincontents section.body #map {
+	margin:0 0 35px 0;
+}
+#container.info #maincontents section.body #m-map {
+	display:none;
+}
+#container.info #maincontents section.body section.guide {
+	margin:0 0 35px 0;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.guide ul li {
+	float:left;
+	margin:0 11px 0 0;
+}
+#container.info #maincontents section.body section.guide ul li figure {
+	margin:0 0 0 0;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.guide ul li legend {
+	margin:5px 0;
+	font-size:12px;
+}
+#container.info #maincontents section.body section.guide ul li.last {
+	margin:0 0 0 0;
+}
+
+/*#sidearea*/
+#container.info #sidearea aside.box ul.categorys{
+	margin-bottom:20px;
+}
+#container.info #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_354D66.gif) 0 7px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+
+/*form*/
+#container.info #maincontents section.body .form {
+	margin:0 10px 25px;
+}
+#container.info #maincontents section.body .form form div.email{
+	float:left;
+	width:480px;
+}
+#container.info #maincontents section.body .form form div.submit{
+	float:right;
+	width:150px;
+}
+#container.info #maincontents section.body .form input{
+	width:100%;
+}
+#container.info #maincontents section.body .form input.add {
+	background:#990000;
+	color:#FFF;
+	border:none;
+/* IE */
+    filter:progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#990000,endColorstr=#990000);
+    zoom: 1;
+}
+#container.info #maincontents section.body .form input.del {
+	background:#354D66;
+	color:#FFF;
+	border:none;
+/* IE */
+    filter:progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#354D66,endColorstr=#354D66);
+    zoom: 1;
+}
+
+

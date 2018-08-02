@@ -4,7 +4,7 @@ services:
     build: ./www
     container_name: uplink_wp
     volumes:
-      - ./www/html/assets:/var/www/html/assets
+      - ./www/html/wp/wp-content:/var/www/html/wp/wp-content
       - ./log/apache:/var/log/apache2
     ports:
       - 80:80

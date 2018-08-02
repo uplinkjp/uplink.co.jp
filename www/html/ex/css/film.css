@@ -1,0 +1,744 @@
+/*film*/
+#container.film.films #maincontents{
+	border-top:#9D3798 solid 5px;
+}
+#container.film.films.list #maincontents section.posts article.post header p {
+	color:#9D3798;
+}
+#container.film.films.individual #maincontents article.post header p {
+	color:#9D3798;
+}
+#container.film.films #sidearea{
+	border-top:#9D3798 solid 5px;
+}
+#container.film.films #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_9D3798.gif) 0 7px no-repeat;
+}
+#container.film.films #sidearea aside.box ul.categorys.rental li{
+	background:url(../img/icon_3399CC.gif) 0 7px no-repeat;
+}
+/*#maincontents .film.list*/
+#container.film.list #maincontents section.posts {
+	margin:0 15px 70px 15px;
+}
+#container.film.list #maincontents section.posts header.contents-title {
+	margin:0 0 15px 0;
+	padding:0 0 5px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.film.list #maincontents section.posts header.contents-title h1 {
+	font-size:24px;
+}
+#container.film.list #maincontents section.posts header.contents-title h2 {
+	font-size:22px;
+}
+#container.film.list #maincontents section.posts header.contents-title h2 small {
+	font-size:14px;
+	font-weight:normal;
+}
+#container.film.list #maincontents section.posts header.contents-title h2 small a{
+	text-decoration:underline;
+}
+#container.film.list #maincontents section.posts header.contents-title h2 small a:hover{
+	text-decoration:none;
+}
+
+#container.film.list #maincontents section.posts header.contents-title p {
+	margin:15px 0;
+}
+#container.film.list #maincontents section.posts header.contents-title h1 .note {
+	font-size:14px;
+	font-weight:normal;
+	color:#666;
+}
+#container.film.list #maincontents section.posts article.post {
+	margin:0 0 15px 0;
+	padding:0 0 15px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.film.list #maincontents section.posts article.post header {
+	float:right;
+	width:450px;
+	margin:0 0 0 0;
+}
+#container.film.list #maincontents section.posts article.post header.noimg {
+	float:none;
+	width:100%;
+	margin:0 0 0 0;
+}
+#container.film.list #maincontents section.posts article.post header h2 {
+	font-size:20px;
+}
+#container.film.list #maincontents section.posts article.post.news header h2 {
+	font-size:18px;
+}
+#container.film.list #maincontents section.posts article.post header p {
+	margin:0 0 5px 0;
+	font-size:14px;
+}
+#container.film.list #maincontents section.posts article.post header p.credit {
+	display:none;
+}
+#container.film.list #maincontents section.posts article.post figure {
+	float:left;
+	width:200px;
+	height:140px;
+}
+#container.film.list #maincontents section.posts article.post p {
+	margin:0 0 25px 0;
+	font-size:16px;
+}
+#container.film.list #maincontents section.posts article.post p.print {
+	display:none;
+}
+#container.film.list #maincontents section.posts article.post ul.link li {
+	background:url(../img/icon_8C7B8C.gif) 0 5px no-repeat;
+	margin:0 0 5px 0;
+	padding:0 0 0 15px;
+	font-size:14px;
+}
+#container.film.list #maincontents section.posts article.post ul li.target {
+	background:url(../img/icon_354D66.gif) 0 5px no-repeat;
+}
+#container.film.list #maincontents section.posts article.post ul li.target a {
+	background:url(../img/icon_blank.gif) right 3px no-repeat;
+	padding:0 15px 0 0;
+}
+#container.film #maincontents ul.tag{
+	background:url(../img/icon_tag.gif) 0 2px no-repeat;
+	padding:0 0 0 23px;
+}
+#container.film #maincontents ul.tag.print {
+	display:none;
+}
+#container.film #maincontents ul.material{
+	background:url(../img/icon_material.gif) 0 2px no-repeat;
+	padding:0 0 0 23px;
+}
+#container.film #maincontents ul.tag li,
+#container.film #maincontents ul.material li{
+	margin:0 10px 0 0;
+	font-size:12px;
+	line-height:20px;
+	float:left;
+}
+
+
+/*#maincontents .film.individual*/
+#container.film.individual #maincontents article.post {
+	margin:0 0 50px 0;
+}
+#container.film.individual #maincontents article.post header {
+	margin:0 0 0 0;
+	padding:0 15px 15px;
+	border-bottom:#EEE8E8 solid 5px;
+}
+#container.film.individual #maincontents article.post header h2 {
+	font-size:14px;
+	font-weight:normal;
+	color:#999;
+}
+#container.film.individual #maincontents article.post header h2 a {
+	color:#999;
+}
+#container.film.individual #maincontents article.post header h1 {
+	font-size:24px;
+}
+#container.film.individual #maincontents article.post header p {
+	margin:0 0 5px 0;
+}
+#container.film.individual #maincontents article.post header ul.tag {
+	margin:0 0 10px 0;
+}
+#container.film.individual #maincontents article.post header ul.socialmedia {
+	margin:0 0 5px 0;
+}
+#container.film.individual #maincontents article.post figure {
+	border-bottom:#EEE8E8 solid 5px;
+	text-align:center;
+}
+#container.film.individual #maincontents article.post figure figcaption {
+	color:#666;
+	padding:5px 15px;
+	font-size:14px;
+	text-align:right;
+}
+#container.film.individual #maincontents section {
+	padding:15px;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.film.individual #maincontents section p {
+	margin:0 0 25px 0;
+}
+#container.film.individual #maincontents section.data {
+	border-bottom:#EEE8E8 solid 5px;
+}
+#container.film.individual #maincontents section.data ul li.rental {
+	background:url(../img/icon_3399CC.gif) 0 7px no-repeat;
+	margin: 0 0 10px;
+	padding: 0 0 0 15px;
+}
+#container.film.individual #maincontents section.data ul li.rental p {
+	font-size:14px;
+}
+#container.film.individual #maincontents section.data ul li.rental p a:link {
+    color: #007b7b;
+    text-decoration: underline;
+}
+#container.film.individual #maincontents section.data ul li.rental p a:visited {
+    color: #007b7b;
+    text-decoration: underline;
+}
+#container.film.individual #maincontents section.data ul li.rental p a:hover {
+    color: #009999;
+    text-decoration: none;
+}
+#container.film.individual #maincontents section.data figure {
+	border-bottom:none;
+	text-align:center;
+	margin:15px 0;
+}
+#container.film.individual #maincontents section.data dl dt{
+	float:left;
+	clear:both;
+	margin:0 0 10px 0;
+	width:110px;
+	color:#666;
+}
+#container.film.individual #maincontents section.data dl dd{
+	float:right;
+	margin:0 0 10px 0;
+	padding:0 0 0 10px;
+	width:530px;
+	border-left: #CCC solid 1px;
+}
+#container.film.individual #maincontents section.data dl dd a:link {
+    color: #007b7b;
+    text-decoration: underline;
+}
+#container.film.individual #maincontents section.data dl dd a:visited {
+    color: #007b7b;
+    text-decoration: underline;
+}
+#container.film.individual #maincontents section.data dl dd a:hover {
+    color: #009999;
+    text-decoration: none;
+}
+#container.film.individual #maincontents section.data figure {
+	border-bottom:none;
+	text-align:center;
+	margin:15px 0;
+}
+#container.film.individual #maincontents section.body {
+	padding:30px 15px;
+}
+#container.film.individual #maincontents section.body h2 {
+	font-size:20px;
+}
+#container.film.individual #maincontents section.body h3 {
+	font-size:18px;
+}
+#container.film.individual #maincontents section.body .red {
+	color:#900;
+}
+#container.film.individual #maincontents section.body .blue {
+	color:#354C7F;
+}
+#container.film.individual #maincontents section.body .pink {
+	color:#D72274;
+}
+#container.film.individual #maincontents section.body .green {
+	color:#1D6F33;
+}
+#container.film.individual #maincontents section.body div.enclosure {
+	border:#CCC solid 3px;
+	padding:15px;
+	margin:0 0 25px 0;
+}
+#container.film.individual #maincontents section.body div.center {
+	text-align:center;
+}
+#container.film.individual #maincontents section.body span.small {
+	font-size:14px;
+}
+#container.film.individual #maincontents section.body hr {
+    border-color: #CCC;
+    border-style: solid;
+    border-width: 1px 0 0;
+    height: 1px;
+	margin:0 0 0 0;
+}
+#container.film.individual #maincontents section.body section {
+	margin:0 0 40px 0;
+	padding:0 0 0 0;
+}
+#container.film.individual #maincontents section.data h2,
+#container.film.individual #maincontents section.body section h2 {
+	font-size:14px;
+	color:#666;
+    border-color: #CCC;
+    border-style: solid;
+    border-width: 0 0 1px;
+	margin:0 0 10px 0;
+}
+#container.film.individual #maincontents section.body section.credit p {
+	font-size:14px;
+}
+#container.film.individual #maincontents section.body figure {
+	border-bottom:none;
+	text-align:center;
+	margin:15px 0;
+}
+#container.film.individual #maincontents section.body figure img {
+	margin:5px;
+}
+#container.film.individual #maincontents section.body section.trailer p {
+	text-align:center;
+}
+
+/*#sidearea*/
+#container.film #sidearea aside.box ul.calendar li{
+	background:url(../img/icon_calendar.gif) 0 6px no-repeat;
+	padding:0 0 0 20px;
+	font-size:18px;
+}
+#container.film #sidearea aside.box ul.categorys{
+	margin-bottom:20px;
+}
+#container.film #sidearea aside.box ul.categorys li{
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+#container.film #sidearea aside.box ul.categorys li.sub{
+	margin:0 0 5px 0;
+}
+#container.film #sidearea aside.box ul.categorys li.archive {
+	background-image:none !important;
+	margin:0 0 0 10px;
+	padding:0 0 0 0;
+}
+#container.film #sidearea aside.box ul.categorys li.archive ul {
+	margin:0 0 10px 0;
+	padding:0 0 0 0;
+}
+#container.film #sidearea aside.box ul.categorys li.archive ul li{
+	background:url(../img/icon_link_arrow_9D3798.gif) 0 6px no-repeat;
+	margin:0 0 5px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+	line-height:23px;
+}
+#container.film #sidearea aside.box ul.service li{
+	background:url(../img/icon_8C7B8C.gif) 0 5px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:14px;
+}
+#container.film #sidearea aside.box ul.tag li{
+	background:url(../img/icon_tag.gif) 0 2px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 25px;
+	font-size:14px;
+	line-height:20px;
+}
+#container.film #sidearea aside.box ul.material li.sub{
+	background:url(../img/icon_material.gif) 0 2px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 25px;
+	font-size:16px;
+	line-height:20px;
+}
+
+/*rental*/
+#container.film.rental #maincontents{
+	border-top:#3399CC solid 5px;
+}
+#container.film.rental #maincontents ul li.arrow{
+	background:url(../img/icon_link_arrow_3399CC.gif) 0 6px no-repeat;
+	line-height: 23px;
+	margin: 0 0 5px;
+	padding: 0 0 0 15px;
+}
+#container.rental.film.list #maincontents section.posts ul li ol{
+	margin:0 0 0 0;
+	padding: 0 0 0 0;
+}
+#container.rental.film.list #maincontents section.posts ul li ol li{
+	background-image:none;
+}
+
+#container.rental.film.list #maincontents section.posts header.contents-title.img-header {
+	border:none;
+	padding:0 0 0 0;
+}
+#container.film.rental.list #maincontents section.posts p {
+	font-size:16px;
+	margin:0 0 15px 0;
+}
+#container.film.rental.list #maincontents section.posts ul li {
+	background:url(../img/icon_link_arrow_3399CC.gif) 0 7px no-repeat;
+	font-size:16px;
+	padding:0 0 0 15px;
+	margin:0 0 5px 0;
+}
+
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li {
+	background:#3399CC;
+	background-image:none;
+	font-size:16px;
+	line-height:60px;
+	padding:0;
+	margin:0 1% 10px;
+	width:48%;
+	float:left;
+	text-align:center;
+	border-radius: 10px;		/* CSS3草案 */
+	-webkit-border-radius: 10px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 10px;	/* Firefox用 */
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.contact,
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.report,
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.faq {
+	background:#3399CC;
+	font-size:16px;
+	margin:0 1% 10px;
+	width:31.3333%;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.rentallist {
+	background:#9D3798;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.report {
+	background:#354D66;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li:hover {
+	background:#27789E;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.rentallist:hover {
+	background:#70276c;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li.report:hover {
+	background:#16212C;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li a {
+	color:#FFF;
+	display:block;
+}
+#container.film.rental.list #maincontents section.posts ul.rentalmenu li a:hover {
+	color:#FFF;
+	text-decoration:none;
+}
+#container.film.rental.list #maincontents section.posts.rentallist header h1 small {
+	font-size:14px;
+	font-weight:normal;
+}
+#container.film.rental.list #maincontents section.posts.rentallist ul {
+    margin: 10px 0 0 0;
+}
+#container.film.rental.list #maincontents section.posts.rentallist ul li {
+	background:none;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 0 10px 0 0;
+	padding:0 0 0 0;
+}
+
+#container.film.rental.list #maincontents section.posts article.post header p {
+	color:#3399CC;
+}
+#container.film.rental.individual #maincontents article.post header p {
+	color:#3399CC;
+}
+#container.film.rental #sidearea{
+	border-top:#3399CC solid 5px;
+}
+#container.film.rental #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_3399CC.gif) 0 7px no-repeat;
+}
+#container.film.rental #sidearea aside.box ul.categorys.films li{
+	background:url(../img/icon_9D3798.gif) 0 7px no-repeat;
+}
+#container.film.rental #sidearea aside.box ul.categorys.news li{
+	background:url(../img/icon_354D66.gif) 0 7px no-repeat;
+}
+#container.film.rental #sidearea aside.box ul.categorys li.archive ul li{
+	background:url(../img/icon_link_arrow_3399CC.gif) 0 6px no-repeat;
+}
+
+
+/*rental r-individual*/
+#container.rental.film.r-individual #maincontents article.post {
+	margin:0 0 50px 0;
+}
+#container.rental.film.r-individual #maincontents article.post header {
+	margin:0 15px;
+	padding:0 0 5px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.rental.film.r-individual #maincontents article.post header h1 {
+	font-size:24px;
+}
+#container.rental.film.r-individual #maincontents section {
+	padding:15px;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.rental.film.r-individual #maincontents section p {
+	margin:0 0 15px 0;
+}
+#container.rental.film.r-individual #maincontents section.body {
+	padding:15px;
+}
+#container.rental.film.r-individual #maincontents section.body h2 {
+	font-size:22px;
+	margin:0 0 5px 0;
+}
+#container.rental.film.r-individual #maincontents section.body h2 span.point {
+	font-size:12px;
+	font-weight:normal;
+	background:#ccc;
+	padding:5px 10px;
+}
+#container.rental.film.r-individual #maincontents section.body ol {
+	margin:0 15px 15px 15px;
+	padding:0 25px;
+}
+#container.rental.film.r-individual #maincontents section.body ol li {
+	list-style-type: decimal;
+}
+
+#container.rental.film.r-individual #maincontents section.body section.contents {
+	margin:45px 0;
+	padding:0 0 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents h2 {
+	margin:0 0 20px 0;
+	padding:0 0 5px 0;
+	border-bottom:#CCC solid 1px;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents h2 small {
+	font-size:18px;
+	font-weight:normal;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents h2 span.txt-icon {
+	font-size:16px;
+	font-weight:normal;
+	line-height:1;
+	color:#FFF;
+	background:#990000;
+	padding:5px 20px;
+	margin:0 10px 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content {
+	margin:0 15px 50px 15px;
+	padding:0 0 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content .notes {
+	color:#900;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content section {
+	margin:0 15px 25px 15px;
+	padding:0 0 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content h3 {
+	background:#C4E0F0;
+	font-size:18px;
+	margin:0 0 15px 0;
+	padding:5px;
+	border-left:#3399CC solid 5px;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content h3 small {
+	font-size:16px;
+	font-weight:normal;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content h3 small a {
+	text-decoration:underline;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content h3 small a:hover {
+	text-decoration:none;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content h3 span.txt-icon {
+	font-size:12px;
+	font-weight:normal;
+	line-height:1;
+	color:#FFF;
+	background:#990000;
+	padding:5px 10px;
+	margin:0 10px 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents h4 {
+	font-size:18px;
+	margin:0 0 5px 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents h4 small {
+	font-size:14px;
+	font-weight:normal;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.data {
+	margin:0 0 15px 0;
+	padding:0 0 0 0;
+	font-size:14px;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.data dl dt {
+	clear: both;
+	width:90px;
+	float:left;
+	color:#666666;
+	margin:0 0 10px 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.data dl dd {
+	border-left: 1px solid #CCCCCC;
+	float:right;
+	width:560px;
+	padding:0 0 0 10px;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.photos {
+	margin:0 15px 15px 15px;
+	padding:0 0 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.photos ul li {
+	float:left;
+	margin:0 12px 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.photos ul li.last {
+	margin:0 0 0 0;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content ul li {
+	background: url(../img/icon_c.gif) no-repeat 0 10px;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents section.content ul.important li {
+	background: url(../img/icon_c.gif) no-repeat 0 12px;
+	font-size: 16px;
+	margin: 0;
+	padding: 0 0 0 10px;
+}
+
+#container.rental.film.r-individual #maincontents section.body section.contents section.content.frame {
+	margin:0 15px 25px 15px;
+	padding:10px;
+	border:#999 solid 3px;
+}
+#container.rental.film.r-individual #maincontents section.body section.contents p.frame {
+	margin:0 0 15px 0;
+	padding:10px;
+	border:#999 solid 3px;
+}
+
+table.simple {
+	margin:0 0 20px 0;
+}
+table.simple th {
+	text-align:center;
+}
+
+table.cautions {
+	margin:0 0 20px 0;
+    border: none;
+    width: 100%;
+}
+table.cautions th {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #3399CC;
+    padding: 5px 10px;
+    text-align: center;
+	vertical-align: middle;
+	border: none;
+	color:#FFF;
+	width:80px;
+	font-weight:normal;
+	font-size:14px;
+}
+table.cautions td {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    padding: 0 10px;
+    text-align: left;
+	border: none;
+}
+
+/*rental news*/
+#container.film.rental.list #maincontents section.posts.news article.post {
+	margin:0 0 10px 0;
+	padding:0 0 10px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.film.rental.list #maincontents section.posts.news article.post header {
+	float:left;
+	width:440px;
+}
+#container.film.rental.list #maincontents section.posts.news article.post header.noimg {
+	margin-bottom:0;
+	float:none;
+	width:auto;
+}
+#container.film.rental.list #maincontents section.posts.news article.post header h2 {
+	font-weight:normal;
+	font-size:18px;
+}
+#container.film.rental.list #maincontents section.posts.news article.post header h2 a {
+	text-decoration:underline;
+	color:#267499;
+}
+#container.film.rental.list #maincontents section.posts.news article.post header h2 a:hover {
+	text-decoration:none;
+}
+#container.film.rental.list #maincontents section.posts.news article.post header time {
+	margin:0 0 5px 0;
+	
+}
+#container.film.rental.list #maincontents section.posts.news article.post figure {
+	float:right;
+	width:200px;
+	height:140px;
+}
+#container.film.rental.list #maincontents section.posts.news article.post p {
+	margin:0 0 25px 0;
+	font-size:16px;
+}
+#container.film.rental.list #maincontents section.posts.news footer {
+	text-align:right;
+	font-size:16px;
+}
+#container.film.rental.list #maincontents section.posts.news footer a {
+	color:#333;
+}
+
+
+/*table*/
+table.simple th.font-s {
+	font-size:12px;
+}
+table.simple td.pdf p {
+	background: url(../img/icon_file_pdf.gif) no-repeat;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 64px;
+	height:64px;
+	line-height:60px;
+}
+table.simple td.word p {
+	background: url(../img/icon_file_word.gif) no-repeat;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 64px;
+	height:64px;
+	line-height:60px;
+}
+
+/*banner*/
+
+.banner{
+	text-align:center;
+	margin:0 0 30px;
+}
+

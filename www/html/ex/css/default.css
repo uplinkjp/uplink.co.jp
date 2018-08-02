@@ -1,0 +1,391 @@
+@charset "utf-8";
+
+/*Settings*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+body {
+	line-height: 1;
+	-webkit-text-size-adjust : none;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+:focus {
+	outline: 0;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	border: none;
+	vertical-align:bottom;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display : block;
+}
+h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, div{
+	text-align : justify;
+	text-justify : inter-ideograph;
+}
+
+/*Bace Design*/
+* html body
+, *:first-child+html body {
+	font-family: 'Verdana','メイリオ', Meiryo, sans-serif;
+}
+body {
+	background:#EEE8E8;
+	color:#333;
+	font-family:'Verdana','メイリオ','ＭＳ Ｐゴシック','ＭＳ ゴシック','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','Meiryo',Osaka,Osaka-等幅,sans-serif;
+	font-size: 14px;
+	line-height:1.4;
+}
+strong {
+	font-weight:800;
+}
+form label {
+	font-weight:800;
+}
+hr {
+	border-color: #DDDDDD;
+	border-style: solid;
+	border-width: 1px 0 0 0;
+	height: 1px;
+	margin: 0 0 20px 0;
+}
+blockquote{
+	background:#DDDDDD;
+	padding:15px;
+	margin:0 0 20px 0;
+}
+p {
+	line-height:1.6;
+}
+
+/* link */
+a {
+	outline:0;
+	-webkit-tap-highlight-color:#FFFFCC;
+}
+a:link {
+	color:#007B7B;
+	text-decoration:underline;
+}
+a:visited {
+	color:#007B7B;
+	text-decoration:underline;
+}
+a:hover {
+	color:#009999;
+	text-decoration:none;
+}
+
+h1 a:link, h2 a:link, h3 a:link, h4 a:link, h5 a:link, h6 a:link ,ul li a:link,dl dd a:link,dl dt a:link{
+	color:#333;
+	text-decoration:none;
+}
+h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 :visited, h6 a:visited ,ul li a:visited,dl dd a:visited,dl dt a:visited{
+	color:#333;
+	text-decoration:none;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover ,ul li a:hover,dl dd a:hover,dl dt a:hover{
+	color:#666;
+	text-decoration:underline;
+}
+
+#news dl dd a{
+	color:#333;
+	text-decoration:none;
+}
+#news dl dd a:hover{
+	color:#666;
+	text-decoration: underline;
+}
+
+
+/* class */
+.hide-txt {
+	display:block;
+	overflow:hidden;
+	text-indent:-5000px;
+}
+.r{
+	float:right;
+	margin:0 0 20px 20px;
+}
+.l{
+	float:left;
+	margin:0 20px 20px 0;
+}
+br.clear {
+	clear:both;
+}
+a.target {
+    background: url("../img/icon_blank.gif") no-repeat scroll right 3px;
+    padding: 0 18px 0 0;
+	color:#333;
+}
+a.target:hover {
+	color:#666;
+}
+a.arrow {
+    background: url("../img/icon_link_arrow.gif") no-repeat scroll left 4px;
+    padding: 0 0 0 15px;
+	color:#333;
+}
+a.arrow:hover {
+	color:#666;
+}
+p.center{
+	text-align:center;
+}
+p.left{
+	text-align:left;
+}
+p.right{
+	text-align:right;
+}
+
+/*twitter*/
+.twtr-widget, .twtr-hd h4, .twtr-tweet-text p, .twtr-widget p {
+	line-height:1.6 !important;
+    font-family: "Verdana","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","Meiryo","メイリオ","ＭＳ Ｐゴシック","Osaka",sans-serif !important;
+}
+.twtr-tweet-text p {
+	line-height:1.6 !important;
+	font-size:12px;
+}
+.twtr-hd{
+	padding:0 10px 10px 10px !important;
+}
+.twtr-ft {
+    display: none;
+}
+.twtr-bd, .twtr-doc {
+    background: none repeat scroll 0 0 transparent !important;
+}
+.twtr-timeline {
+    height: 270px !important;
+}
+.twtr-tweet-text {
+    font-family: 'Verdana','メイリオ','ＭＳ Ｐゴシック','ＭＳ ゴシック','Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','Meiryo',Osaka,Osaka-等幅,sans-serif;
+}
+.twtr-profile-img{
+	width:48px !important;
+	height:48px !important;
+}
+.twtr-widget.twtr-widget-profile .twtr-doc .twtr-hd  h3,
+.twtr-widget.twtr-widget-profile .twtr-doc .twtr-hd  h4{
+	margin:0 0 0 55px !important;
+}
+#twtr-widget-1 .twtr-tweet .twtr-tweet-text em a {
+	color:#999 !important;
+	font-size:10px;
+}
+.twtr-widget .twtr-tweet{
+	margin:0 0 10px 0;
+}
+
+/*clearfix*/
+.clearfix:after {
+	content: ".";  /* 新しい要素を作る */
+	display: block;  /* ブロックレベル要素に */
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix {
+  min-height: 1px;
+}
+* html .clearfix {
+  height: 1px;
+  /*¥*//*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+/*table*/
+table.simple {
+    width: 100%;
+    border: 1px #999 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table.simple th {
+    padding: 5px 10px;
+    border: #999 solid;
+    border-width: 0 0 1px 1px;
+    background: #F5F5F5;
+    font-weight: bold;
+    text-align: left;
+}
+table.simple td {
+    padding: 5px 10px;
+    border: 1px #999 solid;
+    border-width: 0 0 1px 1px;
+    text-align: left;
+}
+table.simple small {
+	font-size:12px;
+}
+table.simple small.blue {
+	color:#0000d5;
+}
+
+/*form*/
+.form form{
+	margin:0 0 15px 0;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="submit"],
+.form textarea,
+.form .dropdown {
+	font-family:'メイリオ', Meiryo, sans-serif;
+	border:1px solid #999;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding:10px 5px;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="submit"],
+.form .dropdown {
+	font-size:16px;
+}
+.form input[type="submit"] {
+	cursor: pointer;
+}
+.form input[type="text"],
+.form input[type="email"],
+.form textarea,
+.form .dropdown{
+/* Webkit */
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		from(#eee),
+		to(#fff)
+		);
+/* Firefox */
+	background: -moz-linear-gradient(
+		top,
+		#eee,
+		#fff
+		);
+/* IE */
+	filter:progid:DXImageTransform.Microsoft.gradient
+        (startColorstr=#ffeeeeee,endColorstr=#ffffffff);
+	zoom: 1;
+}
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus,
+.form input[type="text"]:hover,
+.form input[type="email"]:hover,
+.form textarea:hover,
+.form .dropdown:hover {
+	border:1px solid #666;
+}
+
+
+/*notfound*/
+.notfound{
+	background:#FFF;
+	margin:0 auto;
+	padding:200px 0;
+	text-align:center;
+}
+.notfound h1{
+	font-size:32px;
+	text-align:center;
+}
+.notfound h2{
+	font-size:16px;
+	font-weight:normal;
+	margin:0 0 10px 0;
+	text-align:center;
+}
+.notfound p{
+	text-align:center;
+}
+
+
+/*newmark*/
+span.newmark{
+	font-size:12px;
+	font-weight:normal;
+	color:#F36;
+	margin:0 0 0 10px;
+}
+
+/*WPキャプション*/
+div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.alignright {
+	margin:0 0 20px 20px;
+	display: inline;
+}
+div.alignleft {
+	margin:0 20px 20px 0;
+	display: inline;
+}
+.wp-caption {
+	text-align: center;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	font-size: 14px;
+	line-height: 1.4;
+	padding: 0 5px 5px;
+	margin: 0;
+}
+
+
+
+/* Facebook Like Box width: 100% */
+/*.fbcomments,
+.fb_iframe_widget,
+.fb_iframe_widget[style],
+.fb_iframe_widget iframe[style],
+.fbcomments iframe[style],
+.fb_iframe_widget span{
+    width: 100% !important;
+}*/

@@ -1,0 +1,289 @@
+/*#index-slider*/
+#index-slider #slider{
+	width:100%;
+	height:auto;
+	margin-top:20px;
+}
+#index-slider #slider ul.slides li img{
+	width:100%;
+	height:auto;
+}
+#index-slider #slider ul.flex-direction-nav li{
+	height:auto;
+}
+#index-slider #slider ul.flex-direction-nav li a{
+	height:100%;
+}
+#index-slider #slider ul.flex-direction-nav li a.flex-prev{
+	top: 0;
+	left: 0;
+}
+#index-slider #slider ul.flex-direction-nav li a.flex-next{
+	top: 0;
+	right: 0;
+}
+#index-slider #slider ul.flex-direction-nav li a.flex-prev{
+	background: url(../img/btn_slider_nav.png) 0 center no-repeat;
+}
+#index-slider #slider ul.flex-direction-nav li a.flex-next{
+	background: url(../img/btn_slider_nav.png) -50px center no-repeat;
+}
+#index-slider #slider-mini-padding{
+	display:none;
+}
+
+/*#calendar*/
+#calendar h1{
+	padding:15px 0 5px 0;
+	font-size:20px;
+}
+#calendar footer a{
+	background:url(../img/icon_arrow.gif) center 25px no-repeat;
+	font-size:16px;
+	line-height:20px;
+	height:60px;
+}
+#calendar footer a:hover{
+	background:url(../img/icon_arrow.gif) center -35px no-repeat;
+}
+
+/*#cloud*/
+#cloud{
+	margin:0 0 10px 0;
+}
+#cloud a.pc{
+	display: none;
+}
+#cloud a.sp{
+	display: block;
+}
+#cloud a.sp img{
+	width: 100%;
+	height: auto;
+	margin:2px 0 0 0;
+}
+
+/*#news*/
+#news{
+	margin:0 0 10px 0;
+	display: block;
+}
+#news h1{
+	display: block;
+	vertical-align: auto;
+	border-bottom:#594D59 solid 3px;
+	font-size:18px;
+	font-weight:normal;
+	width: auto;
+	background: transparent;
+	text-align:left;
+}
+#news h1 a{
+	color:#594D59;
+	text-decoration:none;
+}
+#news dl{
+	display: block;
+	width:100%;
+	padding:5px 0 0 0;
+}
+#news dl dt{
+	float:none;
+	margin:0 0 0 0;
+	width: auto;
+	color:#594D59;
+	font-size:12px;
+}
+
+#news dl dd{
+	float:none;
+	margin:0 0 10px 0;
+	width: auto;
+	font-size:12px;
+}
+
+/*#calendar*/
+#calendar nav ul li{
+	margin:0 5px 0 0;
+	font-size:12px;
+}
+#calendar nav ul li.all{
+	background:url(../img/icon_354D66.gif) 0 2px no-repeat;
+}
+#calendar nav ul li.movie{
+	background:url(../img/icon_3B8D51.gif) 0 2px no-repeat;
+}
+#calendar nav ul li.event{
+	background:url(../img/icon_536A9D.gif) 0 2px no-repeat;
+}
+#calendar nav ul li.gallery{
+	background:url(../img/icon_FC482A.gif) 0 2px no-repeat;
+}
+#calendar nav ul li.market{
+	background:url(../img/icon_00B79B.gif) 0 2px no-repeat;
+}
+/*#schedule-table*/
+#schedule-table {
+	margin:0;
+}
+#schedule-table dl.tbl {
+	width:100%;
+}
+#schedule-table dt.day {
+	float:left;
+	width:10%;
+	padding:0;
+	font-size:12px;
+}
+#schedule-table dt.day {
+	float:left;
+	width:10%;
+	padding:0;
+	font-size:12px;
+}
+#schedule-table dd.week-mon,
+#schedule-table dd.week-tue,
+#schedule-table dd.week-wed,
+#schedule-table dd.week-thu,
+#schedule-table dd.week-fri,
+#schedule-table dd.week-sat,
+#schedule-table dd.week-sun{
+	border-top:1px solid #CCC;
+	float:left;
+	width:90%;
+}
+#schedule-table dd.week-mon,
+#schedule-table dd.week-tue,
+#schedule-table dd.week-wed,
+#schedule-table dd.week-thu,
+#schedule-table dd.week-fri{
+	background:#F5F5F5;
+}
+	
+#schedule-table dd.week-mon,
+#schedule-table dd.week-tue,
+#schedule-table dd.week-wed,
+#schedule-table dd.week-thu,
+#schedule-table dd.week-fri,
+#schedule-table dd.week-sat,
+#schedule-table dd.week-sun{
+	width:90%;
+}
+#schedule-table dd section.item{
+	clear: both;
+}
+#schedule-table dd section.item header.title{
+	width:100%;
+	float:none;
+}
+#schedule-table dd section.item header.title{
+	width:100%;
+	float:none;
+}
+#schedule-table dd section.item header.title.title-movie {background:url(/ex/img/icon_3B8D51.gif) 4px 10px no-repeat;}
+#schedule-table dd section.item header.title.title-event {background:url(/ex/img/icon_536A9D.gif) 4px 10px no-repeat;}
+#schedule-table dd section.item header.title.title-gallery {background:url(/ex/img/icon_FC482A.gif) 4px 10px no-repeat;}
+#schedule-table dd section.item header.title.title-market {background:url(/ex/img/icon_00B79B.gif) 4px 10px no-repeat;}
+
+#schedule-table dd section.item header.title h2{
+	font-size:14px;
+	padding:5px 5px 5px 17px;
+}
+#schedule-table dd section.item ul.datas{
+	font-size:12px;
+	background: #FFF;
+	width:100%;
+	height:auto;
+	overflow:auto;
+	float:none;
+	clear:both;
+}
+#schedule-table dd section.item ul.datas li.data{
+	height:auto;
+	padding:5px 10px;
+	border-top: 1px dotted #CCC;
+}
+#schedule-table dd section.item ul.datas{
+	padding:0;
+	width:100%;
+	float:none;
+}
+#schedule-table dd section.item ul.datas li.data{
+	padding-left:5px;
+	padding-right:0;
+	clear:both;
+}
+#schedule-table dd section.item ul.datas li.data:after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 1px;
+    overflow: hidden;
+}
+/*\*/
+* html #schedule-table dd section.item ul.datas li.data {
+    height: 1em;
+    overflow: visible;
+}
+/**/
+#schedule-table dd section.item ul.datas li .txt{
+	width:99%;
+}
+#schedule-table dd section.item ul.datas li.with-btn .txt,
+#schedule-table dd section.item ul.datas li.with-ticket .txt {
+	width:78%;/**/
+}
+#schedule-table dd section.item ul.datas li.with-btn.with-ticket .txt {
+	width:70%;
+}
+#schedule-table dd section.item ul.datas li.with-btn.with-ticket p.btn_preservation {
+	width:28%;
+}
+#schedule-table dd section.item ul.datas li.with-btn p.btn_preservation ,
+#schedule-table dd section.item ul.datas li.with-ticket p.btn_preservation  {
+	width:20%;/**/
+}
+#schedule-table dd section.item ul.datas li.with-ticket p.btn_preservation small {
+	color: #666;
+	font-size:14px;
+	line-height:24px;
+	text-align:center;
+	width:25%;
+	height:auto;
+	display:block;
+	margin-top:0;
+}
+#schedule-table dd section.item ul.datas li.with-ticket.with-btn p.btn_preservation small {
+	float:left;
+}
+#schedule-table dd section.item ul.datas li.with-btn p.btn_preservation a {
+	background: #900;
+	text-decoration: none;
+	text-align:center;
+	font-size:12px;
+	line-height:2;
+	color:#FFF;
+	width:100%;/**/
+	height:auto;
+	display:block;
+	margin-left:0;
+}
+#schedule-table dd section.item ul.datas li.with-ticket.with-btn p.btn_preservation a {
+	margin-left:0;
+	width:75%;/**/
+}
+#schedule-table dd section.item ul.datas li.with-btn p.btn_preservation span {
+	background:#666;
+	text-decoration: none;
+	text-align:center;
+	font-size:12px;
+	line-height:2;
+	color:#FFF;
+	width:100%;/**/
+	height:auto;
+	display:block;
+	margin-left:0;
+}
+#schedule-table dd section.item ul.datas li.with-ticket.with-btn p.btn_preservation span {
+	margin-left:0;
+}

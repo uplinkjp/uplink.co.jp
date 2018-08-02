@@ -1,0 +1,259 @@
+/*#maincontents .info*/
+#container.info #maincontents article.post {
+	margin:0 0 20px 0;
+}
+#container.info #maincontents article.post header h1 {
+	font-size:20px;
+}
+#container.info #maincontents section {
+	padding:0;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.info #maincontents section.body {
+	padding:15px;
+}
+#container.info #maincontents section.body h2 {
+	font-size:18px;
+}
+#container.info #maincontents section.body p {
+	font-size:14px;
+}
+#container.info #maincontents section.body ol {
+	margin:0 0 25px 0;
+}
+#container.info #maincontents section.body ol li {
+	font-size:14px;
+}
+
+/*contents*/
+#container.info #maincontents section.body section.contents h2 small {
+	font-size:14px;
+}
+#container.info #maincontents section.body section.contents section.content {
+	margin:0 0 25px 0;
+}
+#container.info #maincontents section.body section.contents section {
+	margin:0 0 25px 0;
+}
+#container.info #maincontents section.body section.contents section.content section {
+	margin:0 0 25px 0;
+	padding:0 0 0 0;
+}
+#container.info #maincontents section.body section.contents section.content h3 {
+	font-size:16px;
+}
+#container.info #maincontents section.body section.contents section.content h3 small {
+	font-size:14px;
+}
+#container.info #maincontents section.body section.contents section.content h3 span.txt-icon {
+	font-size:12px;
+	margin:0 5px 0 0;
+}
+#container.info #maincontents section.body section.contents h4 {
+	font-size:14px;
+}
+#container.info #maincontents section.body section.contents h4 small {
+	font-size:12px;
+	font-weight:normal;
+}
+#container.info #maincontents section.body section.contents h4 small {
+	font-size:12px;
+	font-weight:normal;
+}
+#container.info #maincontents section.body section.contents section.data {
+	margin:0 0 15px 0;
+	padding:0 0 0 0;
+	font-size:12px;
+}
+#container.info #maincontents section.body section.contents section.data dl dt {
+	clear: both;
+	width:70px;
+	float:left;
+	color:#666666;
+	margin:0 0 10px 0;
+}
+#container.info #maincontents section.body section.contents section.data dl dd {
+	border-left: 1px solid #CCCCCC;
+	float:right;
+	width:180px;
+	padding:0 0 0 10px;
+}
+#container.info #maincontents section.body section.contents section.photos {
+	margin:0 0 10px 0;
+}
+#container.info #maincontents section.body section.contents section.photos ul li {
+	margin:0 10px 10px 0;
+}
+#container.info #maincontents section.body section.contents section.photos ul li img {
+	width:125px;
+	height:125px;
+}
+#container.info #maincontents section.body section.contents section.photos ul li.last {
+	margin:0 0 0 0;
+}
+
+
+#container.info #maincontents section.body section.contents section.content ul li {
+	background: url(../img/icon_c.gif) no-repeat 0 8px;
+	font-size: 12px;
+}
+#container.info #maincontents section.body section.contents section.content ul.important li {
+	background: url(../img/icon_c.gif) no-repeat 0 8px;
+	font-size: 12px;
+}
+
+#container.info #maincontents section.body section.contents section.content.frame {
+	margin:0 0 25px 0;
+}
+
+/*info*/
+#container.info #maincontents section.body img.logo {
+	width:120px;
+	height:120px;
+}
+
+/*table*/
+table.simple {
+	font-size:14px;
+	width:100%;
+}
+table.simple th, table.simple td {
+	padding:5px;
+}
+table.simple th.day {
+	width:50px;
+}
+table.simple td.charge {
+	width:70px;
+	text-align:right;
+}
+table.simple td.time {
+	width:40px;
+}
+table.simple td.pdf p {
+	background: none;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 0;
+	height: auto;
+	line-height: 1.6;
+}
+table.simple td.word p {
+	background: none;
+	margin:0 0 0 0 !important;
+	padding:0 0 0 0;
+	height: auto;
+	line-height: 1.6;
+}
+
+/*twitter*/
+#container.info #maincontents section.body section.tw-accounts section.tw-account {
+	margin:0 0 15px 0;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account figure {
+	display:none;
+	float:none;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account p {
+	width:100%;
+	float:none;
+	overflow:hidden;
+}
+#container.info #maincontents section.body section.tw-accounts section.tw-account p a.twitter-follow-button {
+	display:none !important;
+}
+
+/*map*/
+#container.info #maincontents section.body #map {
+	display:none;
+}
+#container.info #maincontents section.body #m-map {
+	display: block;
+	text-align:center;
+}
+#container.info #maincontents section.body #m-map .btn {
+	margin:10px 0 25px;
+	background:#8C7B8C;
+}
+#container.info #maincontents section.body #m-map .btn a {
+	color:#FFF;
+	text-align:center;
+	text-decoration:none;
+	display: block;
+	width:100%;
+	height:50px;
+	line-height:50px;
+}
+#container.info #maincontents section.body section.guide {
+	margin:0 0 20px 0;
+}
+#container.info #maincontents section.body section.guide ul li {
+	float:none;
+	margin:0 0 0 0;
+	text-align:center;
+}
+#container.info #maincontents section.body section.guide ul li figure img {
+	margin:0 0 0 0;
+	width:70%;
+	height:auto;
+}
+#container.info #maincontents section.body section.guide ul li legend {
+	margin:5px 0;
+	text-align:center;
+	width:100%;
+}
+
+/*privacypolicy*/
+#container.info.privacypolicy #maincontents section.body section.contents dl dt{
+	font-size:14px;
+}
+#container.info.privacypolicy #maincontents section.body section.contents dl dd{
+	font-size:12px;
+}
+#container.info.privacypolicy #maincontents section.body section.contents ul li{
+	font-size:14px;
+}
+
+/*form*/
+#container.info #maincontents section.body .form {
+	margin:0 0 25px;
+}
+#container.info #maincontents section.body .form input{
+	font-size:16px;
+}
+#container.info #maincontents section.body .form div.email input{
+	padding:10px 2%;
+	width:95.5%;
+}
+#container.info #maincontents section.body .form form div.email{
+	margin:0 0 5px 0;
+	padding:0 0 0 0;
+	float:none;
+	width:100%;
+}
+#container.info #maincontents section.body .form form div.submit{
+	float:none;
+	width:100%;
+}
+
+/*info chronology*/
+dl.chronology {
+	font-size:12px;
+}
+dl.chronology dt {
+	width:90px;
+	font-size:14px;
+}
+dl.chronology dd {
+	width:180px;
+	font-size:12px !important;
+}
+
+/*uplink-logo*/
+.uplink-logo{
+	margin:0 0 5px 5px;
+}
+.uplink-logo img{
+	width:120px;
+	height:120px;
+}

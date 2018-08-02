@@ -1,0 +1,150 @@
+/*#maincontents .reserv*/
+#container.reserv #maincontents{
+	border-top:#95C600 solid 5px;
+}
+#container.reserv #maincontents article.post {
+	margin:0 0 50px 0;
+}
+#container.reserv #maincontents article.post header {
+	margin:0 15px;
+	padding:0 0 5px 0;
+	border-bottom:#ccc solid 1px;
+}
+#container.reserv #maincontents article.post header h1 {
+	font-size:24px;
+}
+#container.reserv #maincontents section {
+	padding:15px;
+	font-size:16px;
+	line-height:1.6;
+}
+#container.reserv #maincontents section p {
+	margin:0 0 15px 0;
+}
+#container.reserv #maincontents section p.right {
+	text-align:right;
+}
+#container.reserv #maincontents section.body {
+	padding:15px;
+}
+#container.reserv #maincontents section.body h2 {
+	font-size:22px;
+	margin:0 0 5px 0;
+}
+
+/*contents*/
+#container.reserv #maincontents section.body section.contents {
+	margin:45px 0;
+	padding:0 0 0 0;
+}
+#container.reserv #maincontents section.body section.contents h2 {
+	margin:0 0 20px 0;
+	padding:0 0 5px 0;
+	border-bottom:#CCC solid 1px;
+}
+#container.reserv #maincontents section.body section.contents section.content ul.important {
+	margin:0 0 15px 0;
+}
+#container.reserv #maincontents section.body section.contents section.content ul.important li {
+	background:url(../img/icon_95C600.gif) 0 7px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+
+
+
+/*#sidearea*/
+#container.reserv #sidearea{
+	border-top:#95C600 solid 5px;
+}
+#container.reserv #sidearea aside.box ul.categorys{
+	margin-bottom:20px;
+}
+#container.reserv #sidearea aside.box ul.categorys li{
+	background:url(../img/icon_95C600.gif) 0 7px no-repeat;
+	margin:0 0 10px 0;
+	padding:0 0 0 15px;
+	font-size:16px;
+}
+
+
+
+/*form*/
+#container.reserv #maincontents section.body .form {
+	margin:0 0 25px;
+}
+#container.reserv #maincontents section.body .form div {
+	margin:0 0 15px;
+}
+#container.reserv #maincontents section.body .form div label {
+	display:block;
+	font-weight:normal;
+	margin:0 0 5px 0;
+}
+#container.reserv #maincontents section.body .form div .radio-btn {
+	display:block;
+	margin:0 0 50px 0;
+}
+#container.reserv #maincontents section.body .form div .radio-btn input[type="radio"] {
+	width: auto;
+}
+#container.reserv #maincontents section.body .form div .radio-btn label {
+	display:inline;
+	margin-right:50px;
+}
+
+
+
+.form input {
+	width:628px;
+}
+.form select {
+	width:300px;
+}
+.form textarea{
+	width:628px;
+}
+#container.reserv #maincontents section.body .form input.submit {
+	background:#990000;
+	width:100%;
+	color:#FFF;
+	border:none;
+	display:block;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="submit"],
+.form textarea,
+.form .dropdown {
+	font-size:18px;
+}
+
+/*table*/
+table.simple-black {
+    width: 100%;
+    border: 1px #333 solid;
+    border-collapse: collapse;
+    border-spacing: 0;
+	margin:0 0 30px 0;
+}
+table.simple-black th {
+	width:100px;
+    padding: 5px 10px;
+    border: #333 solid;
+    border-width: 0 0 1px 1px;
+    background: #F5F5F5;
+    font-weight: normal;
+    text-align: left;
+}
+table.simple-black th.h {
+    background: #333;
+	color:#FFF;
+}
+table.simple-black td {
+    padding: 5px 10px;
+    border: 1px #333 solid;
+    border-width: 0 0 1px 1px;
+    text-align: left;
+}
