@@ -1,1 +1,0 @@
-# CINRA WP Bootstrap
