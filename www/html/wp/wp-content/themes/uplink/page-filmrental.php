@@ -1,7 +1,4 @@
-<?php
-/* Template Name: 配給作品 自主上映 */
-//get_header('film');
-?>
+<?php /* Template Name: 配給作品 自主上映 */?>
 	
 <?php require $_SERVER['DOCUMENT_ROOT'] . ("/ex/inc/_head_meta.inc.php");?>
 <?php require $_SERVER['DOCUMENT_ROOT'] . ("/ex/inc/_head_linkfile.inc.php");?>
