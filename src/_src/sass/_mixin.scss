@@ -1,0 +1,67 @@
+//
+// sassのmixinはここに記載
+//
+
+// clearfix
+@mixin clearfix {
+  *zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// texthidden
+@mixin texthidden {
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+// calc-vw
+@function calc-vw($size, $viewport:375){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// placeholder color
+@mixin placeholderColor($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// letter-spacing
+@mixin letter-spacing($tracking) {
+  letter-spacing: $tracking / 1000 + em;
+}
+
+// media query
+@mixin mqPC {
+  @media screen and (min-width: 415px) {
+    @content;
+  }
+}
+@mixin mqSP {
+  @media screen and (max-width: 414px) {
+    @content;
+  }
+}
