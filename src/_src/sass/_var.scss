@@ -2,12 +2,61 @@
 // 共通の変数はここに記載
 //
 
-// color
-// $c_green: #43b03e;
-// $c_dark_green: #2a853a;
-// $c_light_green: rgba($c_green, .6);
-// $c_light_green: #a2d088;
-// $c_twitter: #5eaadf;
-// $c_facebook: #395898;
-// $c_gray: #cdcdcd;
-// $c_black: #000;
+//
+// COLOR
+//
+// 背景色
+$c_bg_light: #212121; // UPLINK Light
+$c_bg_light_bottom: #E8E8E8; // UPLINK Light
+$c_bg_dark: #212121 // UPLINK Dark
+$c_bg_shibuya: #EEE8E8; //UPLINK 渋谷
+$c_bg_joji: #E8EEE8; // UPLINK 吉祥寺
+
+// 共通テキスト
+$c_text_primary: $rgba(0, 0, 0, .87); // プライマリーテキスト
+$c_text_secondary: rgba(0, 0, 0, .6); // セカンダリーテキスト
+$c_text_w: #FFFFFF; // 白抜きテキスト
+$c_text_link: #007B7B; // リンクテキスト
+
+// ヘッダー
+$c_header_bg: #3C3C3C;
+$c_header_text: #000000;
+$c_shibuya_header_bg: #64276A;
+$c_shibuya_header_text: #A4DE9A;
+$c_joji_header_bg: #A4DE9A;
+$c_joji_header_text: #64276A;
+
+// グロナビボタン色
+$c_nav_shibuya_bg: #64276A; // UPLINK 渋谷
+$c_nav_shibuya_text: #A4DE9A; // UPLINK 渋谷
+$c_nav_joji_bg: #A4DE9A; // UPLINK 吉祥寺
+$c_nav_joji_text: #64276A; // UPLINK 吉祥寺
+$c_nav_related_bg: #FFFFFF; // UPLINK Cloud など関連サービス
+$c_nav_related_text: rgba(0, 0, 0, .87); // UPLINK Cloud など関連サービス
+$c_nav_movies_bg: #3B8D51; // 上映
+$c_nav_movies_text: #FFFFFF; // 上映
+$c_nav_events_bg: #536A9D; // イベント
+$c_nav_events_text: #FFFFFF; // イベント
+$c_nav_gallery_bg: #FA5032; // ギャラリー
+$c_nav_gallery_text: #FFFFFF; // ギャラリー
+$c_nav_market_bg: #00AD93; // マーケット
+$c_nav_market_text: #FFFFFF; // マーケット
+$c_nav_cafe_bg: #ED418C; // カフェ
+$c_nav_cafe_text: #FFFFFF; // カフェ
+$c_nav_map_bg: #674F27; // 地図
+$c_nav_map_text: #FFFFFF; // 地図
+$c_nav_login_bg: #000000; // 会員ログイン
+$c_nav_login_text: #FFFFFF; // 会員ログイン
+$c_nav_default_bg: #BFBFBF; // その他汎用
+$c_nav_default_text: rgba(0, 0, 0, .87); // その他汎用
+
+// カレンダー
+$c_weekday: #B2B2B2; // 平日
+$c_saturday: #2979FF; // 土曜
+$c_holiday: #FF1744; // 日祝
+
+// ボタン
+$c_button_purchase_bg: #FF1744; // 購入する
+$c_button_purchase_text: #FFFFFF; // 購入する
+$c_button_default_bg: #CCCCCC; // その他
+$c_button_default_text: rgba(0, 0, 0, .87); // その他

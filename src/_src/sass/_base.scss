@@ -5,3 +5,13 @@
 body {
   font-family: $font-default;
 }
+
+a {
+  transition: opacity .225s cubic-bezier(.8, 0, .3, 1); // 早めの速度でサイト共通のイージング値
+}
+a:hover {
+  opacity: .7;
+  @include mqSP {
+    opacity: 1;
+  }
+}

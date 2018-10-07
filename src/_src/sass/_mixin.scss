@@ -55,13 +55,29 @@
 }
 
 // media query
-@mixin mqPC {
-  @media screen and (min-width: 415px) {
+@mixin mqSP {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
-@mixin mqSP {
-  @media screen and (max-width: 414px) {
+@mixin mqTB {
+  @media screen and (min-width: 768px) {
     @content;
   }
+}
+@mixin mqPC {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+// 長体
+@mixin text_narrow {
+  transform: scaleX(.88); transform-origin: left center;
+}
+
+// イージング
+@mixin transition {
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.8, 0, .3, 1);
 }
