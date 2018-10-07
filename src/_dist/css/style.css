@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700");
+@import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanjp.min.css");
+
 @charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -68,16 +72,79 @@ input[type="submit"]::focus,
 input[type="button"]::focus {
   outline-offset: -2px; }
 
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 300;
+  src: local("SpaceGrotesk-Light"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Light.woff") format("woff"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Light.otf") format("opentype"); }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: local("SpaceGrotesk-Regular"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Regular.woff") format("woff"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Regular.otf") format("opentype"); }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: local("SpaceGrotesk-Medium"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Medium.woff") format("woff"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Medium.otf") format("opentype"); }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: local("SpaceGrotesk-SemiBold"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-SemiBold.woff") format("woff"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-SemiBold.otf") format("opentype"); }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local("SpaceGrotesk-Bold"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Bold.woff") format("woff"), url("fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Bold.otf") format("opentype"); }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif; }
+  font-family: YakuHanJP, "Noto Sans JP", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+  min-width: 320px; }
 
 a {
-  transition: opacity 0.225s cubic-bezier(0.8, 0, 0.3, 1); }
+  transition: opacity 0.225s cubic-bezier(0.8, 0, 0.3, 1);
+  text-decoration: none; }
 
 a:hover {
   opacity: .7;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 767px) {
     a:hover {
       opacity: 1;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
+
+.l-footer {
+  background: #000000;
+  color: #FFFFFF; }
+  .l-footer a {
+    color: #FFFFFF; }
+
+.l-header {
+  background: #212121; }
+
+.l-nav a {
+  text-decoration: none; }
+
+.nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a {
+  display: block; }
+
+.nav-shibuya a {
+  background: #64276A;
+  color: #A4DE9A; }
+
+.nav-joji a {
+  background: #A4DE9A;
+  color: #64276A; }
+
+.nav-related a {
+  background: #FFFFFF;
+  color: rgba(0, 0, 0, 0.87); }
+
+.nav-default a {
+  background: #BFBFBF;
+  color: rgba(0, 0, 0, 0.87); }

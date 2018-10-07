@@ -3,11 +3,13 @@
 //
 
 body {
-  font-family: $font-default;
+  font-family: $f_default;
+  min-width: 320px;
 }
 
 a {
   transition: opacity .225s cubic-bezier(.8, 0, .3, 1); // 早めの速度でサイト共通のイージング値
+  text-decoration: none;
 }
 a:hover {
   opacity: .7;

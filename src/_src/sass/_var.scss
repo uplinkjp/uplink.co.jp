@@ -8,12 +8,12 @@
 // 背景色
 $c_bg_light: #212121; // UPLINK Light
 $c_bg_light_bottom: #E8E8E8; // UPLINK Light
-$c_bg_dark: #212121 // UPLINK Dark
+$c_bg_dark: #212121; // UPLINK Dark
 $c_bg_shibuya: #EEE8E8; //UPLINK 渋谷
 $c_bg_joji: #E8EEE8; // UPLINK 吉祥寺
 
 // 共通テキスト
-$c_text_primary: $rgba(0, 0, 0, .87); // プライマリーテキスト
+$c_text_primary: rgba(0, 0, 0, .87); // プライマリーテキスト
 $c_text_secondary: rgba(0, 0, 0, .6); // セカンダリーテキスト
 $c_text_w: #FFFFFF; // 白抜きテキスト
 $c_text_link: #007B7B; // リンクテキスト
@@ -21,10 +21,14 @@ $c_text_link: #007B7B; // リンクテキスト
 // ヘッダー
 $c_header_bg: #3C3C3C;
 $c_header_text: #000000;
-$c_shibuya_header_bg: #64276A;
-$c_shibuya_header_text: #A4DE9A;
-$c_joji_header_bg: #A4DE9A;
-$c_joji_header_text: #64276A;
+$c_header_bg_shibuya: #64276A;
+$c_header_text_shibuya: #A4DE9A;
+$c_header_bg_joji: #A4DE9A;
+$c_header_text_joji: #64276A;
+
+// フッター
+$c_footer_bg: #000000;
+$c_footer_text: #FFFFFF;
 
 // グロナビボタン色
 $c_nav_shibuya_bg: #64276A; // UPLINK 渋谷

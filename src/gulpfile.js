@@ -127,17 +127,12 @@ gulp.task('libs', function() {
     .pipe(gulp.dest(wpDir + 'js/libs'));
 });
 
-// mock =======================================================================
-gulp.task('mock', function() {
-    gulp.src([srcDir + '_mock/*'])
-    .pipe(gulp.dest(distDir + '_mock/'))
-    .pipe(gulp.dest(wpDir + '_mock/'));
-});
 
 // fonts =======================================================================
 gulp.task('fonts', function() {
     return gulp.src([srcDir +'fonts/**/*'])
-    .pipe(gulp.dest('../../www/html/fonts'))
+    .pipe(gulp.dest(distDir + 'css/fonts/'))
+    .pipe(gulp.dest(wpDir + 'css/fonts/'));
 });
 
 // clean =======================================================================

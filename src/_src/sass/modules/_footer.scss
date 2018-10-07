@@ -1,2 +1,7 @@
 .l-footer {
+  background: $c_footer_bg;
+  color: $c_footer_text;
+  a {
+    color: $c_footer_text;
+  }
 }

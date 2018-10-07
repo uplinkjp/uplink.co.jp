@@ -1,2 +1,43 @@
 .l-header {
+  background: $c_bg_light;
+}
+
+.l-nav {
+  a {
+    text-decoration: none;
+  }
+}
+%nav {
+  a {
+    display: block;
+  }
+}
+
+.nav-shibuya {
+  @extend %nav;
+  a {
+    background: $c_nav_shibuya_bg;
+    color: $c_nav_shibuya_text;
+  }
+}
+.nav-joji {
+  @extend %nav;
+  a {
+    background: $c_nav_joji_bg;
+    color: $c_nav_joji_text;
+  }
+}
+.nav-related {
+  @extend %nav;
+  a {
+    background: $c_nav_related_bg;
+    color: $c_nav_related_text;
+  }
+}
+.nav-default {
+  @extend %nav;
+  a {
+    background: $c_nav_default_bg;
+    color: $c_nav_default_text;
+  }
 }

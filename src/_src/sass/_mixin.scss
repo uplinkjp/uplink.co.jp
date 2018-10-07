@@ -71,11 +71,6 @@
   }
 }
 
-// 長体
-@mixin text_narrow {
-  transform: scaleX(.88); transform-origin: left center;
-}
-
 // イージング
 @mixin transition {
   transition-duration: .3s;

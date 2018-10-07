@@ -1,4 +1,88 @@
+//
 // fonts
+//
 
-$font-default: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+// Noto Sans JP Regular / Noto Sans JP Bold
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700');
 
+// YakuHanJP：ゴシック体（約物全部入り）
+@import url('https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanjp.min.css');
+
+// Space Grotesk Bold
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 300;
+  src: local('SpaceGrotesk-Light'), 
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Light.woff') format('woff'),
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Light.otf') format('opentype')
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: local('SpaceGrotesk-Regular'), 
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Regular.woff') format('woff'),
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Regular.otf') format('opentype')
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: local('SpaceGrotesk-Medium'), 
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Medium.woff') format('woff'),
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Medium.otf') format('opentype')
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: local('SpaceGrotesk-SemiBold'), 
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-SemiBold.woff') format('woff'),
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-SemiBold.otf') format('opentype')
+}
+@font-face {
+  font-family: "SpaceGrotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local('SpaceGrotesk-Bold'), 
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Bold.woff') format('woff'),
+    url('fonts/SpaceGrotesk-v1.1.0/SpaceGrotesk-Bold.otf') format('opentype')
+}
+
+$f_default: YakuHanJP, 'Noto Sans JP', 'Yu Gothic', YuGothic, 'Hiragino Kaku Gothic Pro', Meiryo, sans-serif;
+$f_sg: 'SpaceGrotesk', sans-serif;
+
+@mixin f_default {
+  font-family: $f_default;
+}
+// 長体
+@mixin f_narrow {
+  font-family: $f_default;
+  transform: scaleX(.88); transform-origin: left center;
+}
+
+@mixin f_sg {
+  font-family: $f_sg;
+  font-weight: 400;
+}
+
+@mixin f_sg_light {
+  font-family: $f_sg;
+  font-weight: 300;
+}
+
+@mixin f_sg_midium {
+  font-family: $f_sg;
+  font-weight: 500;
+}
+
+@mixin f_sg_semibold {
+  font-family: $f_sg;
+  font-weight: 600;
+}
+
+@mixin f_sg_bold {
+  font-family: $f_sg;
+  font-weight: 700;
+}
