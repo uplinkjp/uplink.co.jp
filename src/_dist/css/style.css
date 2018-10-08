@@ -104,7 +104,8 @@ input[type="button"]::focus {
 
 body {
   font-family: YakuHanJP, "Noto Sans JP", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
-  min-width: 320px; }
+  min-width: 320px;
+  background: #E8E8E8; }
 
 a {
   transition: opacity 0.225s cubic-bezier(0.8, 0, 0.3, 1);
@@ -118,33 +119,338 @@ a:hover {
       opacity: 1;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
 
+.l-followus {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 15px;
+  margin: 20px 0; }
+  .l-followus a {
+    color: #fff;
+    text-decoration: underline; }
+
+.followus-heading {
+  margin-bottom: 25px;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 16px; }
+
+.followus-sns {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin: 0 0 40px 0; }
+  .followus-sns li {
+    margin: 0 15px; }
+    .followus-sns li a {
+      display: inline-block;
+      font-size: 0;
+      overflow: hidden;
+      vertical-align: middle;
+      white-space: nowrap;
+      text-indent: 100%;
+      display: block; }
+      .followus-sns li a:after {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center; }
+    .followus-sns li.sns-tw a {
+      width: 20px;
+      height: 17px; }
+      .followus-sns li.sns-tw a:after {
+        background-image: url(../img/icon-sns_twitter.png);
+        width: 20px;
+        height: 17px;
+        background-size: 20px auto; }
+    .followus-sns li.sns-fb a {
+      width: 18px;
+      height: 18px; }
+      .followus-sns li.sns-fb a:after {
+        background-image: url(../img/icon-sns_facebook.png);
+        width: 18px;
+        height: 18px;
+        background-size: 18px auto; }
+    .followus-sns li.sns-in a {
+      width: 18px;
+      height: 18px; }
+      .followus-sns li.sns-in a:after {
+        background-image: url(../img/icon-sns_instagram.png);
+        width: 18px;
+        height: 18px;
+        background-size: 18px auto; }
+    .followus-sns li.sns-yt a {
+      width: 22px;
+      height: 15px; }
+      .followus-sns li.sns-yt a:after {
+        background-image: url(../img/icon-sns_youtube.png);
+        width: 22px;
+        height: 15px;
+        background-size: 22px auto; }
+
 .l-footer {
   background: #000000;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  text-align: center;
+  padding: 40px 15px 50px 15px; }
   .l-footer a {
     color: #FFFFFF; }
+
+.footer-logo {
+  margin-bottom: 40px; }
+  .footer-logo img {
+    width: 40px; }
+
+.footer-nav {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 50px; }
+  .footer-nav li {
+    margin-bottom: 25px; }
+    .footer-nav li:last-child {
+      margin-bottom: 0; }
+
+.footer-copy {
+  font-size: 12px;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 700; }
 
 .l-header {
   background: #212121; }
 
-.l-nav a {
-  text-decoration: none; }
+.header-inner {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: #3C3C3C; }
 
-.nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a {
+.header-logo a {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+  .header-logo a span {
+    width: 60px;
+    background: #212121; }
+  .header-logo a img {
+    width: 40px;
+    height: 60px; }
+  .header-logo a:after {
+    content: "";
+    display: inline-block;
+    width: 75px;
+    height: 20px;
+    padding: 0 0 0 20px;
+    background-repeat: no-repeat;
+    background-image: url(../img/logo_text.png);
+    background-position: center;
+    background-size: 75px auto; }
+
+.header-nav_trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background: red; }
+  .header-nav_trigger a {
+    display: inline-block;
+    font-size: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-indent: 100%;
+    display: block; }
+    .header-nav_trigger a:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/icon-menu-on.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 24px auto; }
+
+.section-heading {
+  padding: 25px 0;
+  font-size: 18px;
+  font-weight: 700; }
+  .section-heading span {
+    display: block;
+    font-size: 12px;
+    font-family: "SpaceGrotesk", sans-serif;
+    font-weight: 400;
+    margin: 5px 0 0 0; }
+
+.list-news li {
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 20px 0; }
+  .list-news li:last-child {
+    margin-bottom: 0; }
+
+.list-news-date {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 12px;
+  margin-bottom: 10px;
   display: block; }
+
+.list-news-inner {
+  display: -ms-flexbox;
+  display: flex; }
+  .list-news-inner dt {
+    color: rgba(0, 0, 0, 0.87);
+    line-height: 1.5;
+    font-size: 15px; }
+
+.list-related li {
+  margin-bottom: 5px; }
+  .list-related li:last-child {
+    margin-bottom: 0; }
+
+.list-tag {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 20px 0; }
+  .list-tag li {
+    margin: 0 5px 0 0;
+    height: 24px; }
+
+.tag-movies, .tag-events, .tag-gallery, .tag-market {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 7px; }
+
+.tag-movies {
+  background: #3B8D51; }
+
+.tag-events {
+  background: #536A9D; }
+
+.tag-gallery {
+  background: #FA5032; }
+
+.tag-market {
+  background: #00AD93; }
+
+.list-calendar-header {
+  padding: 20px 0;
+  margin: 0 0 5px 0;
+  background: #fff;
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  border-top: 4px solid #B2B2B2; }
+  .list-calendar-header span {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #B2B2B2; }
+  .list-calendar-header.is-holiday {
+    border-color: #FF1744; }
+    .list-calendar-header.is-holiday span {
+      color: #FF1744; }
+  .list-calendar-header.is-saturday {
+    border-color: #2979FF; }
+    .list-calendar-header.is-saturday span {
+      color: #2979FF; }
+
+.list-calendar li {
+  background: #fff;
+  margin-bottom: 5px; }
+
+.list-readmore {
+  margin-top: 5px; }
+  .list-readmore a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.87);
+    padding: 20px 0;
+    font-family: "SpaceGrotesk", sans-serif;
+    font-weight: 700;
+    background: #fff; }
+    .list-readmore a:after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin: 0 0 0 5px;
+      background-repat: no-repeat;
+      background-image: url(../img/arrow-default.png);
+      background-size: 13px auto; }
+
+.l-nav {
+  padding: 20px 0; }
+  .l-nav a {
+    text-decoration: none; }
+
+.list-related, .nav-shibuya, .nav-joji, .nav-related, .nav-default {
+  margin-bottom: 5px; }
+  .list-related:last-child, .nav-shibuya:last-child, .nav-joji:last-child, .nav-related:last-child, .nav-default:last-child {
+    margin-bottom: 0; }
+  .list-related a, .nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a {
+    display: block;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box; }
+    .list-related a img, .nav-shibuya a img, .nav-joji a img, .nav-related a img, .nav-default a img {
+      display: block; }
+    .list-related a p, .nav-shibuya a p, .nav-joji a p, .nav-related a p, .nav-default a p {
+      font-family: YakuHanJP, "Noto Sans JP", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+      transform: scaleX(0.88);
+      transform-origin: left center;
+      font-size: 18px;
+      font-weight: 700; }
+    .list-related a span, .nav-shibuya a span, .nav-joji a span, .nav-related a span, .nav-default a span {
+      font-family: "SpaceGrotesk", sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      margin-top: 7px; }
+    .list-related a:after, .nav-shibuya a:after, .nav-joji a:after, .nav-related a:after, .nav-default a:after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px auto; }
 
 .nav-shibuya a {
   background: #64276A;
-  color: #A4DE9A; }
+  color: #A4DE9A;
+  width: 100%;
+  height: 124px; }
+  .nav-shibuya a:after {
+    background-image: url(../img/arrow-shibuya.png); }
 
 .nav-joji a {
   background: #A4DE9A;
-  color: #64276A; }
+  color: #64276A;
+  width: 100%;
+  height: 124px; }
+  .nav-joji a:after {
+    background-image: url(../img/arrow-joji.png); }
 
 .nav-related a {
   background: #FFFFFF;
   color: rgba(0, 0, 0, 0.87); }
+  .nav-related a:after {
+    background-image: url(../img/arrow-default.png); }
 
 .nav-default a {
   background: #BFBFBF;
   color: rgba(0, 0, 0, 0.87); }
+  .nav-default a:after {
+    background-image: url(../img/arrow-default.png); }

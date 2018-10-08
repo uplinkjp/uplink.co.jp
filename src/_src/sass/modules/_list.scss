@@ -1,0 +1,133 @@
+// お知らせ
+.list-news {
+  li {
+    background: #fff;
+    margin-bottom: 5px;
+    padding: 20px 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.list-news-date {
+  color: $c_text_secondary;
+  font-size: 12px;
+  margin-bottom: 10px;
+  display: block;
+}
+.list-news-inner {
+  display: flex;
+  dt {
+    color: $c_text_primary;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+}
+
+// 関連サービス
+.list-related {
+  @extend %nav;
+  li {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// タグ
+.list-tag {
+  display: flex;
+  margin: 0 0 20px 0;
+  li {
+    margin: 0 5px 0 0;
+    height: 24px;
+  }
+}
+%tag {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 7px;
+}
+.tag-movies {
+  @extend %tag;
+  background: $c_nav_movies_bg;
+}
+.tag-events {
+  @extend %tag;
+  background: $c_nav_events_bg;
+}
+.tag-gallery {
+  @extend %tag;
+  background: $c_nav_gallery_bg;
+}
+.tag-market {
+  @extend %tag;
+  background: $c_nav_market_bg;
+}
+
+.list-calendar-header {
+  padding: 20px 0;
+  margin: 0 0 5px 0;
+  background: #fff;
+  @include f_sg_bold;
+  font-size: 28px;
+  border-top: 4px solid $c_weekday;
+  span {
+    font-size: 18px;
+    margin-left: 10px;
+    color: $c_weekday;
+  }
+  &.is-holiday {
+    border-color: $c_holiday;
+    span {
+      color: $c_holiday;
+    }
+  }
+  &.is-saturday {
+    border-color: $c_saturday;
+    span {
+      color: $c_saturday;
+    }
+  }
+}
+.list-calendar {
+  li {
+    background: #fff;
+    margin-bottom: 5px;
+  }
+}
+
+
+//
+// リスト下のボタン
+// <p class="list-readmore"><a href="">お知らせ一覧</a></p>
+//
+.list-readmore {
+  margin-top: 5px;
+  a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    color: $c_text_primary;
+    padding: 20px 0;
+    @include f_sg_bold;
+    background: #fff;
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin: 0 0 0 5px;
+      background-repat: no-repeat;
+      background-image: url(../img/arrow-default.png);
+      background-size: 13px auto;
+    }
+  }
+}

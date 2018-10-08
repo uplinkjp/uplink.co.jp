@@ -1,43 +1,59 @@
 .l-header {
   background: $c_bg_light;
 }
-
-.l-nav {
+.header-inner {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: $c_header_bg;
+}
+.header-logo {
   a {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    span {
+      width: 60px;
+      background: $c_bg_light;
+    }
+    img {
+      width: 40px;
+      height: 60px;
+    }    
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 75px;
+      height: 20px;
+      padding: 0 0 0 20px;
+      background-repeat: no-repeat;
+      background-image: url(../img/logo_text.png);
+      background-position: center;
+      background-size: 75px auto;
+    }
   }
 }
-%nav {
+
+.header-nav_trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background: red;
   a {
+    @include texthidden;
     display: block;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url(../img/icon-menu-on.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 24px auto;
+    }
   }
 }
 
-.nav-shibuya {
-  @extend %nav;
-  a {
-    background: $c_nav_shibuya_bg;
-    color: $c_nav_shibuya_text;
-  }
-}
-.nav-joji {
-  @extend %nav;
-  a {
-    background: $c_nav_joji_bg;
-    color: $c_nav_joji_text;
-  }
-}
-.nav-related {
-  @extend %nav;
-  a {
-    background: $c_nav_related_bg;
-    color: $c_nav_related_text;
-  }
-}
-.nav-default {
-  @extend %nav;
-  a {
-    background: $c_nav_default_bg;
-    color: $c_nav_default_text;
-  }
-}
+
