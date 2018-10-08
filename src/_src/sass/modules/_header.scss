@@ -1,4 +1,6 @@
 .l-header {
+  max-width: $max-width;
+  margin: 0 auto;
   padding: 0 $padding_wrap;
   .theme-main & {
     background: $c_bg_light;
