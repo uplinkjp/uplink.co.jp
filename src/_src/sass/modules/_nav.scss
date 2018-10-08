@@ -1,16 +1,29 @@
-
 .l-nav {
   padding: 20px 0;
-  a {
-    text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include mqTB {
+  }
+  @include mqPC {
+    flex-wrap: nowrap;
   }
 }
 %nav {
   margin-bottom: 5px;
+  width: 100%;
+  @include mqTB {
+    width: calc(50% - 2.5px);
+  }
+  @include mqPC {
+    width: 100%;
+    margin-right: 5px;
+  }
   &:last-child {
     margin-bottom: 0;
   }
   a {
+    text-decoration: none;
     display: block;
     position: relative;
     padding: 10px;
@@ -23,6 +36,7 @@
       @include f_narrow;
       font-size: 18px;
       font-weight: 700;
+      margin-bottom: 5px;
     }
     span {
       @include f_sg_bold;
@@ -41,6 +55,84 @@
       background-size: 20px auto;
     }
   }
+}
+.nav-wrap_pc {
+  width: 100%;
+  @include mqTB {
+    display: flex;
+    justify-content: space-between;
+    > div {
+      width: calc(50% - 2.5px);
+    }
+  }
+  @include mqPC {
+    display: block;
+    > div {
+      width: 100%;
+    }
+  }
+}
+.nav-wrap {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  > div {
+    width: calc(50% - 2.5px);
+    margin-right: 0;
+  }
+  @include mqTB {
+    width: calc(50% - 2.5px);
+  }
+  @include mqPC {
+    width: 100%;
+    margin-right: 5px;
+    > div {
+      width: calc(50% - 2.5px);
+    }
+  }
+}
+
+.nav-wrap-child {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  > div{
+    width: calc((100% - 10px) / 3);
+    &.nav-col-2 {
+      width: calc(((100% - 10px) / 3) * 2 + 5px);
+    }
+    &.nav-col-1 {
+      width: calc(((100% - 10px) / 3));
+    }
+  }
+  @include mqTB {
+    > div{
+      width: calc((100% - 20px) / 6);
+      &.nav-col-2 {
+        width: calc(((100% - 20px) / 6) * 2 + 5px);
+      }
+      &.nav-col-1 {
+        width: calc(((100% - 20px) / 6));
+      }
+    }
+  }
+  @include mqPC {
+    width: 100%;
+    > div{
+      margin-right: 0;
+      width: calc((100% - 10px) / 3);
+      &.nav-col-2 {
+        width: calc((100% - 5px) / 3 * 2 + 2.5px);
+      }
+      &.nav-col-1 {
+        width: calc((100% - 5px) / 3 - 2.5px);
+      }
+    }
+
+  }
+
 }
 
 .nav-shibuya {
@@ -72,6 +164,7 @@
   a {
     background: $c_nav_related_bg;
     color: $c_nav_related_text;
+    height: 60px;
     &:after {
       background-image: url(../img/arrow-default.png);
     }
@@ -82,8 +175,120 @@
   a {
     background: $c_nav_default_bg;
     color: $c_nav_default_text;
+    height: 60px;
     &:after {
       background-image: url(../img/arrow-default.png);
+    }
+  }
+  .theme-shibuya &,
+  .theme-joji & {
+    a {
+      padding-right: 5px;
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+%nav-child {
+  a {
+    p {
+      transform: none;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+
+.nav-movies {
+  @extend %nav;
+  @extend %nav-child;
+  a {
+    background: $c_nav_movies_bg;
+    color: $c_nav_movies_text;
+    height: 124px;
+    &:after {
+      background-image: url(../img/arrow-related.png);
+    }
+  }
+}
+.nav-events {
+  @extend %nav;
+  @extend %nav-child;
+  a {
+    background: $c_nav_events_bg;
+    color: $c_nav_events_text;
+    height: 124px;
+    &:after {
+      background-image: url(../img/arrow-related.png);
+    }
+  }
+}
+.nav-gallery {
+  @extend %nav;
+  @extend %nav-child;
+  a {
+    background: $c_nav_gallery_bg;
+    color: $c_nav_gallery_text;
+    height: 60px;
+    &:after {
+      background-image: url(../img/arrow-related.png);
+    }
+  }
+}
+.nav-market {
+  @extend %nav;
+  @extend %nav-child;
+  a {
+    background: $c_nav_market_bg;
+    color: $c_nav_market_text;
+    height: 60px;
+    &:after {
+      background-image: url(../img/arrow-related.png);
+    }
+  }
+}
+.nav-cafe {
+  @extend %nav;
+  @extend %nav-child;
+  a {
+    background: $c_nav_cafe_bg;
+    color: $c_nav_cafe_text;
+    height: 60px;
+    &:after {
+      background-image: url(../img/arrow-related.png);
+    }
+  }
+}
+.nav-map {
+  @extend %nav;
+  @extend %nav-child;
+  a {
+    background: $c_nav_map_bg;
+    color: $c_nav_map_text;
+    height: 60px;
+    &:after {
+      background-image: url(../img/arrow-related.png);
+    }
+  }
+  .theme-joji & {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+.nav-login {
+  @extend %nav;
+  a {
+    background: $c_nav_login_bg;
+    color: $c_nav_login_text;
+    height: 60px;
+    padding-right: 5px;
+    p {
+      font-size: 13px;
+    }
+    &:after {
+      background-image: url(../img/arrow-related.png);
     }
   }
 }

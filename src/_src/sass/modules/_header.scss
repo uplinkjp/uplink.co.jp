@@ -1,11 +1,28 @@
 .l-header {
-  background: $c_bg_light;
+  padding: 0 $padding_wrap;
+  .theme-main & {
+    background: $c_bg_light;
+  }
+  .theme-shibuya & {
+    background: $c_bg_shibuya;
+  }
+  .theme-joji & {
+    background: $c_bg_joji;
+  }
 }
 .header-inner {
   position: relative;
   width: 100%;
   height: 60px;
-  background: $c_header_bg;
+  .theme-main & {
+    background: $c_header_bg;
+  }
+  .theme-shibuya & {
+    background: $c_header_bg_shibuya;
+  }
+  .theme-joji & {
+    background: $c_header_bg_joji;
+  }
 }
 .header-logo {
   a {
@@ -13,22 +30,41 @@
     align-items: center;
     span {
       width: 60px;
-      background: $c_bg_light;
+      .theme-main & {
+        background: $c_bg_light;
+      }
+      .theme-shibuya & {
+        background: $c_bg_shibuya;
+      }
+      .theme-joji & {
+        background: $c_bg_joji;
+      }
     }
     img {
       width: 40px;
       height: 60px;
-    }    
+    }
     &:after {
       content: "";
       display: inline-block;
-      width: 75px;
       height: 20px;
       padding: 0 0 0 20px;
       background-repeat: no-repeat;
-      background-image: url(../img/logo_text.png);
       background-position: center;
-      background-size: 75px auto;
+      background-size: auto 20px;
+      .theme-main & {
+        background-image: url(../img/logo-text.png);
+        width: 75px;
+      }
+      .theme-shibuya & {
+        background-image: url(../img/logo-shibuya.png);
+        width: 120px;
+      }
+      .theme-joji & {
+        background-image: url(../img/logo-joji.png);
+        width: 140px;
+      }
+
     }
   }
 }
@@ -37,7 +73,7 @@
   position: absolute;
   right: 0;
   top: 0;
-  width: 40px;
+  width: 54px;
   height: 100%;
   a {
     @include texthidden;
@@ -47,10 +83,18 @@
       display: block;
       width: 100%;
       height: 100%;
-      background-image: url(../img/icon-menu-on.png);
       background-repeat: no-repeat;
-      background-position: right center;
+      background-position: center;
       background-size: 24px auto;
+      .theme-main & {
+        background-image: url(../img/icon-menu-on.png);
+      }
+      .theme-shibuya & {
+        background-image: url(../img/icon-menu-on_shibuya.png);
+      }
+      .theme-joji & {
+        background-image: url(../img/icon-menu-on_joji.png);
+      }
     }
   }
 }

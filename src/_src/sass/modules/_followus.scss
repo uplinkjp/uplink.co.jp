@@ -1,13 +1,35 @@
 .l-followus {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 80px 15px;
-  margin: 20px 0;
+  padding: 0 $padding_wrap;
   a {
-    color: #fff;
     text-decoration: underline;
   }
+}
+.followus-inner {
+  text-align: center;
+  padding: 80px $padding_wrap;
+  margin: 20px 0;
+  .theme-main & {
+    background: #000;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  .theme-shibuya & {
+    background: $c_nav_shibuya_bg;
+    color: $c_nav_shibuya_text;
+    a {
+      color: $c_nav_shibuya_text;
+    }
+  }
+  .theme-joji & {
+    background: $c_nav_joji_bg;
+    color: $c_nav_joji_text;
+    a {
+      color: $c_nav_joji_text;
+    }
+  }
+
 }
 .followus-heading {
   margin-bottom: 25px;
@@ -19,7 +41,6 @@
   align-items: center;
   justify-content: center;
   margin: 0 0 40px 0;
-
   li {
     margin: 0 15px;
     a {
@@ -37,10 +58,18 @@
         width: 20px;
         height: 17px;
         &:after {
-          background-image: url(../img/icon-sns_twitter.png);
           width: 20px;
           height: 17px;
           background-size: 20px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_twitter.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_twitter_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_twitter_joji.png);
+          }
         }
       }
     }
@@ -49,10 +78,18 @@
         width: 18px;
         height: 18px;
         &:after {
-          background-image: url(../img/icon-sns_facebook.png);
           width: 18px;
           height: 18px;
           background-size: 18px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_facebook.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_facebook_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_facebook_joji.png);
+          }
         }
       }
     }
@@ -61,10 +98,18 @@
         width: 18px;
         height: 18px;
         &:after {
-          background-image: url(../img/icon-sns_instagram.png);
           width: 18px;
           height: 18px;
           background-size: 18px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_instagram.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_instagram_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_instagram_joji.png);
+          }
         }
       }
     }
@@ -73,10 +118,18 @@
         width: 22px;
         height: 15px;
         &:after {
-          background-image: url(../img/icon-sns_youtube.png);
           width: 22px;
           height: 15px;
           background-size: 22px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_youtube.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_youtube_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_youtube_joji.png);
+          }
         }
       }
     }

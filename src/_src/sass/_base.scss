@@ -5,7 +5,15 @@
 body {
   font-family: $f_default;
   min-width: 320px;
-  background: $c_bg_light_bottom;
+  &.theme-main {
+    background: $c_bg_light_bottom;
+  }
+  &.theme-shibuya {
+    background: $c_bg_shibuya;
+  }
+  &.theme-joji {
+    background: $c_bg_joji;
+  }
 }
 
 a {

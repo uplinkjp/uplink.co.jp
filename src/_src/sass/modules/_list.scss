@@ -3,7 +3,7 @@
   li {
     background: #fff;
     margin-bottom: 5px;
-    padding: 20px 0;
+    padding: 20px $padding_wrap;
     &:last-child {
       margin-bottom: 0;
     }
@@ -17,19 +17,26 @@
 }
 .list-news-inner {
   display: flex;
+  justify-content: space-between;
   dt {
     color: $c_text_primary;
     line-height: 1.5;
     font-size: 15px;
+    flex: 1;
   }
   dd {
     padding: 0 0 0 25px;
+    width: 28.125vw;
+    img {
+      width: 100%;
+    }
   }
 }
 
 // 関連サービス
 .list-related {
   @extend %nav;
+  padding: 0 $padding_wrap;
   li {
     margin-bottom: 5px;
     &:last-child {
@@ -42,6 +49,7 @@
 .list-tag {
   display: flex;
   margin: 0 0 20px 0;
+  padding: 0 $padding_wrap;
   li {
     margin: 0 5px 0 0;
     height: 24px;
@@ -75,7 +83,7 @@
 }
 
 .list-calendar-header {
-  padding: 20px 0;
+  padding: 20px $padding_wrap;
   margin: 0 0 5px 0;
   background: #fff;
   @include f_sg_bold;
@@ -103,7 +111,7 @@
   li {
     background: #fff;
     margin-bottom: 5px;
-    padding: 15px 0 20px 0;
+    padding: 15px $padding_wrap 20px $padding_wrap;
     a {
       color: $c_text_primary;
     }

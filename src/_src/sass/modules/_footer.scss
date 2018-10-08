@@ -2,7 +2,7 @@
   background: $c_footer_bg;
   color: $c_footer_text;
   text-align: center;
-  padding: 40px 15px 50px 15px;
+  padding: 40px $padding_wrap 50px $padding_wrap;
   a {
     color: $c_footer_text;
   }
