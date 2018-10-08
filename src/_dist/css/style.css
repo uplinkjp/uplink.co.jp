@@ -364,7 +364,37 @@ a:hover {
 
 .list-calendar li {
   background: #fff;
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  padding: 15px 0 20px 0; }
+  .list-calendar li a {
+    color: rgba(0, 0, 0, 0.87); }
+
+.list-calendar-heading {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 15px 0; }
+
+.list-calendar-inner {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 10px 10px 15px 10px;
+  margin: 0 0 5px 0; }
+  .list-calendar-inner:last-child {
+    margin-bottom: 0; }
+
+.list-calendar-date {
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: rgba(0, 0, 0, 0.87); }
+  .list-calendar-date span {
+    font-size: 12px; }
+
+.list-calendar-text {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+  font-size: 12px; }
 
 .list-readmore {
   margin-top: 5px; }
