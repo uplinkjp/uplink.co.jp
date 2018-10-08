@@ -119,6 +119,55 @@ a:hover {
       opacity: 1;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
 
+.button-purchase {
+  width: 90px;
+  height: 40px;
+  text-align: center; }
+  .list-calendar-information + .button-purchase {
+    margin-left: 10px; }
+  .button-purchase a {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    padding: 0 0 0 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border-radius: 3px;
+    font-weight: 700;
+    background: #CCCCCC; }
+    .button-purchase a span {
+      font-family: YakuHanJP, "Noto Sans JP", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+      transform: scaleX(0.88);
+      transform-origin: left center;
+      color: rgba(0, 0, 0, 0.87);
+      display: block; }
+    .button-purchase a:before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      background-repeat: no-repeat;
+      background-size: 14px auto;
+      width: 14px;
+      height: 100%;
+      background-position: center; }
+  .button-purchase.is-green1 a, .button-purchase.is-green2 a, .button-purchase.is-yellow1 a {
+    background: #FF1744; }
+    .button-purchase.is-green1 a span, .button-purchase.is-green2 a span, .button-purchase.is-yellow1 a span {
+      color: #FFFFFF; }
+  .button-purchase.is-green1 a:before {
+    background-image: url(../img/icon-status_green1.png); }
+  .button-purchase.is-green2 a:before {
+    background-image: url(../img/icon-status_green2.png); }
+  .button-purchase.is-yellow1 a:before {
+    background-image: url(../img/icon-status_yellow1.png); }
+  .button-purchase.is-yellow2 a:before {
+    background-image: url(../img/icon-status_yellow2.png); }
+  .button-purchase.is-red a:before {
+    background-image: url(../img/icon-status_red.png); }
+
 .l-followus {
   background: #000;
   color: #fff;
@@ -254,8 +303,7 @@ a:hover {
   right: 0;
   top: 0;
   width: 40px;
-  height: 100%;
-  background: red; }
+  height: 100%; }
   .header-nav_trigger a {
     display: inline-block;
     font-size: 0;
@@ -305,6 +353,8 @@ a:hover {
     color: rgba(0, 0, 0, 0.87);
     line-height: 1.5;
     font-size: 15px; }
+  .list-news-inner dd {
+    padding: 0 0 0 25px; }
 
 .list-related li {
   margin-bottom: 5px; }
@@ -376,6 +426,12 @@ a:hover {
   margin: 0 0 15px 0; }
 
 .list-calendar-inner {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
   background: rgba(0, 0, 0, 0.05);
   padding: 10px 10px 15px 10px;
   margin: 0 0 5px 0; }
@@ -395,6 +451,10 @@ a:hover {
   color: rgba(0, 0, 0, 0.6);
   line-height: 1.5;
   font-size: 12px; }
+
+.list-calendar-information {
+  -ms-flex: 1;
+      flex: 1; }
 
 .list-readmore {
   margin-top: 5px; }
