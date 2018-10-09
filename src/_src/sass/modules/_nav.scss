@@ -12,6 +12,7 @@
 %nav {
   margin-bottom: 5px;
   width: 100%;
+  box-sizing: border-box;
   @include mqTB {
     width: calc(50% - 2.5px);
   }

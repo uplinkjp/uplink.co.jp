@@ -76,3 +76,19 @@
   transition-duration: .3s;
   transition-timing-function: cubic-bezier(.8, 0, .3, 1);
 }
+
+// animation
+@mixin animationValue( $name, $duration, $function, $delay, $count, $state){
+    -webkit-animation: $name $duration+s $function $delay+s $count $state;
+    animation: $name $duration+s $function $delay+s $count $state;
+}
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}

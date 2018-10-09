@@ -8,13 +8,17 @@ NE = {
       NE.sample.init();
       NE.bind();
     });
-    $(window).on('load', function() {
-      NE.onload();
-    })
   },
 
   bind: function() {
     console.log('bind');
+    $(window)
+    .on('load', function() {
+      NE.onload();
+    })
+    .on('scroll', function() {
+      NE.onscroll();
+    })
 
   },
 
@@ -30,7 +34,13 @@ NE = {
       nextArrow: '',
     });
 
+    NE.header.init($('.l-header'));
+  },
 
+  onscroll: function() {
+    var st = $(window).scrollTop();
+
+    NE.header.scroll(st);
   }
 
 };

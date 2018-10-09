@@ -5,6 +5,12 @@
 @import url("https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanjp.min.css");
 
 @charset "UTF-8";
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -308,15 +314,46 @@ a:hover {
   font-weight: 700; }
 
 .l-header {
+  width: 100vw;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 15px; }
+  padding: 0 15px;
+  box-sizing: border-box;
+  transition: all .7s ease; }
   .theme-main .l-header {
     background: #212121; }
   .theme-shibuya .l-header {
     background: #EEE8E8; }
   .theme-joji .l-header {
     background: #E8EEE8; }
+  .l-header.is-scroll {
+    position: fixed;
+    top: -60px;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    overflow: hidden; }
+  .l-header.is-fixed {
+    top: 0; }
+    .l-header.is-fixed .l-nav [class*="nav-"]:not([class*="nav-wrap"]) {
+      opacity: 0;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      transition: all .7s ease 1s; }
+  .l-header.is-open {
+    width: 100vw;
+    height: 100vh; }
+    .l-header.is-open .l-nav [class*="nav-"]:not([class*="nav-wrap"]):nth-of-type(1) {
+      animation: fadein 0.5s ease 0.5s 1 forwards; }
+    .l-header.is-open .l-nav [class*="nav-"]:not([class*="nav-wrap"]):nth-of-type(2) {
+      animation: fadein 0.5s ease 1s 1 forwards; }
+    .l-header.is-open .l-nav [class*="nav-"]:not([class*="nav-wrap"]):nth-of-type(3) {
+      animation: fadein 0.5s ease 1.5s 1 forwards; }
+    .l-header.is-open .l-nav [class*="nav-"]:not([class*="nav-wrap"]):nth-of-type(4) {
+      animation: fadein 0.5s ease 2s 1 forwards; }
+    .l-header.is-open .l-nav [class*="nav-"]:not([class*="nav-wrap"]):nth-of-type(5) {
+      animation: fadein 0.5s ease 2.5s 1 forwards; }
+    .l-header.is-open .l-nav [class*="nav-"]:not([class*="nav-wrap"]):nth-of-type(6) {
+      animation: fadein 0.5s ease 3s 1 forwards; }
 
 .header-inner {
   position: relative;
@@ -391,6 +428,12 @@ a:hover {
         background-image: url(../img/icon-menu-on_shibuya.png); }
       .theme-joji .header-nav_trigger a:before {
         background-image: url(../img/icon-menu-on_joji.png); }
+  .theme-main .header-nav_trigger.is-close a:before {
+    background-image: url(../img/icon-menu-off.png); }
+  .theme-shibuya .header-nav_trigger.is-close a:before {
+    background-image: url(../img/icon-menu-off_shibuya.png); }
+  .theme-joji .header-nav_trigger.is-close a:before {
+    background-image: url(../img/icon-menu-off_joji.png); }
 
 .section-heading {
   padding: 25px 15px;
@@ -573,7 +616,8 @@ a:hover {
 
 .list-related, .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-movies, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
   margin-bottom: 5px;
-  width: 100%; }
+  width: 100%;
+  box-sizing: border-box; }
   @media screen and (min-width: 768px) {
     .list-related, .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-movies, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: calc(50% - 2.5px); } }

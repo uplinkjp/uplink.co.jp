@@ -1,7 +1,9 @@
 .l-header {
+  width: 100vw;
   max-width: $max-width;
   margin: 0 auto;
   padding: 0 $padding_wrap;
+  box-sizing: border-box;
   .theme-main & {
     background: $c_bg_light;
   }
@@ -11,7 +13,41 @@
   .theme-joji & {
     background: $c_bg_joji;
   }
+  transition: all .7s ease;
+  &.is-scroll {
+    position: fixed;
+    top: -60px;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    overflow: hidden;
+  }
+  &.is-fixed {
+    top: 0;
+    .l-nav {
+      [class*="nav-"]:not([class*="nav-wrap"]) {
+        opacity: 0;
+        transition: all .7s ease 1s;
+      }
+    }
+  }
+  &.is-open {
+    width: 100vw;
+    height: 100vh;
+    .l-nav {
+      [class*="nav-"]:not([class*="nav-wrap"]) {
+        @for $cnt from 1 through 6 {
+            &:nth-of-type(#{$cnt}){
+                @include animationValue(fadein, 0.5, ease, $cnt * 0.5 , 1, forwards);
+            }
+        } 
+      }
+    }
+  }
 }
+
+
+
 .header-inner {
   position: relative;
   width: 100%;
@@ -66,7 +102,6 @@
         background-image: url(../img/logo-joji.png);
         width: 140px;
       }
-
     }
   }
 }
@@ -96,6 +131,21 @@
       }
       .theme-joji & {
         background-image: url(../img/icon-menu-on_joji.png);
+      }
+    }
+  }
+  &.is-close {
+    a {
+      &:before {
+        .theme-main & {
+          background-image: url(../img/icon-menu-off.png);
+        }
+        .theme-shibuya & {
+          background-image: url(../img/icon-menu-off_shibuya.png);
+        }
+        .theme-joji & {
+          background-image: url(../img/icon-menu-off_joji.png);
+        }
       }
     }
   }
