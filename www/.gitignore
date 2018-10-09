@@ -28,6 +28,7 @@ vendor
 
 ## Independents
 
+/html/htdig
 /html/_log/*
 /html/_tabela/*
 /html/-/*

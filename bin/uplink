@@ -31,6 +31,12 @@ then
     echo "Sync: ダウンロード"
     rsync -av --progress admin@210.143.102.33:/var/www/html/* ./www/html/ --exclude=/wp --exclude=/ex --exclude=/info_ --exclude=index.php
 
+  elif [ $2 = upload ]
+  then
+
+    echo "Sync: アップロード"
+    rsync -av --progress ./www/html/* uplink@52.199.98.72:/home/uplink/uplink.co.jp/www/html/  --exclude=/wp --exclude=/ex --exclude=/info_ --exclude=index.php
+
   fi
 
 fi
