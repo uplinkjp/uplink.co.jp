@@ -12,35 +12,39 @@
 
 ### Init
 
-http://uplink.test
+- UPLINK: http://uplink.test
+- UPLINK渋谷: http://shibuya.uplink.test
+- UPLINK吉祥寺: http://joji.uplink.test
 
 **/etc/hosts**
 
 ```sh
 127.0.0.1    uplink.test
+127.0.0.1    shibuya.uplink.test
+127.0.0.1    joji.uplink.test
 ```
 
 ```sh
-$ docker-compose build
-$ docker-compose up -d
+$ bin/uplink build
+$ bin/uplink start
 ```
 
 ### Start
 
 ```sh
-$ docker-compose up -d
+$ bin/uplink start
 ```
 
 ### Stop
 
 ```sh
-$ docker-compose stop
+$ bin/uplink stop
 ```
 
 ### Dump
 
 ```sh
-$ docker exec -it bash uplink_mysql
+$ bin/uplink ssh mysql
 $ mysqldump -u uplink -p uplink > develop.sql #PW: 3030
 ```
 
