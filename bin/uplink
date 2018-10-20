@@ -1,0 +1,101 @@
+#!/bin/sh
+
+dockercompose_file=docker-compose.yml
+
+# ---------------------------
+#
+#    Git
+#
+# ---------------------------
+
+if [ $1 = push ]
+then
+
+  echo "Git: カレントブランチをPushします"
+  git symbolic-ref --short HEAD | xargs git push origin
+
+fi
+
+# ---------------------------
+#
+#    Sync
+#
+# ---------------------------
+
+if [ $1 = sync ]
+then
+
+  if [ $2 = download ]
+  then
+
+    echo "Sync: ダウンロード"
+    rsync -av --progress admin@210.143.102.33:/var/www/html/* ./www/html/ --exclude=/wp --exclude=/ex --exclude=/info_ --exclude=index.php
+
+  elif [ $2 = upload ]
+  then
+
+    echo "Sync: アップロード"
+    rsync -av --progress ./www/html/* uplink@52.199.98.72:/home/uplink/uplink.co.jp/www/html/  --exclude=/wp --exclude=/ex --exclude=/info_ --exclude=index.php
+
+  fi
+
+fi
+
+# ---------------------------
+#
+#    Docker
+#
+# ---------------------------
+
+if [ $1 = init ]
+then
+  echo Dockerコンテナを初期化しますか [Y/n] :
+  read ANSWER
+  case $ANSWER in
+    "" | "Y" | "y" | "yes" | "Yes" | "YES" )
+      docker-compose -f ${dockercompose_file} build
+      docker exec -it uplink_db mysqldump -u uplink -p3030 uplink > ./sql/develop.sql
+    ;;
+    * ) echo "NO!!";;
+  esac
+elif [ $1 = build ]
+then
+  echo Dockerイメージを生成
+  docker-compose -f ${dockercompose_file} build
+elif [ $1 = start ]
+then
+  echo Dockerコンテナを起動
+  docker-compose -f ${dockercompose_file} up -d
+elif [ $1 = stop ]
+then
+  echo Dockerコンテナを停止
+  docker-compose -f ${dockercompose_file} stop
+elif [ $1 = ssh ]
+then
+  if [ $2 ]
+  then
+    echo Dockerコンテナ$3にログイン
+    container=$2
+  else
+    docker-compose -f ${dockercompose_file} ps
+    echo コンテナ名を入力してください :
+    read container
+  fi
+  docker exec -it uplink_${container} bash
+else
+  echo Exit
+fi
+
+# ---------------------------
+#
+#    Capistrano
+#
+# ---------------------------
+
+if [ $1 = cap ]
+then
+
+  cd capistrano
+  cap $2 $3
+
+fi
