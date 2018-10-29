@@ -4,8 +4,9 @@
   margin: 0 auto;
   padding: 0 $padding_wrap;
   box-sizing: border-box;
+  z-index: 9999;
   .theme-main & {
-    background: $c_bg_light;
+    background: $c_bg_nav;
   }
   .theme-shibuya & {
     background: $c_bg_shibuya;
@@ -24,24 +25,45 @@
   }
   &.is-fixed {
     top: 0;
-    .l-nav {
-      [class*="nav-"]:not([class*="nav-wrap"]) {
-        opacity: 0;
-        transition: all .7s ease 1s;
+    // .l-nav {
+    //   [class*="nav-"]:not([class*="nav-wrap"]) {
+    //     opacity: 0;
+    //     transition: all .7s ease 1s;
+    //   }
+    // }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      transition: all .7s ease .5s;
+      .theme-main & {
+        background: linear-gradient(to top,$c_bg_nav 60%,transparent);
+      }
+      .theme-shibuya & {
+        background: linear-gradient(to top,$c_bg_shibuya 60%,transparent);
+      }
+      .theme-joji & {
+        background: linear-gradient(to top,$c_bg_joji 60%,transparent);
       }
     }
   }
   &.is-open {
     width: 100vw;
     height: 100vh;
-    .l-nav {
-      [class*="nav-"]:not([class*="nav-wrap"]) {
-        @for $cnt from 1 through 6 {
-            &:nth-of-type(#{$cnt}){
-                @include animationValue(fadein, 0.5, ease, $cnt * 0.5 , 1, forwards);
-            }
-        } 
-      }
+    // .l-nav {
+    //   [class*="nav-"]:not([class*="nav-wrap"]) {
+    //     @for $cnt from 1 through 6 {
+    //         &:nth-of-type(#{$cnt}){
+    //             @include animationValue(fadein, 0.5, ease, $cnt * 0.5 , 1, forwards);
+    //         }
+    //     } 
+    //   }
+    // }
+    &:after {
+      bottom: -100%;
     }
   }
 }
@@ -69,7 +91,7 @@
     span {
       width: 60px;
       .theme-main & {
-        background: $c_bg_light;
+        background: $c_bg_nav;
       }
       .theme-shibuya & {
         background: $c_bg_shibuya;

@@ -66,29 +66,41 @@ NE.header = {
 
   bind: function() {
     NE.header.$el_nav_trigger.find('a').on('click', function() {
-      NE.header.$el.toggleClass('is-open');
-      NE.header.$el_nav_trigger.toggleClass('is-close');
+      if(NE.header._st >= 60) {
+        if(NE.header.$el.hasClass('is-open')) {
+          NE.scrollBan.release();
+          NE.header.$el.removeClass('is-open');
+          NE.header.$el_nav_trigger.addClass('is-close');
+        } else {
+          NE.scrollBan.ban(NE.header._st);
+          NE.header.$el
+          .addClass('is-scroll')
+          .addClass('is-fixed')
+          .addClass('is-open');
+          NE.header.$el_nav_trigger.removeClass('is-close');
+        }
+      }
       return false;
     });
   },
 
   scroll: function(st) {
-    if(st > NE.header.$el_height) {
-      console.log('add is-scroll');
-      NE.header.$el.addClass('is-scroll');
-      if(st < NE.header._st ) {
-        console.log('add is-fixed');
-        NE.header.$el.addClass('is-fixed');
-        NE.header.$el_nav_trigger.addClass('is-close');
+    if(!NE.header.$el.hasClass('is-open')) {
+      if(st > NE.header.$el_height) {
+        NE.header.$el.addClass('is-scroll');
+        if(st < NE.header._st ) {
+          NE.header.$el.addClass('is-fixed');
+          NE.header.$el_nav_trigger.addClass('is-close');
+        } else {
+          NE.header.$el.removeClass('is-fixed');
+        }
       } else {
-        console.log('remove is-fixed');
+        NE.header.$el.removeClass('is-scroll');
+        NE.header.$el.removeClass('is-open');
         NE.header.$el.removeClass('is-fixed');
+        NE.header.$el_nav_trigger.removeClass('is-close');
       }
       NE.header._st = st;
-    } else {
-      console.log('remove is-scroll');
-      NE.header.$el.removeClass('is-scroll');
-      NE.header.$el_nav_trigger.removeClass('is-close');
     }
   },
 
@@ -131,5 +143,27 @@ NE.scrollBan = {
     $('body').removeClass('is-fixed');
     $('html,body').scrollTop(NE.scrollBan._currentPos);
   }
+
+};
+
+NE.slick = {
+
+  init: function() {
+    console.log('sample init');
+  },
+
+  bind: function() {
+  },
+
+};
+
+NE.sticky = {
+
+  init: function() {
+    console.log('sample init');
+  },
+
+  bind: function() {
+  },
 
 };
