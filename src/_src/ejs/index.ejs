@@ -37,26 +37,22 @@
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
   }
-  table {
-    width: 100%;
-    text-align: left;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
+  ul li {
+    margin-bottom: 15px;
   }
-  table tr th,
-  table tr td {
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
-    padding: 5px 10px;
-  }
-  table tr th {
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-  }
+
   a {
     color: #000;
     text-decoration: underline;
+  }
+  a[href=""] {
+    opacity: .4;
+    pointer-events: none;
+    text-decoration: none;
+  }
+  li:before {
+    content: "・";
+    padding: 0 10px 0 0;
   }
   </style>
 
@@ -66,27 +62,20 @@
 <div class="l-wrap">
   <h1>UPLINK.CO.JP</h1>
   <h2>INDEX</h2>
-  <table>
-    <tr>
-      <th>ページ名</th>
-      <th>デザインFIX</th>
-      <th>コーディングFIX</th>
-    </tr>
-    <tr>
-      <td><a href="00_index.html" target="_blank">総合トップ</a></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a href="00_index_shibuya.html" target="_blank">渋谷トップ</a></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a href="00_index_joji.html" target="_blank">吉祥寺トップ</a></td>
-      <td></td>
-      <td></td>
-    </tr>
+  <ul>
+    <li><a href="00_index.html" target="_blank">総合トップ</a></li>
+    <li><a href="00_index_shibuya.html" target="_blank">渋谷トップ</a></li>
+    <li><a href="00_index_joji.html" target="_blank">吉祥寺トップ</a></li>
+    <li><a href="" target="_blank">アーカイブ: イベント</a></li>
+    <li><a href="" target="_blank">アーカイブ: フィルム</a></li>
+    <li><a href="" target="_blank">アーカイブ: ギャラリー</a></li>
+    <li><a href="" target="_blank">アーカイブ: マーケット</a></li>
+    <li><a href="" target="_blank">アーカイブ: ニュース</a></li>
+    <li><a href="" target="_blank">記事詳細</a></li>
+    <li><a href="" target="_blank">固定ページ</a></li>
+    <li><a href="" target="_blank">スケジュール</a></li>
+  </ul>
+
   </table>
 </div>
 
