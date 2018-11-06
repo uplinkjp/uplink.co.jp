@@ -1,4 +1,4 @@
-NE.scrollBan = {
+UPLINK.scrollBan = {
 
   _currentPos: 0,
 
@@ -6,7 +6,7 @@ NE.scrollBan = {
   },
 
   ban: function(st) {
-    NE.scrollBan._currentPos = st;
+    UPLINK.scrollBan._currentPos = st;
     $('body').addClass('is-fixed');
     $('body').css({
       top: '-' + st + 'px'
@@ -15,7 +15,7 @@ NE.scrollBan = {
 
   release: function(){
     $('body').removeClass('is-fixed');
-    $('html,body').scrollTop(NE.scrollBan._currentPos);
+    $('html,body').scrollTop(UPLINK.scrollBan._currentPos);
   }
 
 };

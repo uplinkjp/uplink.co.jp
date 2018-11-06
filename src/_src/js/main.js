@@ -1,48 +1,47 @@
 'use strict';
 
-var NE = {};
+var UPLINK = {};
 
-NE = {
+UPLINK = {
   init: function() {
     $( function() {
-      NE.sample.init();
-      NE.bind();
+      UPLINK.sample.init();
+      UPLINK.bind();
     });
   },
 
   bind: function() {
-    console.log('bind');
+    // console.log('bind');
     $(window)
     .on('load', function() {
-      NE.onload();
+      UPLINK.onload();
     })
     .on('scroll', function() {
-      NE.onscroll();
+      UPLINK.onscroll();
+    })
+    .on('resize', function() {
+      UPLINK.onresize();
     })
 
   },
 
   onload: function() {
-    console.log('onload');
-    $('.js-slick').slick({
-      infinite: true,
-      dots:true,
-      slidesToShow: 1,
-      centerMode: true, //要素を中央寄せ
-      centerPadding:'6%', //両サイドの見えている部分のサイズ
-      prevArrow: '',
-      nextArrow: '',
-    });
-
-    NE.header.init($('.l-header'));
+    // console.log('onload');
+    UPLINK.slick.init();
+    UPLINK.header.init($('.l-header'));
+   // $('.js-dotdotdot').dotdotdot();
   },
 
   onscroll: function() {
     var st = $(window).scrollTop();
+    UPLINK.header.scroll(st);
+  },
 
-    NE.header.scroll(st);
+  onresize: function() {
+    // UPLINK.header.init($('.l-header'));
   }
+
 
 };
 
-NE.init();
+UPLINK.init();

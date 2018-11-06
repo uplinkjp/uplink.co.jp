@@ -1,4 +1,4 @@
-NE.header = {
+UPLINK.header = {
 
   $el: null,
   $el_height: null,
@@ -7,39 +7,51 @@ NE.header = {
 
   init: function(el) {
     console.log('header.js init');
-    NE.header.$el = el;
-    NE.header.$el_height = el.height();
-    NE.header.$el.wrap('<div class="js-header-wrap"></div>');
+    UPLINK.header.$el = el;
+    UPLINK.header.$el_height = el.height();
+    UPLINK.header.$el.wrap('<div class="js-header-wrap"></div>');
     $('.js-header-wrap').height(el.height());
-    NE.header.$el_nav_trigger = $('.header-nav_trigger');
-    NE.header.bind();
+    UPLINK.header.$el_nav_trigger = $('.header-nav_trigger');
+    UPLINK.header.bind();
   },
 
   bind: function() {
-    NE.header.$el_nav_trigger.find('a').on('click', function() {
-      NE.header.$el.toggleClass('is-open');
-      NE.header.$el_nav_trigger.toggleClass('is-close');
+    UPLINK.header.$el_nav_trigger.find('a').on('click', function() {
+      if(UPLINK.header._st >= 60) {
+        if(UPLINK.header.$el.hasClass('is-open')) {
+          UPLINK.scrollBan.release();
+          UPLINK.header.$el.removeClass('is-open');
+          UPLINK.header.$el_nav_trigger.addClass('is-close');
+        } else {
+          UPLINK.scrollBan.ban(UPLINK.header._st);
+          UPLINK.header.$el
+          .addClass('is-scroll')
+          .addClass('is-fixed')
+          .addClass('is-open');
+          UPLINK.header.$el_nav_trigger.removeClass('is-close');
+        }
+      }
       return false;
     });
   },
 
   scroll: function(st) {
-    if(st > NE.header.$el_height) {
-      console.log('add is-scroll');
-      NE.header.$el.addClass('is-scroll');
-      if(st < NE.header._st ) {
-        console.log('add is-fixed');
-        NE.header.$el.addClass('is-fixed');
-        NE.header.$el_nav_trigger.addClass('is-close');
+    if(!UPLINK.header.$el.hasClass('is-open')) {
+      if(st > UPLINK.header.$el_height) {
+        UPLINK.header.$el.addClass('is-scroll');
+        if(st < UPLINK.header._st ) {
+          UPLINK.header.$el.addClass('is-fixed');
+          UPLINK.header.$el_nav_trigger.addClass('is-close');
+        } else {
+          UPLINK.header.$el.removeClass('is-fixed');
+        }
       } else {
-        console.log('remove is-fixed');
-        NE.header.$el.removeClass('is-fixed');
+        UPLINK.header.$el.removeClass('is-scroll');
+        UPLINK.header.$el.removeClass('is-open');
+        UPLINK.header.$el.removeClass('is-fixed');
+        UPLINK.header.$el_nav_trigger.removeClass('is-close');
       }
-      NE.header._st = st;
-    } else {
-      console.log('remove is-scroll');
-      NE.header.$el.removeClass('is-scroll');
-      NE.header.$el_nav_trigger.removeClass('is-close');
+      UPLINK.header._st = st;
     }
   },
 

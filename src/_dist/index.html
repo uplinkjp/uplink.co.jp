@@ -37,26 +37,22 @@
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
   }
-  table {
-    width: 100%;
-    text-align: left;
-    border-top: 1px solid #000;
-    border-left: 1px solid #000;
+  ul li {
+    margin-bottom: 15px;
   }
-  table tr th,
-  table tr td {
-    border-bottom: 1px solid #000;
-    border-right: 1px solid #000;
-    padding: 5px 10px;
-  }
-  table tr th {
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-  }
+
   a {
     color: #000;
     text-decoration: underline;
+  }
+  a[href=""] {
+    opacity: .4;
+    pointer-events: none;
+    text-decoration: none;
+  }
+  li:before {
+    content: "・";
+    padding: 0 10px 0 0;
   }
   </style>
 
@@ -66,27 +62,20 @@
 <div class="l-wrap">
   <h1>UPLINK.CO.JP</h1>
   <h2>INDEX</h2>
-  <table>
-    <tr>
-      <th>ページ名</th>
-      <th>デザインFIX</th>
-      <th>コーディングFIX</th>
-    </tr>
-    <tr>
-      <td><a href="00_index.html" target="_blank">総合トップ</a></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a href="00_index_shibuya.html" target="_blank">渋谷トップ</a></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><a href="00_index_joji.html" target="_blank">吉祥寺トップ</a></td>
-      <td></td>
-      <td></td>
-    </tr>
+  <ul>
+    <li><a href="00_index.html" target="_blank">00: トップ（総合）</a></li>
+    <li><a href="00_index_shibuya.html" target="_blank">00: トップ（渋谷）</a></li>
+    <li><a href="00_index_joji.html" target="_blank">00: トップ（吉祥寺）</a></li>
+    <li><a href="01_archive_event_shibuya.html" target="_blank">01: アーカイブ: イベント（渋谷）</a></li>
+    <li><a href="01_archive_film_shibuya.html" target="_blank">01: アーカイブ: フィルム（渋谷）</a></li>
+    <li><a href="01_archive_gallery_shibuya.html" target="_blank">01: アーカイブ: ギャラリー（渋谷）</a></li>
+    <li><a href="01_archive_market_shibuya.html" target="_blank">01: アーカイブ: マーケット（渋谷）</a></li>
+    <li><a href="01_archive_news_shibuya.html" target="_blank">02: アーカイブ: ニュース（渋谷）</a></li>
+    <li><a href="02_single_shibuya.html" target="_blank">02: 記事詳細（渋谷）</a></li>
+    <li><a href="02_page_shibuya.html" target="_blank">02: 固定ページ（渋谷）</a></li>
+    <li><a href="02_schedule_shibuya.html" target="_blank">02: スケジュール（渋谷）</a></li>
+  </ul>
+
   </table>
 </div>
 
@@ -106,6 +95,7 @@
 
 <script src="./js/libs/jquery.min.js"></script>
 <script src="./js/libs/slick.min.js"></script>
+<!-- <script src="./js/libs/jquery.dotdotdot.js"></script> -->
 <script src="./js/script.min.js"></script>
 </body>
 </html>

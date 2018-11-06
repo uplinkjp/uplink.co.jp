@@ -1,53 +1,52 @@
 'use strict';
 
-var NE = {};
+var UPLINK = {};
 
-NE = {
+UPLINK = {
   init: function() {
     $( function() {
-      NE.sample.init();
-      NE.bind();
+      UPLINK.sample.init();
+      UPLINK.bind();
     });
   },
 
   bind: function() {
-    console.log('bind');
+    // console.log('bind');
     $(window)
     .on('load', function() {
-      NE.onload();
+      UPLINK.onload();
     })
     .on('scroll', function() {
-      NE.onscroll();
+      UPLINK.onscroll();
+    })
+    .on('resize', function() {
+      UPLINK.onresize();
     })
 
   },
 
   onload: function() {
-    console.log('onload');
-    $('.js-slick').slick({
-      infinite: true,
-      dots:true,
-      slidesToShow: 1,
-      centerMode: true, //要素を中央寄せ
-      centerPadding:'6%', //両サイドの見えている部分のサイズ
-      prevArrow: '',
-      nextArrow: '',
-    });
-
-    NE.header.init($('.l-header'));
+    // console.log('onload');
+    UPLINK.slick.init();
+    UPLINK.header.init($('.l-header'));
+   // $('.js-dotdotdot').dotdotdot();
   },
 
   onscroll: function() {
     var st = $(window).scrollTop();
+    UPLINK.header.scroll(st);
+  },
 
-    NE.header.scroll(st);
+  onresize: function() {
+    // UPLINK.header.init($('.l-header'));
   }
+
 
 };
 
-NE.init();
+UPLINK.init();
 
-NE.header = {
+UPLINK.header = {
 
   $el: null,
   $el_height: null,
@@ -56,39 +55,51 @@ NE.header = {
 
   init: function(el) {
     console.log('header.js init');
-    NE.header.$el = el;
-    NE.header.$el_height = el.height();
-    NE.header.$el.wrap('<div class="js-header-wrap"></div>');
+    UPLINK.header.$el = el;
+    UPLINK.header.$el_height = el.height();
+    UPLINK.header.$el.wrap('<div class="js-header-wrap"></div>');
     $('.js-header-wrap').height(el.height());
-    NE.header.$el_nav_trigger = $('.header-nav_trigger');
-    NE.header.bind();
+    UPLINK.header.$el_nav_trigger = $('.header-nav_trigger');
+    UPLINK.header.bind();
   },
 
   bind: function() {
-    NE.header.$el_nav_trigger.find('a').on('click', function() {
-      NE.header.$el.toggleClass('is-open');
-      NE.header.$el_nav_trigger.toggleClass('is-close');
+    UPLINK.header.$el_nav_trigger.find('a').on('click', function() {
+      if(UPLINK.header._st >= 60) {
+        if(UPLINK.header.$el.hasClass('is-open')) {
+          UPLINK.scrollBan.release();
+          UPLINK.header.$el.removeClass('is-open');
+          UPLINK.header.$el_nav_trigger.addClass('is-close');
+        } else {
+          UPLINK.scrollBan.ban(UPLINK.header._st);
+          UPLINK.header.$el
+          .addClass('is-scroll')
+          .addClass('is-fixed')
+          .addClass('is-open');
+          UPLINK.header.$el_nav_trigger.removeClass('is-close');
+        }
+      }
       return false;
     });
   },
 
   scroll: function(st) {
-    if(st > NE.header.$el_height) {
-      console.log('add is-scroll');
-      NE.header.$el.addClass('is-scroll');
-      if(st < NE.header._st ) {
-        console.log('add is-fixed');
-        NE.header.$el.addClass('is-fixed');
-        NE.header.$el_nav_trigger.addClass('is-close');
+    if(!UPLINK.header.$el.hasClass('is-open')) {
+      if(st > UPLINK.header.$el_height) {
+        UPLINK.header.$el.addClass('is-scroll');
+        if(st < UPLINK.header._st ) {
+          UPLINK.header.$el.addClass('is-fixed');
+          UPLINK.header.$el_nav_trigger.addClass('is-close');
+        } else {
+          UPLINK.header.$el.removeClass('is-fixed');
+        }
       } else {
-        console.log('remove is-fixed');
-        NE.header.$el.removeClass('is-fixed');
+        UPLINK.header.$el.removeClass('is-scroll');
+        UPLINK.header.$el.removeClass('is-open');
+        UPLINK.header.$el.removeClass('is-fixed');
+        UPLINK.header.$el_nav_trigger.removeClass('is-close');
       }
-      NE.header._st = st;
-    } else {
-      console.log('remove is-scroll');
-      NE.header.$el.removeClass('is-scroll');
-      NE.header.$el_nav_trigger.removeClass('is-close');
+      UPLINK.header._st = st;
     }
   },
 
@@ -101,7 +112,7 @@ NE.header = {
 
 };
 
-NE.sample = {
+UPLINK.sample = {
 
   init: function() {
     console.log('sample init');
@@ -112,7 +123,7 @@ NE.sample = {
 
 };
 
-NE.scrollBan = {
+UPLINK.scrollBan = {
 
   _currentPos: 0,
 
@@ -120,7 +131,7 @@ NE.scrollBan = {
   },
 
   ban: function(st) {
-    NE.scrollBan._currentPos = st;
+    UPLINK.scrollBan._currentPos = st;
     $('body').addClass('is-fixed');
     $('body').css({
       top: '-' + st + 'px'
@@ -129,7 +140,45 @@ NE.scrollBan = {
 
   release: function(){
     $('body').removeClass('is-fixed');
-    $('html,body').scrollTop(NE.scrollBan._currentPos);
+    $('html,body').scrollTop(UPLINK.scrollBan._currentPos);
   }
+
+};
+
+UPLINK.slick = {
+
+  init: function() {
+    UPLINK.slick.bind();
+    $('.js-slick').slick({
+      infinite: true,
+      dots:true,
+      slidesToShow: 1,
+      centerMode: true, //要素を中央寄せ
+      centerPadding:'6%', //両サイドの見えている部分のサイズ
+      prevArrow: '',
+      nextArrow: '',
+    });
+  },
+
+  bind: function() {
+    // console.log('bind');
+    // $('.js-slick').on('init', function(){
+    //   console.log('init');
+    //   setTimeout( function() {
+    //      $('.js-slider-dotdotdot').dotdotdot();
+    //   },100);
+    // });
+  }
+
+};
+
+UPLINK.sticky = {
+
+  init: function() {
+    console.log('sample init');
+  },
+
+  bind: function() {
+  },
 
 };

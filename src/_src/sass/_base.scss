@@ -6,13 +6,16 @@ body {
   font-family: $f_default;
   min-width: 320px;
   &.theme-main {
-    background: $c_bg_light_bottom;
+    background: $c_bg;
   }
   &.theme-shibuya {
     background: $c_bg_shibuya;
   }
   &.theme-joji {
     background: $c_bg_joji;
+  }
+  &.is-fixed {
+    position: fixed;
   }
 }
 
