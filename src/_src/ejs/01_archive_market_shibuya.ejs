@@ -1,10 +1,37 @@
 <%- include('partials/_head_shibuya.ejs'); %>
+<%- include('partials/_head_sub_market.ejs'); %>
 
 <div class="l-wrap">
-  <%- include('partials/_slider.ejs'); %>
-  <%- include('partials/_list-news.ejs'); %>
-  <%- include('partials/_list-calendar.ejs'); %>
-  <%- include('partials/_followus.ejs'); %>
+
+  <section class="l-archive">
+    <div class="archive-header">
+      <h1>マーケットについて</h1>
+      <p>ABOUT THE MARKET</p>
+    </div>
+    <div class="archive-description">
+      渋谷アップリンク2階のUPLINK MARKETでは様々な商品を販売中。多種多様な商品をそろえてお待ちしています。入荷情報は<a href="" target="_blnak">Facebook</a>でご紹介します。
+    </div>
+  </section>
+
+  <section class="l-archive">
+    <div class="archive-header">
+      <h1>出店スケジュール</h1>
+      <p>SCHEDULE</p>
+    </div>
+    <%- include('partials/_archive.ejs',{len: 8}); %> 
+  </section>
+
+  <section class="l-archive">
+    <div class="archive-header">
+      <h1>オンラインショップ</h1>
+      <p>ONLINE SHOP</p>
+    </div>
+    <div class="archive-description">
+      UPLINK発売のDVDなどのご購入の際は下記のSHOPをご利用ください。
+      <p class="btn-archive"><a href="">Amazon.co.jp</a></p>
+    </div>
+  </section>
+
 </div>
 
 <%- include('partials/_footer.ejs'); %>

@@ -453,6 +453,31 @@ a:hover {
   .theme-joji .header-nav_trigger.is-close a:before {
     background-image: url(../img/icon-menu-off_joji.png); }
 
+.l-header_sub {
+  position: relative;
+  padding: 25px 15px;
+  background: red; }
+
+.header_sub-heading {
+  width: 100vw;
+  max-width: 1280px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 25px 0; }
+  .header_sub-heading span {
+    margin: 5px 0 0;
+    display: block;
+    font-size: 12px;
+    font-family: "SpaceGrotesk", sans-serif;
+    font-weight: 700; }
+
+.header-nav_sub_trigger {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
 .section-heading {
   padding: 25px 15px;
   font-size: 18px;
@@ -900,6 +925,62 @@ a:hover {
     font-size: 13px; }
   .nav-login a:after {
     background-image: url(../img/arrow-related.png); }
+
+@media screen and (min-width: 768px) {
+  .l-nav_sub .nav-wrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%; } }
+
+@media screen and (min-width: 1024px) {
+  .l-nav_sub .nav-wrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    width: 100%; } }
+
+.l-nav_sub a {
+  display: block;
+  position: relative;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  padding: 20px 0;
+  background: green; }
+  .l-nav_sub a:last-child {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
+  @media screen and (min-width: 768px) {
+    .l-nav_sub a {
+      margin-right: 20px; }
+      .l-nav_sub a:last-child {
+        margin-right: 0;
+        border-bottom: none; } }
+  @media screen and (min-width: 1024px) {
+    .l-nav_sub a {
+      margin-right: 20px; }
+      .l-nav_sub a:last-child {
+        margin-right: 0;
+        border-bottom: none; } }
+  .l-nav_sub a span {
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+    font-family: "SpaceGrotesk", sans-serif;
+    font-weight: 700; }
+  .l-nav_sub a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 5px;
+    background-image: url(../img/arrow-related.png);
+    width: 20px;
+    height: 100%;
+    background-size: 20px auto;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .l-nav_sub a[href^="#"]:after {
+    transform: rotate(90deg); }
 
 /* Slider */
 .slick-slider {

@@ -1,10 +1,24 @@
 <%- include('partials/_head_shibuya.ejs'); %>
+<%- include('partials/_head_sub_film.ejs'); %>
 
 <div class="l-wrap">
-  <%- include('partials/_slider.ejs'); %>
-  <%- include('partials/_list-news.ejs'); %>
-  <%- include('partials/_list-calendar.ejs'); %>
-  <%- include('partials/_followus.ejs'); %>
+
+  <section class="l-archive">
+    <div class="archive-header">
+      <h1>公開中の作品</h1>
+      <p>NOW PLAYING</p>
+    </div>
+    <%- include('partials/_archive.ejs',{len: 12}); %>
+  </section>
+
+  <section class="l-archive">
+    <div class="archive-header">
+      <h1>近日公開の作品</h1>
+      <p>COMMING SOON</p>
+    </div>
+    <%- include('partials/_archive.ejs',{len: 8}); %> 
+  </section>
+
 </div>
 
 <%- include('partials/_footer.ejs'); %>

@@ -22,7 +22,6 @@ UPLINK = {
     .on('resize', function() {
       UPLINK.onresize();
     })
-
   },
 
   onload: function() {

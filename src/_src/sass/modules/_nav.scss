@@ -294,3 +294,68 @@
     }
   }
 }
+
+.l-nav_sub {
+  .nav-wrap { // todo: 移植;
+    @include mqTB {
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+    @include mqPC {
+      flex-wrap: nowrap;
+      width: 100%;
+    }
+  }
+  a {
+    display: block;
+    position: relative;
+    width: 100%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border-top: 2px solid rgba(255,255,255,.2);
+    padding: 20px 0;
+    background: green;
+    &:last-child {
+      border-bottom: 2px solid rgba(255,255,255,.2);
+    }
+    @include mqTB {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+        border-bottom: none;
+      }
+    }
+    @include mqPC {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+        border-bottom: none;
+      }
+    }
+    span {
+      font-size: 12px;
+      display: block;
+      margin-top: 5px;
+      @include f_sg_bold;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 5px;
+      background-image: url(../img/arrow-related.png);
+      width: 20px;
+      height: 100%;
+      background-size: 20px auto;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &[href^="#"] {
+      &:after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+}

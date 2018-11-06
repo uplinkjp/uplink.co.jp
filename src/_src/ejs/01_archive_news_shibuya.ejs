@@ -1,10 +1,17 @@
 <%- include('partials/_head_shibuya.ejs'); %>
+<%- include('partials/_head_sub_gallery.ejs'); %>
 
 <div class="l-wrap">
-  <%- include('partials/_slider.ejs'); %>
   <%- include('partials/_list-news.ejs'); %>
-  <%- include('partials/_list-calendar.ejs'); %>
-  <%- include('partials/_followus.ejs'); %>
+
+  <div class="archive-pager">
+    <a href="" class="pager-prev">PREV</a>
+    <span class="pager-current">1</span>
+    <a href="" class="pager-num">2</a>
+    <a href="" class="pager-num">3</a>
+    <a href="" class="pager-next">NEXT</a>
+  </div>
+
 </div>
 
 <%- include('partials/_footer.ejs'); %>

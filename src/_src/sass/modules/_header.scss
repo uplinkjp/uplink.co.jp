@@ -174,3 +174,28 @@
 }
 
 
+.l-header_sub {
+  position: relative;
+  padding: 25px 15px;
+  background: red;
+}
+.header_sub-heading {
+  width: 100vw;
+  max-width: $max-width;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 25px 0;
+  span {
+    margin: 5px 0 0;
+    display: block;
+    font-size: 12px;
+    @include f_sg_bold;
+  }
+}
+.header-nav_sub_trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
