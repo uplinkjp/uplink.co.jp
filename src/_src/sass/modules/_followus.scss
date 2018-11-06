@@ -1,5 +1,6 @@
 .l-followus {
   padding: 0 $padding_wrap;
+  box-sizing: border-box;
   a {
     text-decoration: underline;
   }
@@ -29,7 +30,14 @@
       color: $c_nav_joji_text;
     }
   }
-
+  @include mqTB {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    .followus-box {
+      width: 50%;
+    }
+  }
 }
 .followus-heading {
   margin-bottom: 25px;
@@ -41,6 +49,12 @@
   align-items: center;
   justify-content: center;
   margin: 0 0 40px 0;
+  @include mqTB {
+    margin-bottom: 0;
+  }
+  @include mqSP {
+    margin-bottom: 0;
+  }
   li {
     margin: 0 15px;
     a {

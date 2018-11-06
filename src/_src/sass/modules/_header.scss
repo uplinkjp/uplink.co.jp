@@ -38,7 +38,7 @@
       bottom: 0;
       width: 100%;
       height: calc(100% - 60px);
-      transition: all .7s ease .5s;
+      transition: all .7s .5s;
       .theme-main & {
         background: linear-gradient(to top,$c_bg_nav 60%,transparent);
       }

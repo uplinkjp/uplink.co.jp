@@ -131,9 +131,7 @@
         width: calc((100% - 5px) / 3 - 2.5px);
       }
     }
-
   }
-
 }
 
 .nav-shibuya {
@@ -169,6 +167,9 @@
     &:after {
       background-image: url(../img/arrow-default.png);
     }
+  }
+  .list-related & {
+    width: 100%;
   }
 }
 .nav-default {

@@ -31,12 +31,46 @@
 
 // 関連サービス
 .list-related {
-  @extend %nav;
   padding: 0 $padding_wrap;
+  width: 100%;
+  box-sizing: border-box;
   li {
     margin-bottom: 5px;
     &:last-child {
       margin-bottom: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    img {
+      display: block;
+    }
+    p {
+      @include f_narrow;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    span {
+      @include f_sg_bold;
+      font-size: 12px;
+      margin-top: 7px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px auto;
     }
   }
 }
@@ -78,6 +112,13 @@
   background: $c_nav_market_bg;
 }
 
+.list-calendar-wrap {
+  @include mqPC {
+    display: flex;
+    width: 100%;
+  }
+}
+
 .list-calendar-header {
   padding: 20px $padding_wrap;
   margin: 0 0 5px 0;
@@ -102,15 +143,35 @@
       color: $c_saturday;
     }
   }
+  @include mqPC {
+    width: 228px;
+  }
 }
 .list-calendar {
   li {
     background: #fff;
     margin-bottom: 5px;
     padding: 15px $padding_wrap 20px $padding_wrap;
+    border-left: 8px solid transparent;
     a {
       color: $c_text_primary;
     }
+    &.tagged-movies {
+      border-color: $c_nav_movies_bg;
+    }
+    &.tagged-events {
+      border-color: $c_nav_events_bg;
+    }
+    &.tagged-gallery {
+      border-color: $c_nav_gallery_bg;
+    }
+    &.tagged-market {
+      border-color: $c_nav_market_bg;
+    }
+  }
+  @include mqPC {
+    flex: 1;
+    margin-left: 5px;
   }
 }
 .list-calendar-heading {

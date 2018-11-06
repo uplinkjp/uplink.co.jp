@@ -1,4 +1,4 @@
-NE.sticky = {
+UPLINK.sticky = {
 
   init: function() {
     console.log('sample init');
