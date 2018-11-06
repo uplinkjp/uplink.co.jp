@@ -69,7 +69,21 @@ define('NONCE_SALT',       'Ioyy5F|wX]-[T-p7o n!^PKQUrR=`6A4B|r1[Nd!A+8wP$%;rlu2
  * それぞれにユニーク (一意) な接頭辞を与えることで一つのデータベースに複数の WordPress を
  * インストールすることができます。半角英数字と下線のみを使用してください。
  */
+
 $table_prefix  = 'wp_';
+if( isset($_SERVER['HTTP_HOST']) )
+{
+  switch( strtolower($_SERVER['HTTP_HOST']) )
+  {
+    case 'shibuya.uplink.test':
+    $table_prefix  = 'shibuya_';
+    break;
+
+    case 'joji.uplink.test':
+    $table_prefix  = 'joji_';
+    break;
+  }
+}
 
 /**
  * 開発者へ: WordPress デバッグモード

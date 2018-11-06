@@ -1,5 +1,6 @@
 /.vagrant
 /wiki
+/tmp
 .DS_Store
 
 /log
