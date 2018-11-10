@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -24,9 +26,10 @@
   <title>UPLINK</title>
 
 </head>
-<body class="theme-shibuya">
+<body class="theme-shibuya frontpage">
 
-<!-- 渋谷 -->
+<div class="js-headerWrap">
+  <!-- 渋谷 -->
   <header class="l-header">
     <div class="header-inner">
       <h1 class="header-logo">
@@ -34,12 +37,12 @@
           <span><img src="/img/logo.png" alt="UPLINK" /></span>
         </a>
       </h1>
-      <p class="header-nav_trigger"><a href="">MENU</a></p>
+      <p class="header-nav_trigger"><a href="" class="js-mainNavTrigger">MENU</a></p>
     </div>
 
     <nav class="l-nav">
       <div class="nav-wrap">
-        <div class="nav-movies">
+        <div class="nav-film">
           <a href="">
             <p>上映</p>
             <span>MOVIES</span>
@@ -113,6 +116,7 @@
     </nav>
   </header>
 
+</div>
 
 <div class="l-wrap">
   <!-- 吉祥寺・渋谷 スライダー -->
@@ -193,7 +197,7 @@
     <span>TODAY & TOMORROW</span>
   </h2>
   <ul class="list-tag">
-    <li><span class="tag-movies">上映</span></li>
+    <li><span class="tag-film">上映</span></li>
     <li><span class="tag-events">イベント</span></li>
     <li><span class="tag-gallery">ギャラリー</span></li>
     <li><span class="tag-market">マーケット</span></li>
@@ -203,7 +207,7 @@
       09.01<span>土</span>
     </div>
     <ul class="list-calendar">
-      <li class="tagged-movies">
+      <li class="tagged-film">
         <article>
           <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
           <div class="list-calendar-inner">
@@ -270,7 +274,7 @@
       09.01<span>日</span>
     </div>
     <ul class="list-calendar">
-      <li class="tagged-movies">
+      <li class="tagged-film">
         <article>
           <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
           <div class="list-calendar-inner">
@@ -282,7 +286,7 @@
           </div>
         </article>
       </li>
-      <li class="tagged-movies">
+      <li class="tagged-film">
         <article>
           <h1 class="list-calendar-heading">映画『聖なる呼吸：ヨガのルーツに出会う旅』DVD発売記念トーク＋ヨガ体験付き上映会（ゲスト：柳生直子先生）</h1>
           <div class="list-calendar-inner">
@@ -294,7 +298,7 @@
           </div>
         </article>
       </li>
-      <li class="tagged-movies">
+      <li class="tagged-film">
         <article>
           <h1 class="list-calendar-heading">レディ・バード</h1>
           <div class="list-calendar-inner">
@@ -346,6 +350,7 @@
 
 <script src="./js/libs/jquery.min.js"></script>
 <script src="./js/libs/slick.min.js"></script>
+<script src="./js/libs/jquery.sticky-kit.min.js"></script>
 <!-- <script src="./js/libs/jquery.dotdotdot.js"></script> -->
 <script src="./js/script.min.js"></script>
 </body>

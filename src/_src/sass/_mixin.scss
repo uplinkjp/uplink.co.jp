@@ -92,3 +92,32 @@
     opacity: 1;
   }
 }
+
+@mixin theme_bg() {
+  .theme-main & {
+    background: $c_bg_nav;
+  }
+  .theme-shibuya & {
+    background: $c_bg_shibuya;
+  }
+  .theme-joji & {
+    background: $c_bg_joji;
+  }
+}
+@mixin archive_bg() {
+  .archive-film & {
+    background-color: $c_nav_film_bg;
+  }
+  .archive-event & {
+    background-color: $c_nav_event_bg;
+  }
+  .archive-gallery & {
+    background-color: $c_nav_gallery_bg;
+  }
+  .archive-market & {
+    background-color: $c_nav_market_bg;
+  }
+  .archive-default & {
+    background-color: $c_nav_default_bg;
+  }
+}

@@ -330,48 +330,53 @@ a:hover {
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: 700; }
 
+.js-headerWrap {
+  width: 100%;
+  z-index: 9999; }
+  .js-headerWrap.is-scroll {
+    position: fixed;
+    top: -160px;
+    left: 0;
+    transition: top .7s ease; }
+  .js-headerWrap.is-fixed {
+    top: 0;
+    transition: all .7s ease; }
+  @media screen and (max-width: 767px) {
+    .js-headerWrap.is-open {
+      height: 100% !important; } }
+
 .l-header {
-  width: 100vw;
+  width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 15px;
   box-sizing: border-box;
   z-index: 9999;
+  overflow: hidden;
   transition: all .7s ease; }
+  .frontpage .l-header {
+    transition: none;
+    height: auto; }
+  .is-scroll .l-header {
+    transition: top .7s ease; }
+  .is-fixed .l-header {
+    transition: all .7s ease; }
   .theme-main .l-header {
     background: #212121; }
   .theme-shibuya .l-header {
     background: #EEE8E8; }
   .theme-joji .l-header {
     background: #E8EEE8; }
-  .l-header.is-scroll {
-    position: fixed;
-    top: -60px;
-    left: 0;
-    width: 100vw;
-    height: 60px;
-    overflow: hidden; }
-  .l-header.is-fixed {
-    top: 0; }
-    .l-header.is-fixed:after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: calc(100% - 60px);
-      transition: all .7s .5s; }
-      .theme-main .l-header.is-fixed:after {
-        background: linear-gradient(to top, #212121 60%, transparent); }
-      .theme-shibuya .l-header.is-fixed:after {
-        background: linear-gradient(to top, #EEE8E8 60%, transparent); }
-      .theme-joji .l-header.is-fixed:after {
-        background: linear-gradient(to top, #E8EEE8 60%, transparent); }
-  .l-header.is-open {
-    width: 100vw;
-    height: 100vh; }
-    .l-header.is-open:after {
-      bottom: -100%; }
+  .archive-film .l-header {
+    background-color: #3B8D51; }
+  .archive-event .l-header {
+    background-color: #536A9D; }
+  .archive-gallery .l-header {
+    background-color: #FA5032; }
+  .archive-market .l-header {
+    background-color: #00AD93; }
+  .archive-default .l-header {
+    background-color: #BFBFBF; }
 
 .header-inner {
   position: relative;
@@ -397,6 +402,16 @@ a:hover {
       background: #EEE8E8; }
     .theme-joji .header-logo a span {
       background: #E8EEE8; }
+    .archive-film .header-logo a span {
+      background-color: #3B8D51; }
+    .archive-event .header-logo a span {
+      background-color: #536A9D; }
+    .archive-gallery .header-logo a span {
+      background-color: #FA5032; }
+    .archive-market .header-logo a span {
+      background-color: #00AD93; }
+    .archive-default .header-logo a span {
+      background-color: #BFBFBF; }
   .header-logo a img {
     width: 40px;
     height: 60px; }
@@ -441,31 +456,49 @@ a:hover {
       background-position: center;
       background-size: 24px auto; }
       .theme-main .header-nav_trigger a:before {
-        background-image: url(../img/icon-menu-on.png); }
+        background-image: url(../img/icon-menu-off.png); }
       .theme-shibuya .header-nav_trigger a:before {
-        background-image: url(../img/icon-menu-on_shibuya.png); }
+        background-image: url(../img/icon-menu-off_shibuya.png); }
       .theme-joji .header-nav_trigger a:before {
-        background-image: url(../img/icon-menu-on_joji.png); }
-  .theme-main .header-nav_trigger.is-close a:before {
-    background-image: url(../img/icon-menu-off.png); }
-  .theme-shibuya .header-nav_trigger.is-close a:before {
-    background-image: url(../img/icon-menu-off_shibuya.png); }
-  .theme-joji .header-nav_trigger.is-close a:before {
-    background-image: url(../img/icon-menu-off_joji.png); }
+        background-image: url(../img/icon-menu-off_joji.png); }
+  .frontpage .header-nav_trigger a {
+    pointer-events: none; }
+  .is-scroll .header-nav_trigger a {
+    pointer-events: initial; }
+  .theme-main .is-open .header-nav_trigger a:before {
+    background-image: url(../img/icon-menu-on.png); }
+  .theme-shibuya .is-open .header-nav_trigger a:before {
+    background-image: url(../img/icon-menu-on_shibuya.png); }
+  .theme-joji .is-open .header-nav_trigger a:before {
+    background-image: url(../img/icon-menu-on_joji.png); }
 
 .l-header_sub {
-  position: relative;
-  padding: 25px 15px;
-  background: red; }
+  padding: 0 15px;
+  overflow: hidden;
+  transition: all .7s ease;
+  box-sizing: border-box; }
+  .archive-film .l-header_sub {
+    background-color: #3B8D51; }
+  .archive-event .l-header_sub {
+    background-color: #536A9D; }
+  .archive-gallery .l-header_sub {
+    background-color: #FA5032; }
+  .archive-market .l-header_sub {
+    background-color: #00AD93; }
+  .archive-default .l-header_sub {
+    background-color: #BFBFBF; }
+
+.header_sub-inner {
+  position: relative; }
 
 .header_sub-heading {
-  width: 100vw;
+  width: 100%;
   max-width: 1280px;
   font-size: 24px;
   color: #fff;
   font-weight: bold;
   margin: 0 auto;
-  padding: 25px 0; }
+  padding: 30px 0; }
   .header_sub-heading span {
     margin: 5px 0 0;
     display: block;
@@ -475,8 +508,26 @@ a:hover {
 
 .header-nav_sub_trigger {
   position: absolute;
-  right: 0;
-  top: 0; }
+  right: 25px;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-indent: 100%; }
+  .header-nav_sub_trigger a {
+    display: block;
+    width: 15px;
+    height: 100%;
+    background-image: url(../img/icon-submenu-off.png);
+    background-size: 5px auto;
+    background-repeat: no-repeat;
+    background-position: right center; }
+  .is-open .header-nav_sub_trigger a {
+    background-image: url(../img/icon-submenu-on.png); }
 
 .section-heading {
   padding: 25px 15px;
@@ -565,7 +616,7 @@ a:hover {
     margin: 0 5px 0 0;
     height: 24px; }
 
-.tag-movies, .tag-events, .tag-gallery, .tag-market {
+.tag-film, .tag-events, .tag-gallery, .tag-market {
   display: block;
   color: #fff;
   font-size: 12px;
@@ -575,7 +626,7 @@ a:hover {
   text-align: center;
   padding: 0 7px; }
 
-.tag-movies {
+.tag-film {
   background: #3B8D51; }
 
 .tag-events {
@@ -624,7 +675,7 @@ a:hover {
   border-left: 8px solid transparent; }
   .list-calendar li a {
     color: rgba(0, 0, 0, 0.87); }
-  .list-calendar li.tagged-movies {
+  .list-calendar li.tagged-film {
     border-color: #3B8D51; }
   .list-calendar li.tagged-events {
     border-color: #536A9D; }
@@ -711,41 +762,41 @@ a:hover {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; } }
 
-.nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-movies, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
+.nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
   margin-bottom: 5px;
   width: 100%;
   box-sizing: border-box; }
   @media screen and (min-width: 768px) {
-    .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-movies, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
+    .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: calc(50% - 2.5px); } }
   @media screen and (min-width: 1024px) {
-    .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-movies, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
+    .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: 100%;
       margin-right: 5px; } }
-  .nav-shibuya:last-child, .nav-joji:last-child, .nav-related:last-child, .nav-default:last-child, .nav-movies:last-child, .nav-events:last-child, .nav-gallery:last-child, .nav-market:last-child, .nav-cafe:last-child, .nav-map:last-child, .nav-login:last-child {
+  .nav-shibuya:last-child, .nav-joji:last-child, .nav-related:last-child, .nav-default:last-child, .nav-film:last-child, .nav-events:last-child, .nav-gallery:last-child, .nav-market:last-child, .nav-cafe:last-child, .nav-map:last-child, .nav-login:last-child {
     margin-bottom: 0; }
-  .nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a, .nav-movies a, .nav-events a, .nav-gallery a, .nav-market a, .nav-cafe a, .nav-map a, .nav-login a {
+  .nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a, .nav-film a, .nav-events a, .nav-gallery a, .nav-market a, .nav-cafe a, .nav-map a, .nav-login a {
     text-decoration: none;
     display: block;
     position: relative;
     padding: 10px;
     border-radius: 5px;
     box-sizing: border-box; }
-    .nav-shibuya a img, .nav-joji a img, .nav-related a img, .nav-default a img, .nav-movies a img, .nav-events a img, .nav-gallery a img, .nav-market a img, .nav-cafe a img, .nav-map a img, .nav-login a img {
+    .nav-shibuya a img, .nav-joji a img, .nav-related a img, .nav-default a img, .nav-film a img, .nav-events a img, .nav-gallery a img, .nav-market a img, .nav-cafe a img, .nav-map a img, .nav-login a img {
       display: block; }
-    .nav-shibuya a p, .nav-joji a p, .nav-related a p, .nav-default a p, .nav-movies a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p, .nav-login a p {
+    .nav-shibuya a p, .nav-joji a p, .nav-related a p, .nav-default a p, .nav-film a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p, .nav-login a p {
       font-family: YakuHanJP, "Noto Sans JP", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
       transform: scaleX(0.88);
       transform-origin: left center;
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 5px; }
-    .nav-shibuya a span, .nav-joji a span, .nav-related a span, .nav-default a span, .nav-movies a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
+    .nav-shibuya a span, .nav-joji a span, .nav-related a span, .nav-default a span, .nav-film a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
       font-family: "SpaceGrotesk", sans-serif;
       font-weight: 700;
       font-size: 12px;
       margin-top: 7px; }
-    .nav-shibuya a:after, .nav-joji a:after, .nav-related a:after, .nav-default a:after, .nav-movies a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
+    .nav-shibuya a:after, .nav-joji a:after, .nav-related a:after, .nav-default a:after, .nav-film a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
       content: "";
       position: absolute;
       right: 5px;
@@ -865,16 +916,16 @@ a:hover {
   .theme-joji .nav-default a p {
     font-size: 13px; }
 
-.nav-movies a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p {
+.nav-film a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p {
   transform: none;
   font-size: 18px;
   font-weight: 700; }
 
-.nav-movies a {
+.nav-film a {
   background: #3B8D51;
   color: #FFFFFF;
   height: 124px; }
-  .nav-movies a:after {
+  .nav-film a:after {
     background-image: url(../img/arrow-related.png); }
 
 .nav-events a {
@@ -946,8 +997,7 @@ a:hover {
   font-size: 18px;
   font-weight: bold;
   border-top: 2px solid rgba(255, 255, 255, 0.2);
-  padding: 20px 0;
-  background: green; }
+  padding: 20px 0; }
   .l-nav_sub a:last-child {
     border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
   @media screen and (min-width: 768px) {

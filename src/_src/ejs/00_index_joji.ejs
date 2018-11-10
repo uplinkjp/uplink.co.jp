@@ -1,4 +1,8 @@
-<%- include('partials/_head_joji.ejs'); %>
+<%- include('partials/_head.ejs', { theme: 'theme-joji', page: 'frontpage' }); %>
+
+<div class="js-headerWrap">
+  <%- include('partials/_header_joji.ejs'); %>
+</div>
 
 <div class="l-wrap">
   <%- include('partials/_slider.ejs'); %>

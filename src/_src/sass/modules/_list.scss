@@ -95,13 +95,13 @@
   text-align: center;
   padding: 0 7px;
 }
-.tag-movies {
+.tag-film {
   @extend %tag;
-  background: $c_nav_movies_bg;
+  background: $c_nav_film_bg;
 }
 .tag-events {
   @extend %tag;
-  background: $c_nav_events_bg;
+  background: $c_nav_event_bg;
 }
 .tag-gallery {
   @extend %tag;
@@ -156,11 +156,11 @@
     a {
       color: $c_text_primary;
     }
-    &.tagged-movies {
-      border-color: $c_nav_movies_bg;
+    &.tagged-film {
+      border-color: $c_nav_film_bg;
     }
     &.tagged-events {
-      border-color: $c_nav_events_bg;
+      border-color: $c_nav_event_bg;
     }
     &.tagged-gallery {
       border-color: $c_nav_gallery_bg;

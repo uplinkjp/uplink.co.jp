@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -24,9 +26,10 @@
   <title>UPLINK</title>
 
 </head>
-<body class="theme-shibuya">
+<body class="theme-shibuya archive-event">
 
-<!-- 渋谷 -->
+<div class="js-headerWrap">
+  <!-- 渋谷 -->
   <header class="l-header">
     <div class="header-inner">
       <h1 class="header-logo">
@@ -34,12 +37,12 @@
           <span><img src="/img/logo.png" alt="UPLINK" /></span>
         </a>
       </h1>
-      <p class="header-nav_trigger"><a href="">MENU</a></p>
+      <p class="header-nav_trigger"><a href="" class="js-mainNavTrigger">MENU</a></p>
     </div>
 
     <nav class="l-nav">
       <div class="nav-wrap">
-        <div class="nav-movies">
+        <div class="nav-film">
           <a href="">
             <p>上映</p>
             <span>MOVIES</span>
@@ -113,37 +116,33 @@
     </nav>
   </header>
 
-<div class="l-header_sub">
+  <div class="l-header_sub">
   <div class="header_sub-inner">
     <h2 class="header_sub-heading">
       上映
       <span>MOVIES</span>
     </h2>
+    <p class="header-nav_sub_trigger"><a href="" class="js-subNavTrigger">SUB MENU</a></p>
   </div>
   <nav class="l-nav_sub">
     <div class="nav-wrap">
-      <div class="nav-movies">
-        <a href="">
-          <p>公開中の作品</p>
-          <span>NOW PLAYING</span>
-        </a>
-      </div>
-      <div class="nav-events">
-        <a href="">
-          <p>近日公開の作品</p>
-          <span>COMMING SOON</span>
-        </a>
-      </div>
-      <div class="nav-events">
-        <a href="">
-          <p>今月のスケジュール</p>
-          <span>MONTHLY SCHEDULE</span>
-        </a>
-      </div>
+      <a href="">
+        <p>公開中の作品</p>
+        <span>NOW PLAYING</span>
+      </a>
+      <a href="">
+        <p>近日公開の作品</p>
+        <span>COMMING SOON</span>
+      </a>
+      <a href="">
+        <p>今月のスケジュール</p>
+        <span>MONTHLY SCHEDULE</span>
+      </a>
     </div>
   </nav>
 </div>
 
+</div>
 
 <div class="l-wrap">
 
@@ -345,6 +344,7 @@
 
 <script src="./js/libs/jquery.min.js"></script>
 <script src="./js/libs/slick.min.js"></script>
+<script src="./js/libs/jquery.sticky-kit.min.js"></script>
 <!-- <script src="./js/libs/jquery.dotdotdot.js"></script> -->
 <script src="./js/script.min.js"></script>
 </body>

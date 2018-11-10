@@ -4,14 +4,12 @@ var UPLINK = {};
 
 UPLINK = {
   init: function() {
-    $( function() {
-      UPLINK.sample.init();
+    $(function() {
       UPLINK.bind();
     });
   },
 
   bind: function() {
-    // console.log('bind');
     $(window)
     .on('load', function() {
       UPLINK.onload();
@@ -25,10 +23,8 @@ UPLINK = {
   },
 
   onload: function() {
-    // console.log('onload');
     UPLINK.slick.init();
-    UPLINK.header.init($('.l-header'));
-   // $('.js-dotdotdot').dotdotdot();
+    UPLINK.header.init();
   },
 
   onscroll: function() {
@@ -37,7 +33,7 @@ UPLINK = {
   },
 
   onresize: function() {
-    // UPLINK.header.init($('.l-header'));
+    UPLINK.header.resize();
   }
 
 

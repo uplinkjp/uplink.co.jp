@@ -1,10 +1,14 @@
-<%- include('partials/_head_shibuya.ejs'); %>
+<%- include('partials/_head.ejs', { theme: 'theme-shibuya', page: 'archive-film' }); %>
+
+<div class="js-headerWrap">
+  <%- include('partials/_header_shibuya.ejs'); %>
+  <%- include('partials/_header_sub_film.ejs'); %>
+</div>
 
 <div class="l-wrap">
-  <%- include('partials/_slider.ejs'); %>
-  <%- include('partials/_list-news.ejs'); %>
-  <%- include('partials/_list-calendar.ejs'); %>
-  <%- include('partials/_followus.ejs'); %>
+  <section class="l-archive">
+    <%- include('partials/_archive.ejs',{len: 12}); %>
+  </section>
 </div>
 
 <%- include('partials/_footer.ejs'); %>

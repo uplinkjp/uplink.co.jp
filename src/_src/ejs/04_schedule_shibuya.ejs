@@ -1,5 +1,9 @@
-<%- include('partials/_head_shibuya.ejs'); %>
-<%- include('partials/_head_sub_schedule.ejs'); %>
+<%- include('partials/_head.ejs', { theme: 'theme-shibuya', page: 'archive-schedule' }); %>
+
+<div class="js-headerWrap">
+  <%- include('partials/_header_shibuya.ejs'); %>
+  <%- include('partials/_header_sub_schedule.ejs'); %>
+</div>
 
 <div class="l-wrap">
   <%- include('partials/_archive-calendar.ejs'); %>

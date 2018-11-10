@@ -203,12 +203,12 @@
   }
 }
 
-.nav-movies {
+.nav-film {
   @extend %nav;
   @extend %nav-child;
   a {
-    background: $c_nav_movies_bg;
-    color: $c_nav_movies_text;
+    background: $c_nav_film_bg;
+    color: $c_nav_film_text;
     height: 124px;
     &:after {
       background-image: url(../img/arrow-related.png);
@@ -219,7 +219,7 @@
   @extend %nav;
   @extend %nav-child;
   a {
-    background: $c_nav_events_bg;
+    background: $c_nav_event_bg;
     color: $c_nav_events_text;
     height: 124px;
     &:after {
@@ -315,7 +315,6 @@
     font-weight: bold;
     border-top: 2px solid rgba(255,255,255,.2);
     padding: 20px 0;
-    background: green;
     &:last-child {
       border-bottom: 2px solid rgba(255,255,255,.2);
     }

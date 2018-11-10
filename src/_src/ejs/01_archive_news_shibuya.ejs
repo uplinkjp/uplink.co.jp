@@ -1,5 +1,9 @@
-<%- include('partials/_head_shibuya.ejs'); %>
-<%- include('partials/_head_sub_gallery.ejs'); %>
+<%- include('partials/_head.ejs', { theme: 'theme-shibuya', page: 'archive-default' }); %>
+
+<div class="js-headerWrap">
+  <%- include('partials/_header_shibuya.ejs'); %>
+  <%- include('partials/_header_sub_news.ejs'); %>
+</div>
 
 <div class="l-wrap">
   <%- include('partials/_list-news.ejs'); %>
