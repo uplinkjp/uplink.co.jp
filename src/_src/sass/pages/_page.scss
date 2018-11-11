@@ -15,7 +15,23 @@
 .page-link {
   text-align: right;
   background: #f2f2f2;
-  padding: 10px 0;
+  padding: 10px;
+  a {
+    position: relative;
+    padding-right: 23px;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 13px;
+      height: 100%;
+      background-image: url(../img/arrow-link.png);
+      background-size: 13px 13px;
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+  }
   .archive-description & {
     margin-top: 10px;
   }
