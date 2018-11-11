@@ -2,19 +2,23 @@
 
 <div class="js-headerWrap">
   <%- include('partials/_header_shibuya.ejs'); %>
-  <%- include('partials/_header_sub_news.ejs'); %>
+  <%- include('partials/_header_sub_default.ejs',{title: 'お知らせ', subtitle: 'NEWS'}); %>
 </div>
 
 <div class="l-wrap">
-  <%- include('partials/_list-news.ejs'); %>
+  <div class="l-archive">
+    <%- include('partials/_list-news-core.ejs',{ len: 10, usethumb: true }); %>
+  </div>
 
   <div class="archive-pager">
     <a href="" class="pager-prev">PREV</a>
-    <span class="pager-current">1</span>
-    <a href="" class="pager-num">2</a>
+    <a href="" class="pager-num">1</a>
+    <span class="pager-current">2</span>
     <a href="" class="pager-num">3</a>
     <a href="" class="pager-next">NEXT</a>
   </div>
+
+  <%- include('partials/_followus.ejs'); %>
 
 </div>
 

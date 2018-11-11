@@ -117,7 +117,11 @@
   .archive-market & {
     background-color: $c_nav_market_bg;
   }
-  .archive-default & {
+  .archive-default &,
+  .page-default & {
     background-color: $c_nav_default_bg;
+    .header_sub-heading {
+      color: #000;
+    }
   }
 }

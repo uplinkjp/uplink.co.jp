@@ -8,20 +8,10 @@
 <div class="l-wrap">
 
   <section class="l-archive">
-    <div class="archive-header">
-      <h1>公開中の作品</h1>
-      <p>NOW PLAYING</p>
-    </div>
     <%- include('partials/_archive.ejs',{len: 12}); %>
   </section>
 
-  <section class="l-archive">
-    <div class="archive-header">
-      <h1>近日公開の作品</h1>
-      <p>COMMING SOON</p>
-    </div>
-    <%- include('partials/_archive.ejs',{len: 8}); %> 
-  </section>
+  <%- include('partials/_followus.ejs'); %>
 
 </div>
 

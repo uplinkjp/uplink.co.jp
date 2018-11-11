@@ -1,13 +1,12 @@
-<%- include('partials/_head.ejs', { theme: 'theme-shibuya' }); %>
+<%- include('partials/_head.ejs', { theme: 'theme-shibuya', page: 'page-default' }); %>
 
 <div class="js-headerWrap">
   <%- include('partials/_header_shibuya.ejs'); %>
+  <%- include('partials/_header_sub_default.ejs',{title: '施設レンタル', subtitle: 'RENTAL'}); %>
 </div>
 
 <div class="l-wrap">
-  <%- include('partials/_slider.ejs'); %>
-  <%- include('partials/_list-news.ejs'); %>
-  <%- include('partials/_list-calendar.ejs'); %>
+  <%- include('partials/_wysiwyg.ejs'); %>
   <%- include('partials/_followus.ejs'); %>
 </div>
 

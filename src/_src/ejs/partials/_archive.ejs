@@ -22,19 +22,19 @@
 
   var img = [
     'https://placehold.jp/554x232.png',
+
   ];
   var img_len = img.length;
-
-
-
 %>
 
+<div class="list_archive">
 <% for (var i = 0; i < len; i++) { %>
 
-<article class="list_archive">
-  <img src="<%- img[i % img_len]; %>">
-  <h1 class=""><%- title[i % title_len]; %></h1>
-  <p class=""><%- text[i % text_len]; %></p>
-</article>
+  <article class="list_archive-item"><a href="">
+    <p class="list_archive-thumb"><img src="<%- img[i % img_len]; %>"></p>
+    <h1 class="list_archive-heading"><%- title[i % title_len]; %></h1>
+    <p class="list_archive-text"><%- text[i % text_len]; %></p>
+ </a></article>
 
 <% } %>
+</div>

@@ -6,9 +6,22 @@
 </div>
 
 <div class="l-wrap">
+
   <section class="l-archive">
+    <h2 class="section-heading">
+      公開中の作品
+      <span>NOW PLAYING</span>
+    </h2>
+    <%- include('partials/_archive.ejs',{len: 12}); %>
+    <h2 class="section-heading">
+      近日公開の作品
+      <span>COMMING SOON</span>
+    </h2>
     <%- include('partials/_archive.ejs',{len: 12}); %>
   </section>
+
+  <%- include('partials/_followus.ejs'); %>
+
 </div>
 
 <%- include('partials/_footer.ejs'); %>

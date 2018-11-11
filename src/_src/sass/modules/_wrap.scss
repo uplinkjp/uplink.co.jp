@@ -1,4 +1,4 @@
 .l-wrap {
-  max-width: $max-width;
+  @include containerTB;
   margin: 0 auto;
 }
