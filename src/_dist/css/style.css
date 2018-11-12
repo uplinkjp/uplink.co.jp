@@ -346,17 +346,10 @@ a:hover {
 .l-header {
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
   box-sizing: border-box;
   z-index: 9999;
   overflow: hidden;
-  transition: all .7s ease;
-  box-sizing: border-box; }
-  @media screen and (min-width: 768px) {
-    .l-header {
-      margin: 0 auto;
-      width: 87.5vw;
-      max-width: 1260px; } }
+  transition: all .7s ease; }
   .frontpage .l-header {
     transition: none;
     height: auto; }
@@ -364,85 +357,60 @@ a:hover {
     transition: top .7s ease; }
   .is-fixed .l-header {
     transition: all .7s ease; }
-  .theme-main .l-header {
-    background: #212121; }
-  .theme-shibuya .l-header {
-    background: #EEE8E8; }
-  .theme-joji .l-header {
-    background: #E8EEE8; }
-  .archive-film .l-header {
-    background-color: #3B8D51; }
-  .archive-event .l-header {
-    background-color: #536A9D; }
-  .archive-gallery .l-header {
-    background-color: #FA5032; }
-  .archive-market .l-header {
-    background-color: #00AD93; }
-  .archive-default .l-header,
-  .page-default .l-header {
-    background-color: #BFBFBF; }
-    .archive-default .l-header .header_sub-heading,
-    .page-default .l-header .header_sub-heading {
-      color: #000; }
 
 .header-inner {
-  position: relative;
-  width: 100%;
-  height: 60px; }
-  .theme-main .header-inner {
-    background: #3C3C3C; }
-  .theme-shibuya .header-inner {
-    background: #64276A; }
-  .theme-joji .header-inner {
-    background: #A4DE9A; }
-
-.header-logo a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center; }
-  .header-logo a span {
-    width: 60px; }
-    .theme-main .header-logo a span {
-      background: #212121; }
-    .theme-shibuya .header-logo a span {
-      background: #EEE8E8; }
-    .theme-joji .header-logo a span {
-      background: #E8EEE8; }
-    .archive-film .header-logo a span {
-      background-color: #3B8D51; }
-    .archive-event .header-logo a span {
-      background-color: #536A9D; }
-    .archive-gallery .header-logo a span {
-      background-color: #FA5032; }
-    .archive-market .header-logo a span {
-      background-color: #00AD93; }
-    .archive-default .header-logo a span,
-    .page-default .header-logo a span {
-      background-color: #BFBFBF; }
-      .archive-default .header-logo a span .header_sub-heading,
-      .page-default .header-logo a span .header_sub-heading {
-        color: #000; }
-  .header-logo a img {
-    width: 40px;
-    height: 60px; }
-  .header-logo a:after {
-    content: "";
-    display: inline-block;
-    height: 20px;
-    padding: 0 0 0 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto 20px; }
-    .theme-main .header-logo a:after {
-      background-image: url(../img/logo-text.png);
-      width: 75px; }
-    .theme-shibuya .header-logo a:after {
-      background-image: url(../img/logo-shibuya.png);
-      width: 120px; }
-    .theme-joji .header-logo a:after {
-      background-image: url(../img/logo-joji.png);
-      width: 140px; }
+      align-items: center;
+  box-sizing: border-box; }
+  @media screen and (min-width: 768px) {
+    .header-inner {
+      margin: 0 auto;
+      width: 87.5vw;
+      max-width: 1260px; } }
+
+.header-body {
+  position: relative;
+  width: 100%;
+  height: 60px; }
+  .theme-main .header-body {
+    background: #3C3C3C; }
+  .theme-shibuya .header-body {
+    background: #64276A; }
+  .theme-joji .header-body {
+    background: #A4DE9A; }
+
+.header-logo {
+  padding-right: 20px; }
+  .header-logo a {
+    display: block; }
+    .header-logo a img {
+      width: 40px;
+      height: 60px; }
+  .header-body .header-logo {
+    padding: 0; }
+    .header-body .header-logo a {
+      display: inline-block;
+      font-size: 0;
+      overflow: hidden;
+      vertical-align: middle;
+      white-space: nowrap;
+      text-indent: 100%;
+      height: 100%;
+      padding: 0 0 0 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 20px; }
+      .theme-main .header-body .header-logo a {
+        background-image: url(../img/logo-text.png);
+        width: 75px; }
+      .theme-shibuya .header-body .header-logo a {
+        background-image: url(../img/logo-shibuya.png);
+        width: 120px; }
+      .theme-joji .header-body .header-logo a {
+        background-image: url(../img/logo-joji.png);
+        width: 140px; }
 
 .header-nav_trigger {
   position: absolute;
@@ -512,13 +480,7 @@ a:hover {
   color: #fff;
   font-weight: bold;
   margin: 0 auto;
-  padding: 30px 0;
-  box-sizing: border-box; }
-  @media screen and (min-width: 768px) {
-    .header_sub-heading {
-      margin: 0 auto;
-      width: 87.5vw;
-      max-width: 1260px; } }
+  padding: 30px 0; }
   .header_sub-heading span {
     margin: 5px 0 0;
     display: block;
