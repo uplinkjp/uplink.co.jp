@@ -1,12 +1,26 @@
 .l-nav {
   padding: 20px 0;
+  padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  @include containerTB;
   @include mqTB {
   }
   @include mqPC {
     flex-wrap: nowrap;
+  }
+  .is-scroll & {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .is-fixed.main-open & {
+    margin-top: 0 !important;
+    top: 0;
+    transition: all .7s ease;
   }
 }
 %nav {
@@ -296,6 +310,7 @@
 }
 
 .l-nav_sub {
+  @include containerTB;
   .nav-wrap { // todo: 移植;
     @include mqTB {
       flex-wrap: nowrap;

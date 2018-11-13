@@ -24,16 +24,16 @@ UPLINK = {
 
   onload: function() {
     UPLINK.slick.init();
-    // UPLINK.header.init();
+    UPLINK.header.init();
   },
 
   onscroll: function() {
     var st = $(window).scrollTop();
-    // UPLINK.header.scroll(st);
+    UPLINK.header.scroll(st);
   },
 
   onresize: function() {
-    // UPLINK.header.resize();
+    UPLINK.header.resize();
   }
 
 
