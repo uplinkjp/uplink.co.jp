@@ -52,6 +52,8 @@ UPLINK.header = {
   $subNavTrigger: null,
   _st: 0,
 
+  $subTriggerClone: null,
+
   isScroll: false,
 
   $mainClone: null,
@@ -76,8 +78,11 @@ UPLINK.header = {
     UPLINK.header.$mainClone = $('.l-nav_sub').clone();
     UPLINK.header.$mainClone.addClass('is-clone');
     $('body').append(UPLINK.header.$mainClone);
-    $('.l-nav_sub.is-clone').wrap('<div class="js-sub-clone"></div>')
+    $('.l-nav_sub.is-clone').wrap('<div class="js-sub-clone"></div>');
 
+    // UPLINK.header.$subTriggerClone = $('.js-mainNavTrigger').clone();
+    // UPLINK.header.$subTriggerClone.addClass('is-clone');
+    // $('.js-sub-clone').append(UPLINK.header.$subTriggerClone);
 
     UPLINK.header.$main = $('.l-nav');
     UPLINK.header.$sub = $('.l-header_sub');
@@ -85,7 +90,7 @@ UPLINK.header = {
     UPLINK.header.$main_height = UPLINK.header.$main.outerHeight();
     UPLINK.header.$sub_height = UPLINK.header.$sub.height();
     UPLINK.header.$subNavTrigger = $('.js-subNavTrigger');
-    // UPLINK.header.$main.wrap('<div class="js-header-wrap"></div>');
+    UPLINK.header.$main.wrap('<div class="js-header-wrap"></div>');
 
     if($('.frontpage').length) {
       UPLINK.header.isFrontPage = true;
@@ -133,8 +138,6 @@ UPLINK.header = {
     if(st > 300) {
       $('body').addClass('is-scroll');
       UPLINK.header.isScroll = true;
-      UPLINK.header.closeMainNav();
-      UPLINK.header.closeSubNav();
 
       if(st < UPLINK.header._st ) {
         $('body').addClass('is-navfixed');
@@ -145,6 +148,9 @@ UPLINK.header = {
       UPLINK.header.isScroll = false;
       $('body').removeClass('is-scroll');
       $('body').removeClass('is-navfixed');
+      UPLINK.header.closeMainNav();
+      UPLINK.header.closeSubNav();
+
 
      if(UPLINK.header.isFrontPage) UPLINK.header.openMainNav();
 
@@ -167,34 +173,22 @@ UPLINK.header = {
     $('body').removeClass('main-open');
     if(!UPLINK.header.isScroll) {
       UPLINK.header.$el.css({
-        'margin-top': - UPLINK.header.$main_height +'px'
+        'margin-top': - UPLINK.header.$main_height + 'px'
       });
     }
-
-    // UPLINK.scrollBan.release();
-    // UPLINK.header.$main.css({
-    //   'height': '60px'
-    // });
-    // UPLINK.header.$sub.css({
-    //   'top': '60px'
-    // });
-    // UPLINK.header.$main.removeClass('is-open');
-
   },
 
   openSubNav: function() {
     UPLINK.header.isSubNavOpen = true;
-    // UPLINK.scrollBan.ban(UPLINK.header._st);
-    // UPLINK.header.$sub.addClass('is-open');
     $('body').addClass('sub-open');
-    UPLINK.header.bottom = Number($('.js-subNavTrigger').parent('p').css('bottom').replace('px',''));
-    $('.js-subNavTrigger').parent('p').css({
-      'bottom': UPLINK.header.bottom + UPLINK.header.$sub_height + 'px'
-    });
     if(!UPLINK.header.isScroll) {
       UPLINK.header.$sub.css({
         'height': UPLINK.header.$sub_height + 'px'
       });
+    $('.js-subNavTrigger').parent('p').css({
+      'bottom': 35 + $('.js-sub-clone').outerHeight() + 'px'
+    });
+
     }
   },
 
@@ -202,7 +196,7 @@ UPLINK.header = {
     UPLINK.header.isSubNavOpen = false;
     // UPLINK.scrollBan.release();
     $('.js-subNavTrigger').parent('p').css({
-      'bottom': UPLINK.header.bottom + 'px'
+      'bottom': 35 + 'px'
     });
     if(!UPLINK.header.isScroll) {
       UPLINK.header.$sub.css({
