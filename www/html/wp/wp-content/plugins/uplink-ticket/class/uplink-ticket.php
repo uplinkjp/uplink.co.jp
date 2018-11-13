@@ -5,6 +5,7 @@ class uplinkTicket
 
   private $date_format = 'Y-m-d H:i:s',
           $access_token = null,
+          $ticket_url = 'https://rsv.uplink.co.jp',
           $apiurl,
           $username,
           $password;
@@ -31,6 +32,7 @@ class uplinkTicket
     return array_map( function($program)
     {
 
+      $program->permalink = $this->ticket_url . '/' . $program->programId;
       $program->startDate = date('Y-m-d', (int)$program->startTime / 1000);
       $program->startDatetime = date($this->date_format, (int)$program->startTime / 1000);
       $program->endDatetime = date($this->date_format, (int)$program->endTime / 1000);
