@@ -1,16 +1,15 @@
 .js-headerWrap {
   position: relative;
-  z-index: 0;
+  z-index: 2;
   width: 100%;
   transition: all .7s ease;
 }
-
 
 .l-header {
   position: absolute;
   left: 0;
   top : 0;
-  z-index: 2;
+  z-index: 4;
   width: 100%;
   height: 60px;
   margin: 0 auto;
@@ -28,25 +27,14 @@
     position: fixed;
     top: -100px;
     left: 0;
-    transition: top .7s ease;
   }
   .is-navfixed & {
     transition: all .7s ease;
     top: 0;
-    transition: all .7s ease;
   }
-
   @include mqTB {
     padding: 0;
   }
-  // .is-open & {
-  //   @include mqSP {
-  //     height: 100% !important;
-  //   }
-  // }
-
-  // @include theme_bg();
-  // @include archive_bg();
 }
 
 .header-inner {
@@ -76,13 +64,6 @@
   padding-right: 20px;
   a {
     display: block;
-    // display: flex;
-    // align-items: center;
-    // span {
-    //   width: 60px;
-    //   // @include theme_bg();
-    //   // @include archive_bg();
-    // }
     img {
       width: 40px;
       height: 60px;
@@ -94,27 +75,6 @@
     background-size: 40px 60px;
     background-repeat: no-repeat;
     background-position: 0 0;
-    // &:after {
-    //   content: "";
-    //   display: inline-block;
-    //   height: 20px;
-    //   padding: 0 0 0 20px;
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-size: auto 20px;
-    //   .theme-main & {
-    //     background-image: url(../img/logo-text.png);
-    //     width: 75px;
-    //   }
-    //   .theme-shibuya & {
-    //     background-image: url(../img/logo-shibuya.png);
-    //     width: 120px;
-    //   }
-    //   .theme-joji & {
-    //     background-image: url(../img/logo-joji.png);
-    //     width: 140px;
-    //   }
-    // }
   }
   .header-body & {
     padding: 0;
@@ -200,12 +160,18 @@
 
 
 .l-header_sub {
-  padding: 0 15px;
   padding-top: 60px;
+  padding: 60px 15px 0 15px;
   overflow: hidden;
   transition: all .7s ease;
   box-sizing: content-box;
   @include archive_bg();
+  body:not(.is-scroll).main-open & {
+    padding-top: 0;  
+  }
+  &.is-clone {
+    padding-top: 0;
+  }
 }
 .header_sub-inner {
   position: relative;
@@ -231,12 +197,11 @@
   right: 0;
   top: 50%;
   transform: translate3d(0,-50%,0);
-  // width: 15px;
-  // height: 100%;
   width: 40px;
   height: 40px;
-  background-color: red;
   border-radius: 50%;
+  @include archive_bg();
+  transition: all .7s ease;
   a {
     @include texthidden;
     display: block;
@@ -259,11 +224,17 @@
     bottom: -100px;
     right: 25px;
   }
-  .is-navfixed & {
+ .is-navfixed & {
     bottom: 35px;
   }
-  .is-navfixed & {
-    bottom: 35px;
+  .is-clone & {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
   }
 
 }

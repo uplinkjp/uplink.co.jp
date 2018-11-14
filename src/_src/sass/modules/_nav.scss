@@ -1,10 +1,40 @@
+.js-main-clone {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  transition: all .7s ease;
+  @include theme_bg();
+  .is-navfixed.main-open & {
+    top: 0;
+  }
+  @include mqSP {
+    height: 100%;
+  }
+}
+.js-sub-clone {
+  position: fixed;
+  bottom: -120%;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  transition: all .7s ease;
+  @include archive_bg();
+  .is-navfixed.sub-open & {
+    bottom: 0;
+  }
+}
+
+
+
+
 .l-nav {
-  padding: 20px 0;
-  padding-top: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
+  padding: 80px 15px 20px 15px;
   @include containerTB;
   @include mqTB {
   }
@@ -12,35 +42,6 @@
     flex-wrap: nowrap;
   }
 }
-.js-main-clone {
-  position: fixed;
-  top: -120%;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  transition: all .7s ease;
-  @include theme_bg();
-  .is-navfixed.main-open & {
-    top: 0;
-  }
-
-}
-
-.js-sub-clone {
-  position: fixed;
-  bottom: -120%;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  transition: all .7s ease;
-  @include archive_bg();
-  .is-navfixed.sub-open & {
-    bottom: 0;
-  }
-
-}
-
-
 
 %nav {
   margin-bottom: 5px;
