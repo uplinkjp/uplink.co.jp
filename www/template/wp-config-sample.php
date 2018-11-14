@@ -97,12 +97,9 @@ if( isset($_SERVER['HTTP_HOST']) )
  */
 define('WP_DEBUG', false);
 
-// wp-contentディレクトリの位置を指定
-// define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/assets');
-// define('WP_CONTENT_URL', 'http://'.$_SERVER["HTTP_HOST"].'/assets');
+define('UPLINK_TICKET_APIURL', $_ENV['UPLINK_TICKET_APIURL']);
+define('UPLINK_TICKET_PASSWORD', $_ENV['UPLINK_TICKET_PASSWORD']);
 
-// CHITOSE meets WP BOOTSTRAP
-define('CTS_USE_LANG', (boolean)$_ENV['CTS_USE_LANG']);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 
