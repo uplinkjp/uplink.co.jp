@@ -1,0 +1,52 @@
+.form-googlesearch {
+  width: 100%;
+  form {
+    width: 100%;
+    display: flex;
+  }
+}
+.form-googlesearch-text {
+  width: 100%;
+  height: 48px;
+  flex: 1;
+  input {
+    @include placeholderColor($c_nav_default_bg);
+    width: 100%;
+    height: 48px;
+    border: 1px solid $c_nav_default_bg;
+    border-radius: 5px;
+    background: #fff;
+    padding: 0 5px;
+    font-size: 14px;
+  }
+}
+
+.form-googlesearch-submit {
+  @include texthidden;
+  position: relative;
+  width: 90px;
+  height: 48px;
+  margin-left: 5px;
+  background-color: #3984e6;
+  border-radius: 5px;
+  background-image: url(../img/form-googlesearch.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    line-height: 48px;
+  }
+
+  @include mqTB {
+    width: 103px;
+  }
+  @include mqPC {
+    width: 92px;
+  }
+}

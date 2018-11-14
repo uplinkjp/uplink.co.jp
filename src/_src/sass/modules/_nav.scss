@@ -30,17 +30,18 @@
 
 
 .l-nav {
+  padding: 80px 15px 20px 15px;
+  @include containerTB;
+  margin: 0 auto;
+}
+.nav-inner {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 auto;
-  padding: 80px 15px 20px 15px;
-  @include containerTB;
-  @include mqTB {
-  }
   @include mqPC {
     flex-wrap: nowrap;
   }
+
 }
 
 %nav {

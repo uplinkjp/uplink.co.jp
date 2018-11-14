@@ -130,20 +130,16 @@ UPLINK.header = {
 
   scroll: function(st) {
     if(st > 300) {
-      console.log('scroll1');
       $('body').addClass('is-scroll');
       UPLINK.header.isScroll = true;
       if(UPLINK.header.isMainNavOpen) UPLINK.header.closeMainNav();
       if(UPLINK.header.isSubNavOpen) UPLINK.header.closeSubNav();
       if(st < UPLINK.header._st ) {
-        console.log('scroll2');
         $('body').addClass('is-navfixed');
       } else {
-        console.log('scroll3');
         $('body').removeClass('is-navfixed');
       }
     } else {
-      console.log('scroll_ue');
       UPLINK.header.isScroll = false;
       $('body').removeClass('is-scroll');
       $('body').removeClass('is-navfixed');
@@ -158,8 +154,6 @@ UPLINK.header = {
   },
 
   openMainNav: function() {
-    console.log('open');
-
     UPLINK.header.isMainNavOpen = true;
     $('body').addClass('main-open');
     if(!UPLINK.header.isScroll) {
@@ -170,9 +164,6 @@ UPLINK.header = {
   },
 
   closeMainNav: function() {
-    console.log('close');
-
-
     UPLINK.header.isMainNavOpen = false;
     $('body').removeClass('main-open');
     if(!UPLINK.header.isScroll) {
