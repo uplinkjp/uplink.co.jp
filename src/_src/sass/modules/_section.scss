@@ -5,8 +5,8 @@
   span {
     display: block;
     font-size: 12px;
-    @include f_sg;
-    margin: 5px 0 0 0;
+    @include f_sg_bold;
+    margin: 6px 0 0 0;
   }
   .l-archive & {
     &:first-child {

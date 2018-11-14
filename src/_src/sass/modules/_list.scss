@@ -5,7 +5,7 @@
   }
   li {
     background: #fff;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -19,12 +19,12 @@
 .list-news-date {
   color: $c_text_secondary;
   font-size: 12px;
-  margin-bottom: 10px;
   display: block;
+  @include f_sg_bold;
   span {
     padding-left: 5px;
     font-size: 12px;
-    color: #ff0000;
+    color: #FF1744;
     @include f_sg_bold;
   }
 }
@@ -39,14 +39,14 @@
   padding: 20px $padding_wrap;
 }
 .list-news-thumb {
-  width: 25.1488095%;
-  margin-left: 30px;
+  width: 90px;
   padding: 20px $padding_wrap 20px 0;
   img {
     max-width: 100%;
   }
   @include mqTB {
     padding: 0;
+    width: 168px;
   }
 }
 .list-news-text {
@@ -116,7 +116,7 @@
   height: 24px;
   line-height: 24px;
   text-align: center;
-  padding: 0 7px;
+  padding: 0 6px;
 }
 .tag-film {
   @extend %tag;
@@ -143,8 +143,8 @@
 }
 
 .list-calendar-header {
-  padding: 20px $padding_wrap;
-  margin: 0 0 5px 0;
+  padding: 16px 15px;
+  margin: 0 0 4px 0;
   background: #fff;
   @include f_sg_bold;
   font-size: 28px;
@@ -168,7 +168,7 @@
   }
   @include mqPC {
     padding: 0;
-    width: 228px;
+    width: 25%;
     border: none;
     .list-calendar-header-inner {
       padding: 20px;
@@ -189,8 +189,8 @@
 .list-calendar {
   li {
     background: #fff;
-    margin-bottom: 5px;
-    padding: 15px $padding_wrap 20px $padding_wrap;
+    margin-bottom: 4px;
+    padding: 15px;
     border-left: 8px solid transparent;
     a {
       color: $c_text_primary;
@@ -210,7 +210,7 @@
   }
   @include mqPC {
     flex: 1;
-    margin-left: 5px;
+    margin-left: 4px;
   }
 }
 .list-calendar-heading {
@@ -224,7 +224,7 @@
   justify-content: space-between;
   align-items: center;
   background: rgba(0,0,0,.05);
-  padding: 10px 10px 15px 10px;
+  padding: 10px;
   margin: 0 0 5px 0;
   &:last-child {
     margin-bottom: 0;
@@ -233,7 +233,7 @@
 .list-calendar-date {
   @include f_sg_bold;
   font-size: 18px;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
   color: $c_text_primary;
   span {
     font-size: 12px;
@@ -253,7 +253,7 @@
 // <p class="list-readmore"><a href="">お知らせ一覧</a></p>
 //
 .list-readmore {
-  margin-top: 5px;
+  margin-top: 4px;
   a {
     display: block;
     text-align: center;
@@ -293,25 +293,24 @@
   }
 }
 .list_archive-item {
-  // background: #fff;
-  width: 100%;
-  margin: 0 0 20px 0;
+  margin: 0 15px 20px;
   a {
     display: block;
   }
   @include mqTB {
     width: calc(50% - 10px);
+    margin: 0 0 20px 0;
   }
   @include mqPC {
     width: calc((100% - 40px) / 3);
+   margin: 0 0 20px 0;
   }
 }
 .list_archive-thumb {
   position: relative;
   height: 0;
   width: 100%;
-  padding-top: 42.4836601%;
-  // background: #fff;
+  padding-top: 42.5%;
   text-align: center;
   img {
     position: absolute;
@@ -328,11 +327,11 @@
   font-weight: bold;
   line-height: 1.5;
   color: rgba(0,0,0,.87);
-  padding: 10px 15px 5px 15px;
+  padding: 10px 10px 5px;
 }
 .list_archive-text {
   background: #fff;
-  color: rgba(0,0,0,.87);
+  color: rgba(0,0,0,.6);
   font-size: 12px;
   line-height: 1.5;
   padding: 0 15px 10px 15px;

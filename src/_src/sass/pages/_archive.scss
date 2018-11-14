@@ -7,7 +7,7 @@
   color: rgba(0,0,0,.87);
   line-height: 1.5;
   a {
-    color: rgba(0,123,123,.87);
+    color: #007b7b;
     font-weight: bold;
   }
   p {
@@ -21,7 +21,7 @@
   align-items: center;
   @include f_sg_bold;
   padding: 20px 0;
-  margin: 5px 0 0 0;
+  margin: 4px 0 0 0;
   font-size: 16px;
   background: #fff;
   > * {
@@ -58,20 +58,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px $padding_wrap 30px $padding_wrap;
+  padding: 20px 15px;
 }
 .archive_header-heading {
   font-size: 32px;
-  font-weight: bold;
+  @include f_sg_bold;
 }
 .archive_header-nav {
   display: flex;
   font-size: 14px;
   font-weight: bold;
   > * {
-    margin-left: 15px;
+    margin-left: 10px;
   }
   a {
-    color: rgba(0,123,123,.87);
+    color: #007B7B;
   }
 }

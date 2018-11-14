@@ -5,6 +5,9 @@
 body {
   font-family: $f_default;
   min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   &.theme-main {
     background: $c_bg;
   }
