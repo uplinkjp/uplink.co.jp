@@ -793,7 +793,7 @@ a:hover {
       width: 25%;
       border: none; }
       .list-calendar-header .list-calendar-header-inner {
-        padding: 20px;
+        padding: 16px 15px;
         border-top: 4px solid #B2B2B2; }
       .list-calendar-header.is-holiday .list-calendar-header-inner {
         border-color: #FF1744; }
