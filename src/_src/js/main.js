@@ -19,7 +19,10 @@ UPLINK = {
     })
     .on('resize', function() {
       UPLINK.onresize();
-    })
+    });
+
+    $('.list-calendar-header-inner').stick_in_parent(); // pc
+    $('.list-calendar-header').stick_in_parent(); // sp
   },
 
   onload: function() {

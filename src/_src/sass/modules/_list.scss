@@ -167,7 +167,23 @@
     }
   }
   @include mqPC {
+    padding: 0;
     width: 228px;
+    border: none;
+    .list-calendar-header-inner {
+      padding: 20px;
+      border-top: 4px solid $c_weekday;
+    }
+    &.is-holiday {
+      .list-calendar-header-inner {
+        border-color: $c_holiday;
+      }
+    }
+    &.is-saturday {
+      .list-calendar-header-inner {
+        border-color: $c_saturday;
+      }
+    }
   }
 }
 .list-calendar {
