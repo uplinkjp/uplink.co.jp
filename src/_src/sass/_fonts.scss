@@ -98,4 +98,5 @@ $f_sg: 'SpaceGrotesk', sans-serif;
 @mixin f_sg_bold {
   font-family: $f_sg;
   font-weight: 700;
+  letter-spacing: .025em;
 }

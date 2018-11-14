@@ -223,6 +223,7 @@ a:hover {
   margin-bottom: 25px;
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: 700;
+  letter-spacing: .025em;
   font-size: 16px; }
 
 .followus-sns {
@@ -329,14 +330,19 @@ a:hover {
 .footer-copy {
   font-size: 12px;
   font-family: "SpaceGrotesk", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  letter-spacing: .025em; }
 
 .form-googlesearch {
-  width: 100%; }
+  width: 100%;
+  margin-top: 4px; }
   .form-googlesearch form {
     width: 100%;
     display: -ms-flexbox;
     display: flex; }
+  @media screen and (min-width: 768px) {
+    .form-googlesearch {
+      margin-top: 0; } }
 
 .form-googlesearch-text {
   width: 100%;
@@ -347,7 +353,7 @@ a:hover {
     width: 100%;
     height: 48px;
     border: 1px solid #BFBFBF;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #fff;
     padding: 0 5px;
     font-size: 14px; }
@@ -376,9 +382,9 @@ a:hover {
   position: relative;
   width: 90px;
   height: 48px;
-  margin-left: 5px;
+  margin-left: 4px;
   background-color: #3984e6;
-  border-radius: 5px;
+  border-radius: 3px;
   background-image: url(../img/form-googlesearch.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -583,7 +589,8 @@ a:hover {
     display: block;
     font-size: 12px;
     font-family: "SpaceGrotesk", sans-serif;
-    font-weight: 700; }
+    font-weight: 700;
+    letter-spacing: .025em; }
 
 .header-nav_sub_trigger {
   position: absolute;
@@ -662,13 +669,15 @@ a:hover {
   font-size: 12px;
   display: block;
   font-family: "SpaceGrotesk", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  letter-spacing: .025em; }
   .list-news-date span {
     padding-left: 5px;
     font-size: 12px;
     color: #FF1744;
     font-family: "SpaceGrotesk", sans-serif;
-    font-weight: 700; }
+    font-weight: 700;
+    letter-spacing: .025em; }
 
 .list-news-inner {
   width: 100%;
@@ -703,7 +712,7 @@ a:hover {
     display: block;
     position: relative;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     box-sizing: border-box; }
     .list-related a img {
       display: block; }
@@ -717,6 +726,7 @@ a:hover {
     .list-related a span {
       font-family: "SpaceGrotesk", sans-serif;
       font-weight: 700;
+      letter-spacing: .025em;
       font-size: 12px;
       margin-top: 7px; }
     .list-related a:after {
@@ -773,6 +783,7 @@ a:hover {
   background: #fff;
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: 700;
+  letter-spacing: .025em;
   font-size: 28px;
   border-top: 4px solid #B2B2B2; }
   .list-calendar-header span {
@@ -844,6 +855,7 @@ a:hover {
 .list-calendar-date {
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: 700;
+  letter-spacing: .025em;
   font-size: 18px;
   margin: 0 0 5px 0;
   color: rgba(0, 0, 0, 0.87); }
@@ -870,6 +882,7 @@ a:hover {
     padding: 20px 0;
     font-family: "SpaceGrotesk", sans-serif;
     font-weight: 700;
+    letter-spacing: .025em;
     background: #fff; }
     .list-readmore a:after {
       content: "";
@@ -1006,16 +1019,16 @@ a:hover {
           flex-wrap: nowrap; } }
 
 .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   width: 100%;
   box-sizing: border-box; }
   @media screen and (min-width: 768px) {
     .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
-      width: calc(50% - 2.5px); } }
+      width: calc(50% - 2px); } }
   @media screen and (min-width: 1024px) {
     .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: 100%;
-      margin-right: 5px; } }
+      margin-right: 4px; } }
   .nav-shibuya:last-child, .nav-joji:last-child, .nav-related:last-child, .nav-default:last-child, .nav-film:last-child, .nav-events:last-child, .nav-gallery:last-child, .nav-market:last-child, .nav-cafe:last-child, .nav-map:last-child, .nav-login:last-child {
     margin-bottom: 0; }
   .nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a, .nav-film a, .nav-events a, .nav-gallery a, .nav-market a, .nav-cafe a, .nav-map a, .nav-login a {
@@ -1023,20 +1036,22 @@ a:hover {
     display: block;
     position: relative;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     box-sizing: border-box; }
     .nav-shibuya a img, .nav-joji a img, .nav-related a img, .nav-default a img, .nav-film a img, .nav-events a img, .nav-gallery a img, .nav-market a img, .nav-cafe a img, .nav-map a img, .nav-login a img {
-      display: block; }
+      display: block;
+      margin-bottom: 5px; }
     .nav-shibuya a p, .nav-joji a p, .nav-related a p, .nav-default a p, .nav-film a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p, .nav-login a p {
       font-family: YakuHanJP, "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
       transform: scaleX(0.88);
       transform-origin: left center;
       font-size: 18px;
       font-weight: 700;
-      margin-bottom: 5px; }
+      margin-bottom: 4px; }
     .nav-shibuya a span, .nav-joji a span, .nav-related a span, .nav-default a span, .nav-film a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
       font-family: "SpaceGrotesk", sans-serif;
       font-weight: 700;
+      letter-spacing: .025em;
       font-size: 12px;
       margin-top: 7px; }
     .nav-shibuya a:after, .nav-joji a:after, .nav-related a:after, .nav-default a:after, .nav-film a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
@@ -1059,7 +1074,7 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between; }
       .nav-wrap_pc > div {
-        width: calc(50% - 2.5px); } }
+        width: calc(50% - 2px); } }
   @media screen and (min-width: 1024px) {
     .nav-wrap_pc {
       display: block; }
@@ -1075,17 +1090,17 @@ a:hover {
   -ms-flex-pack: justify;
       justify-content: space-between; }
   .nav-wrap > div {
-    width: calc(50% - 2.5px);
+    width: calc(50% - 2px);
     margin-right: 0; }
   @media screen and (min-width: 768px) {
     .nav-wrap {
-      width: calc(50% - 2.5px); } }
+      width: calc(50% - 2px); } }
   @media screen and (min-width: 1024px) {
     .nav-wrap {
       width: 100%;
-      margin-right: 5px; }
+      margin-right: 4px; }
       .nav-wrap > div {
-        width: calc(50% - 2.5px); } }
+        width: calc(50% - 2px); } }
 
 .nav-wrap-child {
   display: -ms-flexbox;
@@ -1115,9 +1130,9 @@ a:hover {
         margin-right: 0;
         width: calc((100% - 10px) / 3); }
         .nav-wrap-child > div.nav-col-2 {
-          width: calc((100% - 5px) / 3 * 2 + 2.5px); }
+          width: calc((100% - 5px) / 3 * 2 + 2px); }
         .nav-wrap-child > div.nav-col-1 {
-          width: calc((100% - 5px) / 3 - 2.5px); } }
+          width: calc((100% - 5px) / 3 - 2px); } }
 
 .nav-shibuya a {
   background: #64276A;
@@ -1208,7 +1223,7 @@ a:hover {
 
 .theme-joji .nav-map {
   width: 100%;
-  margin-bottom: 5px; }
+  margin-bottom: 4px; }
 
 .nav-login a {
   background: #000000;
@@ -1265,7 +1280,8 @@ a:hover {
       display: block;
       margin-top: 5px;
       font-family: "SpaceGrotesk", sans-serif;
-      font-weight: 700; }
+      font-weight: 700;
+      letter-spacing: .025em; }
     .l-nav_sub a:after {
       content: "";
       position: absolute;
@@ -1289,6 +1305,7 @@ a:hover {
     font-size: 12px;
     font-family: "SpaceGrotesk", sans-serif;
     font-weight: 700;
+    letter-spacing: .025em;
     margin: 6px 0 0 0; }
   .l-archive .section-heading:first-child {
     margin-top: -20px; }
@@ -1710,6 +1727,7 @@ a:hover {
       align-items: center;
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: 700;
+  letter-spacing: .025em;
   padding: 20px 0;
   margin: 4px 0 0 0;
   font-size: 16px;
@@ -1757,7 +1775,8 @@ a:hover {
 .archive_header-heading {
   font-size: 32px;
   font-family: "SpaceGrotesk", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  letter-spacing: .025em; }
 
 .archive_header-nav {
   display: -ms-flexbox;
@@ -1821,6 +1840,7 @@ a:hover {
       top: -4px;
       font-family: "SpaceGrotesk", sans-serif;
       font-weight: 700;
+      letter-spacing: .025em;
       font-size: 15px;
       padding: 0 15px 0 0; }
   .page-heading_decorated .page-heading_decorated-sub {

@@ -45,15 +45,15 @@
 }
 
 %nav {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   width: 100%;
   box-sizing: border-box;
   @include mqTB {
-    width: calc(50% - 2.5px);
+    width: calc(50% - 2px);
   }
   @include mqPC {
     width: 100%;
-    margin-right: 5px;
+    margin-right: 4px;
   }
   &:last-child {
     margin-bottom: 0;
@@ -63,16 +63,17 @@
     display: block;
     position: relative;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 3px;
     box-sizing: border-box;
     img {
       display: block;
+      margin-bottom: 5px;
     }
     p {
       @include f_narrow;
       font-size: 18px;
       font-weight: 700;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
     span {
       @include f_sg_bold;
@@ -98,7 +99,7 @@
     display: flex;
     justify-content: space-between;
     > div {
-      width: calc(50% - 2.5px);
+      width: calc(50% - 2px);
     }
   }
   @include mqPC {
@@ -114,17 +115,17 @@
   flex-wrap: wrap;
   justify-content: space-between;
   > div {
-    width: calc(50% - 2.5px);
+    width: calc(50% - 2px);
     margin-right: 0;
   }
   @include mqTB {
-    width: calc(50% - 2.5px);
+    width: calc(50% - 2px);
   }
   @include mqPC {
     width: 100%;
-    margin-right: 5px;
+    margin-right: 4px;
     > div {
-      width: calc(50% - 2.5px);
+      width: calc(50% - 2px);
     }
   }
 }
@@ -160,10 +161,10 @@
       margin-right: 0;
       width: calc((100% - 10px) / 3);
       &.nav-col-2 {
-        width: calc((100% - 5px) / 3 * 2 + 2.5px);
+        width: calc((100% - 5px) / 3 * 2 + 2px);
       }
       &.nav-col-1 {
-        width: calc((100% - 5px) / 3 - 2.5px);
+        width: calc((100% - 5px) / 3 - 2px);
       }
     }
   }
@@ -311,7 +312,7 @@
   }
   .theme-joji & {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
   }
 }
 .nav-login {
