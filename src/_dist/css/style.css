@@ -928,14 +928,10 @@ input[type="button"]::focus {
   height: 0;
   width: 100%;
   padding-top: 42.5%;
-  text-align: center; }
-  .list_archive-thumb img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
-    max-width: 100%;
-    max-height: 100%; }
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .list_archive-heading {
   background: #fff;
