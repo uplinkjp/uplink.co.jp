@@ -1282,22 +1282,18 @@ input[type="button"]::focus {
     color: #fff;
     font-size: 18px;
     font-weight: bold;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     padding: 20px 0; }
-    .l-nav_sub a:last-child {
-      border-bottom: 2px solid rgba(255, 255, 255, 0.2); }
     @media screen and (min-width: 768px) {
       .l-nav_sub a {
         margin-right: 20px; }
         .l-nav_sub a:last-child {
-          margin-right: 0;
-          border-bottom: none; } }
+          margin-right: 0; } }
     @media screen and (min-width: 1024px) {
       .l-nav_sub a {
         margin-right: 20px; }
         .l-nav_sub a:last-child {
-          margin-right: 0;
-          border-bottom: none; } }
+          margin-right: 0; } }
     .l-nav_sub a span {
       font-size: 12px;
       display: block;
