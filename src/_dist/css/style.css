@@ -446,6 +446,10 @@ input[type="button"]::focus {
       margin: 0 auto;
       width: 87.5vw;
       max-width: 1260px; } }
+  @media screen and (min-width: 768px) {
+    .header-inner {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .header-body {
   position: relative;
@@ -581,6 +585,9 @@ input[type="button"]::focus {
   font-weight: bold;
   margin: 0 auto;
   padding: 30px 0; }
+  @media screen and (min-width: 768px) {
+    .header_sub-heading {
+      padding: 30px 15px; } }
   .header_sub-heading span {
     margin: 5px 0 0;
     display: block;
@@ -1255,6 +1262,9 @@ input[type="button"]::focus {
       margin: 0 auto;
       width: 87.5vw;
       max-width: 1260px; } }
+  @media screen and (min-width: 768px) {
+    .l-nav_sub {
+      padding: 0 15px; } }
   @media screen and (min-width: 768px) {
     .l-nav_sub .nav-wrap {
       -ms-flex-wrap: nowrap;

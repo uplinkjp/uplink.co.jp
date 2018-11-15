@@ -359,6 +359,9 @@
 
 .l-nav_sub {
   @include containerTB;
+  @include mqTB {
+    padding: 0 15px;
+  }
   .nav-wrap { // todo: 移植;
     @include mqTB {
       flex-wrap: nowrap;
