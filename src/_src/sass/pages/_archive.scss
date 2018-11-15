@@ -54,6 +54,14 @@
   transform: rotate(-180deg);
 }
 
+.archive_shcedule-header_wrap {
+  @include mqTB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .archive_shcedule-header {
   display: flex;
   justify-content: space-between;
@@ -73,5 +81,10 @@
   }
   a {
     color: #007B7B;
+  }
+  .archive_shcedule-header_wrap & {
+    @include mqTB {
+      margin-left: 10px;
+    }
   }
 }

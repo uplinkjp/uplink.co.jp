@@ -752,6 +752,9 @@ input[type="button"]::focus {
   .list-tag li {
     margin: 0 5px 0 0;
     height: 24px; }
+  @media screen and (min-width: 768px) {
+    .archive_shcedule-header_wrap .list-tag {
+      margin-bottom: 0; } }
 
 .tag-film, .tag-events, .tag-gallery, .tag-market {
   display: block;
@@ -1822,6 +1825,15 @@ input[type="button"]::focus {
 .pager-prev {
   transform: rotate(-180deg); }
 
+@media screen and (min-width: 768px) {
+  .archive_shcedule-header_wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    -ms-flex-align: center;
+        align-items: center; } }
+
 .archive_shcedule-header {
   display: -ms-flexbox;
   display: flex;
@@ -1846,6 +1858,9 @@ input[type="button"]::focus {
     margin-left: 10px; }
   .archive_header-nav a {
     color: #007B7B; }
+  @media screen and (min-width: 768px) {
+    .archive_shcedule-header_wrap .archive_header-nav {
+      margin-left: 10px; } }
 
 .page-heading {
   font-size: 20px !important;

@@ -107,6 +107,11 @@
     margin: 0 5px 0 0;
     height: 24px;
   }
+  .archive_shcedule-header_wrap & {
+    @include mqTB {
+      margin-bottom: 0;
+    }
+  }
 }
 %tag {
   display: block;
