@@ -73,8 +73,8 @@
 
 // イージング
 @mixin transition {
-  transition-duration: .3s;
-  transition-timing-function: cubic-bezier(.8, 0, .3, 1);
+  transition-duration: $t_duration;
+  transition-timing-function: $t_easing;
 }
 
 // animation

@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 3;
-  transition: all .7s ease;
+  transition: all $t_duration $t_easing;
   @include theme_bg();
   .is-navfixed.main-open & {
     top: 0;
@@ -19,7 +19,7 @@
   left: 0;
   width: 100%;
   z-index: 2;
-  transition: all .7s ease;
+  transition: all $t_duration $t_easing;
   @include archive_bg();
   .is-navfixed.sub-open & {
     bottom: 0;

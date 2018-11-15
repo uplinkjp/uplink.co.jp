@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  transition: opacity .225s cubic-bezier(.8, 0, .3, 1); // 早めの速度でサイト共通のイージング値
+  transition: opacity $t_duration $t_easing; // 早めの速度でサイト共通のイージング値
   text-decoration: none;
 }
 a:hover {
