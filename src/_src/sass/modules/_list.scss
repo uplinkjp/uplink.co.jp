@@ -149,6 +149,7 @@
   @include f_sg_bold;
   font-size: 28px;
   border-top: 4px solid $c_weekday;
+  z-index: 1;
   span {
     font-size: 18px;
     margin-left: 10px;
@@ -173,6 +174,7 @@
     .list-calendar-header-inner {
       padding: 16px 15px;
       border-top: 4px solid $c_weekday;
+      z-index: 1;
     }
     &.is-holiday {
       .list-calendar-header-inner {

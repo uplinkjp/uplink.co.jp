@@ -780,7 +780,8 @@ input[type="button"]::focus {
   font-weight: 700;
   letter-spacing: .025em;
   font-size: 28px;
-  border-top: 4px solid #B2B2B2; }
+  border-top: 4px solid #B2B2B2;
+  z-index: 1; }
   .list-calendar-header span {
     font-size: 18px;
     margin-left: 10px;
@@ -800,7 +801,8 @@ input[type="button"]::focus {
       border: none; }
       .list-calendar-header .list-calendar-header-inner {
         padding: 16px 15px;
-        border-top: 4px solid #B2B2B2; }
+        border-top: 4px solid #B2B2B2;
+        z-index: 1; }
       .list-calendar-header.is-holiday .list-calendar-header-inner {
         border-color: #FF1744; }
       .list-calendar-header.is-saturday .list-calendar-header-inner {
@@ -1528,17 +1530,24 @@ input[type="button"]::focus {
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)"; }
 
 .l-slider {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
   .l-slider .slider-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    width: 100%;
     transition: opacity .3s linear; }
     .l-slider .slider-inner .slick-slide {
       position: relative;
       line-height: 0;
       background: #000;
       height: 165px !important;
-      margin: 0 5px; }
+      margin: 0 2px; }
       @media screen and (min-width: 768px) {
         .l-slider .slider-inner .slick-slide {
           height: 350px !important; } }
@@ -1569,16 +1578,27 @@ input[type="button"]::focus {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
-          height: 30px;
-          line-height: 30px; }
+          height: 24px;
+          line-height: 24px; }
+          @media screen and (min-width: 768px) {
+            .l-slider .slider-inner .slick-slide .slider-toptext span,
+            .l-slider .slider-inner .slick-slide .slider-bottomtext span {
+              height: 30px;
+              line-height: 30px; } }
       .l-slider .slider-inner .slick-slide .slider-toptext {
         top: 0;
-        font-size: 12px;
+        font-size: 11px;
         color: rgba(255, 255, 255, 0.6); }
+        @media screen and (min-width: 768px) {
+          .l-slider .slider-inner .slick-slide .slider-toptext {
+            font-size: 12px; } }
       .l-slider .slider-inner .slick-slide .slider-bottomtext {
         bottom: 0;
-        font-size: 15px;
+        font-size: 12px;
         color: #fff; }
+        @media screen and (min-width: 768px) {
+          .l-slider .slider-inner .slick-slide .slider-bottomtext {
+            font-size: 15px; } }
     .l-slider .slider-inner a {
       line-height: 0;
       padding: 0 2.5px;
@@ -1596,7 +1616,7 @@ input[type="button"]::focus {
   .slick-dots li {
     width: 6px;
     height: 6px;
-    margin: 0 10px; }
+    margin: 0 5px; }
     .slick-dots li button {
       width: 6px;
       height: 6px;

@@ -222,12 +222,14 @@ UPLINK.slick = {
     UPLINK.slick.bind();
     $('.js-slick').slick({
       infinite: true,
-      dots:true,
+      dots: true,
       slidesToShow: 1,
       centerMode: true, //要素を中央寄せ
       centerPadding:'6%', //両サイドの見えている部分のサイズ
       prevArrow: '',
       nextArrow: '',
+      autoplay: true,
+      autoplaySpeed: 4000,
     });
   },
 
