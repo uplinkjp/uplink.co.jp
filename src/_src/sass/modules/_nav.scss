@@ -138,7 +138,7 @@
   > div{
     width: calc((100% - 10px) / 3);
     &.nav-col-2 {
-      width: calc(((100% - 10px) / 3) * 2 + 5px);
+      width: calc(((100% - 10px) / 3) * 2 + 4px);
     }
     &.nav-col-1 {
       width: calc(((100% - 10px) / 3));
@@ -148,7 +148,7 @@
     > div{
       width: calc((100% - 20px) / 6);
       &.nav-col-2 {
-        width: calc(((100% - 20px) / 6) * 2 + 5px);
+        width: calc(((100% - 20px) / 6) * 2 + 4px);
       }
       &.nav-col-1 {
         width: calc(((100% - 20px) / 6));
@@ -161,10 +161,10 @@
       margin-right: 0;
       width: calc((100% - 10px) / 3);
       &.nav-col-2 {
-        width: calc((100% - 5px) / 3 * 2 + 2px);
+        width: calc((100% - 4px) / 3 * 2 + 2px);
       }
       &.nav-col-1 {
-        width: calc((100% - 5px) / 3 - 2px);
+        width: calc((100% - 4px) / 3 - 2px);
       }
     }
   }
@@ -204,6 +204,11 @@
       background-image: url(../img/arrow-default.png);
     }
   }
+  .l-nav & {
+    a {
+      background: #e5e5e5;
+    }
+  }
   .list-related & {
     width: 100%;
   }
@@ -224,6 +229,11 @@
       padding-right: 5px;
       p {
         font-size: 13px;
+      }
+      &:after {
+        width: 14px;
+        height: 14px;
+        background-size: 14px auto;
       }
     }
   }
@@ -246,6 +256,9 @@
     background: $c_nav_film_bg;
     color: $c_nav_film_text;
     height: 124px;
+    p { 
+      font-size: 24px    
+    }
     &:after {
       background-image: url(../img/arrow-related.png);
     }
@@ -258,6 +271,9 @@
     background: $c_nav_event_bg;
     color: $c_nav_events_text;
     height: 124px;
+    p { 
+      font-size: 24px    
+    }
     &:after {
       background-image: url(../img/arrow-related.png);
     }
@@ -327,6 +343,16 @@
     }
     &:after {
       background-image: url(../img/arrow-related.png);
+    }
+  }
+  .theme-shibuya &,
+  .theme-joji & {
+    a {
+      &:after {
+        width: 14px;
+        height: 14px;
+        background-size: 14px auto;
+      }
     }
   }
 }

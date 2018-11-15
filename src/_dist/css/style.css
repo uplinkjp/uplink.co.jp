@@ -310,8 +310,7 @@ a:hover {
   letter-spacing: .025em; }
 
 .form-googlesearch {
-  width: 100%;
-  margin-top: 4px; }
+  width: 100%; }
   .form-googlesearch form {
     width: 100%;
     display: -ms-flexbox;
@@ -331,7 +330,7 @@ a:hover {
     border: 1px solid #BFBFBF;
     border-radius: 3px;
     background: #fff;
-    padding: 0 5px;
+    padding: 0 10px;
     font-size: 14px; }
     .form-googlesearch-text input:placeholder-shown {
       color: #BFBFBF; }
@@ -356,7 +355,6 @@ a:hover {
   white-space: nowrap;
   text-indent: 100%;
   position: relative;
-  width: 90px;
   height: 48px;
   margin-left: 4px;
   background-color: #3984e6;
@@ -364,7 +362,14 @@ a:hover {
   background-image: url(../img/form-googlesearch.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 18px 18px; }
+  background-size: 18px 18px;
+  width: calc(((100% - 10px) / 3)); }
+  @media screen and (min-width: 768px) {
+    .form-googlesearch-submit {
+      width: calc(((100% - 20px) / 6)); } }
+  @media screen and (min-width: 1024px) {
+    .form-googlesearch-submit {
+      width: calc((100% - 4px) / 9 - 4px); } }
   .form-googlesearch-submit input {
     position: absolute;
     top: 0;
@@ -374,12 +379,26 @@ a:hover {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     line-height: 48px; }
-  @media screen and (min-width: 768px) {
-    .form-googlesearch-submit {
-      width: 103px; } }
-  @media screen and (min-width: 1024px) {
-    .form-googlesearch-submit {
-      width: 92px; } }
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none; }
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px; }
 
 .js-headerWrap {
   position: relative;
@@ -438,7 +457,7 @@ a:hover {
     background: #A4DE9A; }
 
 .header-logo {
-  padding-right: 20px; }
+  padding-right: 25px; }
   .header-logo a {
     display: block;
     display: inline-block;
@@ -1089,14 +1108,14 @@ a:hover {
   .nav-wrap-child > div {
     width: calc((100% - 10px) / 3); }
     .nav-wrap-child > div.nav-col-2 {
-      width: calc(((100% - 10px) / 3) * 2 + 5px); }
+      width: calc(((100% - 10px) / 3) * 2 + 4px); }
     .nav-wrap-child > div.nav-col-1 {
       width: calc(((100% - 10px) / 3)); }
   @media screen and (min-width: 768px) {
     .nav-wrap-child > div {
       width: calc((100% - 20px) / 6); }
       .nav-wrap-child > div.nav-col-2 {
-        width: calc(((100% - 20px) / 6) * 2 + 5px); }
+        width: calc(((100% - 20px) / 6) * 2 + 4px); }
       .nav-wrap-child > div.nav-col-1 {
         width: calc(((100% - 20px) / 6)); } }
   @media screen and (min-width: 1024px) {
@@ -1106,9 +1125,9 @@ a:hover {
         margin-right: 0;
         width: calc((100% - 10px) / 3); }
         .nav-wrap-child > div.nav-col-2 {
-          width: calc((100% - 5px) / 3 * 2 + 2px); }
+          width: calc((100% - 4px) / 3 * 2 + 2px); }
         .nav-wrap-child > div.nav-col-1 {
-          width: calc((100% - 5px) / 3 - 2px); } }
+          width: calc((100% - 4px) / 3 - 2px); } }
 
 .nav-shibuya a {
   background: #64276A;
@@ -1133,6 +1152,9 @@ a:hover {
   .nav-related a:after {
     background-image: url(../img/arrow-default.png); }
 
+.l-nav .nav-related a {
+  background: #e5e5e5; }
+
 .list-related .nav-related {
   width: 100%; }
 
@@ -1149,6 +1171,11 @@ a:hover {
   .theme-shibuya .nav-default a p,
   .theme-joji .nav-default a p {
     font-size: 13px; }
+  .theme-shibuya .nav-default a:after,
+  .theme-joji .nav-default a:after {
+    width: 14px;
+    height: 14px;
+    background-size: 14px auto; }
 
 .nav-film a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p {
   transform: none;
@@ -1159,6 +1186,8 @@ a:hover {
   background: #3B8D51;
   color: #FFFFFF;
   height: 124px; }
+  .nav-film a p {
+    font-size: 24px; }
   .nav-film a:after {
     background-image: url(../img/arrow-related.png); }
 
@@ -1166,6 +1195,8 @@ a:hover {
   background: #536A9D;
   color: #FFFFFF;
   height: 124px; }
+  .nav-events a p {
+    font-size: 24px; }
   .nav-events a:after {
     background-image: url(../img/arrow-related.png); }
 
@@ -1210,6 +1241,12 @@ a:hover {
     font-size: 13px; }
   .nav-login a:after {
     background-image: url(../img/arrow-related.png); }
+
+.theme-shibuya .nav-login a:after,
+.theme-joji .nav-login a:after {
+  width: 14px;
+  height: 14px;
+  background-size: 14px auto; }
 
 .l-nav_sub {
   box-sizing: border-box; }
