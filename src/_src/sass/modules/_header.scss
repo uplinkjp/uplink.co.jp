@@ -3,6 +3,10 @@
   z-index: 2;
   width: 100%;
   transition: all .7s ease;
+  .theme-main & {  
+    background: $c_bg_nav;
+  }
+
 }
 
 .l-header {
