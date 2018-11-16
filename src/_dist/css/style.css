@@ -99,15 +99,18 @@ body {
   body.is-fixed {
     position: fixed; }
 
-a {
+a,
+.form-googlesearch-submit {
   transition: opacity 0.3s cubic-bezier(0.8, 0, 0.3, 1);
   text-decoration: none; }
 
-a:hover {
+a:hover,
+.form-googlesearch-submit:hover {
   opacity: .7;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
   @media screen and (max-width: 767px) {
-    a:hover {
+    a:hover,
+    .form-googlesearch-submit:hover {
       opacity: 1;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
 
@@ -309,15 +312,43 @@ a:hover {
   font-weight: 700;
   letter-spacing: .025em; }
 
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+       appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer; }
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none; }
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px; }
+
+input[type="text"],
+input[type="button"],
+input[type="email"],
+input[type="submit"],
+textarea {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
 .form-googlesearch {
+  margin-top: 0;
   width: 100%; }
   .form-googlesearch form {
     width: 100%;
     display: -ms-flexbox;
     display: flex; }
-  @media screen and (min-width: 768px) {
-    .form-googlesearch {
-      margin-top: 0; } }
 
 .form-googlesearch-text {
   width: 100%;
@@ -379,26 +410,6 @@ a:hover {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     line-height: 48px; }
-
-/* iOSでのデフォルトスタイルをリセット */
-input[type="submit"],
-input[type="button"] {
-  border-radius: 0;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-       appearance: button;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer; }
-
-input[type="submit"]::-webkit-search-decoration,
-input[type="button"]::-webkit-search-decoration {
-  display: none; }
-
-input[type="submit"]::focus,
-input[type="button"]::focus {
-  outline-offset: -2px; }
 
 .js-headerWrap {
   position: relative;
@@ -463,7 +474,7 @@ input[type="button"]::focus {
     background: #A4DE9A; }
 
 .header-logo {
-  padding-right: 25px; }
+  padding-right: 15px; }
   .header-logo a {
     display: block;
     display: inline-block;
@@ -493,7 +504,7 @@ input[type="button"]::focus {
       height: 100%;
       padding: 0 0 0 20px;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 15px center;
       background-size: auto 20px; }
       .theme-main .header-body .header-logo a {
         background-image: url(../img/logo-text.png);

@@ -1,11 +1,40 @@
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+input[type="text"],
+input[type="button"],
+input[type="email"],
+input[type="submit"],
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
 .form-googlesearch {
+  margin-top: 0;
   width: 100%;
   form {
     width: 100%;
     display: flex;
-  }
-  @include mqTB {
-    margin-top: 0;
   }
 }
 .form-googlesearch-text {
@@ -58,24 +87,3 @@
 
 }
 
-
-
-/* iOSでのデフォルトスタイルをリセット */
-input[type="submit"],
-input[type="button"] {
-  border-radius: 0;
-  -webkit-box-sizing: content-box;
-  -webkit-appearance: button;
-  appearance: button;
-  border: none;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-input[type="submit"]::-webkit-search-decoration,
-input[type="button"]::-webkit-search-decoration {
-  display: none;
-}
-input[type="submit"]::focus,
-input[type="button"]::focus {
-  outline-offset: -2px;
-}

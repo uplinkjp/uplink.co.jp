@@ -69,7 +69,7 @@
 
 }
 .header-logo {
-  padding-right: 25px;
+  padding-right: 15px;
   a {
     display: block;
     img {
@@ -91,7 +91,7 @@
       height: 100%;
       padding: 0 0 0 20px;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 15px center;
       background-size: auto 20px;
       .theme-main & {
         background-image: url(../img/logo-text.png);

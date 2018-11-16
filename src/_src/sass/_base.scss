@@ -22,11 +22,13 @@ body {
   }
 }
 
-a {
+a,
+.form-googlesearch-submit {
   transition: opacity $t_duration $t_easing; // 早めの速度でサイト共通のイージング値
   text-decoration: none;
 }
-a:hover {
+a:hover,
+.form-googlesearch-submit:hover {
   opacity: .7;
   @include mqSP {
     opacity: 1;
