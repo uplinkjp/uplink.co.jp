@@ -1682,7 +1682,6 @@ input[type="button"]::focus {
     font-size: 19px;
     font-weight: bold;
     text-align: center;
-    padding: 0 15px;
     margin-bottom: 20px;
     transform-origin: center; }
   .l-wysiwyg .small,
