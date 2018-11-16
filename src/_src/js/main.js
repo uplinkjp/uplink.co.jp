@@ -25,12 +25,19 @@ UPLINK = {
     $('.list-calendar-header').stick_in_parent(); // sp
 
 
+    var timer = null;
     // smooth scroll
     $(document).on('click', 'a[href^="#"]', function(){
+      if(timer) clearTimeout(timer);
       var href = $(this).attr('href');
       var target = $(href == '#' || href === '' ? 'html' : href);
-      var position = target.offset().top - 100;
-      $('html,body').animate({scrollTop : position}, 300, $.bez([.8, 0, .3, 1]));
+      UPLINK.header.closeMainNav();
+      UPLINK.header.closeSubNav();
+      timer = setTimeout(function() {
+        var position = target.offset().top;
+        console.log(position);
+        $('html,body').animate({scrollTop : position}, 300, $.bez([.8, 0, .3, 1]));
+      }, 300);
       return false;
     });
 

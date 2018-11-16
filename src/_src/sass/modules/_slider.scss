@@ -3,6 +3,7 @@
   border-bottom: 1px solid rgba(0,0,0,.12);
   .slider-inner {
     transition: opacity $t_duration $t_easing;
+    opacity: 0;
     .slick-slide {
       position: relative;
       line-height: 0;
