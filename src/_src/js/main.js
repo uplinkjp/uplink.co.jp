@@ -36,7 +36,6 @@ UPLINK = {
       UPLINK.header.closeSubNav();
       timer = setTimeout(function() {
         var position = target.offset().top;
-        console.log(position);
         $('html,body').animate({scrollTop : position}, 300, $.bez([.8, 0, .3, 1]));
       }, 300);
       return false;

@@ -1,14 +1,6 @@
 UPLINK.slick = {
 
   init: function() {
-
-    // console.log('aaa');
-    // var ww = $(window).outerWidth();
-    // var slideW = ( ww * 0.875 ) - 30 - 8;
-    // if( slideW >= 1280 ) slideW = 1280;
-    // var padding = ( ww - slideW ) / 2;
-
-
     UPLINK.slick.bind();
     $('.js-slick').slick({
       infinite: true,

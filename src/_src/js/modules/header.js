@@ -114,16 +114,16 @@ UPLINK.header = {
   },
 
   doInit: function() {
-    console.log('doinit');
-    if(UPLINK.header.isFrontPage) console.log('　isFrontPage');
-    if(UPLINK.header.is2ndPage) console.log('　is2ndPage');
-    if(UPLINK.header.is3rdPage) console.log('　is3rdPage');
-    if(UPLINK.header.isPC) console.log('　isPC');
-    if(UPLINK.header.isTB) console.log('　isTB');
-    if(UPLINK.header.isSP) console.log('　isSP');
-    if(UPLINK.header.defMainOpen) console.log('　defMainOpen');
-    if(UPLINK.header.defSubOpen) console.log('　defSubOpen');
-    console.log('- - - - - - - - - -');
+    // console.log('doinit');
+    // if(UPLINK.header.isFrontPage) console.log('　isFrontPage');
+    // if(UPLINK.header.is2ndPage) console.log('　is2ndPage');
+    // if(UPLINK.header.is3rdPage) console.log('　is3rdPage');
+    // if(UPLINK.header.isPC) console.log('　isPC');
+    // if(UPLINK.header.isTB) console.log('　isTB');
+    // if(UPLINK.header.isSP) console.log('　isSP');
+    // if(UPLINK.header.defMainOpen) console.log('　defMainOpen');
+    // if(UPLINK.header.defSubOpen) console.log('　defSubOpen');
+    // console.log('- - - - - - - - - -');
 
     if(UPLINK.header.defMainOpen) {
       UPLINK.header.openMainNav();
@@ -234,17 +234,16 @@ UPLINK.header = {
     var content = $(sl).eq(0).find('a, .form-googlesearch-text, .form-googlesearch');
     var total = content.length;
     var delay = new Array();
+
     var i = 0;
     content.each(function() {
       delay[i] = 500 + i * 30;
       i++;
     });
     delay = delay.sort(shuffle);
-    console.log(delay);
 
     var j = 0;
     content.each(function() {
-      console.log(delay[j]);
       content.eq(j).delay(delay[j]).animate({'opacity': 1},30);
       j++;
     });
