@@ -550,7 +550,7 @@ textarea {
         background-image: url(../img/icon-menu-off_joji.png); }
   .type-frontpage .header-nav_trigger a {
     pointer-events: none; }
-  .type-scroll .header-nav_trigger a {
+  .is-scroll .header-nav_trigger a {
     pointer-events: initial; }
   .main-open.theme-main .header-nav_trigger a:before {
     background-image: url(../img/icon-menu-on.png); }
