@@ -121,12 +121,22 @@ gulp.task('plugins', function() {
 });
 
 // libs =======================================================================
-gulp.task('libs', function() {
-    gulp.src([srcDir + 'js/libs/*.js'])
-    .pipe(gulp.dest(distDir + 'js/libs'))
-    .pipe(gulp.dest(wpDir + 'js/libs'));
+ gulp.task('libs', function() {
+     gulp.src([srcDir + 'js/libs/*.js'])
+     .pipe(gulp.dest(distDir + 'js/libs'))
+     .pipe(gulp.dest(wpDir + 'js/libs'));
 });
 
+// plugins =======================================================================
+gulp.task('plugins', function() {
+    gulp.src([srcDir + 'js/plugins/*.js'])
+    .pipe(concat('plugins.js'))
+    .pipe(gulp.dest(distDir + 'js/'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(uglify())
+    .pipe(gulp.dest(distDir + 'js/'))
+    .pipe(gulp.dest(wpDir + 'js/'));
+});
 
 // fonts =======================================================================
 gulp.task('fonts', function() {
@@ -151,7 +161,7 @@ gulp.task('fonts', function() {
 gulp.task('watch',function(){
   gulp.watch(srcDir + 'ejs/**/*.ejs', ['html']);
   gulp.watch(srcDir + 'sass/**/*.scss', ['sass']);
-  gulp.watch(srcDir + 'js/**/*.js', ['scripts','libs']);
+  gulp.watch(srcDir + 'js/**/*.js', ['scripts','libs','plugins']);
   gulp.watch(srcDir + 'js/libs/*.js', ['libs']);
   gulp.watch(srcDir + 'js/plugins/*.js', ['plugins']);
   gulp.watch(srcDir + '_mock/*', ['mock']);

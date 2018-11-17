@@ -21,9 +21,7 @@ UPLINK = {
       UPLINK.onresize();
     });
 
-    $('.list-calendar-header-inner').stick_in_parent(); // pc
-    $('.list-calendar-header').stick_in_parent(); // sp
-
+    UPLINK.sticky.init();
 
     var timer = null;
     // smooth scroll
@@ -56,6 +54,7 @@ UPLINK = {
   onresize: function() {
     var ww = $(window).width();
     UPLINK.header.resize(ww);
+    UPLINK.sticky.resize(ww);
   }
 
 

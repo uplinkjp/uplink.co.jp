@@ -38,9 +38,6 @@ UPLINK.header = {
     UPLINK.header.sl_mainNavTrigger = '.js-mainNavTrigger';
     UPLINK.header.sl_subNavTrigger = '.js-subNavTrigger';
 
-    UPLINK.header.main_height = UPLINK.header.$main.outerHeight();
-    UPLINK.header.sub_height = UPLINK.header.$sub.height();
-
     UPLINK.header.isFrontPage = $('.type-frontpage').length ? true : false;
     UPLINK.header.is2ndPage = $('.type-2nd').length ? true : false;
     UPLINK.header.is3rdPage = $('.type-3rd').length ? true : false;
@@ -88,13 +85,10 @@ UPLINK.header = {
     UPLINK.header.isTB = false;
     UPLINK.header.isSP = false;
 
-    if(ww <= 767) {
-      UPLINK.header.isSP = true;
-    } else if(768 <= ww && ww <= 1024) {
-      UPLINK.header.isTB = true;
-    } else if(1025 < ww) {
-      UPLINK.header.isPC = true;
-    }
+    var type = UPLINK.getDisplayType.get(ww);
+    if(type == 'sp') UPLINK.header.isSP = true;
+    if(type == 'tb') UPLINK.header.isTB = true;
+    if(type == 'pc') UPLINK.header.isPC = true;
   },
 
   setDefault: function() {
@@ -144,6 +138,8 @@ UPLINK.header = {
   },
 
   resize: function(ww) {
+    UPLINK.header.main_height = UPLINK.header.$mainClone.outerHeight();
+    UPLINK.header.sub_height = UPLINK.header.$subClone.height();
     UPLINK.header.setSize(ww);
     UPLINK.header.setDefault();
     UPLINK.header.scroll(UPLINK.header._st);

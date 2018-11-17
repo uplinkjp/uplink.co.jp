@@ -21,9 +21,7 @@ UPLINK = {
       UPLINK.onresize();
     });
 
-    $('.list-calendar-header-inner').stick_in_parent(); // pc
-    $('.list-calendar-header').stick_in_parent(); // sp
-
+    UPLINK.sticky.init();
 
     var timer = null;
     // smooth scroll
@@ -56,12 +54,30 @@ UPLINK = {
   onresize: function() {
     var ww = $(window).width();
     UPLINK.header.resize(ww);
+    UPLINK.sticky.resize(ww);
   }
 
 
 };
 
 UPLINK.init();
+
+UPLINK.getDisplayType = {
+
+  get: function(ww) {
+    var type = null;
+    if(ww <= 767) {
+      type = 'sp';
+    } else if(768 <= ww && ww <= 1024) {
+      type = 'tb';
+    } else if(1025 < ww) {
+      type =  'pc';
+    }
+    // console.log('display size is '+type);
+    return type;
+  }
+
+};
 
 UPLINK.header = {
 
@@ -102,9 +118,6 @@ UPLINK.header = {
 
     UPLINK.header.sl_mainNavTrigger = '.js-mainNavTrigger';
     UPLINK.header.sl_subNavTrigger = '.js-subNavTrigger';
-
-    UPLINK.header.main_height = UPLINK.header.$main.outerHeight();
-    UPLINK.header.sub_height = UPLINK.header.$sub.height();
 
     UPLINK.header.isFrontPage = $('.type-frontpage').length ? true : false;
     UPLINK.header.is2ndPage = $('.type-2nd').length ? true : false;
@@ -153,13 +166,10 @@ UPLINK.header = {
     UPLINK.header.isTB = false;
     UPLINK.header.isSP = false;
 
-    if(ww <= 767) {
-      UPLINK.header.isSP = true;
-    } else if(768 <= ww && ww <= 1024) {
-      UPLINK.header.isTB = true;
-    } else if(1025 < ww) {
-      UPLINK.header.isPC = true;
-    }
+    var type = UPLINK.getDisplayType.get(ww);
+    if(type == 'sp') UPLINK.header.isSP = true;
+    if(type == 'tb') UPLINK.header.isTB = true;
+    if(type == 'pc') UPLINK.header.isPC = true;
   },
 
   setDefault: function() {
@@ -209,6 +219,8 @@ UPLINK.header = {
   },
 
   resize: function(ww) {
+    UPLINK.header.main_height = UPLINK.header.$mainClone.outerHeight();
+    UPLINK.header.sub_height = UPLINK.header.$subClone.height();
     UPLINK.header.setSize(ww);
     UPLINK.header.setDefault();
     UPLINK.header.scroll(UPLINK.header._st);
@@ -330,6 +342,47 @@ UPLINK.slick = {
   },
 
   bind: function() {
+  }
+
+};
+
+UPLINK.sticky = {
+
+  type: null,
+
+  init: function() {
+    UPLINK.sticky.type = UPLINK.getDisplayType.get($(window).width());
+
+    $('.js-sticky').stick_in_parent(); // 汎用
+    if(UPLINK.sticky.type === 'pc') {
+      $('.list-calendar-header-inner').stick_in_parent(); // カレンダーtb/pc
+    } else {
+      $('.list-calendar-header').stick_in_parent(); // カレンダーsp
+    }
+  },
+
+  resize: function(ww) {
+    var _type = UPLINK.getDisplayType.get(ww);
+    if(UPLINK.sticky.type !== _type) {
+      // console.log('change sticky-type');
+
+      // スティッキーの解除
+      $('.js-sticky').trigger('sticky_kit:detach'); // 汎用
+      if(UPLINK.sticky.type === 'pc') {
+        $('.list-calendar-header-inner').trigger("sticky_kit:detach"); // カレンダーtb/pc
+      } else {
+        $('.list-calendar-header').trigger("sticky_kit:detach"); // カレンダーsp
+      }
+      UPLINK.sticky.type = _type;
+
+      // スティッキー再設定
+      $('.js-sticky').stick_in_parent(); // 汎用
+      if(UPLINK.sticky.type === 'pc') {
+        $('.list-calendar-header-inner').stick_in_parent(); // カレンダーtb/pc
+      } else {
+        $('.list-calendar-header').stick_in_parent(); // カレンダーsp
+      }
+    }
   }
 
 };
