@@ -22,7 +22,7 @@
 
   padding: 0 $padding_wrap;
   // @include containerTB;
-  .frontpage & {
+  .type-frontpage & {
     transition: none;
     height: auto;
   }
@@ -138,12 +138,12 @@
       }
     }
   }
-  .frontpage & {
+  .type-frontpage & {
     a {
       pointer-events: none;
     }
   }
-  .is-scroll & {
+  .type-scroll & {
     a {
       pointer-events: initial;
     }
@@ -160,7 +160,6 @@
         .theme-joji & {
           background-image: url(../img/icon-menu-on_joji.png);
         }
-
       }
     }
   }

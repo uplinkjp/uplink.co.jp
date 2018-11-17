@@ -41,7 +41,7 @@ UPLINK.header = {
     $('body').append(UPLINK.header.$subClone);
     $('.l-header_sub.is-clone').wrap('<div class="js-sub-clone"></div>');
 
-    if($('.frontpage').length) {
+    if($('.type-frontpage').length) {
       UPLINK.header.isFrontPage = true;
       UPLINK.header.openMainNav();
     } else {
