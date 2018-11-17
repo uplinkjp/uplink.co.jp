@@ -548,11 +548,11 @@ textarea {
     pointer-events: none; }
   .type-scroll .header-nav_trigger a {
     pointer-events: initial; }
-  .theme-main .main-open .header-nav_trigger a:before {
+  .main-open.theme-main .header-nav_trigger a:before {
     background-image: url(../img/icon-menu-on.png); }
-  .theme-shibuya .main-open .header-nav_trigger a:before {
+  .main-open.theme-shibuya .header-nav_trigger a:before {
     background-image: url(../img/icon-menu-on_shibuya.png); }
-  .theme-joji .main-open .header-nav_trigger a:before {
+  .main-open.theme-joji .header-nav_trigger a:before {
     background-image: url(../img/icon-menu-on_joji.png); }
 
 .l-header_sub {

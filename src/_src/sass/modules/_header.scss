@@ -148,18 +148,24 @@
       pointer-events: initial;
     }
   }
-  .main-open & {
+  .main-open.theme-main & {
     a {
       &:before {
-        .theme-main & {
-          background-image: url(../img/icon-menu-on.png);
-        }
-        .theme-shibuya & {
-          background-image: url(../img/icon-menu-on_shibuya.png);
-        }
-        .theme-joji & {
-          background-image: url(../img/icon-menu-on_joji.png);
-        }
+        background-image: url(../img/icon-menu-on.png);
+      }
+    }
+  }
+  .main-open.theme-shibuya & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_shibuya.png);
+      }
+    }
+  }
+  .main-open.theme-joji & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_joji.png);
       }
     }
   }

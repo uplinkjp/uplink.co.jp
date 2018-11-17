@@ -54,7 +54,8 @@ UPLINK = {
   },
 
   onresize: function() {
-    UPLINK.header.resize();
+    var ww = $(window).width();
+    UPLINK.header.resize(ww);
   }
 
 

@@ -1,33 +1,49 @@
 UPLINK.header = {
 
-
   $el: null,
   $main: null,
   $sub: null,
-  $mainNavTrigger: null,
-  $main_height: null,
-  $sub_height: null,
-  $subNavTrigger: null,
   $mainClone: null,
   $subClone: null,
 
+  sl_mainNavTrigger: null,
+  sl_subNavTrigger: null,
+
+  main_height: null,
+  sub_height: null,
+
   _st: 0,
+
   isScroll: false,
+
   isFrontPage: false,
-  hasSubNavi: false,
+  is2ndPage: false,
+  is3rdPage: false,
+
+  isPC: false,
+  isTB: false,
+  isSP: false,
+
+  defMainOpen: false,
+  defSubOpen: false,
+
   isMainNavOpen: false,
   isSubNavOpen: false,
-
-  bottom: 0,
 
   init: function() {
     UPLINK.header.$el = $('.js-headerWrap');
     UPLINK.header.$main = $('.l-nav');
-    UPLINK.header.mainNavTrigger = '.js-mainNavTrigger';
-    UPLINK.header.$main_height = UPLINK.header.$main.outerHeight();
     UPLINK.header.$sub = $('.l-header_sub');
-    UPLINK.header.subNavTrigger = '.js-subNavTrigger';
-    UPLINK.header.$sub_height = UPLINK.header.$sub.height();
+
+    UPLINK.header.sl_mainNavTrigger = '.js-mainNavTrigger';
+    UPLINK.header.sl_subNavTrigger = '.js-subNavTrigger';
+
+    UPLINK.header.main_height = UPLINK.header.$main.outerHeight();
+    UPLINK.header.sub_height = UPLINK.header.$sub.height();
+
+    UPLINK.header.isFrontPage = $('.type-frontpage').length ? true : false;
+    UPLINK.header.is2ndPage = $('.type-2nd').length ? true : false;
+    UPLINK.header.is3rdPage = $('.type-3rd').length ? true : false;
 
     // メインナビをクローン
     UPLINK.header.$mainClone = UPLINK.header.$main.clone();
@@ -41,27 +57,15 @@ UPLINK.header = {
     $('body').append(UPLINK.header.$subClone);
     $('.l-header_sub.is-clone').wrap('<div class="js-sub-clone"></div>');
 
-    if($('.type-frontpage').length) {
-      UPLINK.header.isFrontPage = true;
-      UPLINK.header.openMainNav();
-    } else {
-      UPLINK.header.isFrontPage = false;
-      UPLINK.header.closeMainNav();
-    }
-
-    if(UPLINK.header.$sub.length) {
-      UPLINK.header.hasSubNavi = true;
-      UPLINK.header.isSubNavOpen = false;
-      UPLINK.header.closeSubNav();
-    }
+    UPLINK.header.resize($(window).width());
+    UPLINK.header.scroll(0);
 
     UPLINK.header.bind();
   },
 
-
   bind: function() {
     $(document)
-    .on('click', UPLINK.header.mainNavTrigger, function() {
+    .on('click', UPLINK.header.sl_mainNavTrigger, function() {
       if(UPLINK.header.isMainNavOpen) {
         UPLINK.header.closeMainNav();
       } else {
@@ -69,7 +73,7 @@ UPLINK.header = {
       }
       return false;
     })
-    .on('click', UPLINK.header.subNavTrigger, function() {
+    .on('click', UPLINK.header.sl_subNavTrigger, function() {
       if(UPLINK.header.isSubNavOpen) {
         UPLINK.header.closeSubNav();
       } else {
@@ -79,7 +83,70 @@ UPLINK.header = {
     });
   },
 
-  resize: function() {
+  setSize: function(ww) {
+    UPLINK.header.isPC = false;
+    UPLINK.header.isTB = false;
+    UPLINK.header.isSP = false;
+
+    if(ww <= 767) {
+      UPLINK.header.isSP = true;
+    } else if(768 <= ww && ww <= 1024) {
+      UPLINK.header.isTB = true;
+    } else if(1025 < ww) {
+      UPLINK.header.isPC = true;
+    }
+  },
+
+  setDefault: function() {
+    UPLINK.header.defMainOpen = false;
+    UPLINK.header.defSubOpen = false;
+
+    if(UPLINK.header.isFrontPage) {
+      UPLINK.header.defMainOpen = true;
+
+    } else if(UPLINK.header.is2ndPage) {
+      if(UPLINK.header.isTB) {
+        UPLINK.header.defSubOpen = true;
+      } else if(UPLINK.header.isPC) {
+        UPLINK.header.defMainOpen = true;
+        UPLINK.header.defSubOpen = true;
+      }
+
+    } else if(UPLINK.header.is3rdPage) {
+      if(UPLINK.header.isPC) {
+        UPLINK.header.defMainOpen = true;
+      }
+    }
+  },
+
+  doInit: function() {
+    console.log('doinit');
+    if(UPLINK.header.isFrontPage) console.log('　isFrontPage');
+    if(UPLINK.header.is2ndPage) console.log('　is2ndPage');
+    if(UPLINK.header.is3rdPage) console.log('　is3rdPage');
+    if(UPLINK.header.isPC) console.log('　isPC');
+    if(UPLINK.header.isTB) console.log('　isTB');
+    if(UPLINK.header.isSP) console.log('　isSP');
+    if(UPLINK.header.defMainOpen) console.log('　defMainOpen');
+    if(UPLINK.header.defSubOpen) console.log('　defSubOpen');
+    console.log('- - - - - - - - - -');
+
+    if(UPLINK.header.defMainOpen) {
+      UPLINK.header.openMainNav();
+    } else {
+      UPLINK.header.closeMainNav();
+    }
+    if(UPLINK.header.defSubOpen) {
+      UPLINK.header.openSubNav();
+    } else {
+      UPLINK.header.closeSubNav();
+    }
+  },
+
+  resize: function(ww) {
+    UPLINK.header.setSize(ww);
+    UPLINK.header.setDefault();
+    UPLINK.header.scroll(UPLINK.header._st);
   },
 
   scroll: function(st) {
@@ -97,12 +164,9 @@ UPLINK.header = {
       UPLINK.header.isScroll = false;
       $('body').removeClass('is-scroll');
       $('body').removeClass('is-navfixed');
-      if(UPLINK.header.hasSubNavi) UPLINK.header.closeSubNav();
-      if(UPLINK.header.isFrontPage) {
-        UPLINK.header.openMainNav();
-      } else {
-        UPLINK.header.closeMainNav();
-      }
+
+      UPLINK.header.doInit();
+
     }
     UPLINK.header._st = st;
   },
@@ -122,29 +186,33 @@ UPLINK.header = {
     $('body').removeClass('main-open');
     if(!UPLINK.header.isScroll) {
       UPLINK.header.$el.css({
-        'margin-top': - UPLINK.header.$main_height + 'px'
+        'margin-top': - UPLINK.header.main_height + 'px'
       });
     }
   },
 
   openSubNav: function() {
-    UPLINK.header.isSubNavOpen = true;
-    $('body').addClass('sub-open');
-    if(!UPLINK.header.isScroll) {
-      UPLINK.header.$sub.css({
-        'height': UPLINK.header.$sub_height + 'px'
-      });
+    if(UPLINK.header.$sub.length) {
+      UPLINK.header.isSubNavOpen = true;
+      $('body').addClass('sub-open');
+      if(!UPLINK.header.isScroll) {
+        UPLINK.header.$sub.css({
+          'height': UPLINK.header.sub_height + 'px'
+        });
+      }
     }
   },
 
   closeSubNav: function() {
-    UPLINK.header.isSubNavOpen = false;
-    if(!UPLINK.header.isScroll) {
-      UPLINK.header.$sub.css({
-        'height': 100+'px'
-      })
+    if(UPLINK.header.$sub.length) {
+      UPLINK.header.isSubNavOpen = false;
+      if(!UPLINK.header.isScroll) {
+        UPLINK.header.$sub.css({
+          'height': 100+'px'
+        })
+      }
+      $('body').removeClass('sub-open');
     }
-    $('body').removeClass('sub-open');
   },
 
 }
