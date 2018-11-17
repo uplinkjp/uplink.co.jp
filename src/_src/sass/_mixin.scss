@@ -92,6 +92,18 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px;
+  }
+}
+@keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px;
+  }
+}
+
+
 
 @mixin theme_bg() {
   .theme-main & {

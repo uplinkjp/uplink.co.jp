@@ -12,6 +12,10 @@
     opacity: 1;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
 
+@keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px; } }
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -612,8 +616,7 @@ textarea {
   transform: translate3d(0, -50%, 0);
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  transition: all 0.3s cubic-bezier(0.8, 0, 0.3, 1); }
+  border-radius: 50%; }
   .category-film .header-nav_sub_trigger {
     background-color: #3B8D51; }
   .category-event .header-nav_sub_trigger {
@@ -640,16 +643,27 @@ textarea {
     background-size: 5px auto;
     background-repeat: no-repeat;
     background-position: center; }
-  .sub-open .header-nav_sub_trigger a {
-    background-image: url(../img/icon-submenu-on.png); }
+  .sub-open .header-nav_sub_trigger {
+    box-shadow: none !important; }
+    .sub-open .header-nav_sub_trigger a {
+      background-image: url(../img/icon-submenu-on.png); }
   .is-scroll .header-nav_sub_trigger {
     position: fixed;
     transform: none;
     top: initial;
     bottom: -100px;
-    right: 25px; }
-  .is-navfixed .header-nav_sub_trigger {
-    bottom: 35px; }
+    right: 37px;
+    box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s cubic-bezier(0.8, 0, 0.3, 1); }
+    @media screen and (min-width: 768px) {
+      .is-scroll .header-nav_sub_trigger {
+        right: 75px; } }
+  .is-subNavTriggerFix .header-nav_sub_trigger {
+    bottom: 50px;
+    transition: all 0.3s cubic-bezier(0.8, 0, 0.3, 1); }
+    @media screen and (min-width: 768px) {
+      .is-subNavTriggerFix .header-nav_sub_trigger {
+        bottom: 80px; } }
   .is-clone .header-nav_sub_trigger {
     position: absolute;
     right: 0;
@@ -1003,7 +1017,7 @@ textarea {
     background-color: #BFBFBF; }
     .category-default .js-sub-clone .header_sub-heading {
       color: #000; }
-  .is-navfixed.sub-open .js-sub-clone {
+  .is-scroll.sub-open .js-sub-clone {
     bottom: 0; }
 
 .l-nav {
@@ -1015,6 +1029,11 @@ textarea {
       margin: 0 auto;
       width: 87.5vw;
       max-width: 1260px; } }
+  .l-nav.is-clone a,
+  .l-nav.is-clone .form-googlesearch-text,
+  .l-nav.is-clone .form-googlesearch {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
 
 .nav-inner {
   display: -ms-flexbox;
@@ -1320,6 +1339,9 @@ textarea {
       background-repeat: no-repeat; }
     .l-nav_sub a[href^="#"]:after {
       transform: rotate(90deg); }
+  .is-clone .l-nav_sub a {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; }
 
 .section-heading {
   padding: 25px 15px;

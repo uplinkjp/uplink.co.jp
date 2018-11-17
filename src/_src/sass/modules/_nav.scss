@@ -21,18 +21,23 @@
   z-index: 2;
   transition: all $t_duration $t_easing;
   @include archive_bg();
-  .is-navfixed.sub-open & {
+  .is-scroll.sub-open & {
     bottom: 0;
   }
 }
-
-
-
 
 .l-nav {
   padding: 80px 15px 20px 15px;
   @include containerTB;
   margin: 0 auto;
+  &.is-clone {
+    // todo 移植
+    a,
+    .form-googlesearch-text,
+    .form-googlesearch {
+      opacity: 0;
+    }
+  }
 }
 .nav-inner {
   display: flex;
@@ -412,6 +417,11 @@
       &:after {
         transform: rotate(90deg);
       }
+    }
+  }
+  .is-clone & {
+    a {
+      opacity: 0;
     }
   }
 

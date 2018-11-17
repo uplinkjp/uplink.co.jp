@@ -158,12 +158,20 @@ UPLINK.header = {
       }
     } else {
       UPLINK.header.isScroll = false;
-      $('body').removeClass('is-scroll');
-      $('body').removeClass('is-navfixed');
-
-      UPLINK.header.doInit();
-
+      $('body')
+        .removeClass('is-scroll')
+        .removeClass('is-navfixed');
+      UPLINK.header.doInit(); // スクロール0の開き方に戻す
     }
+
+    if(st > 400) {
+      setTimeout( function() {
+        $('body').addClass('is-subNavTriggerFix');
+      },100);
+    } else {
+      $('body').removeClass('is-subNavTriggerFix');
+    }
+
     UPLINK.header._st = st;
   },
 
@@ -174,11 +182,14 @@ UPLINK.header = {
       UPLINK.header.$el.css({
         'margin-top': '0px'
       });
+    } else {
+      UPLINK.header.shuffleFadein('.l-nav.is-clone');
     }
   },
 
   closeMainNav: function() {
     UPLINK.header.isMainNavOpen = false;
+    UPLINK.header.opacity0('.l-nav.is-clone');
     $('body').removeClass('main-open');
     if(!UPLINK.header.isScroll) {
       UPLINK.header.$el.css({
@@ -195,6 +206,9 @@ UPLINK.header = {
         UPLINK.header.$sub.css({
           'height': UPLINK.header.sub_height + 'px'
         });
+      } else {
+        UPLINK.header.shuffleFadein('.is-clone .l-nav_sub');
+        $('body').addClass('is-navfixed');
       }
     }
   },
@@ -202,13 +216,46 @@ UPLINK.header = {
   closeSubNav: function() {
     if(UPLINK.header.$sub.length) {
       UPLINK.header.isSubNavOpen = false;
+      UPLINK.header.opacity0('.is-clone .l-nav_sub');
       if(!UPLINK.header.isScroll) {
         UPLINK.header.$sub.css({
           'height': 100+'px'
         })
+      } else {
+        $('body').removeClass('is-navfixed');
       }
       $('body').removeClass('sub-open');
     }
   },
+
+  shuffleFadein: function(sl) {
+    // TODO もっと簡易化できそう
+    var shuffle = function() {return Math.random()-.5};
+    var content = $(sl).eq(0).find('a, .form-googlesearch-text, .form-googlesearch');
+    var total = content.length;
+    var delay = new Array();
+    var i = 0;
+    content.each(function() {
+      delay[i] = 500 + i * 30;
+      i++;
+    });
+    delay = delay.sort(shuffle);
+    console.log(delay);
+
+    var j = 0;
+    content.each(function() {
+      console.log(delay[j]);
+      content.eq(j).delay(delay[j]).animate({'opacity': 1},30);
+      j++;
+    });
+  },
+
+  opacity0: function(sl) {
+    // TODO もっと簡易化できそう
+    var content = $(sl).eq(0).find('a, .form-googlesearch-text, .form-googlesearch');
+    content.css({'opacity': 0});
+  },
+
+
 
 }

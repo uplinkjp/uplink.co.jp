@@ -3,10 +3,9 @@
   z-index: 2;
   width: 100%;
   transition: all $t_duration $t_easing;
-  .theme-main & {  
+  .theme-main & {
     background: $c_bg_nav;
   }
-
 }
 
 .l-header {
@@ -217,7 +216,6 @@
   height: 40px;
   border-radius: 50%;
   @include archive_bg();
-  transition: all $t_duration $t_easing;
   a {
     @include texthidden;
     display: block;
@@ -229,6 +227,7 @@
     background-position: center;
   }
   .sub-open & {
+    box-shadow: none !important;
     a {
       background-image: url(../img/icon-submenu-on.png);
     }
@@ -238,11 +237,27 @@
     transform: none;
     top: initial;
     bottom: -100px;
-    right: 25px;
+    right: 37px;
+    box-shadow: 0 4px 32px rgba(0,0,0,.4);
+    transition: all $t_duration $t_easing;
+    @include mqTB {
+      right: 75px;
+    }
   }
- .is-navfixed & {
-    bottom: 35px;
+
+  .is-subNavTriggerFix & {
+    bottom: 50px;
+    transition: all $t_duration $t_easing;
+    @include mqTB {
+      bottom: 80px;
+    }
+    // @include animationValue(slideUpSubTrigger, .3, $t_easing, .1, 1, forwards);
   }
+
+
+ // .is-subTriggerFixed & {
+ //    bottom: 35px;
+ //  }
   .is-clone & {
     position: absolute;
     right: 0;

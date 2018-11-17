@@ -13,12 +13,15 @@ UPLINK = {
     $(window)
     .on('load', function() {
       UPLINK.onload();
-    })
-    .on('scroll', function() {
-      UPLINK.onscroll();
-    })
-    .on('resize', function() {
-      UPLINK.onresize();
+      $(this)
+      .on('scroll', function() {
+        UPLINK.onscroll();
+      })
+      .on('resize', function() {
+        UPLINK.onresize();
+      });
+
+
     });
 
     UPLINK.sticky.init();
