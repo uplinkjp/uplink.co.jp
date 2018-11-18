@@ -24,7 +24,7 @@
 
   <h2 id="commingsoon" class="section-heading">
     近日公開の作品
-    <span>COMMING SOON</span>
+    <span>COMING SOON</span>
   </h2>
 
   <div class="list_archive">
