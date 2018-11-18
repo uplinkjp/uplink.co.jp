@@ -84,6 +84,7 @@ if( isset($_SERVER['HTTP_HOST']) )
     break;
   }
 }
+define('UPLINK_SITE', str_replace('_', '', $table_prefix));
 
 /**
  * 開発者へ: WordPress デバッグモード
