@@ -29,8 +29,8 @@ a,
 }
 a:hover,
 .form-googlesearch-submit:hover {
-  opacity: .7;
+  opacity: .7 !important;
   @include mqSP {
-    opacity: 1;
+    opacity: 1 !important;
   }
 }

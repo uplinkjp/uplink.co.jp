@@ -110,12 +110,12 @@ a,
 
 a:hover,
 .form-googlesearch-submit:hover {
-  opacity: .7;
+  opacity: .7 !important;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; }
   @media screen and (max-width: 767px) {
     a:hover,
     .form-googlesearch-submit:hover {
-      opacity: 1;
+      opacity: 1 !important;
       -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; } }
 
 .button-purchase {
