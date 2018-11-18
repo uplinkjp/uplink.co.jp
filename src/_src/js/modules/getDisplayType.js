@@ -4,9 +4,9 @@ UPLINK.getDisplayType = {
     var type = null;
     if(ww <= 767) {
       type = 'sp';
-    } else if(768 <= ww && ww <= 1024) {
+    } else if(768 <= ww && ww <= 1023) {
       type = 'tb';
-    } else if(1025 < ww) {
+    } else if(1023 < ww) {
       type =  'pc';
     }
     // console.log('display size is '+type);
