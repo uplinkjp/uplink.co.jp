@@ -196,6 +196,7 @@
   font-weight: bold;
   margin: 0 auto;
   padding: 30px 0;
+  box-sizing: border-box;
   // @include containerTB;
   @include mqTB {
     padding: 30px 15px;
@@ -209,13 +210,16 @@
 }
 .header-nav_sub_trigger {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 50%;
   transform: translate3d(0,-50%,0);
   width: 40px;
   height: 40px;
   border-radius: 50%;
   @include archive_bg();
+  @include mqTB {
+    right: 20px;
+  }
   a {
     @include texthidden;
     display: block;
@@ -237,11 +241,15 @@
     transform: none;
     top: initial;
     bottom: -100px;
-    right: 37px;
+    // right: 37px;
+    right: 20px;
     box-shadow: 0 4px 32px rgba(0,0,0,.4);
     transition: all $t_duration $t_easing;
     @include mqTB {
-      right: 75px;
+      right: calc(6.7vw + 15px);
+    }
+    @media screen and (min-width: $max-width) {
+      right: calc((100% - 1120px) / 2 + 20px);
     }
   }
 

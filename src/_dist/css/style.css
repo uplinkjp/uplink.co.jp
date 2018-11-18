@@ -597,7 +597,8 @@ textarea {
   color: #fff;
   font-weight: bold;
   margin: 0 auto;
-  padding: 30px 0; }
+  padding: 30px 0;
+  box-sizing: border-box; }
   @media screen and (min-width: 768px) {
     .header_sub-heading {
       padding: 30px 15px; } }
@@ -611,7 +612,7 @@ textarea {
 
 .header-nav_sub_trigger {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 50%;
   transform: translate3d(0, -50%, 0);
   width: 40px;
@@ -629,6 +630,9 @@ textarea {
     background-color: #BFBFBF; }
     .category-default .header-nav_sub_trigger .header_sub-heading {
       color: #000; }
+  @media screen and (min-width: 768px) {
+    .header-nav_sub_trigger {
+      right: 20px; } }
   .header-nav_sub_trigger a {
     display: inline-block;
     font-size: 0;
@@ -652,12 +656,15 @@ textarea {
     transform: none;
     top: initial;
     bottom: -100px;
-    right: 37px;
+    right: 20px;
     box-shadow: 0 4px 32px rgba(0, 0, 0, 0.4);
     transition: all 0.3s cubic-bezier(0.8, 0, 0.3, 1); }
     @media screen and (min-width: 768px) {
       .is-scroll .header-nav_sub_trigger {
-        right: 75px; } }
+        right: calc(6.7vw + 15px); } }
+    @media screen and (min-width: 1120px) {
+      .is-scroll .header-nav_sub_trigger {
+        right: calc((100% - 1120px) / 2 + 20px); } }
   .is-subNavTriggerFix .header-nav_sub_trigger {
     bottom: 50px;
     transition: all 0.3s cubic-bezier(0.8, 0, 0.3, 1); }
