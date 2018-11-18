@@ -1,4 +1,13 @@
-<?php get_template_part( 'partials/header' )?>
+<?php
+
+the_post();
+
+$startdate = date('Ymd', strtotime('today'));
+$enddate = date('Ymd', strtotime('+ 2 day'));
+
+$programs = get_uplink_programs_by_date( $startdate, $enddate );
+
+get_template_part( 'partials/header' )?>
 
 <?php get_template_part( 'partials/nav' )?>
 

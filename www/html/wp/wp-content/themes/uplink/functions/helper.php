@@ -32,21 +32,14 @@ function parent_url( $path = null )
  * @access public
  * @return void
  */
-function get_canonical_url( $lang = null )
+function get_canonical_url()
 {
-
-  if (!$lang) $lang = get_locale();
 
   $scheme   = isset($_SERVER['REQUEST_SCHEME']) ? $_SERVER['REQUEST_SCHEME'] : 'http';
   $paths    = pathinfo( preg_replace( '/\?.*/', '', $_SERVER['REQUEST_URI']) );
   $dir      = isset($paths['dirname']) ? trim($paths['dirname'], '/') : null;
   $file     = isset($paths['filename']) ? trim($paths['filename'], '/') : null;
   $url      = $scheme.'://'. trim($_SERVER['HTTP_HOST'], '/').'/';
-
-  if (defined('I18N_CONDUCTOR_DEFAULT_LANG'))
-  {
-    if ($lang && $lang !== I18N_CONDUCTOR_DEFAULT_LANG) $url .= $lang . '/';
-  }
 
   if ($dir) $url .= $dir . '/';
   if ($file) $url .= $file . '/';
@@ -93,4 +86,51 @@ function the_img($img, $size = null, $noimg = null)
 function get_noimg()
 {
   return get_field('image_notfound', 'options') ?: '';
+}
+
+function get_weekday_class( $weekday )
+{
+
+  $class = get_weekday($weekday, array(
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ), true);
+
+  if ($class === 'sunday') $class = 'holiday';
+
+  return $class;
+
+}
+
+function get_weekday_label( $weekday )
+{
+
+  return get_weekday($weekday, array(
+    '日',
+    '月',
+    '火',
+    '水',
+    '木',
+    '金',
+    '土',
+  ));
+
+}
+
+function get_weekday( $weekday, $weekdays, $is_class = false )
+{
+
+  $weekday = (int)$weekday;
+  $label = '';
+
+  if (isset($weekdays[$weekday])) $label = $weekdays[$weekday];
+  if ($is_class) $label = strtolower( $label );
+
+  return $label;
+
 }

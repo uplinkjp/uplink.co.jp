@@ -56,10 +56,9 @@ function cts_body_classes( $classes, $class = null )
   if (is_archive()) $classes[] = 'type-2nd';
 
   $posttype = get_post_type();
-    if ($posttype === 'movie') $posttype = 'film';
-    $classes[] = 'category-' . $posttype;
-
-  // category-film
+  if ($posttype === 'movie') $posttype = 'film';
+  if ($posttype === 'page') $posttype = 'default';
+  $classes[] = 'category-' . $posttype;
 
   return $classes;
 

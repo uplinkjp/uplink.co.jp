@@ -1,3 +1,98 @@
+<?php
+
+global $programs;
+
+if ($programs):
+
+foreach( $programs as $date => $programs_by_day ):
+
+$time = strtotime($date);
+
+?>
+
+<div class="list-calendar-wrap">
+  <div class="list-calendar-header is-<?php echo get_weekday_class( date('w', $time) )?>">
+    <p class="list-calendar-header-inner"><?php echo date('m.d', $time)?><span><?php echo get_weekday_label(date('w', $time))?></span></p>
+  </div>
+  <ul class="list-calendar">
+    <?php
+    if( $programs_by_day ):
+    foreach($programs_by_day as $program):?>
+    <?php /*li class="tagged-film">
+      <article>
+        <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
+        <div class="list-calendar-inner">
+          <div class="list-calendar-information">
+            <p class="list-calendar-date">10:15<span>—11:53</span></p>
+            <p class="list-calendar-text">【予告なし】【上映後舞台挨拶】登壇者：加藤よしひろ(加藤姉妹父親)</p>
+          </div>
+        </div>
+      </article>
+    </li */?>
+    <li class="tagged-events">
+      <article>
+        <h1 class="list-calendar-heading">マガディーラ 勇者転生</h1>
+        <div class="list-calendar-inner">
+          <div class="list-calendar-information">
+            <p class="list-calendar-date">10:15<span>—11:53</span></p>
+            <p class="list-calendar-text">【サービスデー】</p>
+          </div>
+        </div>
+        <div class="list-calendar-inner">
+          <div class="list-calendar-information">
+            <p class="list-calendar-date">10:15<span>—11:53</span></p>
+            <p class="list-calendar-text">【サービスデー】</p>
+          </div>
+          <p class="button-purchase is-yellow2"><a href=""><span>当日窓口</span></a></p>
+        </div>
+        <div class="list-calendar-inner">
+          <div class="list-calendar-information">
+            <p class="list-calendar-date">10:15<span>—11:53</span></p>
+            <p class="list-calendar-text">【サービスデー】</p>
+          </div>
+          <p class="button-purchase is-green2"><a href=""><span>購入する</span></a></p>
+        </div>
+      </article>
+    </li><?php
+    endforeach;
+    endif;
+    ?>
+    <?php /* li class="tagged-gallery">
+      <article>
+        <h1 class="list-calendar-heading">レディ・バード</h1>
+        <div class="list-calendar-inner">
+          <div class="list-calendar-information">
+            <p class="list-calendar-date">10:15<span>—11:53</span></p>
+            <p class="list-calendar-text">【サービスデー】</p>
+          </div>
+          <p class="button-purchase is-red"><a href=""><span>販売終了</span></a></p>
+        </div>
+      </article>
+    </li>
+    <li class="tagged-market">
+      <article>
+        <h1 class="list-calendar-heading">カランコエの花</h1>
+        <div class="list-calendar-inner">
+          <div class="list-calendar-information">
+            <p class="list-calendar-date">10:15<span>—11:53</span></p>
+            <p class="list-calendar-text">【予告なし】【5分前開場】【上映後舞台挨拶】登壇者：有佐、手島実優、石本径代、中川駿</p>
+          </div>
+          <p class="button-purchase is-yellow1"><a href=""><span>購入する</span></a></p>
+        </div>
+      </article>
+    </li */?>
+  </ul>
+</div>
+
+<?php endforeach?>
+
+<?php endif?>
+
+
+
+
+<?php /*
+
 <div class="list-calendar-wrap">
   <div class="list-calendar-header is-saturday">
     <p class="list-calendar-header-inner">09.01<span>土</span></p>
@@ -151,3 +246,5 @@
     </li>
   </ul>
 </div>
+
+*/?>
