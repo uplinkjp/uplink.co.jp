@@ -13,7 +13,7 @@
       width: calc(100vw - 30px);
       @include mqTB {
         width: calc(87.5vw - 30px);
-        max-width: 1230px;
+        max-width: $max-width - 30px;
       }
       > a,
       > div {

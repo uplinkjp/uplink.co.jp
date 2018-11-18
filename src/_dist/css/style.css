@@ -1585,7 +1585,7 @@ textarea {
       @media screen and (min-width: 768px) {
         .l-slider .slider-inner .slick-slide {
           width: calc(87.5vw - 30px);
-          max-width: 1230px; } }
+          max-width: 1090px; } }
       .l-slider .slider-inner .slick-slide > a,
       .l-slider .slider-inner .slick-slide > div {
         display: block;
