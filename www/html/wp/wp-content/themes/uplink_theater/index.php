@@ -1,27 +1,433 @@
-GET /data/v1/programs[?after=日時][&before=日時][&movie_id=作品ID][&movies={true|false}]
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="著者情報">
+  <meta name="description" content="記事の概要">
+  <meta name="format-detection" content="telephone=no,address=no,email=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<?php
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@twitter">
+  <meta property="fb:app_id" content="00000000000">
+  <meta property="og:description" content="記事の概要">
+  <meta property="og:title" content="UPLINK">
+  <meta property="og:url" content="http://www.uplink.co.jp/">
+  <meta property="og:image" content="http://www.uplink.co.jp/img/ogp.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="UPLINK">
 
-// $theaters = get_uplink_theaters();
-// echo '<pre>';print_r($theaters);echo '</pre>';exit;
-
-// $theater = get_uplink_theater( 'shibuya' );
-// echo '<pre>';print_r($theater);echo '</pre>';exit;
-
-// $screens = get_uplink_screens();
-// $screens = get_uplink_screens( 'shibuya' );
-// echo '<pre>';print_r($screens);echo '</pre>';exit;
-
-$programs = get_uplink_programs_by_date( '20181001', '20181130' );
-echo '<pre>';print_r($programs);echo '</pre>';exit;
-
-$programs = get_uplink_programs( array(
-  'after' => '20181101',
-  'before' => '20181130',
-  'movies' => true
-));
-echo '<pre>';print_r($programs);echo '</pre>';exit;
+  <link rel="icon" href="./img/icon/favicon.ico">
+  <link rel="apple-touch-icon" href="./img/icon/icon.png">
+  <link rel="alternate" type="application/rss+xml" href="http://example.com/feed">
 
 
-echo __FILE__.' - '.__LINE__;exit;
+  <title>UPLINK</title>
 
+  <?php wp_head()?>
+
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri()?>/css/style.min.css">
+
+</head>
+<body class="theme-shibuya frontpage">
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- 渋谷 -->
+<header class="l-header">
+  <div class="header-inner">
+    <h1 class="header-logo">
+      <a href="">UPLINK</a>
+    </h1>
+    <div class="header-body">
+      <h2 class="header-logo"><a href="">UPLINK 渋谷</a></h2>
+      <p class="header-nav_trigger"><a href="" class="js-mainNavTrigger">MENU</a></p>
+    </div>
+  </div>
+</header>
+<div class="js-headerWrap">
+  <!-- 渋谷 ナビ -->
+<nav class="l-nav">
+  <div class="nav-inner">
+    <div class="nav-wrap">
+      <div class="nav-film">
+        <a href="">
+          <p>上映</p>
+          <span>MOVIES</span>
+        </a>
+      </div>
+      <div class="nav-events">
+        <a href="">
+          <p>イベント</p>
+          <span>EVENTS</span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-wrap">
+      <div class="nav-gallery">
+        <a href="">
+          <p>ギャラリー</p>
+          <span>GALLERY</span>
+        </a>
+      </div>
+      <div class="nav-market">
+        <a href="">
+          <p>マーケット</p>
+          <span>MARKET</span>
+        </a>
+      </div>
+      <div class="nav-cafe">
+        <a href="">
+          <p>カフェ</p>
+          <span>CAFE</span>
+        </a>
+      </div>
+      <div class="nav-map">
+        <a href="">
+          <p>地図</p>
+          <span>MAP</span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-wrap-child">
+      <div class="nav-default">
+        <a href="">
+          <p>施設案内</p>
+          <span>FACILITY</span>
+        </a>
+      </div>
+      <div class="nav-default">
+        <a href="">
+          <p>料金・割引</p>
+          <span>PRICING</span>
+        </a>
+      </div>
+      <div class="nav-default">
+        <a href="">
+          <p>施設レンタル</p>
+          <span>RENTAL</span>
+        </a>
+      </div>
+      <div class="nav-default nav-col-2">
+        <a href="">
+          <p>アップリンク会員について</p>
+          <span>MEMBERSHIP</span>
+        </a>
+      </div>
+      <div class="nav-login nav-col-1">
+        <a href="">
+          <p>ログイン</p>
+          <span>LOGIN</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="form-googlesearch">
+    <form>
+      <p class="form-googlesearch-text"><input type="text" placeholder="Googleカスタム検索" /></p>
+      <p class="form-googlesearch-submit"><input type="submit" /></p>
+    </form>
+  </div>
+</nav>
+</div>
+
+<div class="l-wrap">
+  <!-- 吉祥寺・渋谷 スライダー -->
+<section class="l-slider">
+  <div class="js-slick slider-inner">
+    <div><a href="">
+      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
+      <img src="https://placehold.jp/800x200.png">
+      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
+    </a></div>
+    <div><a href="">
+      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
+      <img src="https://placehold.jp/240x300.png">
+      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
+    </a></div>
+    <div><a href="">
+      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
+      <img src="https://placehold.jp/160x300.png">
+      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
+    </a></div>
+    <div><a href="">
+      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
+      <img src="https://placehold.jp/100x100.png">
+      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
+    </a></div>
+    <div><a href="">
+      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
+      <img src="https://placehold.jp/500x800.png">
+      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
+    </a></div>
+  </div>
+</section>
+
+
+
+    <section>
+    <h2 class="section-heading">
+      お知らせ
+      <span>NEWS</span>
+    </h2>
+
+
+<ul class="list-news">
+
+
+  <li><a href="">
+    <div class="list-news-inner">
+      <p class="list-news-date">2018.08.16<span>NEW</span></p>
+      <p class="list-news-text">ハービー・山口写真展「今日は、映画を観に行く」撮影プロジェクトの被写体募集！</p>
+    </div>
+
+  </a></li>
+
+  <li><a href="">
+    <div class="list-news-inner">
+      <p class="list-news-date">2018.08.16<span>NEW</span></p>
+      <p class="list-news-text">スタッフ募集（アップリンク吉祥寺劇場運営、経理事務）</p>
+    </div>
+
+  </a></li>
+
+  <li><a href="">
+    <div class="list-news-inner">
+      <p class="list-news-date">2018.08.16<span>NEW</span></p>
+      <p class="list-news-text">渋谷・吉祥寺店共通の「新・アップリンク会員制度」のお得な早期受付スタート！および会員料金の改定について</p>
+    </div>
+
+  </a></li>
+
+  <li><a href="">
+    <div class="list-news-inner">
+      <p class="list-news-date">2018.08.16<span>NEW</span></p>
+      <p class="list-news-text">大好評につきアンコール上映決定！！映画『ラ・チャナ』超貴重特別映像限定上映！！！</p>
+    </div>
+
+  </a></li>
+
+  <li><a href="">
+    <div class="list-news-inner">
+      <p class="list-news-date">2018.08.16<span>NEW</span></p>
+      <p class="list-news-text">パワフルな映画と料理で夏の疲れを吹き飛ばす！ 映画『ラ・チャナ』× Tabelaのコラボレーションメニュー登場 ！</p>
+    </div>
+
+  </a></li>
+
+
+</ul>
+    <p class="list-readmore"><a href="">お知らせ一覧</a></p>
+  </section>
+  <section>
+  <h2 class="section-heading">
+    今日と明日のスケジュール
+    <span>TODAY & TOMORROW</span>
+  </h2>
+  <ul class="list-tag">
+    <li><span class="tag-film">上映</span></li>
+    <li><span class="tag-events">イベント</span></li>
+    <li><span class="tag-gallery">ギャラリー</span></li>
+    <li><span class="tag-market">マーケット</span></li>
+  </ul>
+    <div class="list-calendar-wrap">
+    <div class="list-calendar-header is-saturday">
+      <p class="list-calendar-header-inner">09.01<span>土</span></p>
+    </div>
+    <ul class="list-calendar">
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【予告なし】【上映後舞台挨拶】登壇者：加藤よしひろ(加藤姉妹父親)</p>
+            </div>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-events">
+        <article>
+          <h1 class="list-calendar-heading">マガディーラ 勇者転生</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【サービスデー】</p>
+            </div>
+          </div>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【サービスデー】</p>
+            </div>
+            <p class="button-purchase is-yellow2"><a href=""><span>当日窓口</span></a></p>
+          </div>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【サービスデー】</p>
+            </div>
+            <p class="button-purchase is-green2"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-gallery">
+        <article>
+          <h1 class="list-calendar-heading">レディ・バード</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【サービスデー】</p>
+            </div>
+            <p class="button-purchase is-red"><a href=""><span>販売終了</span></a></p>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-market">
+        <article>
+          <h1 class="list-calendar-heading">カランコエの花</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【予告なし】【5分前開場】【上映後舞台挨拶】登壇者：有佐、手島実優、石本径代、中川駿</p>
+            </div>
+            <p class="button-purchase is-yellow1"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+  <div class="list-calendar-wrap">
+    <div class="list-calendar-header is-holiday">
+      <p class="list-calendar-header-inner">09.01<span>日</span></p>
+    </div>
+    <ul class="list-calendar">
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【予告なし】【上映後舞台挨拶】登壇者：加藤よしひろ(加藤姉妹父親)</p>
+            </div>
+            <p class="button-purchase is-yellow2"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">映画『聖なる呼吸：ヨガのルーツに出会う旅』DVD発売記念トーク＋ヨガ体験付き上映会（ゲスト：柳生直子先生）</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【ダイジェスト版上映】上映後特典映像上映+トーク＆アーサナミニレクチャーあり（ゲスト：柳生直子先生）</p>
+            </div>
+            <p class="button-purchase is-red"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">レディ・バード</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【予告なし】</p>
+            </div>
+            <p class="button-purchase is-green1"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+  <div class="list-calendar-wrap">
+    <div class="list-calendar-header">
+      <p class="list-calendar-header-inner">09.02<span>月</span></p>
+    </div>
+    <ul class="list-calendar">
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【予告なし】【上映後舞台挨拶】登壇者：加藤よしひろ(加藤姉妹父親)</p>
+            </div>
+            <p class="button-purchase is-yellow2"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">映画『聖なる呼吸：ヨガのルーツに出会う旅』DVD発売記念トーク＋ヨガ体験付き上映会（ゲスト：柳生直子先生）</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【ダイジェスト版上映】上映後特典映像上映+トーク＆アーサナミニレクチャーあり（ゲスト：柳生直子先生）</p>
+            </div>
+            <p class="button-purchase is-red"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+      <li class="tagged-film">
+        <article>
+          <h1 class="list-calendar-heading">レディ・バード</h1>
+          <div class="list-calendar-inner">
+            <div class="list-calendar-information">
+              <p class="list-calendar-date">10:15<span>—11:53</span></p>
+              <p class="list-calendar-text">【予告なし】</p>
+            </div>
+            <p class="button-purchase is-green1"><a href=""><span>購入する</span></a></p>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+  <p class="list-readmore"><a href="">今月のスケジュール</a></p>
+</section>
+
+  <section class="l-followus">
+  <div class="followus-inner">
+    <div class="followus-box">
+      <h2 class="followus-heading">FOLLOW US</h2>
+      <ul class="followus-sns">
+        <li class="sns-tw"><a href="">twitter</a></li>
+        <li class="sns-fb"><a href="">facebook</a></li>
+        <li class="sns-in"><a href="">instagram</a></li>
+        <li class="sns-yt"><a href="">youtube</a></li>
+      </ul>
+    </div>
+    <div class="followus-box">
+      <h2 class="followus-heading">SUBSCRIBE</h2>
+      <a href="">メールマガジン登録</a>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer class="l-footer">
+  <h2 class="footer-logo"><img src="./img/logo-footer.png" alt="UPLINK"></h2>
+  <nav class="footer-nav">
+    <ul>
+      <li><a href="">UPLINKについて</a></li>
+      <li><a href="">採用情報</a></li>
+      <li><a href="">地図・お問合せ</a></li>
+      <li><a href="">個人情報の取り扱い</a></li>
+      <li><a href="">English Information</a></li>
+    </ul>
+  </nav>
+  <p class="footer-copy">2018 UPLINK, LTD.</p>
+</footer>
+
+<script src="./js/libs/jquery.min.js"></script>
+<script src="./js/libs/slick.min.js"></script>
+<script src="./js/libs/jquery.sticky-kit.min.js"></script>
+<!-- <script src="./js/libs/jquery.dotdotdot.js"></script> -->
+<script src="./js/script.min.js"></script>
+</body>
+</html>
