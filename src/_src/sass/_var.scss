@@ -3,6 +3,12 @@
 //
 
 //
+// transition
+//
+$t_duration: .3s;
+$t_easing: cubic-bezier(.8, 0, .3, 1);
+
+//
 // PADDING ( 画面左右のパディング )
 //
 $padding_wrap: 15px;

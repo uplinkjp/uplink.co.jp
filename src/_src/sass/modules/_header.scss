@@ -2,7 +2,10 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  transition: all .7s ease;
+  transition: all $t_duration $t_easing;
+  .theme-main & {
+    background: $c_bg_nav;
+  }
 }
 
 .l-header {
@@ -14,22 +17,22 @@
   height: 60px;
   margin: 0 auto;
   box-sizing: border-box;
-  transition: all .7s ease;
+  transition: all $t_duration $t_easing;
 
   padding: 0 $padding_wrap;
   // @include containerTB;
-  .frontpage & {
+  .type-frontpage & {
     transition: none;
     height: auto;
   }
   .is-scroll & {
-    transition: top .7s ease;
+    transition: top $t_duration $t_easing;
     position: fixed;
     top: -100px;
     left: 0;
   }
   .is-navfixed & {
-    transition: all .7s ease;
+    transition: all $t_duration $t_easing;
     top: 0;
   }
   @include mqTB {
@@ -43,6 +46,10 @@
   display: flex;
   align-items: center;
   @include containerTB;
+  @include mqTB {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .header-body {
@@ -61,7 +68,7 @@
 
 }
 .header-logo {
-  padding-right: 20px;
+  padding-right: 15px;
   a {
     display: block;
     img {
@@ -83,7 +90,7 @@
       height: 100%;
       padding: 0 0 0 20px;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: 15px center;
       background-size: auto 20px;
       .theme-main & {
         background-image: url(../img/logo-text.png);
@@ -130,7 +137,7 @@
       }
     }
   }
-  .frontpage & {
+  .type-frontpage & {
     a {
       pointer-events: none;
     }
@@ -140,19 +147,24 @@
       pointer-events: initial;
     }
   }
-  .main-open & {
+  .main-open.theme-main & {
     a {
       &:before {
-        .theme-main & {
-          background-image: url(../img/icon-menu-on.png);
-        }
-        .theme-shibuya & {
-          background-image: url(../img/icon-menu-on_shibuya.png);
-        }
-        .theme-joji & {
-          background-image: url(../img/icon-menu-on_joji.png);
-        }
-
+        background-image: url(../img/icon-menu-on.png);
+      }
+    }
+  }
+  .main-open.theme-shibuya & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_shibuya.png);
+      }
+    }
+  }
+  .main-open.theme-joji & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_joji.png);
       }
     }
   }
@@ -163,7 +175,7 @@
   padding-top: 60px;
   padding: 60px 15px 0 15px;
   overflow: hidden;
-  transition: all .7s ease;
+  transition: all $t_duration $t_easing;
   box-sizing: content-box;
   @include archive_bg();
   body:not(.is-scroll).main-open & {
@@ -185,6 +197,9 @@
   margin: 0 auto;
   padding: 30px 0;
   // @include containerTB;
+  @include mqTB {
+    padding: 30px 15px;
+  }
   span {
     margin: 5px 0 0;
     display: block;
@@ -201,7 +216,6 @@
   height: 40px;
   border-radius: 50%;
   @include archive_bg();
-  transition: all .7s ease;
   a {
     @include texthidden;
     display: block;
@@ -213,6 +227,7 @@
     background-position: center;
   }
   .sub-open & {
+    box-shadow: none !important;
     a {
       background-image: url(../img/icon-submenu-on.png);
     }
@@ -222,11 +237,27 @@
     transform: none;
     top: initial;
     bottom: -100px;
-    right: 25px;
+    right: 37px;
+    box-shadow: 0 4px 32px rgba(0,0,0,.4);
+    transition: all $t_duration $t_easing;
+    @include mqTB {
+      right: 75px;
+    }
   }
- .is-navfixed & {
-    bottom: 35px;
+
+  .is-subNavTriggerFix & {
+    bottom: 50px;
+    transition: all $t_duration $t_easing;
+    @include mqTB {
+      bottom: 80px;
+    }
+    // @include animationValue(slideUpSubTrigger, .3, $t_easing, .1, 1, forwards);
   }
+
+
+ // .is-subTriggerFixed & {
+ //    bottom: 35px;
+ //  }
   .is-clone & {
     position: absolute;
     right: 0;

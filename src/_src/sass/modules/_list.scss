@@ -107,6 +107,11 @@
     margin: 0 5px 0 0;
     height: 24px;
   }
+  .archive_shcedule-header_wrap & {
+    @include mqTB {
+      margin-bottom: 0;
+    }
+  }
 }
 %tag {
   display: block;
@@ -149,6 +154,7 @@
   @include f_sg_bold;
   font-size: 28px;
   border-top: 4px solid $c_weekday;
+  z-index: 1;
   span {
     font-size: 18px;
     margin-left: 10px;
@@ -173,6 +179,7 @@
     .list-calendar-header-inner {
       padding: 16px 15px;
       border-top: 4px solid $c_weekday;
+      z-index: 1;
     }
     &.is-holiday {
       .list-calendar-header-inner {
@@ -312,14 +319,10 @@
   width: 100%;
   padding-top: 42.5%;
   text-align: center;
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%,-50%,0);
-    max-width: 100%;
-    max-height: 100%;
-  }
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
 }
 .list_archive-heading {
   background: #fff;

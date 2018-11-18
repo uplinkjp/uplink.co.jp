@@ -73,8 +73,8 @@
 
 // イージング
 @mixin transition {
-  transition-duration: .3s;
-  transition-timing-function: cubic-bezier(.8, 0, .3, 1);
+  transition-duration: $t_duration;
+  transition-timing-function: $t_easing;
 }
 
 // animation
@@ -92,6 +92,18 @@
     opacity: 1;
   }
 }
+@-webkit-keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px;
+  }
+}
+@keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px;
+  }
+}
+
+
 
 @mixin theme_bg() {
   .theme-main & {
@@ -105,20 +117,19 @@
   }
 }
 @mixin archive_bg() {
-  .archive-film & {
+  .category-film & {
     background-color: $c_nav_film_bg;
   }
-  .archive-event & {
+  .category-event & {
     background-color: $c_nav_event_bg;
   }
-  .archive-gallery & {
+  .category-gallery & {
     background-color: $c_nav_gallery_bg;
   }
-  .archive-market & {
+  .category-market & {
     background-color: $c_nav_market_bg;
   }
-  .archive-default &,
-  .page-default & {
+  .category-default & {
     background-color: $c_nav_default_bg;
     .header_sub-heading {
       color: #000;

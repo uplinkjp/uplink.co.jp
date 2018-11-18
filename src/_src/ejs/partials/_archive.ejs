@@ -22,6 +22,10 @@
 
   var img = [
     'https://placehold.jp/554x232.png',
+    'https://placehold.jp/900x232.png',
+    'https://placehold.jp/100x232.png',
+    'https://placehold.jp/200x232.png',
+    'https://placehold.jp/500x500.png',
 
   ];
   var img_len = img.length;
@@ -31,7 +35,7 @@
 <% for (var i = 0; i < len; i++) { %>
 
   <article class="list_archive-item"><a href="">
-    <p class="list_archive-thumb"><img src="<%- img[i % img_len]; %>"></p>
+    <p class="list_archive-thumb" style="background-image: url(<%- img[i % img_len]; %>)"></p>
     <h1 class="list_archive-heading"><%- title[i % title_len]; %></h1>
     <p class="list_archive-text"><%- text[i % text_len]; %></p>
  </a></article>
