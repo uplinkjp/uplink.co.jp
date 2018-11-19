@@ -37,15 +37,35 @@ if (!function_exists('get_uplink_programs_by_date'))
 
     }
 
-    $unsorted_programs = (new uplinkTicket)->fetch_programs($params);
+    $programs_unsorted = (new uplinkTicket)->fetch_programs($params);
 
-    if ($unsorted_programs)
+    if ($programs_unsorted)
     {
 
-      foreach( $unsorted_programs as $program )
+      foreach( $programs_unsorted as $program )
       {
 
-        $programs[$program->startDate][] = $program;
+        $programs[$program->startDate][$program->movieId]['timelines'][] = $program;
+
+        if (!isset($posts[$program->movieId]))
+        {
+          $post = get_posts(array(
+            // 'numberposts' => -1,
+            'post_type'   => array( 'movie', 'event', 'gallery', 'market' ),
+            'meta_key'    => 'movie_id',
+            'meta_value'  => $program->movieId
+          ));
+
+          if ($post) $post = reset($post);
+
+          $posts[$program->movieId] = $post;
+        }
+        else
+        {
+          $post = $posts[$program->movieId];
+        }
+
+        $programs[$program->startDate][$program->movieId]['post'] = $post;
 
       }
 

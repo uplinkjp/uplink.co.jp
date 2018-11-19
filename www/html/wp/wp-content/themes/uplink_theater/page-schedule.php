@@ -10,6 +10,9 @@ $enddate = date('Ymd', mktime(0, 0, 0, $mm + 1, 0, $yyyy));
 
 $programs = get_uplink_programs_by_date( $startdate, $enddate );
 
+// echo '<pre>';print_r($programs);echo '</pre>';exit;
+
+$current_url = get_canonical_url();
 $next_url = get_canonical_url() . '?' . http_build_query(array(
     'yyyy' => date('Y', mktime(0, 0, 0, $mm+1, 1, $yyyy)),
     'mm' => date('n', mktime(0, 0, 0, $mm+1, 1, $yyyy))
@@ -30,8 +33,8 @@ get_template_part( 'partials/header' )?>
       <h1 class="archive_header-heading"><?php echo date('Y.m', mktime(0, 0, 0, $mm, 1, $yyyy))?></h1>
       <div class="archive_header-nav">
         <a href="<?php echo $prev_url?>">前の月</a>
-      <span>今月</span>
-      <a href="<?php echo $next_url?>">次の月</a>
+        <a href="<?php echo $current_url?>">今月</a>
+        <a href="<?php echo $next_url?>">次の月</a>
       </div>
     </div>
     <ul class="list-tag">
@@ -48,8 +51,8 @@ get_template_part( 'partials/header' )?>
     <h1 class="archive_header-heading"><?php echo date('Y.m', mktime(0, 0, 0, $mm, 1, $yyyy))?></h1>
     <div class="archive_header-nav">
       <a href="<?php echo $prev_url?>">前の月</a>
-      <span>今月</span>
-      <a href="<?php echo $next_url?>">次の月</a>
+        <a href="<?php echo $current_url?>">今月</a>
+        <a href="<?php echo $next_url?>">次の月</a>
     </div>
   </div>
 </section>

@@ -134,3 +134,15 @@ function get_weekday( $weekday, $weekdays, $is_class = false )
   return $label;
 
 }
+
+function get_uplink_post_class( $post = null )
+{
+
+  $class = get_post_type( $post );
+
+  if ($class === 'movie') $class = 'film';
+  if ($class === 'event') $class = 'events';
+
+  return $class;
+
+}

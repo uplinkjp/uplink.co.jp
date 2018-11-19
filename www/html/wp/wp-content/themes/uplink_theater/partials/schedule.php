@@ -17,43 +17,29 @@ $time = strtotime($date);
   <ul class="list-calendar">
     <?php
     if( $programs_by_day ):
-    foreach($programs_by_day as $program):?>
-    <?php /*li class="tagged-film">
+    foreach($programs_by_day as $movie_id => $program):
+
+    $post = $program['post'];
+
+    if ($post):
+    setup_postdata($post);
+    ?>
+    <li class="tagged-<?php echo get_uplink_post_class()?>">
       <article>
-        <h1 class="list-calendar-heading">かみさまとのやくそく～あなたは親を選んで生まれてきた～</h1>
+        <h1 class="list-calendar-heading"><a href="<?php the_permalink()?>"><?php the_title()?></a></h1>
+        <?php foreach( $program['timelines'] as $timeline ):?>
         <div class="list-calendar-inner">
           <div class="list-calendar-information">
-            <p class="list-calendar-date">10:15<span>—11:53</span></p>
-            <p class="list-calendar-text">【予告なし】【上映後舞台挨拶】登壇者：加藤よしひろ(加藤姉妹父親)</p>
+            <p class="list-calendar-date"><?php echo date('H:i', $timeline->startTime / 1000)?><span>—<?php echo date('H:i', $timeline->endTime / 1000)?></span></p>
+            <?php if($timeline->remark):?><p class="list-calendar-text"><?php echo nl2br($timeline->remark)?></p><?php endif?>
           </div>
         </div>
-      </article>
-    </li */?>
-    <li class="tagged-events">
-      <article>
-        <h1 class="list-calendar-heading">マガディーラ 勇者転生</h1>
-        <div class="list-calendar-inner">
-          <div class="list-calendar-information">
-            <p class="list-calendar-date">10:15<span>—11:53</span></p>
-            <p class="list-calendar-text">【サービスデー】</p>
-          </div>
-        </div>
-        <div class="list-calendar-inner">
-          <div class="list-calendar-information">
-            <p class="list-calendar-date">10:15<span>—11:53</span></p>
-            <p class="list-calendar-text">【サービスデー】</p>
-          </div>
-          <p class="button-purchase is-yellow2"><a href=""><span>当日窓口</span></a></p>
-        </div>
-        <div class="list-calendar-inner">
-          <div class="list-calendar-information">
-            <p class="list-calendar-date">10:15<span>—11:53</span></p>
-            <p class="list-calendar-text">【サービスデー】</p>
-          </div>
-          <p class="button-purchase is-green2"><a href=""><span>購入する</span></a></p>
-        </div>
+        <?php endforeach?>
       </article>
     </li><?php
+    wp_reset_postdata();
+    endif;
+
     endforeach;
     endif;
     ?>
