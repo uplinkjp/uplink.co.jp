@@ -5,7 +5,7 @@ the_post();
 $startdate = date('Ymd', strtotime('today'));
 $enddate = date('Ymd', strtotime('+ 2 day'));
 
-$programs = get_uplink_programs_by_date( $startdate, $enddate );
+$programs = get_uplink_programs_by_date( get_uplink_site(), $startdate, $enddate );
 
 get_template_part( 'partials/header' )?>
 

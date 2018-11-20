@@ -63,6 +63,22 @@ class uplinkTicket
 
   }
 
+  public function fetch_screen_ids( $slug = null, $params = array() )
+  {
+
+    $screen_ids = array();
+
+    $screens = $this->fetch_screens( $slug, $params );
+
+    if ($screens)
+    {
+      $screen_ids = wp_list_pluck( $screens, 'screenId', true );
+    }
+
+    return $screen_ids;
+
+  }
+
   public function fetch_theaters( $slug = null, $params = array() )
   {
 

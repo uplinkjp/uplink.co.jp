@@ -2,7 +2,7 @@
 
 the_post();
 
-$programs = get_uplink_programs_by_post();
+$programs = get_uplink_programs_by_post( get_uplink_site() );
 
 get_template_part( 'partials/header' )?>
 
