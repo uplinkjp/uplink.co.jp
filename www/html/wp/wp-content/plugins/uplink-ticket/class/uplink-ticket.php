@@ -28,7 +28,7 @@ class uplinkTicket
     $response = $this->fetch($this->endpoint( 'programs', $params ));
 
     if (!$response->programs) return array();
-    
+
     return array_map( function($program)
     {
 

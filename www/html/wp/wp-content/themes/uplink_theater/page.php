@@ -4,7 +4,10 @@ the_post();
 
 get_template_part( 'partials/header' )?>
 
-<?php get_template_part( 'partials/nav' )?>
+<div class="js-headerWrap">
+  <?php get_template_part( 'navs/global', get_uplink_site() )?>
+  <?php get_template_part( 'navs/detail', get_post_type() )?>
+</div>
 
 <div class="l-wrap">
 

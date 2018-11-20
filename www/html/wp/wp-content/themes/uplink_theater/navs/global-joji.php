@@ -27,12 +27,6 @@
           <span>MARKET</span>
         </a>
       </div>
-      <div class="nav-cafe">
-        <a href="<?php echo home_url('cafe')?>">
-          <p>カフェ</p>
-          <span>CAFE</span>
-        </a>
-      </div>
       <div class="nav-map">
         <a href="<?php echo home_url('map')?>">
           <p>地図</p>
@@ -73,10 +67,5 @@
       </div>
     </div>
   </div>
-  <div class="form-googlesearch">
-    <form>
-      <p class="form-googlesearch-text"><input type="text" placeholder="Googleカスタム検索" /></p>
-      <p class="form-googlesearch-submit"><input type="submit" /></p>
-    </form>
-  </div>
+  <?php get_template_part('partials/search')?>
 </nav>

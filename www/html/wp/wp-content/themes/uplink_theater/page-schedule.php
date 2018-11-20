@@ -1,5 +1,9 @@
 <?php
 
+/*
+Template Name: Schedule
+ */
+
 the_post();
 
 $yyyy = isset($_GET['yyyy']) ? (int)$_GET['yyyy'] : date('Y');
@@ -23,6 +27,18 @@ $prev_url = get_canonical_url() . '?' . http_build_query(array(
   ));
 
 get_template_part( 'partials/header' )?>
+
+<div class="js-headerWrap">
+  <?php get_template_part( 'navs/global', get_uplink_site() )?>
+  <div class="l-header_sub">
+    <div class="header_sub-inner">
+      <h2 class="header_sub-heading">
+        今月のスケジュール
+        <span>MONTHLY SCHEDULE</span>
+      </h2>
+    </div>
+  </div>
+</div>
 
 <?php get_template_part( 'partials/nav', 'schedule' )?>
 

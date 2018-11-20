@@ -12,6 +12,61 @@ if (!function_exists('get_uplink_programs'))
 
 }
 
+if (!function_exists('get_uplink_grograms_by_movie'))
+{
+
+  function get_uplink_programs_by_movie( $movie_id, $params = array() )
+  {
+
+    $programs = array();
+    $posts = array();
+
+    $post_types = get_post_types();
+
+    $params['movie_id'] = $movie_id;
+    $params['after'] = date('Ymd', strtotime('- 10 year'));
+    $params['before'] = date('Ymd', strtotime('+ 10 year'));
+
+    $programs_unsorted = (new uplinkTicket)->fetch_programs($params);
+
+    if ($programs_unsorted)
+    {
+
+      foreach( $programs_unsorted as $program )
+      {
+
+        $programs[$program->startDate][$program->movieId]['timelines'][] = $program;
+
+        if (!isset($posts[$program->movieId]))
+        {
+          $post = get_posts(array(
+            // 'numberposts' => -1,
+            'post_type'   => $post_types,
+            'meta_key'    => 'movie_id',
+            'meta_value'  => $program->movieId
+          ));
+
+          if ($post) $post = reset($post);
+
+          $posts[$program->movieId] = $post;
+        }
+        else
+        {
+          $post = $posts[$program->movieId];
+        }
+
+        $programs[$program->startDate][$program->movieId]['post'] = $post;
+
+      }
+
+    }
+
+    return $programs;
+
+  }
+
+}
+
 if (!function_exists('get_uplink_programs_by_date'))
 {
 
@@ -19,6 +74,8 @@ if (!function_exists('get_uplink_programs_by_date'))
   {
 
     $programs = array();
+
+    $post_types = get_post_types();
 
     $params['after'] = $startdate;
     $params['before'] = $enddate;
@@ -51,7 +108,7 @@ if (!function_exists('get_uplink_programs_by_date'))
         {
           $post = get_posts(array(
             // 'numberposts' => -1,
-            'post_type'   => array( 'movie', 'event', 'gallery', 'market' ),
+            'post_type'   => $post_types,
             'meta_key'    => 'movie_id',
             'meta_value'  => $program->movieId
           ));

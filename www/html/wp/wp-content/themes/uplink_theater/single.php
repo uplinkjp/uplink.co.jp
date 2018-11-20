@@ -2,9 +2,19 @@
 
 the_post();
 
+if ($movie_id = get_field('movie_id'))
+{
+
+  $programs = get_uplink_programs_by_movie( $movie_id );
+
+}
+
 get_template_part( 'partials/header' )?>
 
-<?php get_template_part( 'partials/nav', get_post_type() )?>
+<div class="js-headerWrap">
+<?php get_template_part( 'navs/global', get_uplink_site() )?>
+<?php get_template_part( 'navs/detail', get_post_type() )?>
+</div>
 
 <div class="l-wrap">
 
@@ -57,13 +67,13 @@ get_template_part( 'partials/header' )?>
 
 </article>
 
-<section>
+<?php if( $programs ):?><section>
   <h2 class="section-heading">
     スケジュールとチケット
     <span>SCHEDULE & TICKETS</span>
   </h2>
   <?php get_template_part( 'partials/schedule' )?>
-</section>
+</section><?php endif?>
 
 <?php /*
 
@@ -81,6 +91,7 @@ get_template_part( 'partials/header' )?>
 
 */?>
 
+<?php if( $post->post_content ):?>
 <section>
   <h2 class="section-heading">
     作品紹介
@@ -92,6 +103,7 @@ get_template_part( 'partials/header' )?>
     </div>
   </div>
 </section>
+<?php endif?>
 
 <?php /*
 

@@ -9,7 +9,9 @@ $programs = get_uplink_programs_by_date( $startdate, $enddate );
 
 get_template_part( 'partials/header' )?>
 
-<?php get_template_part( 'partials/nav' )?>
+<div class="js-headerWrap">
+  <?php get_template_part( 'navs/global', get_uplink_site() )?>
+</div>
 
 <?php get_template_part( 'partials/slider', 'top' )?>
 
