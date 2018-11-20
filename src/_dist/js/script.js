@@ -36,7 +36,6 @@ UPLINK = {
       UPLINK.header.closeSubNav();
       timer = setTimeout(function() {
         var position = target.offset().top;
-        console.log(position);
         $('html,body').animate({scrollTop : position}, 300, $.bez([.8, 0, .3, 1]));
       }, 300);
       return false;
@@ -71,9 +70,9 @@ UPLINK.getDisplayType = {
     var type = null;
     if(ww <= 767) {
       type = 'sp';
-    } else if(768 <= ww && ww <= 1024) {
+    } else if(768 <= ww && ww <= 1023) {
       type = 'tb';
-    } else if(1025 < ww) {
+    } else if(1023 < ww) {
       type =  'pc';
     }
     // console.log('display size is '+type);
@@ -198,16 +197,16 @@ UPLINK.header = {
   },
 
   doInit: function() {
-    console.log('doinit');
-    if(UPLINK.header.isFrontPage) console.log('　isFrontPage');
-    if(UPLINK.header.is2ndPage) console.log('　is2ndPage');
-    if(UPLINK.header.is3rdPage) console.log('　is3rdPage');
-    if(UPLINK.header.isPC) console.log('　isPC');
-    if(UPLINK.header.isTB) console.log('　isTB');
-    if(UPLINK.header.isSP) console.log('　isSP');
-    if(UPLINK.header.defMainOpen) console.log('　defMainOpen');
-    if(UPLINK.header.defSubOpen) console.log('　defSubOpen');
-    console.log('- - - - - - - - - -');
+    // console.log('doinit');
+    // if(UPLINK.header.isFrontPage) console.log('　isFrontPage');
+    // if(UPLINK.header.is2ndPage) console.log('　is2ndPage');
+    // if(UPLINK.header.is3rdPage) console.log('　is3rdPage');
+    // if(UPLINK.header.isPC) console.log('　isPC');
+    // if(UPLINK.header.isTB) console.log('　isTB');
+    // if(UPLINK.header.isSP) console.log('　isSP');
+    // if(UPLINK.header.defMainOpen) console.log('　defMainOpen');
+    // if(UPLINK.header.defSubOpen) console.log('　defSubOpen');
+    // console.log('- - - - - - - - - -');
 
     if(UPLINK.header.defMainOpen) {
       UPLINK.header.openMainNav();
@@ -318,17 +317,16 @@ UPLINK.header = {
     var content = $(sl).eq(0).find('a, .form-googlesearch-text, .form-googlesearch');
     var total = content.length;
     var delay = new Array();
+
     var i = 0;
     content.each(function() {
       delay[i] = 500 + i * 30;
       i++;
     });
     delay = delay.sort(shuffle);
-    console.log(delay);
 
     var j = 0;
     content.each(function() {
-      console.log(delay[j]);
       content.eq(j).delay(delay[j]).animate({'opacity': 1},30);
       j++;
     });
@@ -368,14 +366,6 @@ UPLINK.scrollBan = {
 UPLINK.slick = {
 
   init: function() {
-
-    // console.log('aaa');
-    // var ww = $(window).outerWidth();
-    // var slideW = ( ww * 0.875 ) - 30 - 8;
-    // if( slideW >= 1280 ) slideW = 1280;
-    // var padding = ( ww - slideW ) / 2;
-
-
     UPLINK.slick.bind();
     $('.js-slick').slick({
       infinite: true,
