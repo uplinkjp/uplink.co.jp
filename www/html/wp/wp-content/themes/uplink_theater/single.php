@@ -22,7 +22,7 @@ get_template_part( 'partials/header' )?>
         <a href="">#トーク</a>
         <a href="">#映像</a>
       </div>
-      <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      <div class="fb-like" data-href="<?php the_permalink()?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
     </div>
     <div class="single-header-thumb">
       <span><img src="https://placehold.jp/755x1544.png"></span>
