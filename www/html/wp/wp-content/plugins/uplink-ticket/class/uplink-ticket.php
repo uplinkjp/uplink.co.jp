@@ -112,7 +112,7 @@ class uplinkTicket
   }
 
 
-  private function fetch( $api_endpoint )
+  private function fetch( $api_endpoint, $retry = false )
   {
 
     $ch = curl_init();
@@ -128,9 +128,24 @@ class uplinkTicket
 
     $response = curl_exec($ch);
 
+    if ($this->is_error($ch) && !$retry)
+    {
+
+      $this->auth();
+      return $this->fetch( $api_endpoint, true );
+
+    }
+
     curl_close($ch);
 
     return json_decode($response);
+
+  }
+
+  private function is_error($ch)
+  {
+
+    return (int)curl_getinfo($ch, CURLINFO_HTTP_CODE) !== 200;
 
   }
 
@@ -160,7 +175,9 @@ class uplinkTicket
 
     $headers = explode("\n", $header);
 
-    set_transient( 'uplink_ticket_access_token', $headers );
+    $this->access_token = $headers;
+
+    set_transient( 'uplink_ticket_access_token', $this->access_token );
 
     curl_close($ch);
 

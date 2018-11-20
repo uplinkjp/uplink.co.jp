@@ -15,8 +15,14 @@ if (!function_exists('get_uplink_programs'))
 if (!function_exists('get_uplink_grograms_by_movie'))
 {
 
-  function get_uplink_programs_by_movie( $movie_id, $params = array() )
+  function get_uplink_programs_by_post( $params = array(), $post = null )
   {
+
+    if (!$post) global $post;
+
+    $movie_id = get_field('movie_id');
+
+    if (!$movie_id) return;
 
     $programs = array();
     $posts = array();
@@ -35,27 +41,9 @@ if (!function_exists('get_uplink_grograms_by_movie'))
       foreach( $programs_unsorted as $program )
       {
 
-        $programs[$program->startDate][$program->movieId]['timelines'][] = $program;
+        $programs[$program->startDate][$movie_id]['timelines'][] = $program;
 
-        if (!isset($posts[$program->movieId]))
-        {
-          $post = get_posts(array(
-            // 'numberposts' => -1,
-            'post_type'   => $post_types,
-            'meta_key'    => 'movie_id',
-            'meta_value'  => $program->movieId
-          ));
-
-          if ($post) $post = reset($post);
-
-          $posts[$program->movieId] = $post;
-        }
-        else
-        {
-          $post = $posts[$program->movieId];
-        }
-
-        $programs[$program->startDate][$program->movieId]['post'] = $post;
+        $programs[$program->startDate][$movie_id]['post'] = $post;
 
       }
 

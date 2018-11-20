@@ -2,12 +2,7 @@
 
 the_post();
 
-if ($movie_id = get_field('movie_id'))
-{
-
-  $programs = get_uplink_programs_by_movie( $movie_id );
-
-}
+$programs = get_uplink_programs_by_post();
 
 get_template_part( 'partials/header' )?>
 
