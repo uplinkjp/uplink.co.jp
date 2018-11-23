@@ -679,6 +679,11 @@ textarea {
     width: 40px;
     height: 40px;
     border-radius: 50%; }
+  .sub-open .is-clone .header-nav_sub_trigger {
+    right: 5px; }
+    @media screen and (min-width: 768px) {
+      .sub-open .is-clone .header-nav_sub_trigger {
+        right: 20px; } }
 
 .l-archive .list-news {
   margin-top: -15px; }
