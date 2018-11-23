@@ -218,6 +218,7 @@
 .nav-default {
   @extend %nav;
   a {
+    padding-right: 4px;
     background: $c_nav_default_bg;
     color: $c_nav_default_text;
     height: 60px;
@@ -228,7 +229,7 @@
   .theme-shibuya &,
   .theme-joji & {
     a {
-      padding-right: 5px;
+      padding-right: 4px;
       p {
         font-size: 13px;
       }

@@ -1198,6 +1198,7 @@ textarea {
   width: 100%; }
 
 .nav-default a {
+  padding-right: 4px;
   background: #BFBFBF;
   color: rgba(0, 0, 0, 0.87);
   height: 60px; }
@@ -1206,7 +1207,7 @@ textarea {
 
 .theme-shibuya .nav-default a,
 .theme-joji .nav-default a {
-  padding-right: 5px; }
+  padding-right: 4px; }
   .theme-shibuya .nav-default a p,
   .theme-joji .nav-default a p {
     font-size: 13px; }
