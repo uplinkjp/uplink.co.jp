@@ -33,6 +33,7 @@ $time = strtotime($date);
             <p class="list-calendar-date"><?php echo date('H:i', $timeline->startTime / 1000)?><span>—<?php echo date('H:i', $timeline->endTime / 1000)?></span></p>
             <?php if($timeline->remark):?><p class="list-calendar-text"><?php echo nl2br($timeline->remark)?></p><?php endif?>
           </div>
+          <p class="button-purchase is-yellow1"><a href="<?php echo $timeline->permalink?>" target="_blank"><span>購入する</span></a></p>
         </div>
         <?php endforeach?>
       </article>

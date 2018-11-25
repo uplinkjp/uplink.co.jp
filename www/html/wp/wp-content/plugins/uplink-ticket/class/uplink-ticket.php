@@ -5,7 +5,7 @@ class uplinkTicket
 
   private $date_format = 'Y-m-d H:i:s',
           $access_token = null,
-          $ticket_url = 'https://rsv.uplink.co.jp',
+          $ticket_url = 'http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com',
           $apiurl,
           $username,
           $password;
@@ -32,10 +32,14 @@ class uplinkTicket
     return array_map( function($program)
     {
 
-      $program->permalink = $this->ticket_url . '/' . $program->programId;
+      $program->permalink = $this->ticket_url . '/TicketReserver/program/' . $program->programId;
       $program->startDate = date('Y-m-d', (int)$program->startTime / 1000);
       $program->startDatetime = date($this->date_format, (int)$program->startTime / 1000);
       $program->endDatetime = date($this->date_format, (int)$program->endTime / 1000);
+
+      // http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com/TicketReserver/program/2835
+      // http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com/TicketReserver/movie/programs/67
+      // http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com/TicketReserver/program/2790
 
       return $program;
 

@@ -1,5 +1,7 @@
 <?php
 
+global $programs;
+
 the_post();
 
 $startdate = date('Ymd', strtotime('today'));
@@ -17,6 +19,15 @@ get_template_part( 'partials/header' )?>
 
 <div class="l-wrap">
 
+  <?php
+
+  $news_query = new WP_Query( array(
+    'post_type'         => 'news',
+    'posts_per_page'    => 10,
+  ));
+
+  if ($news_query->have_posts()):
+  ?>
   <section>
     <h2 class="section-heading">
       お知らせ
@@ -25,46 +36,22 @@ get_template_part( 'partials/header' )?>
 
     <ul class="list-news">
 
-      <li><a href="">
+      <?php
+
+      while( $news_query->have_posts() ):
+
+      $news_query->the_post();
+
+      ?><li><a href="<?php the_permalink()?>">
         <div class="list-news-inner">
-          <p class="list-news-date">2018.08.16<span>NEW</span></p>
-          <p class="list-news-text">ハービー・山口写真展「今日は、映画を観に行く」撮影プロジェクトの被写体募集！</p>
+          <p class="list-news-date"><?php echo get_the_date( $d = 'Y.m.d' )?><span>NEW</span></p>
+          <p class="list-news-text"><?php the_title()?></p>
         </div>
-      </a></li>
-
-      <li><a href="">
-        <div class="list-news-inner">
-          <p class="list-news-date">2018.08.16<span>NEW</span></p>
-          <p class="list-news-text">スタッフ募集（アップリンク吉祥寺劇場運営、経理事務）</p>
-        </div>
-      </a></li>
-
-      <li><a href="">
-        <div class="list-news-inner">
-          <p class="list-news-date">2018.08.16<span>NEW</span></p>
-          <p class="list-news-text">渋谷・吉祥寺店共通の「新・アップリンク会員制度」のお得な早期受付スタート！および会員料金の改定について</p>
-        </div>
-
-      </a></li>
-
-      <li><a href="">
-        <div class="list-news-inner">
-          <p class="list-news-date">2018.08.16<span>NEW</span></p>
-          <p class="list-news-text">大好評につきアンコール上映決定！！映画『ラ・チャナ』超貴重特別映像限定上映！！！</p>
-        </div>
-
-      </a></li>
-
-      <li><a href="">
-        <div class="list-news-inner">
-          <p class="list-news-date">2018.08.16<span>NEW</span></p>
-          <p class="list-news-text">パワフルな映画と料理で夏の疲れを吹き飛ばす！ 映画『ラ・チャナ』× Tabelaのコラボレーションメニュー登場 ！</p>
-        </div>
-      </a></li>
+      </a></li><?php endwhile?>
 
     </ul>
-    <p class="list-readmore"><a href="">お知らせ一覧</a></p>
-  </section>
+    <p class="list-readmore"><a href="<?php echo home_url('news')?>">お知らせ一覧</a></p>
+  </section><?php endif?>
 
   <section>
     <div class="archive_shcedule-header_wrap">

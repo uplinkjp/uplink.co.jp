@@ -1,5 +1,6 @@
 <article class="list_archive-item"><a href="<?php the_permalink()?>">
-  <p class="list_archive-thumb" style="background-image: url(https://placehold.jp/554x232.png)"></p>
+  <?php if( have_img() ):?><p class="list_archive-thumb" style="background-image: url(<?php echo get_the_post_thumbnail_url( null, 'large' )?>)"></p>
+  <?php else:?><p class="list_archive-thumb" style="background-image: url('noimg')"></p><?php endif?>
   <h1 class="list_archive-heading"><?php the_title()?></h1>
-  <?php /*p class="list_archive-text">上映中</p */?>
+  <p class="list_archive-text"><?php the_remark()?></p>
 </a></article>

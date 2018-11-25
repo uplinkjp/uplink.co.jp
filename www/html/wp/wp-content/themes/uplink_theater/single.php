@@ -3,6 +3,7 @@
 the_post();
 
 $programs = get_uplink_programs_by_post( get_uplink_site() );
+$tags = get_the_terms( $post, 'post_tag' );
 
 get_template_part( 'partials/header' )?>
 
@@ -18,23 +19,24 @@ get_template_part( 'partials/header' )?>
     <div class="single-header-inner">
       <h1 class="single-header-heading"><?php the_title()?></h1>
       <?php if( $date_description = get_field('date_description') ):?><p class="single-header-text"><?php echo $date_description?></p><?php endif?>
-      <div class="single-header-tag">
-        <a href="">#トーク</a>
-        <a href="">#映像</a>
-      </div>
+      <?php if( $tags ):?><div class="single-header-tag">
+        <?php foreach( $tags as $tag ):?><a href="<?php echo get_term_link($tag)?>">#<?php echo $tag->name?></a><?php endforeach?>
+      </div><?php endif?>
       <div class="fb-like" data-href="<?php the_permalink()?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
     </div>
-    <div class="single-header-thumb">
-      <span><img src="https://placehold.jp/755x1544.png"></span>
+    <?php if( have_img() ):?><div class="single-header-thumb">
+      <span>
+        <?php the_post_eyecache( 'large', array( 'width' => null, 'height' => null ) )?>
+      </span>
       <?php if( $caption_with_img = get_field('caption_with_img') ):?><p class="single-header-caption"><?php echo $caption_with_img?></p><?php endif?>
-    </div>
+    </div><?php endif?>
   </div>
 
   <div class="single-header-infornation">
-    <div class="single-information">
+    <?php if( get_post_type() === 'movie' ):?><div class="single-information">
       <h4>日時</h4>
-      <p>上映中</p>
-    </div>
+      <p><?php the_remark()?></p>
+    </div><?php endif?>
     <?php if( $price = get_field('price') ):?><div class="single-information">
       <h4>料金</h4>
       <p><?php echo $price?></p>

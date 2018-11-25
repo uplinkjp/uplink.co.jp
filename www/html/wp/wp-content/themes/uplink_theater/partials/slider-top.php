@@ -1,29 +1,22 @@
-<section class="l-slider">
+<?php
+
+if( have_rows('slides') ):
+
+?><section class="l-slider">
   <div class="js-slick slider-inner">
-    <div><a href="">
-      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
-      <img src="https://placehold.jp/800x200.png">
-      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
-    </a></div>
-    <div><a href="">
-      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
-      <img src="https://placehold.jp/240x300.png">
-      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
-    </a></div>
-    <div><a href="">
-      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
-      <img src="https://placehold.jp/160x300.png">
-      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
-    </a></div>
-    <div><a href="">
-      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
-      <img src="https://placehold.jp/100x100.png">
-      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
-    </a></div>
-    <div><a href="">
-      <p class="slider-toptext"><span>10月22日（月）19:00開場/19:30開演</span></p>
-      <img src="https://placehold.jp/500x800.png">
-      <p class="slider-bottomtext"><span>F/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（トF/T ディスカッション「アジア・トランスフィールド　プノンペンの最新カルチャー」（ト</span></p>
-    </a></div>
+    <?php
+
+    while( have_rows('slides') ):
+
+    the_row();
+
+    $slide_image = get_sub_field('image');
+
+    ?><div><a href="<?php the_sub_field('url')?>" target="_blank">
+      <p class="slider-toptext"><span><?php the_sub_field('date_description')?></span></p>
+      <img src="<?php the_img($slide_image, 'large')?>">
+      <p class="slider-bottomtext"><span><?php the_sub_field('caption')?></span></p>
+    </a></div><?php endwhile?>
   </div>
 </section>
+<?php endif?>

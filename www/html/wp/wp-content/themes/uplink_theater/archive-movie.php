@@ -16,8 +16,23 @@
   <div class="list_archive">
 
     <?php
-    while( have_posts() ):
-    the_post();
+
+    $args = array(
+      'post_type'         => 'movie',
+      'posts_per_page'    => -1,
+      'tax_query'         => array(
+        array(
+          'taxonomy'    => 'movie_status',
+          'field'       => 'slug',
+          'terms'       => array( 'nowshowing' ),
+        ),
+      ),
+    );
+
+    $q = new WP_Query( $args );
+
+    while( $q->have_posts() ):
+    $q->the_post();
 
     get_template_part( 'partials/loop', 'panel' );
 
@@ -33,8 +48,23 @@
   <div class="list_archive">
 
     <?php
-    while( have_posts() ):
-    the_post();
+
+    $args = array(
+      'post_type'         => 'movie',
+      'posts_per_page'    => -1,
+      'tax_query'         => array(
+        array(
+          'taxonomy'    => 'movie_status',
+          'field'       => 'slug',
+          'terms'       => array( 'comingsoon' ),
+        ),
+      ),
+    );
+
+    $q = new WP_Query( $args );
+
+    while( $q->have_posts() ):
+    $q->the_post();
 
     get_template_part( 'partials/loop', 'panel' );
 

@@ -34,6 +34,23 @@ add_filter( 'pre_transient_update_plugins', function() { return null; } );
 add_filter( 'pre_site_transient_update_core', function() { return null; } );
 add_filter( 'pre_site_transient_update_plugins', function() { return null; } );
 
+add_theme_support( 'post-thumbnails' );
+
+/* ----------------------------------------------------------
+
+  ￼Uploads Path
+
+---------------------------------------------------------- */
+
+// add_action('init', function() {
+
+//   if (get_uplink_site() !== 'www')
+//   {
+//     define( 'UPLOADS', 'wp-content/uploads/' . get_uplink_site() );
+//   }
+
+// });
+
 /* ----------------------------------------------------------
 
   ￼body_class()
@@ -47,7 +64,7 @@ function cts_body_classes( $classes, $class = null )
 
   $classes[] = 'theme-' . get_uplink_site();
 
-  if (is_front_page() || is_home()) $classes[] = 'type-frontpage';
+  if (is_front_page() || is_home() || is_404()) $classes[] = 'type-frontpage';
 
   if (is_singular())
   {
@@ -64,3 +81,19 @@ function cts_body_classes( $classes, $class = null )
 
 }
 add_filter( 'body_class', 'cts_body_classes', 1 );
+
+/* ----------------------------------------------------------
+
+  ￼Archive Page
+
+---------------------------------------------------------- */
+
+add_action( 'pre_get_posts', function( $query )
+{
+
+  if (is_tag())
+  {
+    $query->set('post_type', array( 'movie', 'film', 'event', 'market', 'gallery' ));
+  }
+
+});

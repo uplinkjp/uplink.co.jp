@@ -48,6 +48,31 @@ function get_canonical_url()
 
 }
 
+function have_img( $post_id = null )
+{
+
+  if (!$post_id) $post_id = get_the_ID();
+
+  return has_post_thumbnail( $post_id );
+
+}
+
+function the_post_eyecache( $size = null, $attr = array() )
+{
+
+  $url = get_the_post_thumbnail_url( null, $size );
+
+  $attr = wp_parse_args( $attr, array() );
+
+  foreach ( $attr as $k => $v )
+  {
+    $html .= ' ' . $k . '="' . $v .'"';
+  }
+
+  echo '<img src="' . $url . '" ' . $html . '>';
+
+}
+
 /**
  * 画像のURL取得するためのヘルパーメソッド
  *
@@ -76,6 +101,7 @@ function get_img($img, $size = null, $noimg = null)
   if (!$img) return $noimg;
 
   return $size && $img['sizes'][$size] ? $img['sizes'][$size] : $img['url'];
+
 }
 
 function the_img($img, $size = null, $noimg = null)
@@ -86,6 +112,40 @@ function the_img($img, $size = null, $noimg = null)
 function get_noimg()
 {
   return get_field('image_notfound', 'options') ?: '';
+}
+
+function the_remark( $post = null )
+{
+  echo get_the_remark( $post );
+}
+
+function get_the_remark( $post = null )
+{
+
+  if (!$post) global $post;
+
+  $post_type = get_post_type( $post );
+
+  $str = '';
+
+  if ($post_type === 'movie')
+  {
+
+    $terms = get_the_terms($post->ID, 'movie_status');
+    if ( $terms )
+    {
+      $term = reset($terms);
+      $str = $term->name;
+    }
+    else
+    {
+      $str = '上映終了';
+    }
+
+  }
+
+  return $str;
+
 }
 
 function get_weekday_class( $weekday )
