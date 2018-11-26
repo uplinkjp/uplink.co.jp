@@ -41,7 +41,7 @@ then
   then
 
     echo "Sync: Uploadsファイル"
-    rsync -av --progress admin@210.143.102.33:/var/www/html/wp/wp-content/uploads* ./www/html/wp/wp-content/uploads
+    rsync -av --progress admin@210.143.102.33:/var/www/html/wp/wp-content/uploads/* ./www/html/wp/wp-content/uploads
 
   fi
 
