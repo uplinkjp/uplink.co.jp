@@ -148,6 +148,21 @@ function get_the_remark( $post = null )
 
 }
 
+function is_new( $post_id = null, $duration = null )
+{
+
+  if (!$post_id) $post_id = get_the_ID();
+
+  if (!$duration) $duration = 14 * 24 * 60 * 60;// 二週間
+
+  $expire_time = (int)get_the_date( 'U', $post_id ) + $duration;
+
+  $now = time();
+
+  return $now < $expire_time;
+
+}
+
 function get_weekday_class( $weekday )
 {
 
