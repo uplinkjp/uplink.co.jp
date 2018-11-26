@@ -275,5 +275,11 @@
     height: 40px;
     border-radius: 50%;
   }
+  .sub-open .is-clone & {
+    right: 5px;
+    @include mqTB {
+      right: 20px;
+    }
+  }
 
 }
