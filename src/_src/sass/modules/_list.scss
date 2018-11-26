@@ -1,0 +1,342 @@
+// お知らせ
+.list-news {
+  .l-archive & {
+    margin-top: -15px;
+  }
+  li {
+    background: #fff;
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.list-news-date {
+  color: $c_text_secondary;
+  font-size: 12px;
+  display: block;
+  @include f_sg_bold;
+  span {
+    padding-left: 5px;
+    font-size: 12px;
+    color: #FF1744;
+    @include f_sg_bold;
+  }
+}
+.list-news-inner {
+  width: 100%;
+  flex: 1;
+
+  color: $c_text_primary;
+  line-height: 1.5;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 20px $padding_wrap;
+}
+.list-news-thumb {
+  width: 90px;
+  padding: 20px $padding_wrap 20px 0;
+  img {
+    max-width: 100%;
+  }
+  @include mqTB {
+    padding: 0;
+    width: 168px;
+  }
+}
+.list-news-text {
+}
+
+// 関連サービス
+.list-related {
+  padding: 0 $padding_wrap;
+  width: 100%;
+  box-sizing: border-box;
+  li {
+    margin-bottom: 5px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    padding: 10px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    img {
+      display: block;
+    }
+    p {
+      @include f_narrow;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    span {
+      @include f_sg_bold;
+      font-size: 12px;
+      margin-top: 7px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px auto;
+    }
+  }
+}
+
+// タグ
+.list-tag {
+  display: flex;
+  margin: 0 0 20px 0;
+  padding: 0 $padding_wrap;
+  li {
+    margin: 0 5px 0 0;
+    height: 24px;
+  }
+  .archive_shcedule-header_wrap & {
+    @include mqTB {
+      margin-bottom: 0;
+    }
+  }
+}
+%tag {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  padding: 0 6px;
+}
+.tag-film {
+  @extend %tag;
+  background: $c_nav_film_bg;
+}
+.tag-events {
+  @extend %tag;
+  background: $c_nav_event_bg;
+}
+.tag-gallery {
+  @extend %tag;
+  background: $c_nav_gallery_bg;
+}
+.tag-market {
+  @extend %tag;
+  background: $c_nav_market_bg;
+}
+
+.list-calendar-wrap {
+  @include mqPC {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.list-calendar-header {
+  padding: 16px 15px;
+  margin: 0 0 4px 0;
+  background: #fff;
+  @include f_sg_bold;
+  font-size: 28px;
+  border-top: 4px solid $c_weekday;
+  z-index: 1;
+  span {
+    font-size: 18px;
+    margin-left: 10px;
+    color: $c_weekday;
+  }
+  &.is-holiday {
+    border-color: $c_holiday;
+    span {
+      color: $c_holiday;
+    }
+  }
+  &.is-saturday {
+    border-color: $c_saturday;
+    span {
+      color: $c_saturday;
+    }
+  }
+  @include mqPC {
+    padding: 0;
+    width: 25%;
+    border: none;
+    .list-calendar-header-inner {
+      padding: 16px 15px;
+      border-top: 4px solid $c_weekday;
+      z-index: 1;
+    }
+    &.is-holiday {
+      .list-calendar-header-inner {
+        border-color: $c_holiday;
+      }
+    }
+    &.is-saturday {
+      .list-calendar-header-inner {
+        border-color: $c_saturday;
+      }
+    }
+  }
+}
+.list-calendar {
+  li {
+    background: #fff;
+    margin-bottom: 4px;
+    padding: 15px;
+    border-left: 8px solid transparent;
+    a {
+      color: $c_text_primary;
+    }
+    &.tagged-film {
+      border-color: $c_nav_film_bg;
+    }
+    &.tagged-events {
+      border-color: $c_nav_event_bg;
+    }
+    &.tagged-gallery {
+      border-color: $c_nav_gallery_bg;
+    }
+    &.tagged-market {
+      border-color: $c_nav_market_bg;
+    }
+  }
+  @include mqPC {
+    flex: 1;
+    margin-left: 4px;
+  }
+}
+.list-calendar-heading {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+.list-calendar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,.05);
+  padding: 10px;
+  margin: 0 0 5px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.list-calendar-date {
+  @include f_sg_bold;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  color: $c_text_primary;
+  span {
+    font-size: 12px;
+  }
+}
+.list-calendar-text {
+  color: $c_text_secondary;
+  line-height: 1.5;
+  font-size: 12px;
+}
+.list-calendar-information {
+  flex: 1;
+}
+
+//
+// リスト下のボタン
+// <p class="list-readmore"><a href="">お知らせ一覧</a></p>
+//
+.list-readmore {
+  margin-top: 4px;
+  a {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    color: $c_text_primary;
+    padding: 20px 0;
+    @include f_sg_bold;
+    background: #fff;
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin: 0 0 0 5px;
+      background-repat: no-repeat;
+      background-image: url(../img/arrow-default.png);
+      background-size: 13px auto;
+    }
+  }
+}
+.list_archive {
+  @include mqTB {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:after{
+      content:"";
+      display: block;
+      width: calc(50% - 10px);
+    }
+  }
+  @include mqPC {
+    &:after {
+      width: calc((100% - 40px) / 3);
+    }
+  }
+}
+.list_archive-item {
+  margin: 0 15px 20px;
+  a {
+    display: block;
+  }
+  @include mqTB {
+    width: calc(50% - 10px);
+    margin: 0 0 20px 0;
+  }
+  @include mqPC {
+    width: calc((100% - 40px) / 3);
+   margin: 0 0 20px 0;
+  }
+}
+.list_archive-thumb {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 42.5%;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.list_archive-heading {
+  background: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: rgba(0,0,0,.87);
+  padding: 10px 10px 5px;
+}
+.list_archive-text {
+  background: #fff;
+  color: rgba(0,0,0,.6);
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 0 15px 10px 15px;
+
+}

@@ -1,0 +1,90 @@
+.l-archive {
+  margin-top: 20px;
+}
+.archive-description {
+  background: #fff;
+  padding: 20px;
+  color: rgba(0,0,0,.87);
+  line-height: 1.5;
+  a {
+    color: #007b7b;
+    font-weight: bold;
+  }
+  p {
+    max-width: 624px;
+    margin: 0 auto;
+  }
+}
+.archive-pager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include f_sg_bold;
+  padding: 20px 0;
+  margin: 4px 0 0 0;
+  font-size: 16px;
+  background: #fff;
+  > * {
+    margin: 0 15px;
+  }
+  a {
+    color: rgba(0,0,0,.87);
+  }
+
+}
+.pager-current {
+  color: rgba(0,0,0,.6);
+}
+.pager-prev,
+.pager-next {
+  @include texthidden;
+  width: 13px;
+  height: 13px;
+  &:after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-image: url(../img/arrow-default.png);
+    background-size: 13px auto;
+  }
+}
+.pager-prev {
+  transform: rotate(-180deg);
+}
+
+.archive_shcedule-header_wrap {
+  @include mqTB {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.archive_shcedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+}
+.archive_header-heading {
+  font-size: 32px;
+  @include f_sg_bold;
+}
+.archive_header-nav {
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  > * {
+    margin-left: 10px;
+  }
+  a {
+    color: #007B7B;
+  }
+  .archive_shcedule-header_wrap & {
+    @include mqTB {
+      margin-left: 10px;
+    }
+  }
+}

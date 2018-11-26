@@ -1,0 +1,30 @@
+.l-footer {
+  background: $c_footer_bg;
+  color: $c_footer_text;
+  text-align: center;
+  padding: 40px $padding_wrap 50px $padding_wrap;
+  a {
+    color: $c_footer_text;
+  }
+}
+.footer-logo {
+  margin-bottom: 40px;
+  img {
+    width: 60px;
+  }
+}
+.footer-nav {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  li {
+    margin-bottom: 25px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.footer-copy {
+  font-size: 12px;
+  @include f_sg_bold;
+}

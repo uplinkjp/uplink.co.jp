@@ -1,0 +1,138 @@
+//
+// sassのmixinはここに記載
+//
+
+// clearfix
+@mixin clearfix {
+  *zoom: 1;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// texthidden
+@mixin texthidden {
+  display: inline-block;
+  font-size: 0;
+  overflow: hidden;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-indent: 100%;
+}
+
+// calc-vw
+@function calc-vw($size, $viewport:375){
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// placeholder color
+@mixin placeholderColor($color) {
+  &:placeholder-shown {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+// letter-spacing
+@mixin letter-spacing($tracking) {
+  letter-spacing: $tracking / 1000 + em;
+}
+
+// media query
+@mixin mqSP {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin mqTB {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin mqPC {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+// イージング
+@mixin transition {
+  transition-duration: $t_duration;
+  transition-timing-function: $t_easing;
+}
+
+// animation
+@mixin animationValue( $name, $duration, $function, $delay, $count, $state){
+    -webkit-animation: $name $duration+s $function $delay+s $count $state;
+    animation: $name $duration+s $function $delay+s $count $state;
+}
+@-webkit-keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px;
+  }
+}
+@keyframes slideUpSubTrigger {
+  100% {
+    bottom: 35px;
+  }
+}
+
+
+
+@mixin theme_bg() {
+  .theme-main & {
+    background: $c_bg_nav;
+  }
+  .theme-shibuya & {
+    background: $c_bg_shibuya;
+  }
+  .theme-joji & {
+    background: $c_bg_joji;
+  }
+}
+@mixin archive_bg() {
+  .category-film & {
+    background-color: $c_nav_film_bg;
+  }
+  .category-event & {
+    background-color: $c_nav_event_bg;
+  }
+  .category-gallery & {
+    background-color: $c_nav_gallery_bg;
+  }
+  .category-market & {
+    background-color: $c_nav_market_bg;
+  }
+  .category-default & {
+    background-color: $c_nav_default_bg;
+    .header_sub-heading {
+      color: #000;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<%
+  if(typeof len === 'undefined') { var len = 10 }
+
+  var title = [
+    '『アメリカン・スリープオーバー』【『アンダー・ザ・シルバーレイク』公開記念／デヴィッド・ロバート・ミッチェルの世界】',
+    'ヤン・シュヴァンクマイエル監督引退記念上映会 「シュルレアリストの軌跡」',
+    '『顔たち、ところどころ』',
+    '『こども食堂にて』',
+    'TAMAYO Samejima「水墨画　布と和紙　模写と現代」',
+    'BD＆DVD『ダンサー、セルゲイ・ポルーニン 世界一優雅な野獣』初回生産限定版ご購入でプロジェクト・ポルーニン「SATORI」グッズが抽選で当たる！',
+
+  ];
+  var title_len = title.length;
+
+  var text = [
+    '上映中',
+    '10月13日（土）～10月25日（木）',
+    '10月27日（土）～11月2日（金）※チケット発売は10月23日（水）朝10時より、オンライン・窓口ともに開始します。',
+    '10月17日（水）- 10月29日（月）10:00〜21:00',
+  ];
+  var text_len = text.length;
+
+  var img = [
+    'https://placehold.jp/554x232.png',
+    'https://placehold.jp/900x232.png',
+    'https://placehold.jp/100x232.png',
+    'https://placehold.jp/200x232.png',
+    'https://placehold.jp/500x500.png',
+
+  ];
+  var img_len = img.length;
+%>
+
+<div class="list_archive">
+<% for (var i = 0; i < len; i++) { %>
+
+  <article class="list_archive-item"><a href="">
+    <p class="list_archive-thumb" style="background-image: url(<%- img[i % img_len]; %>)"></p>
+    <h1 class="list_archive-heading"><%- title[i % title_len]; %></h1>
+    <p class="list_archive-text"><%- text[i % text_len]; %></p>
+ </a></article>
+
+<% } %>
+</div>

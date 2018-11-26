@@ -1,0 +1,89 @@
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+input[type="text"],
+input[type="button"],
+input[type="email"],
+input[type="submit"],
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.form-googlesearch {
+  margin-top: 0;
+  width: 100%;
+  form {
+    width: 100%;
+    display: flex;
+  }
+}
+.form-googlesearch-text {
+  width: 100%;
+  height: 48px;
+  flex: 1;
+  input {
+    @include placeholderColor($c_nav_default_bg);
+    width: 100%;
+    height: 48px;
+    border: 1px solid $c_nav_default_bg;
+    border-radius: 3px;
+    background: #fff;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+
+.form-googlesearch-submit {
+  @include texthidden;
+  position: relative;
+  height: 48px;
+  margin-left: 4px;
+  background-color: #3984e6;
+  border-radius: 3px;
+  background-image: url(../img/form-googlesearch.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 18px 18px;
+
+  width: calc(((100% - 10px) / 3));
+  @include mqTB {
+    width: calc(((100% - 20px) / 6));
+  }
+  @include mqPC {
+    width: calc((100% - 4px) / 9 - 4px);
+  }
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    line-height: 48px;
+  }
+
+
+
+}
+

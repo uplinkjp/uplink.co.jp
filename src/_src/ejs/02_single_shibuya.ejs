@@ -1,0 +1,95 @@
+<%- include('partials/_head.ejs', { theme: 'theme-shibuya', page: 'type-3rd category-film' }); %>
+
+<%- include('partials/_header_shibuya.ejs'); %>
+<div class="js-headerWrap">
+  <%- include('partials/_nav_shibuya.ejs'); %>
+  <%- include('partials/_nav_sub_film.ejs'); %>
+</div>
+
+<div class="l-wrap">
+
+  <article>
+    <div class="single-header">
+      <div class="single-header-inner">
+        <h1 class="single-header-heading">根本敬の映像夜間中学（2018年10月）</h1>
+        <p class="single-header-text">10月26日（金）19:30開場/20:00開演</p>
+        <div class="single-header-tag">
+          <a href="">#トーク</a>
+          <a href="">#映像</a>
+        </div>
+        <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      </div>
+      <div class="single-header-thumb">
+        <span><img src="https://placehold.jp/755x1544.png"></span>
+        <p class="single-header-caption">ドローイング＆コラージュ：根本敬</p>
+      </div>
+    </div>
+
+    <div class="single-header-infornation">
+      <div class="single-information">
+        <h4>日時</h4>
+        <p>上映中</p>
+      </div>
+      <div class="single-information">
+        <h4>料金</h4>
+        <p>一般￥1,800/学生￥1,500(平日学割￥1,100)/高校生以下￥800/シニア￥1,100/UPLINK会員￥1,000</p>
+      </div>
+      <div class="single-information">
+        <h4>作品分数</h4>
+        <p>89分</p>
+      </div>
+      <div class="single-information">
+        <h4>リンク</h4>
+        <div class="single-linkList">
+          <a href="" target="_blank">公式サイト</a>
+          <a href="" target="_blank">Twitter</a>
+          <a href="" target="_blank">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+  </article>
+
+  <section>
+    <h2 class="section-heading">
+      スケジュールとチケット
+      <span>SCHEDULE & TICKETS</span>
+    </h2>
+    <%- include('partials/_list-calendar-core.ejs'); %>
+  </section>
+
+  <section>
+    <h2 class="section-heading">
+      関連イベント
+      <span>EVENTS</span>
+    </h2>
+    <%- include('partials/_wysiwyg.ejs'); %>
+  </section>
+
+  <section>
+    <h2 class="section-heading">
+      作品紹介
+      <span>ABOUT THE MOVIE</span>
+    </h2>
+    <%- include('partials/_wysiwyg.ejs'); %>
+  </section>
+
+  <section>
+    <h2 class="section-heading">
+      予告編
+      <span>TRAILER</span>
+    </h2>
+    <div class="wysiwyg-wrap">
+      <div class="l-wysiwyg">
+        <div class="youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/asggt9WQtx0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/_followus.ejs'); %>
+
+</div>
+
+<%- include('partials/_footer.ejs'); %>

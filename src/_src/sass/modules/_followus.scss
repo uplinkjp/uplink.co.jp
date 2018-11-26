@@ -1,0 +1,149 @@
+.l-followus {
+  padding: 0 $padding_wrap;
+  box-sizing: border-box;
+  a {
+    text-decoration: underline;
+  }
+}
+.followus-inner {
+  text-align: center;
+  padding: 40px 15px;
+  margin: 20px 0;
+  font-weight: bold;
+  .theme-main & {
+    background: #000;
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+  .theme-shibuya & {
+    background: $c_nav_shibuya_bg;
+    color: $c_nav_shibuya_text;
+    a {
+      color: $c_nav_shibuya_text;
+    }
+  }
+  .theme-joji & {
+    background: $c_nav_joji_bg;
+    color: $c_nav_joji_text;
+    a {
+      color: $c_nav_joji_text;
+    }
+  }
+  @include mqTB {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    .followus-box {
+      width: 50%;
+    }
+  }
+}
+.followus-heading {
+  margin-bottom: 25px;
+  @include f_sg_bold;
+  font-size: 16px;
+}
+.followus-sns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 40px 0;
+  @include mqTB {
+    margin-bottom: 0;
+  }
+  li {
+    margin: 0 15px;
+    a {
+      @include texthidden;
+      display: block;
+      &:after {
+        content: "";
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+    &.sns-tw {
+      a {
+        width: 20px;
+        height: 17px;
+        &:after {
+          width: 20px;
+          height: 17px;
+          background-size: 20px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_twitter.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_twitter_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_twitter_joji.png);
+          }
+        }
+      }
+    }
+    &.sns-fb {
+      a {
+        width: 18px;
+        height: 18px;
+        &:after {
+          width: 18px;
+          height: 18px;
+          background-size: 18px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_facebook.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_facebook_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_facebook_joji.png);
+          }
+        }
+      }
+    }
+    &.sns-in {
+      a {
+        width: 18px;
+        height: 18px;
+        &:after {
+          width: 18px;
+          height: 18px;
+          background-size: 18px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_instagram.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_instagram_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_instagram_joji.png);
+          }
+        }
+      }
+    }
+    &.sns-yt {
+      a {
+        width: 22px;
+        height: 15px;
+        &:after {
+          width: 22px;
+          height: 15px;
+          background-size: 22px auto;
+          .theme-main & {
+            background-image: url(../img/icon-sns_youtube.png);
+          }
+          .theme-shibuya & {
+            background-image: url(../img/icon-sns_youtube_shibuya.png);
+          }
+          .theme-joji & {
+            background-image: url(../img/icon-sns_youtube_joji.png);
+          }
+        }
+      }
+    }
+  }
+}

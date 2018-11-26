@@ -1,0 +1,279 @@
+.js-headerWrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  transition: all $t_duration $t_easing;
+  .theme-main & {
+    background: $c_bg_nav;
+  }
+}
+
+.l-header {
+  position: absolute;
+  left: 0;
+  top : 0;
+  z-index: 4;
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  transition: all $t_duration $t_easing;
+
+  padding: 0 $padding_wrap;
+  // @include containerTB;
+  .type-frontpage & {
+    transition: none;
+    height: auto;
+  }
+  .is-scroll & {
+    transition: top $t_duration $t_easing;
+    position: fixed;
+    top: -100px;
+    left: 0;
+  }
+  .is-navfixed & {
+    transition: all $t_duration $t_easing;
+    top: 0;
+  }
+  @include mqTB {
+    padding: 0;
+  }
+}
+
+.header-inner {
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  @include containerTB;
+  @include mqTB {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.header-body {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  .theme-main & {
+    background: $c_header_bg;
+  }
+  .theme-shibuya & {
+    background: $c_header_bg_shibuya;
+  }
+  .theme-joji & {
+    background: $c_header_bg_joji;
+  }
+
+}
+.header-logo {
+  padding-right: 15px;
+  a {
+    display: block;
+    img {
+      width: 40px;
+      height: 60px;
+    }
+    @include texthidden;
+    width: 40px;
+    height: 60px;
+    background-image: url(../img/logo.png);
+    background-size: 40px 60px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+  .header-body & {
+    padding: 0;
+    a {
+      @include texthidden;
+      height: 100%;
+      padding: 0 0 0 20px;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      background-size: auto 20px;
+      .theme-main & {
+        background-image: url(../img/logo-text.png);
+        width: 75px;
+      }
+      .theme-shibuya & {
+        background-image: url(../img/logo-shibuya.png);
+        width: 120px;
+      }
+      .theme-joji & {
+        background-image: url(../img/logo-joji.png);
+        width: 140px;
+      }
+    }
+
+  }
+}
+
+.header-nav_trigger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 54px;
+  height: 100%;
+  a {
+    @include texthidden;
+    display: block;
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 24px auto;
+      .theme-main & {
+        background-image: url(../img/icon-menu-off.png);
+      }
+      .theme-shibuya & {
+        background-image: url(../img/icon-menu-off_shibuya.png);
+      }
+      .theme-joji & {
+        background-image: url(../img/icon-menu-off_joji.png);
+      }
+    }
+  }
+  .type-frontpage & {
+    a {
+      pointer-events: none;
+    }
+  }
+  .is-scroll & {
+    a {
+      pointer-events: initial;
+    }
+  }
+  .main-open.theme-main & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on.png);
+      }
+    }
+  }
+  .main-open.theme-shibuya & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_shibuya.png);
+      }
+    }
+  }
+  .main-open.theme-joji & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_joji.png);
+      }
+    }
+  }
+}
+
+
+.l-header_sub {
+  padding-top: 60px;
+  padding: 60px 15px 0 15px;
+  overflow: hidden;
+  transition: all $t_duration $t_easing;
+  box-sizing: content-box;
+  @include archive_bg();
+  body:not(.is-scroll).main-open & {
+    padding-top: 0;  
+  }
+  &.is-clone {
+    padding-top: 0;
+  }
+}
+.header_sub-inner {
+  position: relative;
+  @include containerTB;
+}
+.header_sub-heading {
+  width: 100%;
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 30px 0;
+  box-sizing: border-box;
+  // @include containerTB;
+  @include mqTB {
+    padding: 30px 15px;
+  }
+  span {
+    margin: 5px 0 0;
+    display: block;
+    font-size: 12px;
+    @include f_sg_bold;
+  }
+}
+.header-nav_sub_trigger {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translate3d(0,-50%,0);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @include archive_bg();
+  @include mqTB {
+    right: 20px;
+  }
+  a {
+    @include texthidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/icon-submenu-off.png);
+    background-size: 5px auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .sub-open & {
+    box-shadow: none !important;
+    a {
+      background-image: url(../img/icon-submenu-on.png);
+    }
+  }
+  .is-scroll & {
+    position: fixed;
+    transform: none;
+    top: initial;
+    bottom: -100px;
+    // right: 37px;
+    right: 20px;
+    box-shadow: 0 4px 32px rgba(0,0,0,.4);
+    transition: all $t_duration $t_easing;
+    @include mqTB {
+      right: calc(6.7vw + 15px);
+    }
+    @media screen and (min-width: $max-width) {
+      right: calc((100% - 1120px) / 2 + 20px);
+    }
+  }
+
+  .is-subNavTriggerFix & {
+    bottom: 50px;
+    transition: all $t_duration $t_easing;
+    @include mqTB {
+      bottom: 80px;
+    }
+    // @include animationValue(slideUpSubTrigger, .3, $t_easing, .1, 1, forwards);
+  }
+
+
+ // .is-subTriggerFixed & {
+ //    bottom: 35px;
+ //  }
+  .is-clone & {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate3d(0,-50%,0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+}

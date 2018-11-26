@@ -1,0 +1,36 @@
+//
+// bodyやaタグなどに直接つけるスタイルはここに記載
+//
+
+body {
+  @include f_default;
+  min-width: 320px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.theme-main {
+    background: $c_bg;
+  }
+  &.theme-shibuya {
+    background: $c_bg_shibuya;
+  }
+  &.theme-joji {
+    background: $c_bg_joji;
+  }
+  &.is-fixed {
+    position: fixed;
+  }
+}
+
+a,
+.form-googlesearch-submit {
+  transition: opacity $t_duration $t_easing; // 早めの速度でサイト共通のイージング値
+  text-decoration: none;
+}
+a:hover,
+.form-googlesearch-submit:hover {
+  opacity: .7 !important;
+  @include mqSP {
+    opacity: 1 !important;
+  }
+}

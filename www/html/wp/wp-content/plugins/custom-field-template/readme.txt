@@ -1,10 +1,10 @@
 === Custom Field Template ===
 Contributors: Hiroaki Miyashita
-Donate link: http://wpgogo.com/development/custom-field-template.html
-Tags: custom field, custom fields, custom, fields, field, template, meta, custom field template, custom post type
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WN7Y2442JPRU6
+Tags: custom field, custom fields, custom, fields, field, template, meta, custom field template, custom post type, acf, advanced
 Requires at least: 2.1
-Tested up to: 4.2
-Stable tag: 2.3.4
+Tested up to: 5.0
+Stable tag: 2.4.4
 License: GPLv2 or later
 
 The Custom Field Template plugin extends the functionality of custom fields.
@@ -89,6 +89,8 @@ If you have translated into your language, please let me know.
 
 * [Japanese Custom Field Template Manual](http://ja.wpcft.com/)
 
+Are you interested in other plugins? See the following site [CMS x WP](https://www.cmswp.jp/).
+
 == Installation ==
 
 1. Copy the `custom-field-template` directory into your `wp-content/plugins` directory
@@ -111,6 +113,40 @@ See the default template and modify it.
 4. Auto Hook of `the_content()` in the option page of this plugin may help you do this. You can use [cft] shortcodes here. You can switch the cft formats in each category.
 
 == Changelog ==
+
+= 2.4.4 =
+* Code cleaning.
+* Bugfix: media picker for pages.
+* Bugfix: quick edit for custom post types.
+
+= 2.4.3 =
+* Bugfix: deployment of templates.
+
+= 2.4.2 =
+* Support for Gutenberg.
+
+= 2.4.1 =
+* Bugfix: save button with file delete checkboxes.
+
+= 2.4 =
+* Bugfix: cftsearch.
+
+= 2.3.9 =
+* Code cleaning.
+* Bugfix: cftsearch.
+
+= 2.3.8 =
+* Code cleaning.
+
+= 2.3.7 =
+* Bugfix: image output in the cft shortcode with the format attribute. 
+
+= 2.3.6 =
+* Code cleaning.
+* Bugfix: Category ID and Page Template file name refinement.
+
+= 2.3.5 =
+* Bugfix: WordPress 4.4.
 
 = 2.3.4 =
 * Bugfix: tag save.
