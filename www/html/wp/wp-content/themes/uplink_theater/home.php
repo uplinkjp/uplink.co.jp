@@ -44,7 +44,7 @@ get_template_part( 'partials/header' )?>
 
       ?><li><a href="<?php the_permalink()?>">
         <div class="list-news-inner">
-          <p class="list-news-date"><?php echo get_the_date( $d = 'Y.m.d' )?><span>NEW</span></p>
+          <p class="list-news-date"><?php echo get_the_date( $d = 'Y.m.d' )?><?php if(is_new()):?><span>NEW</span><?php endif?></p>
           <p class="list-news-text"><?php the_title()?></p>
         </div>
       </a></li><?php endwhile?>
