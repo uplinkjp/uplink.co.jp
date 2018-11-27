@@ -8,11 +8,11 @@
   </div>
   <nav class="l-nav_sub">
     <div class="nav-wrap">
-      <a href="<?php echo home_url('schedule#nowplaying')?>">
+      <a href="<?php echo home_url('movie#nowplaying')?>">
         <p>公開中の作品</p>
         <span>NOW PLAYING</span>
       </a>
-      <a href="<?php echo home_url('schedule#commingsoon')?>">
+      <a href="<?php echo home_url('movie#commingsoon')?>">
         <p>近日公開の作品</p>
         <span>COMMING SOON</span>
       </a>
