@@ -1,12 +1,12 @@
 === Contact Form 7 ===
 Contributors: takayukister
-Donate link: http://contactform7.com/donate/
+Donate link: https://contactform7.com/donate/
 Tags: contact, form, contact form, feedback, email, ajax, captcha, akismet, multilingual
-Requires at least: 3.2
-Tested up to: 3.4.1
-Stable tag: 3.2.1
+Requires at least: 4.8
+Tested up to: 4.9
+Stable tag: 5.0.5
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Just another contact form plugin. Simple but flexible.
 
@@ -14,79 +14,38 @@ Just another contact form plugin. Simple but flexible.
 
 Contact Form 7 can manage multiple contact forms, plus you can customize the form and the mail contents flexibly with simple markup. The form supports Ajax-powered submitting, CAPTCHA, Akismet spam filtering and so on.
 
-* [Docs](http://contactform7.com/docs/)
-* [FAQ](http://contactform7.com/faq/)
-* [Support](http://contactform7.com/support/)
+= Docs & Support =
+
+You can find [docs](https://contactform7.com/docs/), [FAQ](https://contactform7.com/faq/) and more detailed information about Contact Form 7 on [contactform7.com](https://contactform7.com/). If you were unable to find the answer to your question on the FAQ or in any of the documentation, you should check the [support forum](https://wordpress.org/support/plugin/contact-form-7/) on WordPress.org. If you can't locate any topics that pertain to your particular issue, post a new topic for it.
 
 = Contact Form 7 Needs Your Support =
 
-It is hard to continue development and support for this plugin without contributions from users like you. If you enjoy using Contact Form 7 and find it useful, please consider [__making a donation__](http://contactform7.com/donate/). Your donation will help encourage and support the plugin's continued development and better user support.
+It is hard to continue development and support for this free plugin without contributions from users like you. If you enjoy using Contact Form 7 and find it useful, please consider [__making a donation__](https://contactform7.com/donate/). Your donation will help encourage and support the plugin's continued development and better user support.
 
-= Translators =
+= Privacy Notices =
 
-* Afrikaans (af) - [Schalk Burger](http://www.schalkburger.za.net/)
-* Albanian (sq) - [Olgi Zenullari](http://www.olgizenullari.com/)
-* Arabic (ar) - [Tarek Chaaban](http://www.chaaban.info/), Muhammed Lardi, [Yaser Maadan](http://www.englize.com/)
-* Armenian (hy_AM) - [Emmanuelle Traduction](http://www.translatonline.com/)
-* Azerbaijani (az_AZ) - [Zaur Bayramov](http://bloglayaq.com/)
-* Bangla (bn_BD) - [SM Mehdi Akram](http://www.shamokaldarpon.com/)
-* Basque (Euskara; eu) - [karrikas](http://blog.karrikas.com/)
-* Belarusian (be_BY) - [Igor Dubilei](http://www.iflexion.com/)
-* Bosnian (bs) - [Vedran](http://www.seorabbit.com/)
-* Brazilian Portuguese (pt_BR) - [Leonardo Pinheiro](http://www.eletrikabarbarella.com.br/), [Henrique Vianna](http://henriquevianna.com/), [Caciano Gabriel Batista](http://www.gn10.com.br/), [Gervásio Antônio](http://twitter.com/gervasioantonio)
-* Bulgarian (bg_BG) - [Iliyan Darganov](http://www.darganov.com/)
-* Catalan (ca) - [Jordi Sancho](http://www.qasolutions.net/blog), Robert Buj
-* Chinese, Simplified (zh_CN) - [Soz](http://www.webtoolol.com/), [Keefe Dunn](http://dengkefu.com/)
-* Chinese, Traditional (zh_TW) - [James Wu](http://jameswublog.com)
-* Croatian (hr) - [tolingo Translation Services](http://www.tolingo.com)
-* Czech (cs_CZ) - Korry, [Radovan Fiser](http://algymsa.cz/), [Tomas Vesely](http://www.mcmotylek.cz/), [Pavel Bilek](http://chcistranky.eu/zdarma/)
-* Danish (da_DK) - [Jens Griebel](http://www.kompas-it.dk/), [Georg S. Adamsen](http://wordpress.blogos.dk/)
-* Dutch (nl_NL) - [Chris Devriese](http://www.100it.be/), [Martin Hein](http://www.split-a-pixel.nl/), [Rene](http://wpwebshop.com/)
-* Esperanto (eo_EO) - Arkadiusz Zychewicz
-* Estonian (et) - [Peeter Rahuvarm](http://www.kraabus.ee), Egon Elbre
-* Finnish (fi) - [Miika Turunen](http://www.webwork.fi/), [Mediajalostamo](http://www.mediajalostamo.fi/)
-* French (fr_FR) - [Jillij](http://www.jillij.com/), [Oncle Tom](http://case.oncle-tom.net/), [Maître Mô](http://maitremo.fr/)
-* Galician (gl_ES) - [Arume Desenvolvementos Informáticos](http://www.arumeinformatica.es/)
-* Georgian (ka_GE) - [Nodar Rocko Davituri](http://davituri.com/)
-* German (de_DE) - [Marcel Spitau](http://blog.spitau.de), [Ivan Graf](http://blog.bildergallery.com/)
-* Greek (el) - [Nick Mouratidis](http://www.kepik.gr/), [Pr. friedlich](http://friedlich.wordpress.com/)
-* Hebrew (he_IL) - [Yaron Ofer](http://www.gadgetguru.co.il/), [Arik Galansky](http://www.arikg.co.il/)
-* Hindi (hi_IN) - [Tarun Joshi](http://www.readers-cafe.net/), [Ashish](http://outshinesolutions.com/)
-* Hungarian (hu_HU) - [Andras Hirschler](http://hia.itblog.hu/), [János Csárdi-Braunstein](http://blogocska.org/), [Farkas Győző](http://www.sakraft.hu/)
-* Indonesian (Bahasa Indonesia; id_ID) - [Hendry Lee](http://blogbuildingu.com/), [Belajar Seo Indonesia](http://dhany.web.id/panduan-seo)
-* Italian (it_IT) - [Bruno](http://www.brunosalzano.com), [Gianni Diurno](http://gidibao.net/)
-* Japanese (ja) - [Takayuki Miyoshi](http://ideasilo.wordpress.com)
-* Korean (ko_KR) - Seong Eun Lee, [Jong-In Kim](http://incommunity.codex.kr/wordpress/)
-* Latvian (lv) - [Sandis Veinbergs](http://www.kleofass.lv/)
-* Lithuanian (lt_LT) - [Ernestas Kardzys](http://www.ernestas.info/), [Vincent G](http://www.host1free.com/)
-* Macedonian (mk_MK) - [Darko](http://www.findermind.com/)
-* Malay (ms_MY) - [Zairul Azmil](http://www.zairul.com/)
-* Malayalam (ml_IN) - [RAHUL.S.A](http://www.infution.co.cc/)
-* Maltese (mt_MT) - [Ajoft Technologies](http://www.ajoft.com/)
-* Norwegian (nb_NO) - Kjetil M. Bergem, [aanvik.net](http://www.aanvik.net), [Peter Holme](http://holme.se/nettsteder/)
-* Persian (Farsi; fa_IR) - [Mohammad Musavi](http://www.musavis.com/), [Mohsen Firoozmandan](http://www.rankbazar.com/)
-* Polish (pl_PL) - [Zbigniew Czernik](http://zibik.jogger.pl/), [Daniel Fruzynski](http://www.poradnik-webmastera.com), [RafalDesign](http://www.rafaldesign.pl/), [Bartosz Arendt](http://digitalfactory.pl/)
-* Portuguese (pt_PT) - [Hugo Baeta](http://hugobaeta.com), [Pedro Nave](http://pedronave.com/)
-* Russian (ru_RU) - Dmitry Volotovich, [kg69design](http://kg69design.com/), [Denis Voituk](http://artprima.cz/)
-* Romanian (ro_RO) - [Stas Sushkov](http://stas.nerd.ro/), [Anunturi Jibo](http://www.jibo.ro/), [Marius Olar](http://webdudes.ro/)
-* Serbian (sr_RS) - [Vedran](http://www.seorabbit.com/), [Aleksandar Urošević](http://blog.urosevic.net/)
-* Sinhala (si_LK) - [Nitin Aggarwal](http://offshoreally.com/)
-* Slovak (sk_SK) - [Patrik Bóna](http://www.mrhead.sk/)
-* Slovene (sl_SI) - [Mihael Simonič](http://smihael.bplaced.net), Jani Roskar
-* Spanish (es_ES) - [Jordi Sancho](http://www.qasolutions.net/blog), [Vladimir Prieto](http://vladimir.prie.to/), [Federico Mikaelian](http://www.fedemika.com.ar/), [Matias Baldanza](http://matiasbaldanza.com/), [Carlos Agnese](http://albumdecarlitos.com.ar/)
-* Swedish (sv_SE) - [Fredrik Jonsson](http://www.fredda-o-ac.se/), [the Swedish community](http://wp-support.se/)
-* Tagalog (tl) - [Rupert Agnew Lanuza](http://wheretobuy.com.ph/)
-* Tamil (ta) - [Nitin Aggarwal](http://offshoreally.com/)
-* Thai (th) - [kazama](http://blog.wordthai.com/), [ToshiK](http://www.tuntikorn.com/)
-* Turkish (tr_TR) - [Roman Neumuller](http://katpatuka.wordpress.com), [Hasan Yılmaz](http://hedefturkce.com/), [Emin Buğra Saral](http://www.rahmetli.info/)
-* Ukrainian (uk) - [Andrey Kovba](http://myserver.com.ua/), [Ukrainian WordPress localization team](http://wordpress.co.ua/plugins/contact-form-7.html)
-* Vietnamese (vi) - Thanh Hải, Hà, [Khang Minh](http://betterwp.net/)
+With the default configuration, this plugin, in itself, does not:
 
-If you have created your own language pack, or have an update of an existing one, you can send [gettext PO and MO files](http://codex.wordpress.org/Translating_WordPress) to [me](http://ideasilo.wordpress.com/about/) so that I can bundle it into Contact Form 7. You can download the latest [POT file](http://plugins.svn.wordpress.org/contact-form-7/trunk/languages/wpcf7.pot), and [PO files in each language](http://plugins.svn.wordpress.org/contact-form-7/branches/languages/).
+* track users by stealth;
+* write any user personal data to the database;
+* send any data to external servers;
+* use cookies.
 
-= Icon Design =
+If you activate certain features in this plugin, the contact form submitter's personal data, including their IP address, may be sent to the service provider. Thus, confirming the provider's privacy policy is recommended. These features include:
 
-* [Takao Honda](http://www.takaohonda.jp/)
+* reCAPTCHA ([Google](https://policies.google.com/?hl=en))
+* Akismet ([Automattic](https://automattic.com/privacy/))
+
+= Recommended Plugins =
+
+The following plugins are recommended for Contact Form 7 users:
+
+* [Flamingo](https://wordpress.org/plugins/flamingo/) by Takayuki Miyoshi - With Flamingo, you can save submitted messages via contact forms in the database.
+* [Bogo](https://wordpress.org/plugins/bogo/) by Takayuki Miyoshi - Bogo is a straight-forward multilingual plugin that doesn't cause headaches.
+
+= Translations =
+
+You can [translate Contact Form 7](https://contactform7.com/translating-contact-form-7/) on [__translate.wordpress.org__](https://translate.wordpress.org/projects/wp-plugins/contact-form-7).
 
 == Installation ==
 
@@ -95,48 +54,82 @@ If you have created your own language pack, or have an update of an existing one
 
 You will find 'Contact' menu in your WordPress admin panel.
 
-For basic usage, you can also have a look at the [plugin homepage](http://contactform7.com/).
+For basic usage, you can also have a look at the [plugin web site](https://contactform7.com/).
 
 == Frequently Asked Questions ==
 
 Do you have questions or issues with Contact Form 7? Use these support channels appropriately.
 
-1. [Docs](http://contactform7.com/docs/)
-1. [FAQ](http://contactform7.com/faq/)
-1. [Support Forum](http://wordpress.org/support/plugin/contact-form-7)
+1. [Docs](https://contactform7.com/docs/)
+1. [FAQ](https://contactform7.com/faq/)
+1. [Support Forum](https://wordpress.org/support/plugin/contact-form-7/)
 
-[Support](http://contactform7.com/support/)
+[Support](https://contactform7.com/support/)
 
 == Screenshots ==
 
-1. screenshot-1.png 
+1. screenshot-1.png
 
 == Changelog ==
 
-= 3.2.1 =
+For more information, see [Releases](https://contactform7.com/category/releases/).
 
-* Fixed: Error for use of array_key_exists function with invalid first argument.
-* Fixed: Adding unnecessary rewrite rules.
-* Fixed: "Screen Options" doesn't appear on each contact form edit screen.
-* Change the comment_type value sent to Akismet from 'contactform7' to 'contact-form' following their blog post.
-* Introduce wpcf7_add_meta_boxes function and action with the same name. This makes it easier to add custom meta boxes to the edit screen.
-* Pass meta informations of each form submission (e.g. client's IP address) to Flamingo.
-* The jQuery Form Plugin (jquery.form.js) has been updated to 3.14 and compressed with YUI compressor.
-* Translation for Basque has been created.
-* Translations for German, Italian, and Polish have been updated.
+= 5.0.5 =
 
-= 3.2 =
+* Fixes the inconsistency problem between get_data_option() and get_default_option() in the WPCF7_FormTag class.
+* Suppresses PHP errors occur on unlink() calls.
+* Introduces wpcf7_is_file_path_in_content_dir() to support the use of the UPLOADS constant.
 
-* Enhanced admin panel. Introduced list table view for contact forms.
-* Moved the Contact menu to the upper position (just below the Comments).
-* Show alert message when Jetpack contact form is active.
-* Introduced Flamingo module.
-* Made capabilities more customizable.
-* wpcf7_admin_url() is deprecated. Use admin_url() or menu_page_url() instead.
-* Changed the default defined value of constants WPCF7_PLUGIN_DIR and WPCF7_PLUGIN_URL.
-* The jQuery Form Plugin (jquery.form.js) has been updated to 3.09 and compressed with YUI compressor.
-* Translations for Latvian, Swedish, and Czech have been updated.
+= 5.0.4 =
+
+* Specifies the capability_type argument explicitly in the register_post_type() call to fix the privilege escalation vulnerability issue.
+* Local File Attachment – disallows the specifying of absolute file paths referring to files outside the wp-content directory.
+* Config Validator – adds a test item to detect invalid file attachment settings.
+* Fixes a bug in the JavaScript fallback function for legacy browsers that do not support the HTML5 placeholder attribute.
+* Acceptance Checkbox – unsets the form-tag's do-not-store feature.
+
+= 5.0.3 =
+
+* CSS: Applies the "not-allowed" cursor style to submit buttons in the "disabled" state.
+* Acceptance Checkbox: Revises the tag-generator UI to encourage the use of better options in terms of personal data protection.
+* Introduces wpcf7_anonymize_ip_addr() function.
+* Introduces the consent_for:storage option for all types of form-tags.
+
+= 5.0.2 =
+
+* Added the Privacy Notices section to the readme.txt file.
+* Updated the Information meta-box content.
+* Use get_user_locale() instead of get_locale() where it is more appropriate.
+* Acceptance Checkbox: Reset submit buttons’ disabled status after a successful submission.
+
+= 5.0.1 =
+
+* Fixed incorrect uses of _n().
+* Config validation: Fixed incorrect count of alerts in the Additional Settings tab panel.
+* Config validation: Fixed improper treatment for the [_site_admin_email] special mail-tag in the From mail header field.
+* Acceptance checkbox: The class and id attributes specified were applied to the wrong HTML element.
+* Config validation: When there is an additional mail header for mailboxes like Cc or Reply-To, but it has a possible empty value, “Invalid mailbox syntax is used” error will be returned.
+* Explicitly specify the fourth parameter of add_action() to avoid passing unintended parameter values.
+* Check if the target directory is empty before removing the directory.
+
+= 5.0 =
+
+* Additional settings: on_sent_ok and on_submit have been removed.
+* New additional setting: skip_mail
+* Flamingo: Inbound channel title changes in conjunction with a change in the title of the corresponding contact form.
+* DOM events: Make an entire API response object accessible through the event.detail.apiResponse property.
+* HTML mail: Adds language-related attributes to the HTML header.
+* File upload: Sets the accept attribute to an uploading field.
+* Introduces the WPCF7_MailTag class.
+* Allows aborting a mail-sending attempt using the wpcf7_before_send_mail action hook. Also, you can set a custom status and a message through the action hook.
+* Acceptance checkbox: Allows the specifying of a statement of conditions in the form-tag’s content part.
+* Acceptance checkbox: Supports the optional option.
+* New special mail tags: [_site_title], [_site_description], [_site_url], [_site_admin_email], [_invalid_fields], [_user_login], [_user_email], [_user_url], [_user_first_name], [_user_last_name], [_user_nickname], and [_user_display_name]
+* New filter hooks: wpcf7_upload_file_name, wpcf7_autop_or_not, wpcf7_posted_data_{$type}, and wpcf7_mail_tag_replaced_{$type}
+* New form-tag features: zero-controls-container and not-for-mail
 
 == Upgrade Notice ==
 
-The current version of Contact Form 7 requires WordPress 3.2 or higher. If you use older version of WordPress, you need to upgrade WordPress first.
+= 5.0.4 =
+
+This is a security and maintenance release and we strongly encourage you to update to it immediately. For more information, refer to the [release announcement post](https://contactform7.com/category/releases/).

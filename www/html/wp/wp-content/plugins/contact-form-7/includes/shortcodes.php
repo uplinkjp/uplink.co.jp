@@ -1,195 +1,101 @@
 <?php
-
-class WPCF7_ShortcodeManager {
-
-	var $shortcode_tags = array();
-
-	// Taggs scanned at the last time of do_shortcode()
-	var $scanned_tags = null;
-
-	// Executing shortcodes (true) or just scanning (false)
-	var $exec = true;
-
-	function add_shortcode( $tag, $func, $has_name = false ) {
-		if ( is_callable( $func ) )
-			$this->shortcode_tags[$tag] = array(
-				'function' => $func,
-				'has_name' => (boolean) $has_name );
-	}
-
-	function remove_shortcode( $tag ) {
-		unset( $this->shortcode_tags[$tag] );
-	}
-
-	function normalize_shortcode( $content ) {
-		if ( empty( $this->shortcode_tags ) || ! is_array( $this->shortcode_tags ) )
-			return $content;
-
-		$pattern = $this->get_shortcode_regex();
-		return preg_replace_callback( '/' . $pattern . '/s',
-			array( &$this, 'normalize_space_cb' ), $content );
-	}
-
-	function normalize_space_cb( $m ) {
-		// allow [[foo]] syntax for escaping a tag
-		if ( $m[1] == '[' && $m[6] == ']' )
-			return $m[0];
-
-		$tag = $m[2];
-		$attr = trim( preg_replace( '/[\r\n\t ]+/', ' ', $m[3] ) );
-		$content = trim( $m[5] );
-
-		$content = str_replace( "\n", '<WPPreserveNewline />', $content );
-
-		$result = $m[1] . '[' . $tag
-			. ( $attr ? ' ' . $attr : '' )
-			. ( $m[4] ? ' ' . $m[4] : '' )
-			. ']'
-			. ( $content ? $content . '[/' . $tag . ']' : '' )
-			. $m[6];
-
-		return $result;
-	}
-
-	function do_shortcode( $content, $exec = true ) {
-		$this->exec = (bool) $exec;
-		$this->scanned_tags = array();
-
-		if ( empty( $this->shortcode_tags ) || ! is_array( $this->shortcode_tags ) )
-			return $content;
-
-		$pattern = $this->get_shortcode_regex();
-		return preg_replace_callback( '/' . $pattern . '/s',
-			array( &$this, 'do_shortcode_tag' ), $content );
-	}
-
-	function scan_shortcode( $content ) {
-		$this->do_shortcode( $content, false );
-		return $this->scanned_tags;
-	}
-
-	function get_shortcode_regex() {
-		$tagnames = array_keys( $this->shortcode_tags );
-		$tagregexp = join( '|', array_map( 'preg_quote', $tagnames ) );
-
-		return '(\[?)'
-			. '\[(' . $tagregexp . ')(?:[\r\n\t ](.*?))?(?:[\r\n\t ](\/))?\]'
-			. '(?:([^[]*?)\[\/\2\])?'
-			. '(\]?)';
-	}
-
-	function do_shortcode_tag( $m ) {
-		// allow [[foo]] syntax for escaping a tag
-		if ( $m[1] == '[' && $m[6] == ']' ) {
-			return substr( $m[0], 1, -1 );
-		}
-
-		$tag = $m[2];
-		$attr = $this->shortcode_parse_atts( $m[3] );
-
-		$scanned_tag = array(
-			'type' => $tag,
-			'name' => '',
-			'options' => array(),
-			'raw_values' => array(),
-			'values' => array(),
-			'pipes' => null,
-			'labels' => array(),
-			'attr' => '',
-			'content' => '' );
-
-		if ( is_array( $attr ) ) {
-			if ( is_array( $attr['options'] ) ) {
-				if ( $this->shortcode_tags[$tag]['has_name'] && ! empty( $attr['options'] ) ) {
-					$scanned_tag['name'] = array_shift( $attr['options'] );
-
-					if ( ! wpcf7_is_name( $scanned_tag['name'] ) )
-						return $m[0]; // Invalid name is used. Ignore this tag.
-				}
-
-				$scanned_tag['options'] = (array) $attr['options'];
-			}
-
-			$scanned_tag['raw_values'] = (array) $attr['values'];
-
-			if ( WPCF7_USE_PIPE ) {
-				$pipes = new WPCF7_Pipes( $scanned_tag['raw_values'] );
-				$scanned_tag['values'] = $pipes->collect_befores();
-				$scanned_tag['pipes'] = $pipes;
-			} else {
-				$scanned_tag['values'] = $scanned_tag['raw_values'];
-			}
-
-			$scanned_tag['labels'] = $scanned_tag['values'];
-
-		} else {
-			$scanned_tag['attr'] = $attr;
-		}
-
-		$content = trim( $m[5] );
-		$content = preg_replace( "/<br[\r\n\t ]*\/?>$/m", '', $content );
-		$scanned_tag['content'] = $content;
-
-		$scanned_tag = apply_filters( 'wpcf7_form_tag', $scanned_tag, $this->exec );
-
-		$this->scanned_tags[] = $scanned_tag;
-
-		if ( $this->exec ) {
-			$func = $this->shortcode_tags[$tag]['function'];
-			return $m[1] . call_user_func( $func, $scanned_tag ) . $m[6];
-		} else {
-			return $m[0];
-		}
-	}
-
-	function shortcode_parse_atts( $text ) {
-		$atts = array( 'options' => array(), 'values' => array() );
-		$text = preg_replace( "/[\x{00a0}\x{200b}]+/u", " ", $text );
-		$text = stripcslashes( trim( $text ) );
-
-		$pattern = '%^([-+*=0-9a-zA-Z:.!?#$&@_/|\%\r\n\t ]*?)((?:[\r\n\t ]*"[^"]*"|[\r\n\t ]*\'[^\']*\')*)$%';
-
-		if ( preg_match( $pattern, $text, $match ) ) {
-			if ( ! empty( $match[1] ) ) {
-				$atts['options'] = preg_split( '/[\r\n\t ]+/', trim( $match[1] ) );
-			}
-			if ( ! empty( $match[2] ) ) {
-				preg_match_all( '/"[^"]*"|\'[^\']*\'/', $match[2], $matched_values );
-				$atts['values'] = wpcf7_strip_quote_deep( $matched_values[0] );
-			}
-		} else {
-			$atts = $text;
-		}
-
-		return $atts;
-	}
-
-}
-
-$wpcf7_shortcode_manager = new WPCF7_ShortcodeManager();
+/**
+ * All the functions and classes in this file are deprecated.
+ * You shouldn't use them. The functions and classes will be
+ * removed in a later version.
+ */
 
 function wpcf7_add_shortcode( $tag, $func, $has_name = false ) {
-	global $wpcf7_shortcode_manager;
+	wpcf7_deprecated_function( __FUNCTION__, '4.6', 'wpcf7_add_form_tag' );
 
-	return $wpcf7_shortcode_manager->add_shortcode( $tag, $func, $has_name );
+	return wpcf7_add_form_tag( $tag, $func, $has_name );
 }
 
 function wpcf7_remove_shortcode( $tag ) {
-	global $wpcf7_shortcode_manager;
+	wpcf7_deprecated_function( __FUNCTION__, '4.6', 'wpcf7_remove_form_tag' );
 
-	return $wpcf7_shortcode_manager->remove_shortcode( $tag );
+	return wpcf7_remove_form_tag( $tag );
 }
 
 function wpcf7_do_shortcode( $content ) {
-	global $wpcf7_shortcode_manager;
+	wpcf7_deprecated_function( __FUNCTION__, '4.6',
+		'wpcf7_replace_all_form_tags' );
 
-	return $wpcf7_shortcode_manager->do_shortcode( $content );
+	return wpcf7_replace_all_form_tags( $content );
 }
 
-function wpcf7_get_shortcode_regex() {
-	global $wpcf7_shortcode_manager;
+function wpcf7_scan_shortcode( $cond = null ) {
+	wpcf7_deprecated_function( __FUNCTION__, '4.6', 'wpcf7_scan_form_tags' );
 
-	return $wpcf7_shortcode_manager->get_shortcode_regex();
+	return wpcf7_scan_form_tags( $cond );
 }
 
-?>
+class WPCF7_ShortcodeManager {
+
+	private static $form_tags_manager;
+
+	private function __construct() {}
+
+	public static function get_instance() {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::get_instance' );
+
+		self::$form_tags_manager = WPCF7_FormTagsManager::get_instance();
+		return new self;
+	}
+
+	public function get_scanned_tags() {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::get_scanned_tags' );
+
+		return self::$form_tags_manager->get_scanned_tags();
+	}
+
+	public function add_shortcode( $tag, $func, $has_name = false ) {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::add' );
+
+		return self::$form_tags_manager->add( $tag, $func, $has_name );
+	}
+
+	public function remove_shortcode( $tag ) {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::remove' );
+
+		return self::$form_tags_manager->remove( $tag );
+	}
+
+	public function normalize_shortcode( $content ) {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::normalize' );
+
+		return self::$form_tags_manager->normalize( $content );
+	}
+
+	public function do_shortcode( $content, $exec = true ) {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::replace_all' );
+
+		if ( $exec ) {
+			return self::$form_tags_manager->replace_all( $content );
+		} else {
+			return self::$form_tags_manager->scan( $content );
+		}
+	}
+
+	public function scan_shortcode( $content ) {
+		wpcf7_deprecated_function( __METHOD__, '4.6',
+			'WPCF7_FormTagsManager::scan' );
+
+		return self::$form_tags_manager->scan( $content );
+	}
+}
+
+class WPCF7_Shortcode extends WPCF7_FormTag {
+
+	public function __construct( $tag ) {
+		wpcf7_deprecated_function( 'WPCF7_Shortcode', '4.6', 'WPCF7_FormTag' );
+
+		parent::__construct( $tag );
+	}
+}

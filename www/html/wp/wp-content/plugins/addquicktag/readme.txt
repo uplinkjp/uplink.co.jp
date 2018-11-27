@@ -3,8 +3,8 @@ Contributors: Bueltge, inpsyde
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955
 Tags: quicktag, editor, tinymce, add buttons, button, buttons, visual editor
 Requires at least: 3.0
-Tested up to: 4.4-alpha
-Stable tag: trunk
+Tested up to: 5
+Stable tag: 2.5.3
 
 This plugin makes it easy to add Quicktags to the html - and visual-editor.
 
@@ -21,7 +21,6 @@ Please give me feedback, contribute and file technical bugs on [GitHub Repo](htt
 
 **Crafted by [Inpsyde](http://inpsyde.com) · Engineering the web since 2006.**
 
-Yes, we also run that [marketplace for premium WordPress plugins and themes](http://marketpress.com).
 
 == Installation ==
 = Requirements =
@@ -45,20 +44,6 @@ If you wish to use this plugin with an older version of WordPress, please use an
 
 
 == Other Notes ==
-= Acknowledgements =
-**Thanks to**
-
-* German Translation (de_DE) by [myself](http://bueltge.de) ;)
-* French translation (fr_FR) by [Jean-Michel MEYER](http://www.li-an.fr/blog)
-* Japanese translation (ja) by [Yuuichi](http://www.u-1.net/2011/12/29/2498/)
-* Traditional Chinese (zh_TW) by [Zeng pppdog](http://pppdog.me/)
-* Slovak translation by [Branco](http://webhostinggeeks.com/user-reviews/)
-* Brazilian Portuguese translation by [Aluízio Leye Larangeira](http://www.aluizioll.com.br/category/traducao/)
-* Turkish translation by [Turk3005](http://wordpress.org/support/profile/turk3005), see also his [seetings tutorial video](https://yadi.sk/i/l6YwDpa_V3FaV)
-* Ukrainian translation by [Michael Yunat](http://getvoip.com/blog)
-* Czech translation by [Michal Stanke](https://github.com/MikkCZ)
-* Polish translation by [Rachela](http://couponmachine.in)
-
 = Hook for custom post types =
 The plugin adds the quicktag by default to post types/ID `post`, `page` and `comment`. To use the plugin for other post types also you may use a filter; see the following example or an example plugin in the [Gist 1595155](https://gist.github.com/1595155).
 
@@ -142,13 +127,25 @@ The following example adds buttons. The params inside the array are the same as 
 
 
 = License =
-Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you may consider to thank me and leave a [small donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6069955 "Paypal Donate link") for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
-
-= Translations =
-The plugin comes with various translations, please refer to the [WordPress Codex](http://codex.wordpress.org/Installing_WordPress_in_Your_Language "Installing WordPress in Your Language") for more information on activating the translation. If you want to help to translate the plugin to your language, please have a look at the .pot file which contains all definitions and may be used with a [gettext](http://www.gnu.org/software/gettext/) editor like [Poedit](http://www.poedit.net/) (Windows) or the plugin [Localization](http://wordpress.org/extend/plugins/codestyling-localization/) for WordPress.
-
+Good news, this plugin is free for everyone! Since it's released under the GPL, you can use it free of charge on your personal or commercial blog. But if you enjoy this plugin, you may consider to thank me and leave a [positive review](https://wordpress.org/support/plugin/addquicktag/reviews/#new-post) for the time I've spent writing and supporting this plugin. And I really don't want to know how many hours of my life this plugin has already eaten ;)
 
 == Changelog ==
+= 2.5.3 (2018-11-06) =
+* Fix error warning in edit mode without button settings.
+
+= 2.5.2 (2017-11-16) =
+* Fixed several code strict style issues.
+* Fixed javascript topics to write more strict.
+
+= 2.5.1 (2017-03-09) =
+* Fixed Multisite error for check, is the plugin active in the MU Environment.
+
+= 2.5.0 (2017-02-21) =
+* Fixed PHP7.1 problem to save new buttons.
+* Adds title attribute to view on hover to each button in the TinyMCE listbox.
+* Adds possibilty to use Dashicon "icons" for TinyMCE buttons.
+* Button Label is not more required, only the start-tag
+
 = 2.4.3 (2015-08-21) =
 * Add czech translation, thanks to [https://github.com/MikkCZ](https://github.com/MikkCZ)
 * Bugfix: TinyMCE input select was changed in his object, changes on the script for the visual editor to set quicktags.
