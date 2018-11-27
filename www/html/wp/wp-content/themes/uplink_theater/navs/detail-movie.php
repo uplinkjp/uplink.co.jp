@@ -8,15 +8,15 @@
   </div>
   <nav class="l-nav_sub">
     <div class="nav-wrap">
-      <a href="#nowplaying">
+      <a href="<?php echo home_url('schedule#nowplaying')?>">
         <p>公開中の作品</p>
         <span>NOW PLAYING</span>
       </a>
-      <a href="#commingsoon">
+      <a href="<?php echo home_url('schedule#commingsoon')?>">
         <p>近日公開の作品</p>
         <span>COMMING SOON</span>
       </a>
-      <a href="04_schedule_shibuya.html">
+      <a href="<?php echo home_url('schedule')?>">
         <p>今月のスケジュール</p>
         <span>MONTHLY SCHEDULE</span>
       </a>
