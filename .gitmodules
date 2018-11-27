@@ -1,0 +1,3 @@
+[submodule "www/html/wp/wp-content/plugins/wp-metatag-builder"]
+	path = www/html/wp/wp-content/plugins/wp-metatag-builder
+	url = git@github.com:cinra/wp-metatag-builder.git

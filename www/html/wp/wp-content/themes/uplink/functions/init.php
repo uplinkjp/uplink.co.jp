@@ -36,6 +36,18 @@ add_filter( 'pre_site_transient_update_plugins', function() { return null; } );
 
 add_theme_support( 'post-thumbnails' );
 
+if ( function_exists('acf_add_options_page') )
+{
+
+  $option = acf_add_options_page(array(
+    'menu_slug'   => 'option',
+    'page_title'  => 'オプション',
+    'menu_title'  => 'オプション',
+    'redirect'    => false
+  ));
+
+}
+
 /* ----------------------------------------------------------
 
   ￼Uploads Path
