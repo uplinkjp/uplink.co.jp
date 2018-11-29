@@ -60,7 +60,7 @@
         </a>
       </div>
       <div class="nav-default nav-col-2">
-        <a href="<?php echo home_url('membership')?>">
+        <a href="<?php echo home_url('member')?>">
           <p>アップリンク会員について</p>
           <span>MEMBERSHIP</span>
         </a>
