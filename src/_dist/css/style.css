@@ -573,6 +573,8 @@ textarea {
     background-color: #FA5032; }
   .category-market .l-header_sub {
     background-color: #00AD93; }
+  .category-map .l-header_sub {
+    background-color: #674F27; }
   .category-default .l-header_sub {
     background-color: #BFBFBF; }
     .category-default .l-header_sub .header_sub-heading {
@@ -626,6 +628,8 @@ textarea {
     background-color: #FA5032; }
   .category-market .header-nav_sub_trigger {
     background-color: #00AD93; }
+  .category-map .header-nav_sub_trigger {
+    background-color: #674F27; }
   .category-default .header-nav_sub_trigger {
     background-color: #BFBFBF; }
     .category-default .header-nav_sub_trigger .header_sub-heading {
@@ -1026,6 +1030,8 @@ textarea {
     background-color: #FA5032; }
   .category-market .js-sub-clone {
     background-color: #00AD93; }
+  .category-map .js-sub-clone {
+    background-color: #674F27; }
   .category-default .js-sub-clone {
     background-color: #BFBFBF; }
     .category-default .js-sub-clone .header_sub-heading {

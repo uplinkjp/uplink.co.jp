@@ -88,7 +88,7 @@ function cts_body_classes( $classes, $class = null )
   {
     $posttype = get_post_type();
     if ($posttype === 'movie') $posttype = 'film';
-    if ($posttype === 'page') $posttype = 'default';
+    if ($posttype === 'page') $posttype = is_page('map') ? 'map' : 'default';
     $classes[] = 'category-' . $posttype;
   }
 

@@ -3,10 +3,11 @@
 $label = null;
 $label_en = null;
 
-if (is_post_type_archive())
+if (is_post_type_archive() || is_single())
 {
 
-  $post_type = get_queried_object();
+  $post_type = is_single() ? get_post_type_object( get_post_type() ) : get_queried_object();
+  
   if ($post_type)
   {
     $label = $post_type->label;
