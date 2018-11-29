@@ -2004,7 +2004,8 @@ textarea {
     position: relative;
     height: 0;
     background: #000;
-    padding-top: 56.25%; }
+    padding-top: 56.25%;
+    overflow: hidden; }
     .single-header-thumb span img {
       position: absolute;
       max-width: 100%;
