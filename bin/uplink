@@ -29,7 +29,7 @@ then
   then
 
     echo "Sync: ダウンロード"
-    rsync -av --progress admin@210.143.102.33:/var/www/html/* ./www/html/ --exclude=/wp --exclude=/ex --exclude=/info_ --exclude=index.php
+    rsync -av --progress admin@210.143.102.33:/var/www/html/* ./www/html/ --exclude=/wp --exclude=/ex --exclude=/info_
 
   # elif [ $2 = upload ]
   # then
