@@ -873,7 +873,9 @@ textarea {
   .list-calendar {
     -ms-flex: 1;
         flex: 1;
-    margin-left: 4px; } }
+    margin-left: 4px;
+    background: #FFF;
+    margin-bottom: 4px; } }
 
 .list-calendar-heading {
   font-size: 15px;
