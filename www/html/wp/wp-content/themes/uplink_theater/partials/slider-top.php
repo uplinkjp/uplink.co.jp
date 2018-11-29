@@ -12,7 +12,7 @@ if( have_rows('slides') ):
 
     $slide_image = get_sub_field('image');
 
-    ?><div><a href="<?php the_sub_field('url')?>" target="_blank">
+    ?><div><a href="<?php the_sub_field('url')?>">
       <p class="slider-toptext"><span><?php the_sub_field('date_description')?></span></p>
       <img src="<?php the_img($slide_image, 'large')?>">
       <p class="slider-bottomtext"><span><?php the_sub_field('caption')?></span></p>
