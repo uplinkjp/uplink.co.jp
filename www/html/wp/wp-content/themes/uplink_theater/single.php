@@ -91,8 +91,8 @@ get_template_part( 'partials/header' )?>
 <?php if( $post->post_content ):?>
 <section>
   <h2 class="section-heading">
-    作品紹介
-    <span>ABOUT THE MOVIE</span>
+    詳細
+    <span>DETAIL</span>
   </h2>
   <div class="wysiwyg-wrap">
     <div class="l-wysiwyg">
