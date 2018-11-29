@@ -18,6 +18,9 @@
   box-sizing: border-box;
   @include mqPC {
     width: 25%;
+    &.noimg {
+      width: 100%;
+    }
   }
 }
 .single-header-heading {
