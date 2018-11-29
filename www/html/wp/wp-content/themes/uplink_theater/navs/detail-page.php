@@ -2,7 +2,7 @@
 
 $title_en = get_field('title_en');
 
-?><div class="l-header_sub" style="height: 100px;">
+?><div class="l-header_sub">
   <div class="header_sub-inner">
     <h2 class="header_sub-heading">
       <?php the_title()?>

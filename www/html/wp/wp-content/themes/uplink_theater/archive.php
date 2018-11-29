@@ -2,7 +2,7 @@
 
 <div class="js-headerWrap">
   <?php get_template_part( 'navs/global', get_uplink_site() )?>
-  <?php get_template_part( 'navs/detail', get_post_type() )?>
+  <?php get_template_part( 'navs/detail' )?>
 </div>
 
 <div class="l-wrap">

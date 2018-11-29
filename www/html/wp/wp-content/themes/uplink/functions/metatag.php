@@ -36,7 +36,7 @@ class WP_Metatag
 
     if ($image = get_field('og_image', 'option'))
     {
-      $meta['image'] = $image['url'];
+      if (isset($image['url'])) $meta['image'] = $image['url'];
     }
 
     if ($twitter = get_field('twitter', 'option'))
