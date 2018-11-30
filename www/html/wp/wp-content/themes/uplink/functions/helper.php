@@ -124,27 +124,29 @@ function get_the_remark( $post = null )
 
   if (!$post) global $post;
 
-  $post_type = get_post_type( $post );
+  return get_field('date_description', $post->ID);
 
-  $str = '';
+  // $post_type = get_post_type( $post );
 
-  if ($post_type === 'movie')
-  {
+  // $str = '';
 
-    $terms = get_the_terms($post->ID, 'movie_status');
-    if ( $terms )
-    {
-      $term = reset($terms);
-      $str = $term->name;
-    }
-    else
-    {
-      $str = '上映終了';
-    }
+  // if ($post_type === 'movie')
+  // {
 
-  }
+  //   $terms = get_the_terms($post->ID, 'movie_status');
+  //   if ( $terms )
+  //   {
+  //     $term = reset($terms);
+  //     $str = $term->name;
+  //   }
+  //   else
+  //   {
+  //     $str = '上映終了';
+  //   }
 
-  return $str;
+  // }
+
+  // return $str;
 
 }
 
