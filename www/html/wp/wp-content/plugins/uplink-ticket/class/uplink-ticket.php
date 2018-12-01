@@ -5,7 +5,7 @@ class uplinkTicket
 
   private $date_format = 'Y-m-d H:i:s',
           $access_token = null,
-          $ticket_url = 'http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com',
+          $ticket_url,
           $apiurl,
           $username,
           $password;
@@ -13,6 +13,7 @@ class uplinkTicket
   public function __construct()
   {
 
+    $this->ticket_url = defined('UPLINK_TICKET_URL') ? UPLINK_TICKET_URL : 'https://rsv.uplink.co.jp';
     $this->apiurl = defined('UPLINK_TICKET_APIURL') ? UPLINK_TICKET_APIURL : '';
     $this->username = defined('UPLINK_TICKET_USERNAME') ? UPLINK_TICKET_USERNAME : 'api_test';
     $this->password = defined('UPLINK_TICKET_PASSWORD') ? UPLINK_TICKET_PASSWORD : '';
@@ -32,14 +33,15 @@ class uplinkTicket
     return array_map( function($program)
     {
 
-      $program->permalink = $this->ticket_url . '/TicketReserver/program/' . $program->programId;
+      $program->permalink = $this->ticket_url . '/program/' . $program->programId;
       $program->startDate = date('Y-m-d', (int)$program->startTime / 1000);
       $program->startDatetime = date($this->date_format, (int)$program->startTime / 1000);
       $program->endDatetime = date($this->date_format, (int)$program->endTime / 1000);
-
-      // http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com/TicketReserver/program/2835
-      // http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com/TicketReserver/movie/programs/67
-      // http://uplink-alb-1060699766.ap-northeast-1.elb.amazonaws.com/TicketReserver/program/2790
+      $program->sale_status = $this->sale_status( $program );
+      $program->time_status = $this->time_status( $program );
+      $program->limit_status = $this->limit_status( $program );
+      $program->class = $this->status_class( $program );
+      $program->status_label = $this->status_label( $program );
 
       return $program;
 
@@ -114,6 +116,130 @@ class uplinkTicket
     }
 
     return;
+
+  }
+
+  private function sale_status( $program )
+  {
+    return (int)$program->onsiteMemberSalesEnabled === 1;
+  }
+
+  private function time_status( $program )
+  {
+
+    $starttime = $program->startTime / 1000;
+
+    if ( $starttime < strtotime('+30 minutes') && $starttime > time() )
+    {
+      return 'door';
+    }
+    elseif( $starttime < time() )
+    {
+      return 'over';
+    }
+
+    return 'on';
+
+  }
+
+  private function status_label( $program )
+  {
+
+    /*
+    「購入する」　上映の30分前まで
+    「当日窓口」　上映の29分前～上映開始まで
+    「販売終了」　残数0%の場合と、上映開始以降
+     */
+
+    if ($this->time_status($program) === 'door')
+    {
+      return '当日窓口';
+    }
+
+    if ($this->time_status($program) === 'over' || $this->limit_status($program) === 'over')
+    {
+      return '販売終了';
+    }
+
+    return '購入する';
+
+  }
+
+  private function limit_status( $program )
+  {
+
+    $tickets = $program->numOfReservedTickets + $program->numOfIssuedTickets;
+    $rate = $program->numOfTickets - $tickets;
+
+    if( $rate === 0 )
+    {
+      return 'over';# ×　0%
+    }
+    elseif( $rate > 0 && $rate < 40 )
+    {
+      return 'danger';# △　1～39%
+    }
+    elseif( $rate >= 40 && $rate < 70 )
+    {
+      return 'warning';# ○　40～69%
+    }
+
+    return 'safe';# ◎　70～100%
+
+    /*
+    [0] => stdClass Object
+    (
+        [programId] => 2155
+        [movieId] => 78
+        [screenId] => 1
+        [startTime] => 1541586600000
+        [endTime] => 1541594220000
+        [movieLength] => 127
+        [trailerLength] => 0
+        [movieTypeId] => 1
+        [movieStyleId] => 0
+        [remark] =>
+        [programNo] => 1
+        [numOfTickets] => 58
+        [numOfReservedTickets] => 0
+        [numOfIssuedTickets] => 1
+        [onlineMemberSalesEnabled] => 1
+        [onlineMemberSalesStartTime] => 1541170800000
+        [onlineMemberSalesEndTime] => 1541587200000
+        [onlineNonMemberSalesEnabled] => 1
+        [onlineNonMemberSalesStartTime] => 1541257200000
+        [onlineNonMemberSalesEndTime] => 1541587200000
+        [onsiteMemberSalesEnabled] => 1
+        [onsiteMemberSalesStartTime] => 1541170800000
+        [onsiteMemberSalesEndTime] => 1541589600000
+        [onsiteNonMemberSalesEnabled] => 1
+        [onsiteNonMemberSalesStartTime] => 1541257200000
+        [onsiteNonMemberSalesEndTime] => 1541589600000
+    )
+    */
+
+  }
+
+  private function status_class( $program )
+  {
+
+    $limit_status = $this->limit_status($program);
+    $time_status = $this->time_status($program);
+
+    if( $limit_status === 'over' || $time_status === 'over' )
+    {
+      return 'red';# ×　0%
+    }
+    elseif( $limit_status === 'danger' )
+    {
+      return 'yellow2';# △　1～39%
+    }
+    elseif( $limit_status === 'warning' )
+    {
+      return 'green2';# ○　40～69%
+    }
+
+    return 'green1';# ◎　70～100%
 
   }
 
