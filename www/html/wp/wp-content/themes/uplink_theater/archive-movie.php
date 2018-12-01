@@ -73,4 +73,6 @@
   </div>
 </section>
 
+<?php wp_paginate()?>
+
 <?php get_template_part( 'partials/footer' );

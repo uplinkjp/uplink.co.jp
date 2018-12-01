@@ -32,9 +32,12 @@
   }
 
 }
-.pager-current {
-  color: rgba(0,0,0,.6);
+.page-numbers {
+  &.current {
+    color: rgba(0,0,0,.6);
+  }
 }
+
 .pager-prev,
 .pager-next {
   @include texthidden;

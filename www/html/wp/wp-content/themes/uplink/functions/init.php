@@ -98,6 +98,11 @@ function cts_body_classes( $classes, $class = null )
     $classes[] = 'category-default';
   }
 
+  if (is_404())
+  {
+    $classes[] = 'category-alt';
+  }
+
   return $classes;
 
 }
