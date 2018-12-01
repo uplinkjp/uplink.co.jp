@@ -25,8 +25,8 @@ if (!function_exists('wp_paginate'))
     }
     else
     {
-      $paginate_base = str_replace('page/' . $big .'/', '%_%', $paginate_base);
-      $paginate_format = 'page/%#%/';
+      $paginate_base = str_replace('page/' . $big, '%_%', $paginate_base);
+      $paginate_format = 'page/%#%';
     }
 
     $pages = paginate_links(array(
