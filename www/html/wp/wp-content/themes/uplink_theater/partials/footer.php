@@ -11,7 +11,7 @@
       </div>
       <div class="followus-box">
         <h2 class="followus-heading">SUBSCRIBE</h2>
-        <a href="" target="_blank">メールマガジン登録</a>
+        <a href="<?php echo parent_url('info/mailmagazine')?>" target="_blank">メールマガジン登録</a>
       </div>
     </div>
   </section>
@@ -21,11 +21,11 @@
   <h2 class="footer-logo"><img src="<?php echo get_template_directory_uri()?>/img/logo-footer.png" alt="UPLINK"></h2>
   <nav class="footer-nav">
     <ul>
-      <li><a href="<?php echo parent_url('about')?>">UPLINKについて</a></li>
-      <li><a href="<?php echo parent_url('recruit')?>">採用情報</a></li>
-      <li><a href="<?php echo parent_url('map')?>">地図・お問合せ</a></li>
-      <li><a href="<?php echo parent_url('term')?>">個人情報の取り扱い</a></li>
-      <li><a href="">English Information</a></li>
+      <li><a href="<?php echo parent_url('info')?>">UPLINKについて</a></li>
+      <li><a href="<?php echo parent_url('news/recruit')?>">採用情報</a></li>
+      <li><a href="<?php echo parent_url('info/map')?>">地図・お問合せ</a></li>
+      <li><a href="<?php echo parent_url('info/privacypolicy')?>">個人情報の取り扱い</a></li>
+      <li><a href="<?php echo parent_url('info/information_en')?>">English Information</a></li>
     </ul>
   </nav>
   <p class="footer-copy">2018 UPLINK, LTD.</p>
