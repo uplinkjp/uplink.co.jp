@@ -8,15 +8,15 @@ $tags = get_the_terms( $post, 'post_tag' );
 get_template_part( 'partials/header' )?>
 
 <div class="js-headerWrap">
-<?php get_template_part( 'navs/global', get_uplink_site() )?>
-<?php get_template_part( 'navs/detail', get_post_type() )?>
+  <?php get_template_part( 'navs/global', get_uplink_site() )?>
+  <?php get_template_part( 'navs/detail', get_post_type() )?>
 </div>
 
 <div class="l-wrap">
 
 <article>
   <div class="single-header">
-    <div class="single-header-inner">
+    <div class="single-header-inner<?php if( !have_img() ):?> noimg<?php endif?>">
       <h1 class="single-header-heading"><?php the_title()?></h1>
       <?php if( $date_description = get_field('date_description') ):?><p class="single-header-text"><?php echo $date_description?></p><?php endif?>
       <?php if( $tags ):?><div class="single-header-tag">
@@ -91,8 +91,8 @@ get_template_part( 'partials/header' )?>
 <?php if( $post->post_content ):?>
 <section>
   <h2 class="section-heading">
-    作品紹介
-    <span>ABOUT THE MOVIE</span>
+    詳細
+    <span>DETAIL</span>
   </h2>
   <div class="wysiwyg-wrap">
     <div class="l-wysiwyg">

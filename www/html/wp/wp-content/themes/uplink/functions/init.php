@@ -84,10 +84,19 @@ function cts_body_classes( $classes, $class = null )
   }
   if (is_archive()) $classes[] = 'type-2nd';
 
-  $posttype = get_post_type();
-  if ($posttype === 'movie') $posttype = 'film';
-  if ($posttype === 'page') $posttype = 'default';
-  $classes[] = 'category-' . $posttype;
+  if (is_singular() || is_post_type_archive())
+  {
+    $posttype = get_post_type();
+    if ($posttype === 'movie') $posttype = 'film';
+    if ($posttype === 'news') $posttype = 'default';
+    if ($posttype === 'page') $posttype = is_page('map') ? 'map' : 'default';
+    $classes[] = 'category-' . $posttype;
+  }
+
+  if (is_tag())
+  {
+    $classes[] = 'category-default';
+  }
 
   return $classes;
 

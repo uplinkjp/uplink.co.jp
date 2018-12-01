@@ -124,27 +124,7 @@ function get_the_remark( $post = null )
 
   if (!$post) global $post;
 
-  $post_type = get_post_type( $post );
-
-  $str = '';
-
-  if ($post_type === 'movie')
-  {
-
-    $terms = get_the_terms($post->ID, 'movie_status');
-    if ( $terms )
-    {
-      $term = reset($terms);
-      $str = $term->name;
-    }
-    else
-    {
-      $str = '上映終了';
-    }
-
-  }
-
-  return $str;
+  return get_field('date_description', $post->ID);
 
 }
 

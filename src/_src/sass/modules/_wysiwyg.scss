@@ -19,6 +19,7 @@
   }
   img {
     max-width: 100%;
+    height: auto;
   }
   h2 {
     @include f_min_narrow;
@@ -65,10 +66,12 @@
   .bg-green {
     background: #c1ff7a;
   }
-  b {
+  b,
+  strong {
     font-weight: bold;
   }
-  i {
+  i,
+  em {
     font-style: italic;
   }
   s {
