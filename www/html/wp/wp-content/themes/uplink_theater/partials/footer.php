@@ -4,9 +4,9 @@
         <h2 class="followus-heading">FOLLOW US</h2>
         <ul class="followus-sns">
           <li class="sns-tw"><a href="https://twitter.com/<?php the_field('twitter', 'option')?>" target="_blank">twitter</a></li>
-          <li class="sns-fb"><a href="https://www.facebook.com/<?php the_field('facebook', 'option')?>/" target="_blank">facebook</a></li>
-          <li class="sns-in"><a href="https://www.instagram.com/uplink_film/" target="_blank">instagram</a></li>
-          <li class="sns-yt"><a href="https://www.youtube.com/user/diceuplink" target="_blank">youtube</a></li>
+          <li class="sns-fb"><a href="https://www.facebook.com/<?php the_field('facebook', 'option')?>" target="_blank">facebook</a></li>
+          <li class="sns-in"><a href="https://www.instagram.com/<?php the_field('instagram', 'option')?>" target="_blank">instagram</a></li>
+          <li class="sns-yt"><a href="https://www.youtube.com/user/<?php the_field('youtube', 'option')?>" target="_blank">youtube</a></li>
         </ul>
       </div>
       <div class="followus-box">
