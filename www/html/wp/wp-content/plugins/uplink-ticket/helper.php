@@ -33,7 +33,7 @@ if (!function_exists('get_uplink_grograms_by_movie'))
     $post_types = get_post_types();
 
     $params['movie_id'] = $movie_id;
-    $params['after'] = date('Ymd', strtotime('- 10 year'));
+    $params['after'] = date('Ymd', time());
     $params['before'] = date('Ymd', strtotime('+ 10 year'));
 
     $programs_unsorted = $ut->fetch_programs($params);
