@@ -66,7 +66,7 @@
         </a>
       </div>
       <div class="nav-login nav-col-1">
-        <a href="https://rsv.uplink.co.jp">
+        <a href="https://rsv.uplink.co.jp" target="_blank">
           <p>ログイン</p>
           <span>LOGIN</span>
         </a>
