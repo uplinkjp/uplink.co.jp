@@ -33,9 +33,9 @@ get_template_part( 'partials/header' )?>
   </div>
 
   <div class="single-header-infornation">
-    <?php if( get_post_type() === 'movie' ):?><div class="single-information">
+    <?php if( $date_description = get_field('date_description') ):?><div class="single-information">
       <h4>日時</h4>
-      <p><?php the_remark()?></p>
+      <p><?php echo $date_description?></p>
     </div><?php endif?>
     <?php if( $price = get_field('price') ):?><div class="single-information">
       <h4>料金</h4>
