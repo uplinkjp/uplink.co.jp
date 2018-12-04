@@ -284,7 +284,7 @@ class uplinkTicket
   private function fetch( $api_endpoint, $retry = false )
   {
 
-    $cache_path = md5($api_endpoint);
+    $cache_path = 'schedule_api_' . md5($api_endpoint);
     $response = get_transient($cache_path);
 
     if (!$retry && $response)
