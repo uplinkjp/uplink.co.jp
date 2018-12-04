@@ -5,7 +5,8 @@
 				<li><a href="/info/" title="会社概要">会社概要</a></li>
 				<li><a href="/news/" title="お知らせ">お知らせ</a></li>
 				<li><a href="/news/recruit/" title="採用">採用</a></li>
-				<li><a href="/info/map/" title="地図・お問合せ">地図・お問合せ</a></li>
+				<li><a href="/info/map/" title="お問合せ">お問合せ</a></li>
+				<li><a href="/info/privacypolicy/" title="アップリンク会員規約">アップリンク会員規約</a></li>
 				<li><a href="/info/privacypolicy/" title="個人情報の取り扱い">個人情報の取り扱い</a></li>
 				<li><a href="/info/information_en/" title="English information">English information</a></li>
 			</ul>
