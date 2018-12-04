@@ -287,7 +287,7 @@ class uplinkTicket
     $cache_path = 'schedule_api_' . md5($api_endpoint);
     $response = get_transient($cache_path);
 
-    if (!$retry && $response)
+    if (!$retry && !$response)
     {
       $ch = curl_init();
 
