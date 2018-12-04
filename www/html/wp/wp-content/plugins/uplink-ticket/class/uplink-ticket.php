@@ -168,8 +168,8 @@ class uplinkTicket
   private function limit_status( $program )
   {
 
-    $tickets = $program->numOfReservedTickets + $program->numOfIssuedTickets;
-    $rate = $program->numOfTickets - $tickets;
+    $tickets = $program->numOfTickets - ($program->numOfReservedTickets + $program->numOfIssuedTickets);
+    $rate = ($tickets / $program->numOfTickets) * 100;
 
     if( $rate === 0 )
     {

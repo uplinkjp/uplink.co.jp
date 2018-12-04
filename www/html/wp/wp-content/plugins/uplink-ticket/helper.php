@@ -53,6 +53,7 @@ if (!function_exists('get_uplink_grograms_by_movie'))
       }
 
     }
+    // echo '<pre>';print_r($programs['2018-12-15']);echo '</pre>';exit;
 
     return $programs;
 
