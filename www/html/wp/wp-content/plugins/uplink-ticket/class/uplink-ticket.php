@@ -284,28 +284,36 @@ class uplinkTicket
   private function fetch( $api_endpoint, $retry = false )
   {
 
-    $ch = curl_init();
+    $cache_path = md5($api_endpoint);
+    $response = get_transient($cache_path);
 
-    $args = array(
-      CURLOPT_URL => $api_endpoint,
-      CURLOPT_SSL_VERIFYPEER => false,
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_HTTPHEADER => $this->access_token,
-    );
-
-    curl_setopt_array($ch, $args);
-
-    $response = curl_exec($ch);
-
-    if ($this->is_error($ch) && !$retry)
+    if (!$retry && $response)
     {
+      $ch = curl_init();
 
-      $this->auth();
-      return $this->fetch( $api_endpoint, true );
+      $args = array(
+        CURLOPT_URL => $api_endpoint,
+        CURLOPT_SSL_VERIFYPEER => false,
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_HTTPHEADER => $this->access_token,
+      );
 
+      curl_setopt_array($ch, $args);
+
+      $response = curl_exec($ch);
+
+      if ($this->is_error($ch) && !$retry)
+      {
+
+        $this->auth();
+        return $this->fetch( $api_endpoint, true );
+
+      }
+
+      curl_close($ch);
+
+      set_transient( $cache_path, $response, 5 * 60 );
     }
-
-    curl_close($ch);
 
     return json_decode($response);
 
