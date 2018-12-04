@@ -10,7 +10,7 @@ $yyyy = isset($_GET['yyyy']) ? (int)$_GET['yyyy'] : date('Y');
 $mm = isset($_GET['mm']) ? (int)$_GET['mm'] : date('n');
 
 $startdate = date('Ymd', mktime(0, 0, 0, $mm, 1, $yyyy));
-$enddate = date('Ymd', mktime(0, 0, 0, $mm + 1, 0, $yyyy));
+$enddate = date('Ymd', mktime(0, 0, 0, $mm + 1, 1, $yyyy));
 
 $programs = get_uplink_programs_by_date( get_uplink_site(), $startdate, $enddate );
 

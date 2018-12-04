@@ -53,8 +53,6 @@ if (!function_exists('get_uplink_grograms_by_movie'))
       }
 
     }
-    // echo '<pre>';print_r($programs);echo '</pre>';exit;
-    // echo '<pre>';print_r($programs['2018-12-15']);echo '</pre>';exit;
 
     return $programs;
 
@@ -86,8 +84,8 @@ if (!function_exists('get_uplink_programs_by_date'))
     for( $dd; $enddate !== date('Ymd', $time); $dd++ )
     {
 
-      $time = mktime( 0, 0, 0, $mm, $dd, $yyyy);
       $programs[date('Y-m-d', $time)] = null;
+      $time = mktime( 0, 0, 0, $mm, $dd, $yyyy);
 
     }
 
@@ -128,6 +126,8 @@ if (!function_exists('get_uplink_programs_by_date'))
       }
 
     }
+
+    // echo '<pre>';print_r($programs['2018-12-15']);echo '</pre>';exit;
 
     return $programs;
 

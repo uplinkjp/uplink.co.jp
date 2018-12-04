@@ -121,6 +121,7 @@ class uplinkTicket
 
   private function sale_status( $program )
   {
+
     return (int)$program->onsiteMemberSalesEnabled === 1;
   }
 
@@ -129,11 +130,13 @@ class uplinkTicket
 
     $starttime = $program->startTime / 1000;
 
+    if ( $program->onlineMemberSalesStartTime > time() * 1000 && $program->onlineNonMemberSalesStartTime > time() * 1000 ) return 'notyet';
+
     if ( $starttime < strtotime('+30 minutes') && $starttime > time() )
     {
       return 'door';
     }
-    elseif( $starttime < time() )
+    elseif( $starttime < time() || $program->onlineNonMemberSalesEndTime < microtime() )
     {
       return 'over';
     }
@@ -149,7 +152,27 @@ class uplinkTicket
     「購入する」　上映の30分前まで
     「当日窓口」　上映の29分前～上映開始まで
     「販売終了」　残数0%の場合と、上映開始以降
+    「会員先行」　現在時刻が、有料会員の販売開始時刻（onlineMemberSalesStartTime）を過ぎていて、かつ、販売終了時刻（onlineMemberSalesEndTime）を過ぎていない、かつ、その他の販売開始時刻（onlineNonMemberSalesStartTime）を過ぎていない
      */
+
+    $now = microtime();
+    $memberStartTime = $program->onlineMemberSalesStartTime;
+    $memberEndTime = $program->onlineMemberSalesEndTime;
+    $nonMemberStartTime = $program->onlineNonMemberSalesStartTime;
+
+    if (
+      $now > $memberStartTime &&
+      $now < $memberEndTime &&
+      $now < $nonMemberStartTime
+    )
+    {
+      return '会員先行';
+    }
+
+    if ($this->time_status($program) === 'notyet')
+    {
+      return '販売前';
+    }
 
     if ($this->time_status($program) === 'door')
     {
