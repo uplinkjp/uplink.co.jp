@@ -104,14 +104,24 @@ if (!function_exists('get_uplink_programs_by_date'))
 
           if (!isset($posts[$program->movieId]))
           {
-            $post = get_posts(array(
-              // 'numberposts' => -1,
-              'post_type'   => $post_types,
-              'meta_key'    => 'movie_id',
-              'meta_value'  => $program->movieId
-            ));
 
-            if ($post) $post = reset($post);
+            $cache_path = 'post_by_movieid_' . $program->movieId;
+            $post = get_transient( $cache_path );
+
+            if( !$post )
+            {
+              $post = get_posts(array(
+                'post_type'   => $post_types,
+                'meta_key'    => 'movie_id',
+                'meta_value'  => $program->movieId
+              ));
+
+              if ($post)
+              {
+                $post = reset($post);
+                set_transient( $cache_path, $post, 30 * 60);
+              }
+            }
 
             $posts[$program->movieId] = $post;
           }
