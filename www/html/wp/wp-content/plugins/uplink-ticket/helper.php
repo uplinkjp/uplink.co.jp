@@ -68,76 +68,85 @@ if (!function_exists('get_uplink_programs_by_date'))
 
     $ut = new uplinkTicket;
 
-    $programs = array();
-    $screen_ids = $ut->fetch_screen_ids($theater);
-    $post_types = get_post_types();
+    $cache_path = 'schedule_' . $theater . '_' . $startdate . '-' . $enddate . '_' . md5(http_build_query($params));
 
-    $params['after'] = $startdate;
-    $params['before'] = $enddate;
+    $programs = get_transient( $cache_path );
 
-    $yyyy = (int)substr($startdate, 0, 4);
-    $mm = (int)substr($startdate, 4, 2);
-    $dd = (int)substr($startdate, 6, 2);
-
-    $time = mktime( 0, 0, 0, $mm, $dd, $yyyy);
-
-    for( $dd; $enddate !== date('Ymd', $time); $dd++ )
+    if (!$programs)
     {
 
-      $programs[date('Y-m-d', $time)] = null;
+      $programs = array();
+      $screen_ids = $ut->fetch_screen_ids($theater);
+      $post_types = get_post_types();
+
+      $params['after'] = $startdate;
+      $params['before'] = $enddate;
+
+      $yyyy = (int)substr($startdate, 0, 4);
+      $mm = (int)substr($startdate, 4, 2);
+      $dd = (int)substr($startdate, 6, 2);
+
       $time = mktime( 0, 0, 0, $mm, $dd, $yyyy);
 
-    }
-
-    $programs_unsorted = $ut->fetch_programs($params);
-
-    if ($programs_unsorted)
-    {
-
-      foreach( $programs_unsorted as $program )
+      for( $dd; $enddate !== date('Ymd', $time); $dd++ )
       {
 
-        if (in_array( $program->screenId, $screen_ids ))
+        $programs[date('Y-m-d', $time)] = null;
+        $time = mktime( 0, 0, 0, $mm, $dd, $yyyy);
+
+      }
+
+      $programs_unsorted = $ut->fetch_programs($params);
+
+      if ($programs_unsorted)
+      {
+
+        foreach( $programs_unsorted as $program )
         {
 
-          $programs[$program->startDate][$program->movieId]['timelines'][] = $program;
-
-          if (!isset($posts[$program->movieId]))
+          if (in_array( $program->screenId, $screen_ids ))
           {
 
-            $cache_path = 'post_by_movieid_' . $program->movieId;
-            $post = get_transient( $cache_path );
+            $programs[$program->startDate][$program->movieId]['timelines'][] = $program;
 
-            if( !$post )
+            if (!isset($posts[$program->movieId]))
             {
-              $post = get_posts(array(
-                'post_type'   => $post_types,
-                'meta_key'    => 'movie_id',
-                'meta_value'  => $program->movieId
-              ));
 
-              if ($post)
+              $post_cache_path = 'post_by_movieid_' . $program->movieId;
+              $post = get_transient( $post_cache_path );
+
+              if( !$post )
               {
-                $post = reset($post);
-                set_transient( $cache_path, $post, 30 * 60);
+                $post = get_posts(array(
+                  'post_type'   => $post_types,
+                  'meta_key'    => 'movie_id',
+                  'meta_value'  => $program->movieId
+                ));
+
+                if ($post)
+                {
+                  $post = reset($post);
+                  set_transient( $post_cache_path, $post, 30 * 60);
+                }
               }
+
+              $posts[$program->movieId] = $post;
+            }
+            else
+            {
+              $post = $posts[$program->movieId];
             }
 
-            $posts[$program->movieId] = $post;
-          }
-          else
-          {
-            $post = $posts[$program->movieId];
+            $programs[$program->startDate][$program->movieId]['post'] = $post;
           }
 
-          $programs[$program->startDate][$program->movieId]['post'] = $post;
         }
 
       }
 
-    }
+      set_transient( $cache_path, $programs, 5 * 60 );
 
-    // echo '<pre>';print_r($programs['2018-12-15']);echo '</pre>';exit;
+    }
 
     return $programs;
 
