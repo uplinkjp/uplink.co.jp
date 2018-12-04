@@ -124,7 +124,8 @@ a:hover,
   text-align: center; }
   .list-calendar-information + .button-purchase {
     margin-left: 10px; }
-  .button-purchase a {
+  .button-purchase > a,
+  .button-purchase > span {
     display: block;
     width: 100%;
     height: 34px;
@@ -136,13 +137,15 @@ a:hover,
     border-radius: 3px;
     font-weight: 700;
     background: #CCCCCC; }
-    .button-purchase a span {
+    .button-purchase > a span,
+    .button-purchase > span span {
       font-family: YakuHanJP, "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
       transform: scaleX(0.88);
       transform-origin: left center;
       color: rgba(0, 0, 0, 0.87);
       display: block; }
-    .button-purchase a:before {
+    .button-purchase > a:before,
+    .button-purchase > span:before {
       content: "";
       position: absolute;
       left: 10px;
@@ -152,19 +155,30 @@ a:hover,
       width: 14px;
       height: 100%;
       background-position: center; }
-  .button-purchase.is-green1 a, .button-purchase.is-green2 a, .button-purchase.is-yellow1 a {
+  .button-purchase.is-green1 > a,
+  .button-purchase.is-green1 > span, .button-purchase.is-green2 > a,
+  .button-purchase.is-green2 > span, .button-purchase.is-yellow1 > a,
+  .button-purchase.is-yellow1 > span {
     background: #FF1744; }
-    .button-purchase.is-green1 a span, .button-purchase.is-green2 a span, .button-purchase.is-yellow1 a span {
+    .button-purchase.is-green1 > a span,
+    .button-purchase.is-green1 > span span, .button-purchase.is-green2 > a span,
+    .button-purchase.is-green2 > span span, .button-purchase.is-yellow1 > a span,
+    .button-purchase.is-yellow1 > span span {
       color: #FFFFFF; }
-  .button-purchase.is-green1 a:before {
+  .button-purchase.is-green1 > a:before,
+  .button-purchase.is-green1 > span:before {
     background-image: url(../img/icon-status_green1.png); }
-  .button-purchase.is-green2 a:before {
+  .button-purchase.is-green2 > a:before,
+  .button-purchase.is-green2 > span:before {
     background-image: url(../img/icon-status_green2.png); }
-  .button-purchase.is-yellow1 a:before {
+  .button-purchase.is-yellow1 > a:before,
+  .button-purchase.is-yellow1 > span:before {
     background-image: url(../img/icon-status_yellow1.png); }
-  .button-purchase.is-yellow2 a:before {
+  .button-purchase.is-yellow2 > a:before,
+  .button-purchase.is-yellow2 > span:before {
     background-image: url(../img/icon-status_yellow2.png); }
-  .button-purchase.is-red a:before {
+  .button-purchase.is-red > a:before,
+  .button-purchase.is-red > span:before {
     background-image: url(../img/icon-status_red.png); }
 
 .l-followus {

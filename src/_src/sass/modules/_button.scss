@@ -5,7 +5,8 @@
   .list-calendar-information + & {
     margin-left: 10px;
   }
-  a {
+  > a,
+  > span {
     display: block;
     width: 100%;
     height: 34px;
@@ -39,7 +40,8 @@
   &.is-green1,
   &.is-green2,
   &.is-yellow1 {
-    a {
+    > a,
+    > span {
       background: $c_button_purchase_bg;
       span {
         color: $c_button_purchase_text;
@@ -47,21 +49,24 @@
     }
   }
   &.is-green1 {
-    a {
+    > a,
+    > span {
       &:before {
         background-image: url(../img/icon-status_green1.png);
       }
     }
   }
   &.is-green2 {
-    a {
+    > a,
+    > span {
       &:before {
         background-image: url(../img/icon-status_green2.png);
       }
     }
   }
   &.is-yellow1 {
-    a {
+    > a,
+    > span {
       &:before {
         background-image: url(../img/icon-status_yellow1.png);
       }
@@ -69,14 +74,16 @@
     }
   }
   &.is-yellow2 {
-    a {
+    > a,
+    > span {
       &:before {
         background-image: url(../img/icon-status_yellow2.png);
       }
     }
   }
   &.is-red {
-    a {
+    > a,
+    > span {
       &:before {
         background-image: url(../img/icon-status_red.png);
       }
