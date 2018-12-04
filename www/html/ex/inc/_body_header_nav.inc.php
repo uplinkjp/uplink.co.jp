@@ -3,16 +3,13 @@
 			
 			<section class="main-menu">
 			<ul>
-				<li class="movie"><a href="/movie/" title="上映">上映</a></li>
-				<li class="event"><a href="/event/" title="イベント">イベント</a></li>
-				<li class="map"><a href="/info/map/" title="地図">地図</a></li>
+				<li class="movie"><a href="http://shibuya.uplink.co.jp" title="渋谷" target="_blank">渋谷</a></li>
+				<li class="event"><a href="http://joji.uplink.co.jp" title="吉祥寺" target="_blank">吉祥寺</a></li>
 			</ul>
 			</section>
 			
 			<section class="others-menu">
 			<ul>
-				<li class="gallery"><a href="/gallery/" title="ギャラリー">ギャラリー</a></li>
-				<li class="market"><a href="/market/" title="マーケット">マーケット</a></li>
 				<li class="workshop"><a href="/workshop/" title="ワークショップ" target="_blank">ワークショップ</a></li>
 				<li class="cafe"><a href="/tabela/" title="カフェ" target="_blank">カフェ</a></li>
 				<li class="webshop"><a href="http://www.webdice.jp/" title="webDICE" target="_blank">webDICE</a></li>
@@ -23,8 +20,6 @@
 			<section class="guidance">
 				<ul class="clearfix">
 					<li><a href="/film/rental/" title="自主上映のご案内">自主上映</a></li>
-					<li><a href="/info/floorguide/" title="施設案内">施設案内</a></li>
-					<li><a href="/info/rental/" title="施設レンタル・企画募集">施設レンタル</a></li>
 					<li><a href="/info/pro/" title="DCP制作サービス">DCP制作サービス</a></li>
 				</ul>
 			</section>

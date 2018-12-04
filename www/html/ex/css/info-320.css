@@ -107,6 +107,11 @@
 	margin:0 0 25px 0;
 }
 
+#container.info #maincontents section.body section.contents h3 span.memberplan {
+	font-size:14px;
+}
+
+
 /*info*/
 #container.info #maincontents section.body img.logo {
 	width:120px;

@@ -84,6 +84,10 @@
 	width:200px;
 	height:140px;
 }
+#container.film.list #maincontents section.posts article.post figure img {
+	width:200px;
+	height: auto;
+}
 #container.film.list #maincontents section.posts article.post p {
 	margin:0 0 25px 0;
 	font-size:16px;
