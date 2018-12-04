@@ -27,12 +27,12 @@ body {
 }
 #pagewidth header nav .main-menu{
 	margin:0 0 0 0;
-	width:346px;
+	width:313px;
 	float:left;
 }
 #pagewidth header nav .main-menu ul li{
 	float:left;
-	margin:0 4px 0 0;
+	margin:0 3px 0 0;
 }
 #pagewidth header nav .main-menu ul li.map{
 	margin:0 0 0 0;
@@ -43,29 +43,27 @@ body {
 	text-align:center;
 	line-height:40px;
 	color:#FFF;
-	width:167px;
+	width:102px;
 	height:40px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
 }
 #pagewidth header nav .main-menu ul li.movie a{
-	background:#64276A;
-	color:#A4DE9A;
+	background:#3B8D51;
 }
 #pagewidth header nav .main-menu ul li.event a{
-	background:#A4DE9A;
-	color:#64276A;
+	background:#536A9D;
 }
 #pagewidth header nav .main-menu ul li.map a{
 	background:#856D45;
 		font-size:12px;
 }
 #pagewidth header nav .main-menu ul li.movie a:hover{
-	background:#3D1742;
+	background:#1D6F33;
 }
 #pagewidth header nav .main-menu ul li.event a:hover{
-	background:#7EAB76;
+	background:#354C7F;
 }
 #pagewidth header nav .main-menu ul li.map a:hover{
 	background:#674F27;
@@ -77,10 +75,19 @@ body {
 #pagewidth header nav .others-menu ul li{
 	float:left;
 	margin:0 4px 0 0;
-	width:133px;
+	width:93px;
 	height:40px;
 }
+#pagewidth header nav .others-menu ul li.workshop{
+	width:115px;
+}
+#pagewidth header nav .others-menu ul li.cafe{
+	width:80px;
+}
+#pagewidth header nav .others-menu ul li.webshop{
+}
 #pagewidth header nav .others-menu ul li.film{
+	width:80px;
 	margin:0 0 0 0;
 }
 #pagewidth header nav .others-menu ul li a{
@@ -257,6 +264,7 @@ a.gsst_a{
 	line-height:24px;
 	height:22px !important;
 }
+
 aside.search{
 	background:#FFF;
 	padding:5px 10px;
