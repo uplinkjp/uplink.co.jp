@@ -19,4 +19,14 @@ get_template_part( 'partials/header' )?>
   </div>
 </div>
 
+<script>
+(function() {
+var cx = '011475598064287174110:tkrdki_mq-m';
+var gcse = document.createElement('script'); gcse.type = 'text/javascript'; gcse.async = true;
+gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+  '//www.google.com/cse/cse.js?cx=' + cx;
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(gcse, s);
+})();
+</script>
+
 <?php get_template_part( 'partials/footer' );
