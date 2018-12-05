@@ -3,6 +3,8 @@
 $args = $wp_query->query_vars;
 $sticky_posts = get_option( 'sticky_posts' );
 
+echo '<pre>';print_r($args);echo '</pre>';exit;
+
 if ( $sticky_posts )
 {
 
@@ -18,6 +20,7 @@ if ( $sticky_posts )
   {
     $args = array_merge( $args, array(
       'post__not_in' => $sticky_posts,
+      'paged' => $args['paged'] - 1,
     ));
   }
 
