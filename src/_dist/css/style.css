@@ -1750,7 +1750,7 @@ textarea {
   max-width: 640px;
   margin: 0 auto;
   padding: 20px 0;
-  line-height: 1.5; }
+  line-height: 1.625; }
   .l-wysiwyg p, .l-wysiwyg div, .l-wysiwyg table, .l-wysiwyg ul, .l-wysiwyg ol {
     margin-bottom: 20px; }
     .l-wysiwyg p:last-child, .l-wysiwyg div:last-child, .l-wysiwyg table:last-child, .l-wysiwyg ul:last-child, .l-wysiwyg ol:last-child {
