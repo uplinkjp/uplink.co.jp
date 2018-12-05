@@ -61,20 +61,20 @@
 <nav class="l-nav">
   <div class="nav-inner">
     <div class="nav-shibuya">
-      <a href="https://shibuya.uplink.co.jp">
+      <a href="https://shibuya.uplink.co.jp" target="_blank">
         <img src="/wp/wp-content/themes/uplink/img/logo-shibuya.png" width="142" alt="UPLINK 渋谷" />
         <span>CINEMA—SHIBUYA</span>
       </a>
     </div>
     <div class="nav-joji">
-      <a href="https://joji.uplink.co.jp">
+      <a href="https://joji.uplink.co.jp" target="_blank">
         <img src="/wp/wp-content/themes/uplink/img/logo-joji.png" width="165" alt="UPLINK 吉祥寺" />
         <span>CINEMA—KICHIJOJI</span>
       </a>
     </div>
     <div class="nav-wrap_pc">
       <div class="nav-related">
-        <a href="http://www.uplink.co.jp/cloud">
+        <a href="http://www.uplink.co.jp/cloud" target="_blank">
           <img src="/wp/wp-content/themes/uplink/img/logo-cloud.png" width="118" alt="UPLINK Cloud" />
           <span>ONLINE CINEMA</span>
         </a>
@@ -121,7 +121,7 @@ if ($news_query->have_posts()):
 
   $news_query->the_post();
 
-  ?><li><a href="">
+  ?><li><a href="<?php the_permalink()?>" target="_blank">
     <div class="list-news-inner">
       <p class="list-news-date"><?php echo get_the_date( $d = 'Y.m.d' )?><?php if(is_new()):?><span>NEW</span><?php endif?></p>
       <p class="list-news-text"><?php the_title()?></p>
@@ -129,7 +129,7 @@ if ($news_query->have_posts()):
   </a></li><?php endwhile?>
 
 </ul>
-    <p class="list-readmore"><a href="/news">お知らせ一覧</a></p>
+    <p class="list-readmore"><a href="/news" target="_blank">お知らせ一覧</a></p>
   </section>
 <?php endif?>
 
@@ -149,7 +149,7 @@ if ($news_query->have_posts()):
       </li>
       <li>
         <div class="nav-related">
-          <a href="/workshop">
+          <a href="/workshop" target="_blank">
             <p>配給・デジタルムービーを学ぶ</p>
             <span>WORKSHOP</span>
           </a>
@@ -157,7 +157,7 @@ if ($news_query->have_posts()):
       </li>
       <li>
         <div class="nav-related">
-          <a href="/film/">
+          <a href="/film/" target="_blank">
             <p>アップリンクの配給する映画</p>
             <span>FILMS</span>
           </a>
@@ -165,7 +165,7 @@ if ($news_query->have_posts()):
       </li>
       <li>
         <div class="nav-related">
-          <a href="/film/rental/">
+          <a href="/film/rental/" target="_blank">
             <p>自主上映のご案内</p>
             <span>FILM RENTAL</span>
           </a>
@@ -173,7 +173,7 @@ if ($news_query->have_posts()):
       </li>
       <li>
         <div class="nav-related">
-          <a href="/info/pro/">
+          <a href="/info/pro/" target="_blank">
             <p>DCP制作サービス</p>
             <span>PRO SERVICE</span>
           </a>
@@ -189,7 +189,7 @@ if ($news_query->have_posts()):
       </li>
       <li>
         <div class="nav-related">
-          <a href="/tabela/">
+          <a href="/tabela/" target="_blank">
             <img src="/wp/wp-content/themes/uplink/img/logo-tabela.png" width="99" alt="Tabela">
             <span>CAFE & RESTAURANT</span>
           </a>
@@ -210,7 +210,7 @@ if ($news_query->have_posts()):
     </div>
     <div class="followus-box">
       <h2 class="followus-heading">SUBSCRIBE</h2>
-      <a href="/info/mailmagazine/">メールマガジン登録</a>
+      <a href="/info/mailmagazine/" target="_blank">メールマガジン登録</a>
     </div>
   </div>
 </section>
@@ -220,11 +220,11 @@ if ($news_query->have_posts()):
   <h2 class="footer-logo"><img src="/wp/wp-content/themes/uplink/img/logo-footer.png" alt="UPLINK"></h2>
   <nav class="footer-nav">
     <ul>
-      <li><a href="/info/">UPLINKについて</a></li>
-      <li><a href="/news/recruit/">採用情報</a></li>
-      <li><a href="/info/map/">地図・お問合せ</a></li>
-      <li><a href="/info/privacypolicy/">個人情報の取り扱い</a></li>
-      <li><a href="/info/information_en/">English Information</a></li>
+      <li><a href="/info/" target="_blank">UPLINKについて</a></li>
+      <li><a href="/news/recruit/" target="_blank">採用情報</a></li>
+      <li><a href="/info/map/" target="_blank">地図・お問合せ</a></li>
+      <li><a href="/info/privacypolicy/" target="_blank">個人情報の取り扱い</a></li>
+      <li><a href="/info/information_en/" target="_blank">English Information</a></li>
     </ul>
   </nav>
   <p class="footer-copy">2018 UPLINK, LTD.</p>
