@@ -3,8 +3,6 @@
 $args = $wp_query->query_vars;
 $sticky_posts = get_option( 'sticky_posts' );
 
-echo '<pre>';print_r($args);echo '</pre>';exit;
-
 if ( $sticky_posts )
 {
 
