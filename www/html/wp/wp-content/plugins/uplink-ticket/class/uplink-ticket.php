@@ -59,6 +59,7 @@ class uplinkTicket
     $theater = $this->fetch_theaters($slug);
 
     if (!$theater) return;
+    if (!$theaters->screens) return;
 
     return array_filter( $theaters->screens, function($screen) use ($theater)
     {
@@ -173,7 +174,7 @@ class uplinkTicket
 
     if ($this->time_status($program) === 'notyet')
     {
-      return '販売前';
+      return '販売開始前';
     }
 
     if ($this->time_status($program) === 'door')
@@ -248,23 +249,33 @@ class uplinkTicket
   private function status_class( $program )
   {
 
+    $classes = array();
+
     $limit_status = $this->limit_status($program);
     $time_status = $this->time_status($program);
 
-    if( $limit_status === 'over' || $time_status === 'over' || $time_status === 'notyet' )
+    if( $limit_status === 'over' || $time_status === 'over' )
     {
-      return 'red';# ×　0%
+      $classes[] = 'is-over';# ×　0%
+    }
+    elseif( $time_status === 'notyet' )
+    {
+      $classes[] = 'is-notyet';
     }
     elseif( $limit_status === 'danger' )
     {
-      return 'yellow2';# △　1～39%
+      $classes[] = 'is-yellow2';# △　1～39%
     }
     elseif( $limit_status === 'warning' )
     {
-      return 'green2';# ○　40～69%
+      $classes[] = 'is-green2';# ○　40～69%
     }
-
-    return 'green1';# ◎　70～100%
+    else
+    {
+      $classes[] = 'is-green1';# ◎　70～100%
+    }
+    
+    return implode(' ', $classes);
 
   }
 

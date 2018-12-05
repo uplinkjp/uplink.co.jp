@@ -80,7 +80,7 @@
         </a>
       </div>
       <div class="nav-default">
-        <a href="https://rsv.uplink.co.jp" target="_blank">
+        <a href="/info/member/" target="_blank">
           <p>アップリンク会員について</p>
           <span>MEMBERSHIP</span>
         </a>

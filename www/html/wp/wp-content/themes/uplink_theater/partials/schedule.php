@@ -33,7 +33,7 @@ $time = strtotime($date);
             <p class="list-calendar-date"><?php echo date('H:i', $timeline->startTime / 1000 + (9 * 60 * 60))?><span>—<?php echo date('H:i', $timeline->endTime / 1000 + (9 * 60 * 60))?></span></p>
             <?php if($timeline->remark):?><p class="list-calendar-text"><?php echo nl2br($timeline->remark)?></p><?php endif?>
           </div>
-          <p class="button-purchase is-<?php echo $timeline->class?>"><?php if( $timeline->limit_status !== 'over' && $timeline->time_status !== 'over' && $timeline->time_status !== 'notyet' ):?><a href="<?php echo $timeline->permalink?>" target="_blank"><span><?php echo $timeline->status_label?></span></a><?php else:?><span><span><?php echo $timeline->status_label?></span></span><?php endif?></p>
+          <p class="button-purchase <?php echo $timeline->class?>"><?php if( $timeline->limit_status !== 'over' && $timeline->time_status !== 'over' && $timeline->time_status !== 'notyet' ):?><a href="<?php echo $timeline->permalink?>" target="_blank"><span><?php echo $timeline->status_label?></span></a><?php else:?><span><span><?php echo $timeline->status_label?></span></span><?php endif?></p>
         </div>
         <?php endforeach?>
       </article>

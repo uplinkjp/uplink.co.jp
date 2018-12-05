@@ -177,8 +177,19 @@ a:hover,
   .button-purchase.is-yellow2 > a:before,
   .button-purchase.is-yellow2 > span:before {
     background-image: url(../img/icon-status_yellow2.png); }
-  .button-purchase.is-red > a:before,
-  .button-purchase.is-red > span:before {
+  .button-purchase.is-notyet > a,
+  .button-purchase.is-notyet > span {
+    padding: 0; }
+    .button-purchase.is-notyet > a > span,
+    .button-purchase.is-notyet > span > span {
+      width: 116%;
+      opacity: 0.32;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=32)"; }
+    .button-purchase.is-notyet > a:before,
+    .button-purchase.is-notyet > span:before {
+      display: none; }
+  .button-purchase.is-over > a:before,
+  .button-purchase.is-over > span:before {
     background-image: url(../img/icon-status_red.png); }
 
 .l-followus {

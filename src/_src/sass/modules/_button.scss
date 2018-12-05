@@ -81,7 +81,30 @@
       }
     }
   }
-  &.is-red {
+  // &.is-red {
+  //   > a,
+  //   > span {
+  //     &:before {
+  //       background-image: url(../img/icon-status_red.png);
+  //     }
+  //   }
+  // }
+  
+  &.is-notyet {
+    > a,
+    > span {
+      padding: 0;
+      > span {
+        width: 116%;
+        opacity: 0.32;
+      }
+      &:before {
+        display: none;
+        // background-image: url(../img/icon-status_green2.png);
+      }
+    }
+  }
+  &.is-over {
     > a,
     > span {
       &:before {
@@ -89,6 +112,7 @@
       }
     }
   }
+
 
 
 }
