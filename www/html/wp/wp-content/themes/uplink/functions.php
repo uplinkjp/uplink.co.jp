@@ -1,5 +1,7 @@
 <?php
 
+remove_action('template_redirect', 'redirect_canonical');
+
 require_once 'functions/init.php';
 require_once 'functions/posttype.php';
 require_once 'functions/taxonomy.php';

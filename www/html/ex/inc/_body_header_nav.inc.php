@@ -21,6 +21,7 @@
 				<ul class="clearfix">
 					<li><a href="/film/rental/" title="自主上映のご案内">自主上映</a></li>
 					<li><a href="/info/pro/" title="DCP制作サービス">DCP制作サービス</a></li>
+					<li><a href="/info/member/" title="アップリンク会員">アップリンク会員</a></li>
 				</ul>
 			</section>
 			
