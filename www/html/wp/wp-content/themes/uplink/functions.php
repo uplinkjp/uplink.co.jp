@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Asia/Tokyo');
+
 remove_action('template_redirect', 'redirect_canonical');
 
 require_once 'functions/init.php';
