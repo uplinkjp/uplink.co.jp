@@ -8,6 +8,9 @@
 <div class="l-wrap">
 
 <section class="l-archive">
+
+  <?php if (!is_paged()):?>
+
   <h2 id="nowplaying" class="section-heading">
     公開中の作品
     <span>NOW PLAYING</span>
@@ -71,6 +74,43 @@
     endwhile?>
 
   </div>
+
+  <?php
+
+  else:
+
+  $args = $wp_query->query_vars;
+  $args = array_merge($args, array(
+    'post_type'       => 'movie',
+    'paged'           => $args['paged'] - 1,
+    'tax_query'       => array(
+      array(
+        'taxonomy'    => 'movie_status',
+        'field'       => 'slug',
+        'terms'       => array( 'nowshowing', 'comingsoon' ),
+        'operator'    => 'NOT IN',
+      ),
+    ),
+  ));
+
+  $q = new WP_Query( $args );
+
+  ?>
+
+  <div class="list_archive">
+
+  <?php
+  while( $q->have_posts() ):
+  $q->the_post();
+
+  get_template_part( 'partials/loop', 'panel' );
+
+  endwhile?>
+
+  </div>
+
+  <?php endif?>
+
 </section>
 
 <?php wp_paginate()?>
