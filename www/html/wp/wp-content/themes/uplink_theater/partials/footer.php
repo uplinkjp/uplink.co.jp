@@ -21,15 +21,15 @@
   <h2 class="footer-logo"><img src="<?php echo get_template_directory_uri()?>/img/logo-footer.png" alt="UPLINK"></h2>
   <nav class="footer-nav">
     <ul>
-      <li><a href="/info/" title="会社概要" target="_blank">会社概要</a></li>
-      <li><a href="/news/" title="お知らせ" target="_blank">お知らせ</a></li>
-      <li><a href="/news/recruit/" title="採用" target="_blank">採用</a></li>
-      <li><a href="/info/map/" title="お問合せ" target="_blank">お問合せ</a></li>
-      <li><a href="/info/member/" title="アップリンク会員について" target="_blank">アップリンク会員について</a></li>
-      <li><a href="/info/userpolicy/" title="アップリンク会員規約" target="_blank">アップリンク会員規約</a></li>
-      <li><a href="/info/specific/" title="特定商取引法に基づく表記" target="_blank">特定商取引法に基づく表記</a></li>
-      <li><a href="/info/privacypolicy/" title="個人情報の取り扱い" target="_blank">個人情報の取り扱い</a></li>
-      <li><a href="/info/information_en/" title="English information" target="_blank">English information</a></li>
+      <li><a href="<?php echo parent_url('/info/')?>" title="会社概要" target="_blank">会社概要</a></li>
+      <li><a href="<?php echo parent_url('/news/')?>" title="お知らせ" target="_blank">お知らせ</a></li>
+      <li><a href="<?php echo parent_url('/news/recruit/')?>" title="採用" target="_blank">採用</a></li>
+      <li><a href="<?php echo parent_url('/info/map/')?>" title="お問合せ" target="_blank">お問合せ</a></li>
+      <li><a href="<?php echo parent_url('/info/member/')?>" title="アップリンク会員について" target="_blank">アップリンク会員について</a></li>
+      <li><a href="<?php echo parent_url('/info/userpolicy/')?>" title="アップリンク会員規約" target="_blank">アップリンク会員規約</a></li>
+      <li><a href="<?php echo parent_url('/info/specific/')?>" title="特定商取引法に基づく表記" target="_blank">特定商取引法に基づく表記</a></li>
+      <li><a href="<?php echo parent_url('/info/privacypolicy/')?>" title="個人情報の取り扱い" target="_blank">個人情報の取り扱い</a></li>
+      <li><a href="<?php echo parent_url('/info/information_en/')?>" title="English information" target="_blank">English information</a></li>
     </ul>
   </nav>
   <p class="footer-copy">2018 UPLINK, LTD.</p>
