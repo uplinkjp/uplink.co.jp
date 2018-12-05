@@ -28,7 +28,7 @@
         </a>
       </div>
       <div class="nav-cafe">
-        <a href="<?php echo home_url('tabela')?>">
+        <a href="<?php echo home_url('tabela')?>" target="_blank">
           <p>カフェ</p>
           <span>CAFE</span>
         </a>
