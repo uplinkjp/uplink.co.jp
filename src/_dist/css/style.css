@@ -1709,6 +1709,26 @@ textarea {
     .slick-dots li.slick-active button {
       background: rgba(0, 0, 0, 0.87); }
 
+.l-theaterlink {
+  padding: 0 15px;
+  margin: 20px 0; }
+  .l-theaterlink > a {
+    padding: 40px 15px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 0;
+    text-indent: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140px; }
+  .l-theaterlink.is-shibuya a {
+    background-color: #64276A;
+    background-image: url(../img/logo-shibuya.png); }
+  .l-theaterlink.is-joji a {
+    background-color: #A4DE9A;
+    background-image: url(../img/logo-joji.png); }
+
 .l-wrap {
   box-sizing: border-box;
   margin: 0 auto; }

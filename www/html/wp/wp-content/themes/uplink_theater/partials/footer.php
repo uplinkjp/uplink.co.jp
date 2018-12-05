@@ -1,3 +1,5 @@
+  <?php get_template_part('partials/theaterlink', get_uplink_site())?>
+
   <section class="l-followus">
     <div class="followus-inner">
       <div class="followus-box">

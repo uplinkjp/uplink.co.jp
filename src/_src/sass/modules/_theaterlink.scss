@@ -1,0 +1,23 @@
+.l-theaterlink {
+  padding: 0 $padding_wrap;
+  margin: 20px 0;
+  > a {
+    padding: 40px 15px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 0;
+    text-indent: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140px;
+  }
+  &.is-shibuya a {
+    background-color: $c_header_bg_shibuya;
+    background-image: url(../img/logo-shibuya.png);
+  }
+  &.is-joji a {
+    background-color: $c_header_bg_joji;
+    background-image: url(../img/logo-joji.png);
+  }
+}
