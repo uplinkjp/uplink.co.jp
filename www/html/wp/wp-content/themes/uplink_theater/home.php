@@ -67,7 +67,7 @@ get_template_part( 'partials/header' )?>
       </ul>
     </div>
     <?php get_template_part( 'partials/schedule', 'top' )?>
-    <p class="list-readmore"><a href="<?php echo home_url( 'schedule' )?>#<?php echo date('Ymd', strtotime('+ 2 days'))?>">今月のスケジュール</a></p>
+    <p class="list-readmore"><a href="<?php echo home_url( 'schedule' )?>#<?php echo date('Ymd', time())?>">今月のスケジュール</a></p>
   </section>
 
 <?php get_template_part( 'partials/footer' );
