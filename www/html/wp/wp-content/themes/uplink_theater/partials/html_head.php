@@ -12,4 +12,6 @@
   <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/img/icon/uplink_<?php echo get_uplink_site()?>/apple-touch-icon.png" sizes="180x180">
 
   <?php wp_head()?>
+
+  <?php get_template_part('partials/gtag', get_uplink_site())?>
 </head>
