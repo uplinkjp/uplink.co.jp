@@ -7,13 +7,13 @@
 			<nav id="pan">
 				<p><a href="/">ホーム</a> &#8250; <em>イベント</em></p>
 			</nav>
-			
+
 			<!-- posts str -->
 			<section class="posts">
 				<header class="contents-title">
 					<h1>イベント</h1>
 				</header>
-				
+
 				<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 				<!-- post str -->
@@ -46,13 +46,13 @@
 
 			</section>
 			<!-- posts end -->
-			
+
 			<nav id="pager">
 				<?php if(function_exists('wp_pagenavi')) { wp_pagenavi(); } ?>
 			</nav>
 		</div>
 		<!-- maincontents end -->
-		
+
 <?php get_sidebar(); ?>
 
 	</div>

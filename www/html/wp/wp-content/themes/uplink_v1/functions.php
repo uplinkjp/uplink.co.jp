@@ -5,12 +5,32 @@ add_filter( 'show_admin_bar', '__return_false' );
 //サムネ有効化
 add_theme_support( 'post-thumbnails' );
 
+if (!function_exists('is_new'))
+{
+  function is_new( $post_id = null, $duration = null )
+  {
+
+    if (!$post_id) $post_id = get_the_ID();
+
+    if (!$duration) $duration = 14 * 24 * 60 * 60;// 二週間
+
+    $expire_time = (int)get_the_date( 'U', $post_id ) + $duration;
+
+    $now = time();
+
+    return $now < $expire_time;
+
+  }
+}
+
+
+
 
 //カスタム投稿タイプでaddquicktagを使う
 add_filter( 'addquicktag_post_types', 'my_addquicktag_post_types' );
 /**
  * Return array $post_types with custom post types
- * 
+ *
  * @param   $post_type Array
  * @return  $post_type Array
  */
@@ -262,9 +282,9 @@ function my_meta_box() {
 	echo '<p><strong style="color:#F00;">■本文以外の箇所でHTML、改行は不可</strong><br />
 	テキストエリア以外のフォームにデータベースとしてHTMLが入るのは好ましくありません。<br />
 	改行は丁度いいところで改行したつもりでも回覧者の環境（ブラウザ・OS）によって異なります。</p>
-	
+
 	<hr>
-	
+
 	<p><strong>■YOUTUBE、ニコニコ動画、VimeoはURLを書くだけでプレイヤーが表示されます</strong><br />
 http://www.youtube.com/＊＊＊<br />
 http://www.nicovideo.jp/watch/＊＊＊<br />
@@ -399,7 +419,7 @@ function wp_embed_handler_nicovideo( $matches, $attr, $url, $rawattr ) {
         $vid,
         esc_attr($matches[0])
         );
- 
+
     $embed .= "<script type=\"text/javascript\">
 jQuery(function(){
     var output = [];
@@ -450,10 +470,10 @@ remove_action('wp_head','start_post_rel_link',10);
 remove_action('wp_head','adjacent_posts_rel_link_wp_head',10);
 
 // Get the featured image URL - singleページ用 facebook OGP用
-function get_featured_image_url() { 
+function get_featured_image_url() {
     $image_id = get_post_thumbnail_id();
-    $image_url = wp_get_attachment_image_src($image_id,'large', true); 
-    echo $image_url[0]; 
+    $image_url = wp_get_attachment_image_src($image_id,'large', true);
+    echo $image_url[0];
 }
 
 //リダイレクト阻止　filmディレクトリ静的ページ共存

@@ -1,4 +1,4 @@
-<?php require $_SERVER['DOCUMENT_ROOT'] . ("/ex/inc/_head_meta.inc.php"); ?>	
+<?php require $_SERVER['DOCUMENT_ROOT'] . ("/ex/inc/_head_meta.inc.php"); ?>
 <?php require $_SERVER['DOCUMENT_ROOT'] . ("/ex/inc/_head_linkfile.inc.php");?>
 
 	<!-- index-slider str -->
@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/ex/css/index.css?t=20180123" type="text/css" />
 	<link rel="stylesheet" href="/ex/css/index-320.css?t=20180123" media="screen and (max-width: 480px)" />
 	<!-- index-slider end -->
-	
+
 	<title><?php bloginfo('name'); ?></title>
 	<meta property="og:image" content="http://www.uplink.co.jp/ex/img/uplink_img_og.gif" />
 	<meta name="Description" content="東京都渋谷区。映画の配給および製作・ビデオ化などの関連事業。会社沿革、作品や直営映画館の紹介。" />

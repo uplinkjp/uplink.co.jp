@@ -1,4 +1,11 @@
 <?php
+
+if (defined('UPLINK_FORCE_RENEW'))
+{
+	include( WP_CONTENT_DIR . '/themes/uplink/home-tmp.php' );
+	exit;
+}
+
 /* Template Name: トップページhome */
 get_header('home');
 
@@ -9,7 +16,7 @@ include('cinra-css.php');
 			<?php echo post_custom('page_1'); ?>
 		</div>
 		<?php endif; ?>
-		
+
 	</header>
 	<!-- header end -->
 
@@ -17,14 +24,14 @@ include('cinra-css.php');
 		<a href="http://www.uplink.co.jp/cloud/" target="_blank" class="pc"><img src="/ex/img/cloud_banner.jpg" width="950" height="120" alt=""/></a>
 		<a href="http://www.uplink.co.jp/cloud/" target="_blank" class="sp"><img src="/ex/img/cloud_banner_sp.jpg" alt=""/></a>
 	</div> -->
-	
+
 		<div id="cloud" class="clearfix">
 		<div class="cloudplango"><a href="http://www.uplink.co.jp/cloud/" target="_blank" class="pc"><img src="/ex/img/uplinkcloud_banner.jpg" width="473" height="120" alt=""/></a></div>
 		<div class="cloudplango"><a href="http://plango.uplink.co.jp/" target="_blank" class="pc"><img src="/ex/img/plango_banner.jpg" width="473" height="120" alt=""/></a></div>
 		<a href="http://www.uplink.co.jp/cloud/" target="_blank" class="sp"><img src="/ex/img/uplinkcloud_banner_sp.jpg" alt=""/></a>
 		<a href="http://plango.uplink.co.jp/" target="_blank" class="sp"><img src="/ex/img/plango_banner-sp.jpg" alt=""/></a>
 	</div>
-	
+
 	<div id="news" class="clearfix">
 		<section>
 			<h1><a href="/news">お知らせ</a></h1>
@@ -57,8 +64,8 @@ include('cinra-css.php');
 			</dl>
 		</section>
 	</div>
-	
-	
+
+
 	<div id="calendar">
 		<article>
 			<h1><a href="<?php bloginfo('url')?>/schedule/">今日と明日のスケジュール</a></h1>
@@ -70,17 +77,17 @@ include('cinra-css.php');
 					<li class="market">マーケット</li>
 				</ul>
 			</nav>
-			
+
 			<div id="schedule-table">
 
 				<?php echo (file_get_contents("http://ticket.uplink.co.jp/api/schedule"))?>
 
 			</div>
-			
+
 			<footer><a href="<?php bloginfo('url')?>/schedule/">今月のカレンダー</a></footer>
 		</article>
 	</div>
-	
+
 
 </div>
 <!-- pagewidth end -->
