@@ -107,7 +107,7 @@
 
 $news_query = new WP_Query( array(
   'post_type'         => 'news',
-  'posts_per_page'    => 10,
+  'posts_per_page'    => 5,
 ));
 
 if ($news_query->have_posts()):

@@ -106,6 +106,8 @@ class uplinkTicket
 
     }
 
+    if (!$theaters) return null;
+
     if (!$slug) return $theaters;
 
     foreach( $theaters->theaters as $theater )
