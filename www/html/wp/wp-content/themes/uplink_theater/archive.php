@@ -1,25 +1,31 @@
 <?php
 
 $args = $wp_query->query_vars;
-$sticky_posts = get_option( 'sticky_posts' );
 
-if ( $sticky_posts )
+if (!is_tag())
 {
 
-  if (!is_paged())
+  $sticky_posts = get_option( 'sticky_posts' );
+
+  if ( $sticky_posts )
   {
-    $args = array_merge( $args, array(
-      'post__in'              => $sticky_posts,
-      'posts_per_page'        => 9999,
-      'ignore_sticky_posts'   => 1
-    ));
-  }
-  else
-  {
-    $args = array_merge( $args, array(
-      'post__not_in' => $sticky_posts,
-      'paged' => $args['paged'] - 1,
-    ));
+
+    if (!is_paged())
+    {
+      $args = array_merge( $args, array(
+        'post__in'              => $sticky_posts,
+        'posts_per_page'        => 9999,
+        'ignore_sticky_posts'   => 1
+      ));
+    }
+    else
+    {
+      $args = array_merge( $args, array(
+        'post__not_in' => $sticky_posts,
+        'paged' => $args['paged'] - 1,
+      ));
+    }
+
   }
 
 }
