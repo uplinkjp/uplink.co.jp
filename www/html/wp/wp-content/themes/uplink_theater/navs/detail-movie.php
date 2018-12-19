@@ -14,7 +14,7 @@
       </a>
       <a href="<?php echo home_url('movie#commingsoon')?>">
         <p>近日公開の作品</p>
-        <span>COMMING SOON</span>
+        <span>COMING SOON</span>
       </a>
       <a href="<?php echo home_url('schedule')?>">
         <p>今月のスケジュール</p>
