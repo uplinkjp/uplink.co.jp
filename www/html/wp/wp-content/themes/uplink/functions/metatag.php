@@ -76,7 +76,7 @@ class WP_Metatag
       $meta['title'] = get_the_title() . $sep . get_bloginfo( 'sitename' );
       $meta['description'] = get_field( 'meta_description' ) ? : $meta['description'];
       $meta['og_description'] = get_field( 'meta_description' ) ? : $meta['og_description'];
-      if ($image = get_field('image_main')) $meta['image'] = get_img($image, 'large');
+      if (have_img()) $meta['image'] = get_the_post_thumbnail_url(null, 'large');
     }
 
     $meta = apply_filters( 'cts_set_metatags', $meta );
