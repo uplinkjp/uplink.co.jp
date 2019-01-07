@@ -74,8 +74,8 @@ class WP_Metatag
     if (is_single())
     {
       $meta['title'] = get_the_title() . $sep . get_bloginfo( 'sitename' );
-      $meta['description'] = get_field( 'meta_description' ) ? : $meta['description'];
-      $meta['og_description'] = get_field( 'meta_description' ) ? : $meta['og_description'];
+      $meta['description'] = get_field('date_description') ? : $meta['description'];
+      $meta['og_description'] = get_field('date_description') ? : $meta['og_description'];
       if (have_img()) $meta['image'] = get_the_post_thumbnail_url(null, 'large');
     }
 
