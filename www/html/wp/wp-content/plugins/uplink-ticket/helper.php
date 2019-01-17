@@ -117,15 +117,15 @@ if (!function_exists('get_uplink_programs_by_date'))
 
               if( !$post )
               {
-                $post = get_posts(array(
-                  'post_type'   => $post_types,
-                  'meta_key'    => 'movie_id',
-                  'meta_value'  => $program->movieId
-                ));
+
+                $post_id = get_uplink_post_id( $program->movieId );
+
+                if (!$post_id) continue;
+
+                $post = get_post($post_id);
 
                 if ($post)
                 {
-                  $post = reset($post);
                   set_transient( $post_cache_path, $post, 30 * 60);
                 }
               }
@@ -149,6 +149,19 @@ if (!function_exists('get_uplink_programs_by_date'))
     }
 
     return $programs;
+
+  }
+
+}
+
+if (!function_exists('get_uplink_post_id'))
+{
+
+  function get_uplink_post_id( $movie_id )
+  {
+
+    global $wpdb;
+    return $wpdb->get_var( 'SELECT post_id FROM ' . TICKET_INDEX_TABLE . ' WHERE movie_id = ' . $movie_id );
 
   }
 
