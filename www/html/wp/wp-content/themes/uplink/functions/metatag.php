@@ -94,7 +94,7 @@ class WP_Metatag
     if ($meta['fb:app_id']) set_meta_data('fb:app_id', $meta['fb:app_id'], 'property');
 
     set_meta_data('twitter:card', 'summary_large_image');
-    set_meta_data('twitter:title', $meta['sitename']);
+    set_meta_data('twitter:title', $meta['title']);
     set_meta_data('twitter:image', $meta['image']);
     if ($meta['twitter:site']) set_meta_data('twitter:site', $meta['twitter:site']);
     set_meta_data('twitter:description', $meta['description'] ?: '');
