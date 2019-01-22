@@ -28,6 +28,9 @@ vendor
 
 ## Independents
 
+/html/beuys/*
+/html/signage/*
+
 /html/htdig
 /html/_log/*
 /html/_tabela/*
