@@ -57,7 +57,7 @@ get_template_part( 'partials/header' )?>
 
 <?php
 wp_reset_query();
-wp_paginate();
+# wp_paginate();
 ?>
 
 <?php get_template_part( 'partials/footer' );
