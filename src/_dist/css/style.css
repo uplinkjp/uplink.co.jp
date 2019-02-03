@@ -2026,6 +2026,9 @@ textarea {
     .single-header {
       display: -ms-flexbox;
       display: flex; } }
+  .single-header .tw-like {
+    margin-top: 5px;
+    display: inline-block; }
 
 .single-header-infornation {
   background: #fff;

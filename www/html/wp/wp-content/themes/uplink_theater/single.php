@@ -23,6 +23,8 @@ get_template_part( 'partials/header' )?>
         <?php foreach( $tags as $tag ):?><a href="<?php echo get_term_link($tag)?>">#<?php echo $tag->name?></a><?php endforeach?>
       </div><?php endif?>
       <div class="fb-like" data-href="<?php the_permalink()?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      <div class="tw-like"><a class="twitter-share-button"
+        href="<?php the_permalink()?>"></a></div>
     </div>
     <?php if( have_img() ):?><div class="single-header-thumb">
       <span>
