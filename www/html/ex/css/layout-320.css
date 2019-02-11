@@ -41,7 +41,7 @@ body {
 }
 #pagewidth header nav .main-menu ul li{
 	margin:0 1% 0 0;
-	width:32.66666666666667%;
+	width:49%;
 }
 #pagewidth header nav .main-menu ul li a{
 	display:block;
@@ -60,7 +60,7 @@ body {
 }
 #pagewidth header nav .others-menu{
 	width:100%;
-	height: 63px;
+	height: 33px;
 	clear:both;
 }
 #pagewidth header nav .others-menu ul{
@@ -76,25 +76,23 @@ body {
 	line-height:30px;
 }
 #pagewidth header nav .others-menu ul li.gallery{
-	width:32.666%;
+	width:24%;
 }
 #pagewidth header nav .others-menu ul li.market{
-	width:32.666%;
+	width:24%;
 }
 #pagewidth header nav .others-menu ul li.workshop{
-	margin:0 0 0 0;
-	width:32.666%;
+	width:24%;
 }
 #pagewidth header nav .others-menu ul li.cafe{
-	width:32.666%;
-	clear:both;
+	width:24%;
 }
 #pagewidth header nav .others-menu ul li.webshop{
-	width:32.666%;
+	width:24%;
 }
 #pagewidth header nav .others-menu ul li.film{
 	margin:0 0 0 0;
-	width:32.666%;
+	width:24%;
 }
 #pagewidth header nav .others-menu ul li a{
 	display:block;

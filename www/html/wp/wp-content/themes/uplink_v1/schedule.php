@@ -26,50 +26,14 @@ $month += 0;
 	<!-- header end -->
 
 	<div id="calendar" class="schedule">
-		<article>
-			<h1><a href="/schedule/"><?php echo $year?>年<?php echo $month?>月のスケジュール</a></h1>
-
-			<nav>
-				<ul class="clearfix">
-					<li class="movie">上映</li>
-					<li class="event">イベント</li>
-					<li class="gallery">ギャラリー</li>
-					<li class="market">マーケット</li>
-				</ul>
-			</nav>
-
-			<nav class="pager">
-				<?php
-				$output = '<p>';
-				$output .= '<a href="'.$prev_url.'">前の月</a> | ';
-				$output .= '<a href="'.$now_url.'">当月</a> | ';
-				$output .= '<a href="'.$next_url.'">次の月</a>';
-				$output .= '</p>';
-				echo $output;
-				?>
-			</nav>
-
-
-
-			<div id="schedule-table">			
-				<?php
-				$schedule = file_get_contents( 'http://ticket.uplink.co.jp/api/schedule?date='.$date );
-				echo $schedule;
-				?>
-			</div>			
-
-
-
-			<nav class="pager bottom">
-				<?php
-				$output = '<p>';
-				$output .= '<a href="'.$prev_url.'">前の月</a> | ';
-				$output .= '<a href="'.$now_url.'">当月</a> | ';
-				$output .= '<a href="'.$next_url.'">次の月</a>';
-				$output .= '</p>';
-				echo $output;
-				?>
-			</nav>
+				<section class="data" style="background: #FFD3D4; margin: 100px 0; padding: 60px 30px;">
+					<h3 style="color: #900;">「アップリンク渋谷」の公式サイトリニューアルに伴うURL変更について</h3>
+					
+					<p>「アップリンク渋谷」のサイトリニューアルに伴い、URLが変更となりました。お手数ですが、下記URLより情報をご覧ください。<br /><br />
+					<a href="https://shibuya.uplink.co.jp/schedule" target="_blank">https://shibuya.uplink.co.jp/schedule</a>
+					</p>
+				</section>
+		
 
 		</article>
 	</div>
