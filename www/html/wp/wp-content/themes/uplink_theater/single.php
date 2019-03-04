@@ -17,7 +17,7 @@ get_template_part( 'partials/header' )?>
 <article>
   <div class="single-header">
     <div class="single-header-inner<?php if( !have_img() ):?> noimg<?php endif?>">
-      <h1 class="single-header-heading"><?php the_title()?></h1>
+      <h1 class="single-header-heading"><?php the_title()?><?php if( get_field('title_original') ):?><small><?php the_field('title_original')?></small><?php endif?></h1>
       <?php if( $date_description = get_field('date_description') ):?><p class="single-header-text"><?php echo $date_description?></p><?php endif?>
       <?php if( $tags ):?><div class="single-header-tag">
         <?php foreach( $tags as $tag ):?><a href="<?php echo get_term_link($tag)?>">#<?php echo $tag->name?></a><?php endforeach?>

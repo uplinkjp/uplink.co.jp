@@ -1016,14 +1016,18 @@ textarea {
   font-weight: bold;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
-  padding: 10px 10px 5px; }
+  padding: 10px; }
+  .list_archive-heading > small {
+    display: block;
+    font-size: .8em;
+    font-weight: normal; }
 
 .list_archive-text {
   background: #fff;
   color: rgba(0, 0, 0, 0.6);
   font-size: 12px;
   line-height: 1.5;
-  padding: 0 15px 10px 15px; }
+  padding: 0 10px 10px; }
 
 .js-main-clone {
   position: fixed;
@@ -2049,6 +2053,9 @@ textarea {
   font-weight: bold;
   line-height: 1.5;
   margin: 0 0 10px 0; }
+  .single-header-heading > small {
+    display: block;
+    font-size: .8em; }
 
 .single-header-text {
   font-size: 12px;

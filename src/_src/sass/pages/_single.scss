@@ -32,7 +32,13 @@
   font-weight: bold;
   line-height: 1.5;
   margin: 0 0 10px 0;
+  & > small {
+    display: block;
+    font-size: .8em;
+  }
 }
+
+
 .single-header-text {
   font-size: 12px;
   font-size: 12px;
