@@ -161,7 +161,7 @@ if (!function_exists('get_uplink_post_id'))
   {
 
     global $wpdb;
-    return $wpdb->get_var( 'SELECT post_id FROM ' . TICKET_INDEX_TABLE . ' WHERE movie_id = ' . $movie_id );
+    return $wpdb->get_var( 'SELECT post_id FROM ' . TICKET_INDEX_TABLE . ' JOIN ' . $wpdb->posts . ' ON ' . TICKET_INDEX_TABLE . '.post_id = ' . $wpdb->posts . '.ID WHERE ' . TICKET_INDEX_TABLE . '.movie_id = ' . $movie_id . ' AND ' . $wpdb->posts . '.post_status = "publish" ORDER BY ' . $wpdb->posts . '.post_date DESC' );
 
   }
 
