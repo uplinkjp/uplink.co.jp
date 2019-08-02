@@ -141,14 +141,6 @@ if ($news_query->have_posts()):
     <ul class="list-related">
       <li>
         <div class="nav-related">
-          <a href="https://plango.uplink.co.jp" target="_blank">
-            <img src="/wp/wp-content/themes/uplink/img/logo-plango.png" width="75" alt="PLAN GO">
-            <span>CROWDFUNDING</span>
-          </a>
-        </div>
-      </li>
-      <li>
-        <div class="nav-related">
           <a href="/workshop" target="_blank">
             <p>配給・デジタルムービーを学ぶ</p>
             <span>WORKSHOP</span>
