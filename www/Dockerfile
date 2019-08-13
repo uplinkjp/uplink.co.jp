@@ -1,4 +1,4 @@
-FROM cinra/php7:latest
+FROM cinra/php72:latest
 
 WORKDIR /var/www/html
 

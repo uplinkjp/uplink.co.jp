@@ -71,8 +71,8 @@ gulp.task('sprite', function () {
 });
 
 // sass =======================================================================
-gulp.task('sass', function () {
-  gulp.src(srcDir + 'sass/**/*.scss')
+gulp.task('sass', function() {
+  return gulp.src(srcDir + 'sass/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(bulkSass())
@@ -158,13 +158,13 @@ gulp.task('fonts', function() {
 // });
 
 // watch =======================================================================
-gulp.task('watch',function(){
-  gulp.watch(srcDir + 'ejs/**/*.ejs', ['html']);
-  gulp.watch(srcDir + 'sass/**/*.scss', ['sass']);
-  gulp.watch(srcDir + 'js/**/*.js', ['scripts','libs','plugins']);
-  gulp.watch(srcDir + 'js/libs/*.js', ['libs']);
-  gulp.watch(srcDir + 'js/plugins/*.js', ['plugins']);
-  gulp.watch(srcDir + '_mock/*', ['mock']);
+gulp.task('watch', function(){
+  gulp.watch(srcDir + 'ejs/**/*.ejs', gulp.task('html'));
+  gulp.watch(srcDir + 'sass/**/*.scss', gulp.task('sass'));
+  gulp.watch(srcDir + 'js/**/*.js', gulp.task( gulp.parallel('scripts','libs','plugins') ));
+  gulp.watch(srcDir + 'js/libs/*.js', gulp.task('libs'));
+  gulp.watch(srcDir + 'js/plugins/*.js', gulp.task('plugins'));
+  // gulp.watch(srcDir + '_mock/*', gulp.task('mock'));
 });
 
 gulp.task('connect', function() {
@@ -175,4 +175,4 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('default', ['connect','watch'])
+gulp.task('default', gulp.series( gulp.parallel('connect','watch') ));
