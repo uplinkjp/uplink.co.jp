@@ -39,7 +39,8 @@
   }
   &.is-green1,
   &.is-green2,
-  &.is-yellow1 {
+  &.is-yellow1,
+  &.is-yellow2 {
     > a,
     > span {
       background: $c_button_purchase_bg;
@@ -77,7 +78,7 @@
     > a,
     > span {
       &:before {
-        background-image: url(../img/icon-status_yellow2.png);
+        background-image: url(../img/icon-status_yellow1.png);
       }
     }
   }
