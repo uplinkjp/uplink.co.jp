@@ -254,7 +254,7 @@ class uplinkTicket
     $limit_status = $this->limit_status($program);
     $time_status = $this->time_status($program);
 
-    if( $limit_status === 'over' || $time_status === 'over' )
+    if( $limit_status === 'over' || $time_status === 'over' || $time_status === 'door' )
     {
       $classes[] = 'is-over';# ×　0%
     }
@@ -274,7 +274,7 @@ class uplinkTicket
     {
       $classes[] = 'is-green1';# ◎　70～100%
     }
-    
+
     return implode(' ', $classes);
 
   }
