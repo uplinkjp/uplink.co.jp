@@ -31,6 +31,13 @@
       color: $c_nav_joji_text;
     }
   }
+  .theme-kyoto & {
+    background: $c_nav_kyoto_bg;
+    color: $c_nav_kyoto_text;
+    a {
+      color: $c_nav_kyoto_text;
+    }
+  }
   @include mqTB {
     display: flex;
     width: 100%;
@@ -82,6 +89,9 @@
           .theme-joji & {
             background-image: url(../img/icon-sns_twitter_joji.png);
           }
+          .theme-kyoto & {
+            background-image: url(../img/icon-sns_twitter_kyoto.png);
+          }
         }
       }
     }
@@ -101,6 +111,9 @@
           }
           .theme-joji & {
             background-image: url(../img/icon-sns_facebook_joji.png);
+          }
+          .theme-kyoto & {
+            background-image: url(../img/icon-sns_facebook_kyoto.png);
           }
         }
       }
@@ -122,6 +135,9 @@
           .theme-joji & {
             background-image: url(../img/icon-sns_instagram_joji.png);
           }
+          .theme-kyoto & {
+            background-image: url(../img/icon-sns_instagram_kyoto.png);
+          }
         }
       }
     }
@@ -141,6 +157,9 @@
           }
           .theme-joji & {
             background-image: url(../img/icon-sns_youtube_joji.png);
+          }
+          .theme-kyoto & {
+            background-image: url(../img/icon-sns_youtube_kyoto.png);
           }
         }
       }

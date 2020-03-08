@@ -190,6 +190,22 @@ function get_weekday( $weekday, $weekdays, $is_class = false )
 
 }
 
+function get_alt_scheduler( $site = null )
+{
+
+  switch( get_uplink_site() )
+  {
+    case 'kyoto':
+    return 'https://test.sboticket.net/api/schedule';
+    break;
+
+    default:
+    return false;
+    break;
+  }
+
+}
+
 function get_uplink_post_class( $post = null )
 {
 

@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
 $customtaxorder_defaults = array('category' => 0);
-$args = array( 'public' => true, '_builtin' => false ); 
+$args = array( 'public' => true, '_builtin' => false );
 $output = 'objects';
 $taxonomies = get_taxonomies( $args, $output );
 foreach ( $taxonomies as $taxonomy ) {
@@ -61,10 +61,10 @@ function customtaxorder_settings_validate($input) {
 	return $input;
 }
 
-function customtaxorder_menu() {   
+function customtaxorder_menu() {
 	$args = array( 'public' => true, '_builtin' => false );
 	$output = 'objects';
-	$taxonomies = get_taxonomies($args, $output); 
+	$taxonomies = get_taxonomies($args, $output);
 	add_menu_page(__('Term Order'), __('Term Order'), 'manage_categories', 'customtaxorder', 'customtaxorder', plugins_url('images/cat_order.png', __FILE__), 122);
 	add_submenu_page('customtaxorder', __('Order Categories'), __('Order Categories'), 'manage_categories', 'customtaxorder', 'customtaxorder');
 	foreach ($taxonomies as $taxonomy ) {
@@ -99,8 +99,8 @@ function customtaxorder() {
 	$options = $customtaxorder_settings;
 	$settings = '';
 	$parent_ID = 0;
-	if ( $_GET['page'] == 'customtaxorder' ) { 
-		$args = array( 'public' => true, '_builtin' => false ); 
+	if ( $_GET['page'] == 'customtaxorder' ) {
+		$args = array( 'public' => true, '_builtin' => false );
 		$output = 'objects';
 		$taxonomies = get_taxonomies( $args, $output );
 		foreach ( $taxonomies as $taxonomy ) {
@@ -110,12 +110,12 @@ function customtaxorder() {
 		$tax_label = 'Categories';
 		$tax = 'category';
 	} else {
-		$args = array( 'public' => true, '_builtin' => false ); 
+		$args = array( 'public' => true, '_builtin' => false );
 		$output = 'objects';
 		$taxonomies = get_taxonomies( $args, $output );
 		foreach ( $taxonomies as $taxonomy ) {
 			$com_page = 'customtaxorder-'.$taxonomy->name;
-			if ( $_GET['page'] == $com_page ) { 
+			if ( $_GET['page'] == $com_page ) {
 				$settings .= '<input name="customtaxorder_settings[' . $taxonomy->name . ']" type="checkbox" value="1" ' . checked('1', $options[$taxonomy->name], false) . ' /> <label for="customtaxorder_settings[' . $taxonomy->name . ']">Check this box if you want to enable Automatic Sorting of all instances from this taxonomy.</label>';
 				$tax_label = $taxonomy->label;
 				$tax = $taxonomy->name;
@@ -125,18 +125,18 @@ function customtaxorder() {
 		}
 		$settings .= '<input name="customtaxorder_settings[category]" type="hidden" value="' . $options['category'] . '" />';
 	}
-	if (isset($_POST['go-sub-posts'])) { 
+	if (isset($_POST['go-sub-posts'])) {
 		$parent_ID = $_POST['sub-posts'];
 	}
-	elseif (isset($_POST['hidden-parent-id'])) { 
+	elseif (isset($_POST['hidden-parent-id'])) {
 		$parent_ID = $_POST['hidden-parent-id'];
 	}
-	if (isset($_POST['return-sub-posts'])) { 
+	if (isset($_POST['return-sub-posts'])) {
 		$parent_term = get_term($_POST['hidden-parent-id'], $tax);
 		$parent_ID = $parent_term->parent;
 	}
 	$message = "";
-	if (isset($_POST['order-submit'])) { 
+	if (isset($_POST['order-submit'])) {
 		customtaxorder_update_order();
 	}
 ?>
@@ -144,12 +144,12 @@ function customtaxorder() {
 	<?php screen_icon('customtaxorder'); ?>
 	<h2><?php _e('Order ' . $tax_label, 'customtaxorder'); ?></h2>
 	<form name="custom-order-form" method="post" action="">
-		<?php  
+		<?php
 		$args = array(
 			'orderby' => 'term_order',
 			'order' => 'ASC',
 			'hide_empty' => false,
-			'parent' => $parent_ID, 
+			'parent' => $parent_ID,
 		);
 		$terms = get_terms( $tax, $args );
 			if ( $terms ) {
@@ -186,7 +186,7 @@ function customtaxorder() {
 					</select>
 					<input type="submit" name="go-sub-posts" class="button" id="go-sub-posts" value="<?php _e('Order Sub-terms', 'customtaxorder') ?>" />
 				</div>
-			</div>		
+			</div>
 			<?php } ?>
 		</div>
 		<?php } else { ?>
@@ -216,10 +216,10 @@ function customtaxorder() {
 		});
 	});
 	function customtaxorderAddLoadEvent(){
-		jQuery("#custom-order-list").sortable({ 
-			placeholder: "sortable-placeholder", 
+		jQuery("#custom-order-list").sortable({
+			placeholder: "sortable-placeholder",
 			revert: false,
-			tolerance: "pointer" 
+			tolerance: "pointer"
 		});
 	};
 	addLoadEvent(customtaxorderAddLoadEvent);
@@ -234,7 +234,7 @@ function customtaxorder() {
 <?php }
 }
 function customtaxorder_update_order() {
-	if (isset($_POST['hidden-custom-order']) && $_POST['hidden-custom-order'] != "") { 
+	if (isset($_POST['hidden-custom-order']) && $_POST['hidden-custom-order'] != "") {
 		global $wpdb;
 		$new_order = $_POST['hidden-custom-order'];
 		$IDs = explode(",", $new_order);
@@ -252,8 +252,8 @@ function customtaxorder_sub_query( $terms, $tax ) {
 	$options = '';
 	foreach ( $terms as $term ) :
 		$subterms = get_term_children( $term->term_id, $tax );
-		if ( $subterms ) { 
-			$options .= '<option value="' . $term->term_id . '">' . $term->name . '</option>'; 
+		if ( $subterms ) {
+			$options .= '<option value="' . $term->term_id . '">' . $term->name . '</option>';
 		}
 	endforeach;
 	return $options;

@@ -7,7 +7,10 @@ the_post();
 $startdate = date('Ymd', strtotime('today'));
 $enddate = date('Ymd', strtotime('+ 2 day'));
 
-$programs = get_uplink_programs_by_date( get_uplink_site(), $startdate, $enddate );
+if( function_exists('get_uplink_programs_by_date') )
+{
+  $programs = get_uplink_programs_by_date( get_uplink_site(), $startdate, $enddate );
+}
 
 get_template_part( 'partials/header' )?>
 
@@ -53,6 +56,7 @@ get_template_part( 'partials/header' )?>
     <p class="list-readmore"><a href="<?php echo home_url('news')?>">お知らせ一覧</a></p>
   </section><?php endif?>
 
+  <?php if( $programs ):?>
   <section>
     <div class="archive_shcedule-header_wrap">
       <h2 class="section-heading">
@@ -69,5 +73,8 @@ get_template_part( 'partials/header' )?>
     <?php get_template_part( 'partials/schedule', 'top' )?>
     <p class="list-readmore"><a href="<?php echo home_url( 'schedule' )?>#<?php echo date('Ymd', time())?>">今月のスケジュール</a></p>
   </section>
+  <?php elseif( is_alt_scheduler() ):?>
+    <?php get_template_part( 'partials/schedules/top', get_uplink_site() )?>
+  <?php endif?>
 
 <?php get_template_part( 'partials/footer' );

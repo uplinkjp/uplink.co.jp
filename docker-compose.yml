@@ -5,7 +5,7 @@ services:
     container_name: uplink_wp
     volumes:
       - ./www/html/wp/wp-content:/var/www/html/wp/wp-content
-      - ./log/apache:/var/log/apache2
+      - ./data/log/apache:/var/log/apache2
     ports:
       - 80:80
     links:
@@ -26,14 +26,11 @@ services:
       - 3306:3306
     working_dir: /sql
     volumes:
-      - db-data:/var/lib/mysql
+      - ./data/database:/var/lib/mysql
       - ./sql:/sql
-      - ./log/mysql:/var/log/mysql
+      - ./data/log/mysql:/var/log/mysql
     environment:
       MYSQL_ROOT_PASSWORD: example
       MYSQL_DATABASE: uplink
       MYSQL_USER: uplink
       MYSQL_PASSWORD: 3030
-volumes:
-  db-data:
-    driver: local

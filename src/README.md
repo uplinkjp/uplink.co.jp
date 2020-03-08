@@ -13,6 +13,13 @@ gulpのデフォルトタスク（[7-2](https://github.com/cinra/sheis/wiki/_new
 
 http://localhost:8500/
 
+node-sassがコケる場合
+
+```sh
+$ npm update node-sass@latest
+$ npm rebuild node-sass
+```
+
 ### 0-1.Git branch
 
 - feature/front
@@ -78,7 +85,7 @@ body
     ├ .l-container（テンプレ固有のclassを付与 / ページによって背景色がここから違う）
     │ ├ .l-billboard （あったりなかったり）
     │ ├ .l-content
-    │ │ ├ .l-main 
+    │ │ ├ .l-main
     │ │ └ .l-side （あったりなかったり）
     │ └ .l-aside（付属コンテンツ latest/Recommendedなど）
     └ .l-footer （ここから下サイト共通 foot.ejs / foot.php）
@@ -98,7 +105,7 @@ SASS（.scss）→ css
   - 状態の定義：.is-xxx
   - カラー指定：.c-xxx
 - 親子関係は`-`（ハイフン）、兄弟関係/種類は`_`（アンダースコア）で連結する
-  - ex.) `.panel-text` panelに内包されるtext / `.panel_small-text` smallという種類のpanelに内包されるtext 
+  - ex.) `.panel-text` panelに内包されるtext / `.panel_small-text` smallという種類のpanelに内包されるtext
 - 基本的に端的な単語で表現するが、要素に複数単語表現が必要な場合は、単語間の連結は記号を使用せず、キャメルケースを使用する。
 - 略語は基本的に使用しない
 
@@ -182,12 +189,12 @@ gulpを使用
 詳細はpackage.jsonに記載
 
 ### 7-2.タスク
-**default**  
-`$ gulp`  
+**default**
+`$ gulp`
 各ファイルのwatchを行う
 
-**画像圧縮してコピー**  
-`$ gulp imgmin`  
+**画像圧縮してコピー**
+`$ gulp imgmin`
 srcディレクトリ内の画像を圧縮してテーマディレクトリへコピーする
 
 

@@ -65,7 +65,9 @@
   .theme-joji & {
     background: $c_header_bg_joji;
   }
-
+  .theme-kyoto & {
+    background: $c_header_bg_kyoto;
+  }
 }
 .header-logo {
   padding-right: 15px;
@@ -104,6 +106,10 @@
         background-image: url(../img/logo-joji.png);
         width: 140px;
       }
+      .theme-kyoto & {
+        background-image: url(../img/logo-kyoto.png);
+        width: 140px;
+      }
     }
 
   }
@@ -134,6 +140,9 @@
       }
       .theme-joji & {
         background-image: url(../img/icon-menu-off_joji.png);
+      }
+      .theme-kyoto & {
+        background-image: url(../img/icon-menu-off_kyoto.png);
       }
     }
   }
@@ -168,6 +177,13 @@
       }
     }
   }
+  .main-open.theme-kyoto & {
+    a {
+      &:before {
+        background-image: url(../img/icon-menu-on_kyoto.png);
+      }
+    }
+  }
 }
 
 
@@ -179,7 +195,7 @@
   box-sizing: content-box;
   @include archive_bg();
   body:not(.is-scroll).main-open & {
-    padding-top: 0;  
+    padding-top: 0;
   }
   &.is-clone {
     padding-top: 0;

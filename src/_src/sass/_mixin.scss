@@ -115,6 +115,9 @@
   .theme-joji & {
     background: $c_bg_joji;
   }
+  .theme-kyoto & {
+    background: $c_bg_kyoto;
+  }
 }
 @mixin archive_bg() {
   .category-film & {

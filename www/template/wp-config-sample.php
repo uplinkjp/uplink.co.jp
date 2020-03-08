@@ -82,6 +82,10 @@ if( isset($_SERVER['HTTP_HOST']) )
     case 'joji.uplink.test':
     $table_prefix  = 'joji_';
     break;
+
+    case 'kyoto.uplink.test':
+    $table_prefix  = 'kyoto_';
+    break;
   }
 }
 define('UPLINK_SITE', str_replace('_', '', $table_prefix));
@@ -100,6 +104,7 @@ define('WP_DEBUG', false);
 
 define('UPLINK_TICKET_APIURL', $_ENV['UPLINK_TICKET_APIURL']);
 define('UPLINK_TICKET_PASSWORD', $_ENV['UPLINK_TICKET_PASSWORD']);
+define('UPLINK_FORCE_RENEW', true);
 
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
