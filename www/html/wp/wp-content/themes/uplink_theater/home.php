@@ -73,7 +73,7 @@ get_template_part( 'partials/header' )?>
     <?php get_template_part( 'partials/schedule', 'top' )?>
     <p class="list-readmore"><a href="<?php echo home_url( 'schedule' )?>#<?php echo date('Ymd', time())?>">今月のスケジュール</a></p>
   </section>
-  <?php elseif( is_alt_scheduler() ):?>
+  <?php elseif( get_alt_scheduler() ):?>
     <?php get_template_part( 'partials/schedules/top', get_uplink_site() )?>
   <?php endif?>
 
