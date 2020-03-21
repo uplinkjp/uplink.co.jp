@@ -100,6 +100,8 @@ body {
     background: #EEE8E8; }
   body.theme-joji {
     background: #E8EEE8; }
+  body.theme-kyoto {
+    background: #E8EEE8; }
   body.is-fixed {
     position: fixed; }
 
@@ -220,6 +222,11 @@ a:hover,
     color: #64276A; }
     .theme-joji .followus-inner a {
       color: #64276A; }
+  .theme-kyoto .followus-inner {
+    background: #5F0005;
+    color: #92E092; }
+    .theme-kyoto .followus-inner a {
+      color: #92E092; }
   @media screen and (min-width: 768px) {
     .followus-inner {
       display: -ms-flexbox;
@@ -275,6 +282,8 @@ a:hover,
           background-image: url(../img/icon-sns_twitter_shibuya.png); }
         .theme-joji .followus-sns li.sns-tw a:after {
           background-image: url(../img/icon-sns_twitter_joji.png); }
+        .theme-kyoto .followus-sns li.sns-tw a:after {
+          background-image: url(../img/icon-sns_twitter_kyoto.png); }
     .followus-sns li.sns-fb a {
       width: 18px;
       height: 18px; }
@@ -288,6 +297,8 @@ a:hover,
           background-image: url(../img/icon-sns_facebook_shibuya.png); }
         .theme-joji .followus-sns li.sns-fb a:after {
           background-image: url(../img/icon-sns_facebook_joji.png); }
+        .theme-kyoto .followus-sns li.sns-fb a:after {
+          background-image: url(../img/icon-sns_facebook_kyoto.png); }
     .followus-sns li.sns-in a {
       width: 18px;
       height: 18px; }
@@ -301,6 +312,8 @@ a:hover,
           background-image: url(../img/icon-sns_instagram_shibuya.png); }
         .theme-joji .followus-sns li.sns-in a:after {
           background-image: url(../img/icon-sns_instagram_joji.png); }
+        .theme-kyoto .followus-sns li.sns-in a:after {
+          background-image: url(../img/icon-sns_instagram_kyoto.png); }
     .followus-sns li.sns-yt a {
       width: 22px;
       height: 15px; }
@@ -314,6 +327,8 @@ a:hover,
           background-image: url(../img/icon-sns_youtube_shibuya.png); }
         .theme-joji .followus-sns li.sns-yt a:after {
           background-image: url(../img/icon-sns_youtube_joji.png); }
+        .theme-kyoto .followus-sns li.sns-yt a:after {
+          background-image: url(../img/icon-sns_youtube_kyoto.png); }
 
 .l-footer {
   background: #000000;
@@ -503,6 +518,8 @@ textarea {
     background: #64276A; }
   .theme-joji .header-body {
     background: #A4DE9A; }
+  .theme-kyoto .header-body {
+    background: #5F0005; }
 
 .header-logo {
   padding-right: 15px; }
@@ -546,6 +563,9 @@ textarea {
       .theme-joji .header-body .header-logo a {
         background-image: url(../img/logo-joji.png);
         width: 140px; }
+      .theme-kyoto .header-body .header-logo a {
+        background-image: url(../img/logo-kyoto.png);
+        width: 140px; }
 
 .header-nav_trigger {
   position: absolute;
@@ -575,6 +595,8 @@ textarea {
         background-image: url(../img/icon-menu-off_shibuya.png); }
       .theme-joji .header-nav_trigger a:before {
         background-image: url(../img/icon-menu-off_joji.png); }
+      .theme-kyoto .header-nav_trigger a:before {
+        background-image: url(../img/icon-menu-off_kyoto.png); }
   .type-frontpage .header-nav_trigger a {
     pointer-events: none; }
   .is-scroll .header-nav_trigger a {
@@ -585,6 +607,8 @@ textarea {
     background-image: url(../img/icon-menu-on_shibuya.png); }
   .main-open.theme-joji .header-nav_trigger a:before {
     background-image: url(../img/icon-menu-on_joji.png); }
+  .main-open.theme-kyoto .header-nav_trigger a:before {
+    background-image: url(../img/icon-menu-on_kyoto.png); }
 
 .l-header_sub {
   padding-top: 60px;
@@ -1040,6 +1064,8 @@ textarea {
     background: #EEE8E8; }
   .theme-joji .js-main-clone {
     background: #E8EEE8; }
+  .theme-kyoto .js-main-clone {
+    background: #E8EEE8; }
   .is-navfixed.main-open .js-main-clone {
     top: 0; }
   @media screen and (max-width: 767px) {
@@ -1099,41 +1125,41 @@ textarea {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; } }
 
-.nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
+.nav-shibuya, .nav-joji, .nav-kyoto, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
   margin-bottom: 4px;
   width: 100%;
   box-sizing: border-box; }
   @media screen and (min-width: 768px) {
-    .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
+    .nav-shibuya, .nav-joji, .nav-kyoto, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: calc(50% - 2px); } }
   @media screen and (min-width: 1024px) {
-    .nav-shibuya, .nav-joji, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
+    .nav-shibuya, .nav-joji, .nav-kyoto, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: 100%;
       margin-right: 4px; } }
-  .nav-shibuya a, .nav-joji a, .nav-related a, .nav-default a, .nav-film a, .nav-events a, .nav-gallery a, .nav-market a, .nav-cafe a, .nav-map a, .nav-login a {
+  .nav-shibuya a, .nav-joji a, .nav-kyoto a, .nav-related a, .nav-default a, .nav-film a, .nav-events a, .nav-gallery a, .nav-market a, .nav-cafe a, .nav-map a, .nav-login a {
     text-decoration: none;
     display: block;
     position: relative;
     padding: 10px;
     border-radius: 3px;
     box-sizing: border-box; }
-    .nav-shibuya a img, .nav-joji a img, .nav-related a img, .nav-default a img, .nav-film a img, .nav-events a img, .nav-gallery a img, .nav-market a img, .nav-cafe a img, .nav-map a img, .nav-login a img {
+    .nav-shibuya a img, .nav-joji a img, .nav-kyoto a img, .nav-related a img, .nav-default a img, .nav-film a img, .nav-events a img, .nav-gallery a img, .nav-market a img, .nav-cafe a img, .nav-map a img, .nav-login a img {
       display: block;
       margin-bottom: 5px; }
-    .nav-shibuya a p, .nav-joji a p, .nav-related a p, .nav-default a p, .nav-film a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p, .nav-login a p {
+    .nav-shibuya a p, .nav-joji a p, .nav-kyoto a p, .nav-related a p, .nav-default a p, .nav-film a p, .nav-events a p, .nav-gallery a p, .nav-market a p, .nav-cafe a p, .nav-map a p, .nav-login a p {
       font-family: YakuHanJP, "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
       transform: scaleX(0.88);
       transform-origin: left center;
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 4px; }
-    .nav-shibuya a span, .nav-joji a span, .nav-related a span, .nav-default a span, .nav-film a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
+    .nav-shibuya a span, .nav-joji a span, .nav-kyoto a span, .nav-related a span, .nav-default a span, .nav-film a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
       font-family: "SpaceGrotesk", sans-serif;
       font-weight: 700;
       letter-spacing: .025em;
       font-size: 12px;
       margin-top: 7px; }
-    .nav-shibuya a:after, .nav-joji a:after, .nav-related a:after, .nav-default a:after, .nav-film a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
+    .nav-shibuya a:after, .nav-joji a:after, .nav-kyoto a:after, .nav-related a:after, .nav-default a:after, .nav-film a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
       content: "";
       position: absolute;
       right: 5px;
@@ -1229,6 +1255,14 @@ textarea {
   .nav-joji a:after {
     background-image: url(../img/arrow-joji.png); }
 
+.nav-kyoto a {
+  background: #5F0005;
+  color: #92E092;
+  width: 100%;
+  height: 124px; }
+  .nav-kyoto a:after {
+    background-image: url(../img/arrow-kyoto.png); }
+
 .nav-related a {
   background: #FFFFFF;
   color: rgba(0, 0, 0, 0.87);
@@ -1258,6 +1292,15 @@ textarea {
     font-size: 13px; }
   .theme-shibuya .nav-default a:after,
   .theme-joji .nav-default a:after {
+    width: 14px;
+    height: 14px;
+    background-size: 14px auto; }
+
+.theme-kyoto .nav-default a {
+  padding-right: 4px; }
+  .theme-kyoto .nav-default a p {
+    font-size: 13px; }
+  .theme-kyoto .nav-default a:after {
     width: 14px;
     height: 14px;
     background-size: 14px auto; }
@@ -1317,6 +1360,10 @@ textarea {
   width: 100%;
   margin-bottom: 4px; }
 
+.theme-kyoto .nav-map {
+  width: 100%;
+  margin-bottom: 4px; }
+
 .nav-login a {
   background: #000000;
   color: #FFFFFF;
@@ -1329,6 +1376,11 @@ textarea {
 
 .theme-shibuya .nav-login a:after,
 .theme-joji .nav-login a:after {
+  width: 14px;
+  height: 14px;
+  background-size: 14px auto; }
+
+.theme-kyoto .nav-login a:after {
   width: 14px;
   height: 14px;
   background-size: 14px auto; }

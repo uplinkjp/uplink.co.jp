@@ -196,6 +196,18 @@
     }
   }
 }
+.nav-kyoto {
+  @extend %nav;
+  a {
+    background: $c_nav_kyoto_bg;
+    color: $c_nav_kyoto_text;
+    width: 100%;
+    height: 124px;
+    &:after {
+      background-image: url(../img/arrow-kyoto.png);
+    }
+  }
+}
 .nav-related {
   @extend %nav;
   a {
@@ -240,6 +252,19 @@
       }
     }
   }
+  .theme-kyoto & {
+    a {
+      padding-right: 4px;
+      p {
+        font-size: 13px;
+      }
+      &:after {
+        width: 14px;
+        height: 14px;
+        background-size: 14px auto;
+      }
+    }
+  }
 }
 
 %nav-child {
@@ -259,8 +284,8 @@
     background: $c_nav_film_bg;
     color: $c_nav_film_text;
     height: 124px;
-    p { 
-      font-size: 24px    
+    p {
+      font-size: 24px
     }
     &:after {
       background-image: url(../img/arrow-related.png);
@@ -274,8 +299,8 @@
     background: $c_nav_event_bg;
     color: $c_nav_events_text;
     height: 124px;
-    p { 
-      font-size: 24px    
+    p {
+      font-size: 24px
     }
     &:after {
       background-image: url(../img/arrow-related.png);
@@ -333,6 +358,10 @@
     width: 100%;
     margin-bottom: 4px;
   }
+  .theme-kyoto & {
+    width: 100%;
+    margin-bottom: 4px;
+  }
 }
 .nav-login {
   @extend %nav;
@@ -350,6 +379,15 @@
   }
   .theme-shibuya &,
   .theme-joji & {
+    a {
+      &:after {
+        width: 14px;
+        height: 14px;
+        background-size: 14px auto;
+      }
+    }
+  }
+  .theme-kyoto & {
     a {
       &:after {
         width: 14px;
