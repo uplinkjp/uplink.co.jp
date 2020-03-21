@@ -72,6 +72,12 @@
         <span>CINEMA—KICHIJOJI</span>
       </a>
     </div>
+    <div class="nav-kyoto">
+      <a href="https://kyoto.uplink.co.jp" target="_blank">
+        <img src="/wp/wp-content/themes/uplink/img/logo-kyoto.png" width="165" alt="UPLINK 京都" />
+        <span>CINEMA—KYOTO</span>
+      </a>
+    </div>
     <div class="nav-wrap_pc">
       <div class="nav-related">
         <a href="http://www.uplink.co.jp/cloud" target="_blank">

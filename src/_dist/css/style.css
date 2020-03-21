@@ -1131,7 +1131,7 @@ textarea {
   box-sizing: border-box; }
   @media screen and (min-width: 768px) {
     .nav-shibuya, .nav-joji, .nav-kyoto, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
-      width: calc(50% - 2px); } }
+      width: calc(33.2% - 2px); } }
   @media screen and (min-width: 1024px) {
     .nav-shibuya, .nav-joji, .nav-kyoto, .nav-related, .nav-default, .nav-film, .nav-events, .nav-gallery, .nav-market, .nav-cafe, .nav-map, .nav-login {
       width: 100%;
@@ -1150,7 +1150,7 @@ textarea {
       font-family: YakuHanJP, "Noto Sans JP", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
       transform: scaleX(0.88);
       transform-origin: left center;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       margin-bottom: 4px; }
     .nav-shibuya a span, .nav-joji a span, .nav-kyoto a span, .nav-related a span, .nav-default a span, .nav-film a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
