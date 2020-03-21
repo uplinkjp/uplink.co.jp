@@ -246,11 +246,14 @@ dl.chronology {
 	font-size:12px;
 }
 dl.chronology dt {
-	width:90px;
+	width:22%;
 	font-size:14px;
 }
 dl.chronology dd {
-	width:180px;
+	width:75%;
+	font-size:12px !important;
+}
+dl.chronology dd p{
 	font-size:12px !important;
 }
 

@@ -200,6 +200,7 @@ dl.chronology dt {
 	color:#8C7B8D;
 	width:90px;
 	float:left;
+	clear: both;
 }
 dl.chronology dd {
 	margin:0 0 20px 0;
