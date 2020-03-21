@@ -2,7 +2,11 @@
 
 the_post();
 
-$programs = get_uplink_programs_by_post( get_uplink_site() );
+if( function_exists('get_uplink_programs_by_post') )
+{
+  $programs = get_uplink_programs_by_post( get_uplink_site() );
+}
+
 $tags = get_the_terms( $post, 'post_tag' );
 
 get_template_part( 'partials/header' )?>
@@ -66,13 +70,31 @@ get_template_part( 'partials/header' )?>
 
 </article>
 
-<?php if( $programs ):?><section>
+<?php if( $programs ):?>
+<section>
   <h2 class="section-heading">
     スケジュールとチケット
     <span>SCHEDULE & TICKETS</span>
   </h2>
   <?php get_template_part( 'partials/schedule' )?>
-</section><?php endif?>
+</section>
+<?php
+elseif( get_alt_scheduler() ):
+
+  $schedule_html = file_get_contents(get_alt_scheduler() . '?movie=' . get_the_ID());
+  if( $schedule_html ):
+
+?>
+<section>
+  <h2 class="section-heading">
+    スケジュールとチケット
+    <span>SCHEDULE & TICKETS</span>
+  </h2>
+  <?php echo $schedule_html?>
+</section>
+<?php endif?>
+
+<?php endif?>
 
 <?php /*
 

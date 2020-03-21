@@ -49,4 +49,8 @@ $time = strtotime($date);
 
 <?php endforeach?>
 
+<?php elseif( is_alt_scheduler() ):?>
+
+<?php get_template_part( 'partials/schedules/list', get_uplink_site() )?>
+
 <?php endif?>

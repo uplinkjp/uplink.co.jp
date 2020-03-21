@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect'),
+    // connect = require('gulp-connect'),
     sass = require('gulp-sass'),
     bulkSass = require('gulp-sass-bulk-import'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -15,9 +15,9 @@ var gulp = require('gulp'),
     include = require('gulp-include'),
     saveLicense = require('uglify-save-license'),
     rename = require('gulp-rename'),
-    minifyCss = require('gulp-minify-css'),
+    minifyCss = require('gulp-minify-css')
     // cmq = require('gulp-combine-media-queries')
-    ejs = require('gulp-ejs')
+    // ejs = require('gulp-ejs')
     ;
 
 var srcDir = './_src/';
@@ -25,16 +25,16 @@ var distDir = './_dist/';
 var wpDir = '../www/html/wp/wp-content/themes/uplink/';
 
 // html =======================================================================
-gulp.task( 'html', function(){
-  gulp.src([srcDir + 'ejs/**/*.ejs', "!" + srcDir + "ejs/**/_*.ejs"])
-    .pipe(plumber())
-    .pipe(ejs())
-    .pipe(rename({
-    extname: ".html"
-  }))
-  .pipe(gulp.dest(distDir))
-  .pipe(connect.reload());
-});
+// gulp.task( 'html', function(){
+//   gulp.src([srcDir + 'ejs/**/*.ejs', "!" + srcDir + "ejs/**/_*.ejs"])
+//     .pipe(plumber())
+//     .pipe(ejs())
+//     .pipe(rename({
+//     extname: ".html"
+//   }))
+//   .pipe(gulp.dest(distDir))
+//   .pipe(connect.reload());
+// });
 
 
 // img =======================================================================
@@ -159,7 +159,7 @@ gulp.task('fonts', function() {
 
 // watch =======================================================================
 gulp.task('watch', function(){
-  gulp.watch(srcDir + 'ejs/**/*.ejs', gulp.task('html'));
+  // gulp.watch(srcDir + 'ejs/**/*.ejs', gulp.task('html'));
   gulp.watch(srcDir + 'sass/**/*.scss', gulp.task('sass'));
   gulp.watch(srcDir + 'js/**/*.js', gulp.task( gulp.parallel('scripts','libs','plugins') ));
   gulp.watch(srcDir + 'js/libs/*.js', gulp.task('libs'));
@@ -167,12 +167,12 @@ gulp.task('watch', function(){
   // gulp.watch(srcDir + '_mock/*', gulp.task('mock'));
 });
 
-gulp.task('connect', function() {
-  connect.server({
-    root: [__dirname + '/_dist/'],
-    port: 8500,
-    livereload: true
-  });
-});
+// gulp.task('connect', function() {
+//   connect.server({
+//     root: [__dirname + '/_dist/'],
+//     port: 8500,
+//     livereload: true
+//   });
+// });
 
-gulp.task('default', gulp.series( gulp.parallel('connect','watch') ));
+gulp.task('default', gulp.series( gulp.parallel('watch') ));
