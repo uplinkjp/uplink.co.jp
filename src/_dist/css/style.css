@@ -101,7 +101,7 @@ body {
   body.theme-joji {
     background: #E8EEE8; }
   body.theme-kyoto {
-    background: #E8EEE8; }
+    background: #FAEBEB; }
   body.is-fixed {
     position: fixed; }
 
@@ -223,7 +223,7 @@ a:hover,
     .theme-joji .followus-inner a {
       color: #64276A; }
   .theme-kyoto .followus-inner {
-    background: #5F0005;
+    background: #BE1432;
     color: #92E092; }
     .theme-kyoto .followus-inner a {
       color: #92E092; }
@@ -519,7 +519,7 @@ textarea {
   .theme-joji .header-body {
     background: #A4DE9A; }
   .theme-kyoto .header-body {
-    background: #5F0005; }
+    background: #BE1432; }
 
 .header-logo {
   padding-right: 15px; }
@@ -1065,7 +1065,7 @@ textarea {
   .theme-joji .js-main-clone {
     background: #E8EEE8; }
   .theme-kyoto .js-main-clone {
-    background: #E8EEE8; }
+    background: #FAEBEB; }
   .is-navfixed.main-open .js-main-clone {
     top: 0; }
   @media screen and (max-width: 767px) {
@@ -1256,7 +1256,7 @@ textarea {
     background-image: url(../img/arrow-joji.png); }
 
 .nav-kyoto a {
-  background: #5F0005;
+  background: #BE1432;
   color: #92E092;
   width: 100%;
   height: 124px; }
