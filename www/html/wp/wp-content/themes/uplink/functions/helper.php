@@ -196,7 +196,8 @@ function get_alt_scheduler( $site = null )
   switch( get_uplink_site() )
   {
     case 'kyoto':
-    return 'https://test.sboticket.net/api/schedule';
+    return 'https://uplinkkyoto.sboticket.net/api/schedule';
+    // return 'https://test.sboticket.net/api/schedule';
     break;
 
     default:
