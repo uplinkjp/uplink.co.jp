@@ -60,7 +60,7 @@
         </a>
       </div>
       <div class="nav-login nav-col-1">
-        <a href="https://rsv.uplink.co.jp" target="_blank">
+        <a href="https://uplinkkyoto.sboticket.net/member/login" target="_blank">
           <p>ログイン</p>
           <span>LOGIN</span>
         </a>
