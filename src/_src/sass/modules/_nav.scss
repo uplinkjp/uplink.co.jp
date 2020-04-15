@@ -46,7 +46,6 @@
   @include mqPC {
     flex-wrap: nowrap;
   }
-
 }
 
 %nav {
@@ -54,7 +53,7 @@
   width: 100%;
   box-sizing: border-box;
   @include mqTB {
-    width: calc(50% - 2px);
+    width: calc(33.2% - 2px);
   }
   @include mqPC {
     width: 100%;
@@ -73,7 +72,7 @@
     }
     p {
       @include f_narrow;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
       margin-bottom: 4px;
     }
