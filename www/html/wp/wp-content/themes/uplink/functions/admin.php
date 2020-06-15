@@ -34,7 +34,6 @@ add_action( 'manage_posts_custom_column', 'uplink_manage_movie_id_column', 10, 2
 add_filter( 'addquicktag_post_types', 'my_addquicktag_post_types' );
 function my_addquicktag_post_types( $post_types )
 {
-  echo '[TEST]';
   array_push($post_types, 'event', 'movie' , 'movie', 'gallery', 'market', 'news', 'film', 'webshop');
   return $post_types;
 }
