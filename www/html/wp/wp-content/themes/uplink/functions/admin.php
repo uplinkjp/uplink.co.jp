@@ -29,3 +29,11 @@ function uplink_manage_movie_id_column($column_name, $post_id) {
     }
 }
 add_action( 'manage_posts_custom_column', 'uplink_manage_movie_id_column', 10, 2 );
+
+// カスタム投稿タイプでaddquicktagを使う
+add_filter( 'addquicktag_post_types', 'my_addquicktag_post_types' );
+function my_addquicktag_post_types( $post_types )
+{
+  array_push($post_types, 'event', 'movie' , 'movie', 'gallery', 'market', 'news', 'film', 'webshop');
+  return $post_types;
+}
