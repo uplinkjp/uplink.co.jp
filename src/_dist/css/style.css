@@ -886,6 +886,9 @@ textarea {
   font-size: 28px;
   border-top: 4px solid #B2B2B2;
   z-index: 1; }
+  .list-calendar-header .original-title {
+    font-size: 0.8em;
+    display: block; }
   .list-calendar-header span {
     font-size: 18px;
     margin-left: 10px;
@@ -1042,7 +1045,10 @@ textarea {
   font-weight: bold;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
-  padding: 10px 10px 5px; }
+  padding: 10px 15px 5px; }
+  .list_archive-heading .original-title {
+    font-size: 0.8em;
+    display: block; }
 
 .list_archive-text {
   background: #fff;
@@ -2103,6 +2109,10 @@ textarea {
   font-weight: bold;
   line-height: 1.5;
   margin: 0 0 10px 0; }
+  .single-header-heading .original-title {
+    font-size: 0.8em;
+    display: block;
+    padding-top: 5px; }
 
 .single-header-text {
   font-size: 12px;

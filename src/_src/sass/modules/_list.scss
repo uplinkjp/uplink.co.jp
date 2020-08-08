@@ -155,6 +155,10 @@
   font-size: 28px;
   border-top: 4px solid $c_weekday;
   z-index: 1;
+  .original-title {
+    font-size: 0.8em;
+    display: block;
+  }
   span {
     font-size: 18px;
     margin-left: 10px;
@@ -332,7 +336,12 @@
   font-weight: bold;
   line-height: 1.5;
   color: rgba(0,0,0,.87);
-  padding: 10px 10px 5px;
+  padding: 10px 15px 5px;
+
+  .original-title {
+    font-size: 0.8em;
+    display: block;
+  }
 }
 .list_archive-text {
   background: #fff;

@@ -19,6 +19,8 @@ services:
       WP_DB_NAME: uplink
       WP_DB_USER: uplink
       WP_DB_PASSWORD: 3030
+      UPLINK_TICKET_APIURL: https://rsv.uplink.co.jp/data/v1
+      UPLINK_TICKET_PASSWORD: api3718
   mysql:
     image: mysql:5.7.21
     container_name: uplink_mysql
