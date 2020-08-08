@@ -261,11 +261,7 @@ function customtaxorder_sub_query( $terms, $tax ) {
 function customtaxorder_apply_order_filter($orderby, $args) {
 	global $customtaxorder_settings;
 	$options = $customtaxorder_settings;
-	if ( isset( $args['taxonomy'] ) ) {
-		$taxonomy = $args['taxonomy'];
-	} else {
-		$taxonomy = 'category';
-	}
+	$taxonomy = isset( $args['taxonomy'] ) ? reset($args['taxonomy']) : 'category';
 	if ( $args['orderby'] == 'term_order' ) {
 		return 't.term_order';
 	} elseif ( $options[$taxonomy] == 1 && !isset($_GET['orderby']) ) {

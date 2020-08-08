@@ -101,7 +101,7 @@ body {
   body.theme-joji {
     background: #E8EEE8; }
   body.theme-kyoto {
-    background: #E8EEE8; }
+    background: #FAEBEB; }
   body.is-fixed {
     position: fixed; }
 
@@ -223,7 +223,7 @@ a:hover,
     .theme-joji .followus-inner a {
       color: #64276A; }
   .theme-kyoto .followus-inner {
-    background: #5F0005;
+    background: #BE1432;
     color: #92E092; }
     .theme-kyoto .followus-inner a {
       color: #92E092; }
@@ -519,7 +519,7 @@ textarea {
   .theme-joji .header-body {
     background: #A4DE9A; }
   .theme-kyoto .header-body {
-    background: #5F0005; }
+    background: #BE1432; }
 
 .header-logo {
   padding-right: 15px; }
@@ -886,6 +886,9 @@ textarea {
   font-size: 28px;
   border-top: 4px solid #B2B2B2;
   z-index: 1; }
+  .list-calendar-header .original-title {
+    font-size: 0.8em;
+    display: block; }
   .list-calendar-header span {
     font-size: 18px;
     margin-left: 10px;
@@ -1042,10 +1045,10 @@ textarea {
   font-weight: bold;
   line-height: 1.5;
   color: rgba(0, 0, 0, 0.87);
-  padding: 10px; }
-  .list_archive-heading > small {
-    display: block;
+  padding: 10px 15px 5px; }
+  .list_archive-heading .original-title {
     font-size: .8em;
+    display: block;
     font-weight: normal; }
 
 .list_archive-text {
@@ -1069,7 +1072,7 @@ textarea {
   .theme-joji .js-main-clone {
     background: #E8EEE8; }
   .theme-kyoto .js-main-clone {
-    background: #E8EEE8; }
+    background: #FAEBEB; }
   .is-navfixed.main-open .js-main-clone {
     top: 0; }
   @media screen and (max-width: 767px) {
@@ -1260,7 +1263,7 @@ textarea {
     background-image: url(../img/arrow-joji.png); }
 
 .nav-kyoto a {
-  background: #5F0005;
+  background: #BE1432;
   color: #92E092;
   width: 100%;
   height: 124px; }
@@ -2107,9 +2110,10 @@ textarea {
   font-weight: bold;
   line-height: 1.5;
   margin: 0 0 10px 0; }
-  .single-header-heading > small {
+  .single-header-heading .original-title {
+    font-size: 0.8em;
     display: block;
-    font-size: .8em; }
+    padding-top: 5px; }
 
 .single-header-text {
   font-size: 12px;

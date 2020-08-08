@@ -26,7 +26,10 @@ $time = strtotime($date);
     ?>
     <li class="tagged-<?php echo get_uplink_post_class()?>">
       <article>
-        <h1 class="list-calendar-heading"><a href="<?php the_permalink()?>"><?php the_title()?></a></h1>
+        <h1 class="list-calendar-heading"><a href="<?php the_permalink()?>">
+          <?php the_title()?>
+          <?php if( $original_title = get_field('original_title') ):?><small class="original-title"><?php echo $original_title?></small><?php endif?>
+        </a></h1>
         <?php foreach( $program['timelines'] as $timeline ):?>
         <div class="list-calendar-inner">
           <div class="list-calendar-information">

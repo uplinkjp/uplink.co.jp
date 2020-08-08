@@ -173,19 +173,19 @@
 			<?php if(function_exists('wp_pagenavi')) { wp_pagenavi('<nav id="pager">','</nav>'); } ?>
 			<?php wp_reset_query(); ?>
 			
-			<section class="posts news">
+			<!--section class="posts news">
 				<header class="contents-title">
 					<h2>自主上映のスケジュール</h2>
-				</header>
+				</header-->
 				<!-- post str -->
-				<article>
+				<!--article>
 					<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;mode=AGENDA&amp;height=450&amp;wkst=2&amp;hl=ja&amp;bgcolor=%23FFFFFF&amp;src=rlajgrh7lcnd0go3pmcvkli6n0%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" style=" border-width:0 " width="670" height="450" frameborder="0" scrolling="no"></iframe>
 					<p class="right">
 						<a class="target" target="_blank" href="https://www.google.com/calendar/embed?src=rlajgrh7lcnd0go3pmcvkli6n0%40group.calendar.google.com&ctz=Asia/Tokyo">大きなカレンダーを表示</a>
 					</p>
-				</article>
+				</article-->
 				<!-- post end -->
-			</section>
+			<!--/section-->
 			
 			<div class="banner"><a href="/film/rental/campaign/campaign01.php#campaign2"><img src="campaign/img/banner_120407.gif" width="500" height="100"></a></div>
 			
