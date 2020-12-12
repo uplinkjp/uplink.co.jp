@@ -229,7 +229,7 @@ if ($news_query->have_posts()):
       <li><a href="/info/information_en/" title="English information" target="_blank">English information</a></li>
     </ul>
   </nav>
-  <p class="footer-copy">2018 UPLINK, LTD.</p>
+  <p class="footer-copy">UPLINK, LTD.</p>
 </footer>
 
 <script src="/wp/wp-content/themes/uplink/js/libs/jquery.min.js"></script>
