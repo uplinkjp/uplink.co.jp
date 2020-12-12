@@ -1167,7 +1167,8 @@ textarea {
       font-weight: 700;
       letter-spacing: .025em;
       font-size: 12px;
-      margin-top: 7px; }
+      margin-top: 7px;
+      margin-bottom: 7px; }
     .nav-shibuya a:after, .nav-joji a:after, .nav-kyoto a:after, .nav-related a:after, .nav-default a:after, .nav-film a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
       content: "";
       position: absolute;
@@ -1324,7 +1325,7 @@ textarea {
   color: #FFFFFF;
   height: 124px; }
   .nav-film a p {
-    font-size: 24px; }
+    font-size: 22px; }
   .nav-film a:after {
     background-image: url(../img/arrow-related.png); }
 
@@ -1333,7 +1334,7 @@ textarea {
   color: #FFFFFF;
   height: 124px; }
   .nav-events a p {
-    font-size: 24px; }
+    font-size: 22px; }
   .nav-events a:after {
     background-image: url(../img/arrow-related.png); }
 
