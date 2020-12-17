@@ -34,7 +34,7 @@
       <li><a href="<?php echo parent_url('/info/information_en/')?>" title="English information" target="_blank">English information</a></li>
     </ul>
   </nav>
-  <p class="footer-copy">UPLINK, LTD.</p>
+  <p class="footer-copy">UPLINK CO.</p>
 </footer>
 
 <?php wp_footer()?>
