@@ -1158,13 +1158,17 @@ textarea {
       transform-origin: left center;
       font-size: 16px;
       font-weight: 700;
-      margin-bottom: 4px; }
+      margin-bottom: 4px;
+      margin-top: 9px; }
+      .nav-shibuya a p:first-child, .nav-joji a p:first-child, .nav-kyoto a p:first-child, .nav-related a p:first-child, .nav-default a p:first-child, .nav-film a p:first-child, .nav-events a p:first-child, .nav-gallery a p:first-child, .nav-market a p:first-child, .nav-cafe a p:first-child, .nav-map a p:first-child, .nav-login a p:first-child {
+        margin-top: 0; }
     .nav-shibuya a span, .nav-joji a span, .nav-kyoto a span, .nav-related a span, .nav-default a span, .nav-film a span, .nav-events a span, .nav-gallery a span, .nav-market a span, .nav-cafe a span, .nav-map a span, .nav-login a span {
       font-family: "SpaceGrotesk", sans-serif;
       font-weight: 700;
       letter-spacing: .025em;
       font-size: 12px;
-      margin-top: 7px; }
+      margin-top: 7px;
+      margin-bottom: 7px; }
     .nav-shibuya a:after, .nav-joji a:after, .nav-kyoto a:after, .nav-related a:after, .nav-default a:after, .nav-film a:after, .nav-events a:after, .nav-gallery a:after, .nav-market a:after, .nav-cafe a:after, .nav-map a:after, .nav-login a:after {
       content: "";
       position: absolute;
@@ -1321,7 +1325,7 @@ textarea {
   color: #FFFFFF;
   height: 124px; }
   .nav-film a p {
-    font-size: 24px; }
+    font-size: 22px; }
   .nav-film a:after {
     background-image: url(../img/arrow-related.png); }
 
@@ -1330,7 +1334,7 @@ textarea {
   color: #FFFFFF;
   height: 124px; }
   .nav-events a p {
-    font-size: 24px; }
+    font-size: 22px; }
   .nav-events a:after {
     background-image: url(../img/arrow-related.png); }
 

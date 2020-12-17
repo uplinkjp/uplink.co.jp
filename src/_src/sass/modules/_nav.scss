@@ -75,11 +75,16 @@
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 4px;
+      margin-top: 9px;
+      &:first-child {
+        margin-top: 0;
+      }
     }
     span {
       @include f_sg_bold;
       font-size: 12px;
       margin-top: 7px;
+      margin-bottom: 7px;
     }
     &:after {
       content: "";
@@ -284,7 +289,7 @@
     color: $c_nav_film_text;
     height: 124px;
     p {
-      font-size: 24px
+      font-size: 22px
     }
     &:after {
       background-image: url(../img/arrow-related.png);
@@ -299,7 +304,7 @@
     color: $c_nav_events_text;
     height: 124px;
     p {
-      font-size: 24px
+      font-size: 22px
     }
     &:after {
       background-image: url(../img/arrow-related.png);

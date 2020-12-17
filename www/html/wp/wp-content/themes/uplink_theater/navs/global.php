@@ -3,8 +3,10 @@
     <div class="nav-wrap">
       <div class="nav-film">
         <a href="<?php echo home_url('movie')?>">
-          <p>上映</p>
-          <span>MOVIES</span>
+          <p>上映中</p>
+          <span>NOW SHOWING</span>
+          <p>公開予定</p>
+          <span>COMING SOON</span>
         </a>
       </div>
       <div class="nav-events">
