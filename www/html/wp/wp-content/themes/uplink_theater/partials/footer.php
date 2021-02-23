@@ -13,7 +13,11 @@
       </div>
       <div class="followus-box">
         <h2 class="followus-heading">SUBSCRIBE</h2>
-        <a href="<?php echo parent_url('info/mailmagazine')?>" target="_blank">メールマガジン登録</a>
+        <?php if(get_uplink_site() !== 'kyoto'):?>
+          <a href="<?php echo parent_url('info/mailmagazine')?>" target="_blank">メールマガジン登録</a>
+        <?php else:?>
+          <a href="https://uplinkkyoto.sboticket.net/ezine_cancel" target="_blank">メールマガジン解除</a>
+        <?php endif?>
       </div>
     </div>
   </section>
